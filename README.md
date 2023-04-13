@@ -51,6 +51,7 @@ Download manually from:
 This is how it looks, Built with {heart} using **Electron.js** + Some legacy {stuff}.
 
 <img src="./assets/screenshot.png" width="100%" alt="ReVen AIO">
+
 *The App background is the electron DevTools itself*.
 
 ---
