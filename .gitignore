@@ -1,0 +1,6 @@
+build
+compiler
+node_modules
+source/inc/vendor
+assets/bin/7z.*
+package-lock.json
