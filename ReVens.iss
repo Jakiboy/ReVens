@@ -1,5 +1,5 @@
 ; ======================================================================================================================
-; ReVen | Reverse Engineering Toolkit AIO
+; ReVens | Reverse Engineering Toolkit AIO
 ;
 ; Author: Jihad Sinnaour (Jakiboy) <j.sinnaour.official@gmail.com>
 ; URL: https://github.com/Jakiboy/reven
@@ -9,11 +9,11 @@
 ; Define:
 
 #define InstallerRoot "."
-#define InstallerAppName "ReVen"
+#define InstallerAppName "ReVens"
 #define InstallerAppVersion "1.0.0"
 #define InstallerAppPublisher "Jihad Sinnaour (Jakiboy)"
 #define InstallerAppURL "https://github.com/Jakiboy/reven"
-#define InstallerAppExeName "ReVen.exe"
+#define InstallerAppExeName "ReVens.exe"
 
 ; Setup:
 
@@ -77,15 +77,15 @@ Source: "{#InstallerRoot}\build\{#InstallerAppName}\locales\*"; DestDir: "{app}\
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; Temp files:
-Source: "{tmp}/ReVen.zip.001"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVen.zip.002"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVen.zip.003"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVen.zip.004"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVen.zip.005"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVen.zip.006"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVen.zip.007"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVen.zip.008"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVen.zip.009"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.001"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.002"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.003"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.004"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.005"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.006"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.007"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.008"; DestDir: "{app}\bin"; Flags: external;
+Source: "{tmp}/ReVens.zip.009"; DestDir: "{app}\bin"; Flags: external;
 
 ; Icons:
 
@@ -96,13 +96,13 @@ Name: "{autodesktop}\{#InstallerAppName}"; Filename: "{app}\{#InstallerAppExeNam
 ; Run:
 
 [Run]
-; Extract ReVen packages
+; Extract ReVens packages
 Filename: "{app}\bin\extract.bat"; Parameters: "install"; Flags: runhidden
 
-; Hide ReVen Source
+; Hide ReVens Source
 Filename: "{app}\protect.bat"; Parameters: "install"; Flags: runhidden
 
-; Start ReVen
+; Start ReVens
 Filename: "{app}\{#InstallerAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(InstallerAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
 ; Code:
@@ -129,16 +129,16 @@ function NextButtonClick(CurPageID: Integer): Boolean;
 begin
   if CurPageID = wpReady then begin
     DownloadPage.Clear;
-    // Download ReVen packages
-    DownloadPage.Add('https://bit.ly/3mot7kZ', 'ReVen.zip.001', '');
-    DownloadPage.Add('https://bit.ly/3zRjQVE', 'ReVen.zip.002', '');
-    DownloadPage.Add('https://bit.ly/415MEpp', 'ReVen.zip.003', '');
-    DownloadPage.Add('https://bit.ly/3MAQORL', 'ReVen.zip.004', '');
-    DownloadPage.Add('https://bit.ly/3mCDiSR', 'ReVen.zip.005', '');
-    DownloadPage.Add('https://bit.ly/3odaocI', 'ReVen.zip.006', '');
-    DownloadPage.Add('https://bit.ly/3L5HLqV', 'ReVen.zip.007', '');
-    DownloadPage.Add('https://bit.ly/3MAR8jr', 'ReVen.zip.008', '');
-    DownloadPage.Add('https://bit.ly/406sIRY', 'ReVen.zip.009', '');
+    // Download ReVens packages
+    DownloadPage.Add('https://bit.ly/3mot7kZ', 'ReVens.zip.001', '');
+    DownloadPage.Add('https://bit.ly/3zRjQVE', 'ReVens.zip.002', '');
+    DownloadPage.Add('https://bit.ly/415MEpp', 'ReVens.zip.003', '');
+    DownloadPage.Add('https://bit.ly/3MAQORL', 'ReVens.zip.004', '');
+    DownloadPage.Add('https://bit.ly/3mCDiSR', 'ReVens.zip.005', '');
+    DownloadPage.Add('https://bit.ly/3odaocI', 'ReVens.zip.006', '');
+    DownloadPage.Add('https://bit.ly/3L5HLqV', 'ReVens.zip.007', '');
+    DownloadPage.Add('https://bit.ly/3MAR8jr', 'ReVens.zip.008', '');
+    DownloadPage.Add('https://bit.ly/406sIRY', 'ReVens.zip.009', '');
     DownloadPage.Show;
     try
       try

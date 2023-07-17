@@ -1,19 +1,19 @@
-# ReVen: Reverse Engineering Toolkit AIO
+# ReVens: Reverse Engineering Toolkit AIO
 
-<img src="./assets/logo.png" width="100%" alt="ReVen">
+<img src="./assets/logo.png" width="100%" alt="ReVens">
 
-ReVen is a Reverse Engineering Toolkit AIO built for Security (Penetration testing) & Educational purposes **only**.
+ReVens is a Reverse Engineering Toolkit AIO built for Security (Penetration testing) & Educational purposes **only**.
 It contains almost everything about RE *-At least to begin-* .  
-ReVen is built to share personal experience (*passion*) in RE since **2008**, it can be useful for new future **Reversers** / **Developers**.
+ReVens is built to share personal experience (*passion*) in RE since **2008**, it can be useful for new future **Reversers** / **Developers**.
 
 ## Requirements
 
-To run ReVen:
+To run ReVens:
 
 * **Windows 10/11 x64** *-VM recommended-*.
-* **ReVen.iso** *-External ReVen packages-* not available in this repository (More than **300** items).
+* **ReVens.iso** *-External ReVens packages-* not available in this repository (More than **300** items).
 
-To build ReVen:
+To build ReVens:
 
 * **Node.js** ^24.
 
@@ -21,36 +21,36 @@ To build ReVen:
 
 * Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
 * You should make an **Antivirus** exception to avoid detection, or use a virtual machine.
-* **ReVen.iso** is automatically downloaded & extracted during installation.
-* **ReVen.iso** includes docs & basic tutorials about RE.
+* **ReVens.iso** is automatically downloaded & extracted during installation.
+* **ReVens.iso** includes docs & basic tutorials about RE.
 * **100% clean**, *-but use it on your own responsibility-*.
 * **90% portable**.
 
 ## Download
 
-**ReVen AIO**
+**ReVens AIO**
 
-* Download from: [Releases](https://github.com/Jakiboy/ReVen/releases).
+* Download from: [Releases](https://github.com/Jakiboy/ReVens/releases).
 
-**ReVen Packages** (**6Go**)
+**ReVens Packages** (**6Go**)
 
 Download manually from:
 
-* ReVen Packages [Part 1](https://bit.ly/3mot7kZ).
-* ReVen Packages [Part 2](https://bit.ly/3zRjQVE).
-* ReVen Packages [Part 3](https://bit.ly/415MEpp).
-* ReVen Packages [Part 4](https://bit.ly/3MAQORL).
-* ReVen Packages [Part 5](https://bit.ly/3mCDiSR).
-* ReVen Packages [Part 6](https://bit.ly/3odaocI).
-* ReVen Packages [Part 7](https://bit.ly/3L5HLqV).
-* ReVen Packages [Part 8](https://bit.ly/3MAR8jr).
-* ReVen Packages [Part 9](https://bit.ly/406sIRY).
+* ReVens Packages [Part 1](https://bit.ly/3mot7kZ).
+* ReVens Packages [Part 2](https://bit.ly/3zRjQVE).
+* ReVens Packages [Part 3](https://bit.ly/415MEpp).
+* ReVens Packages [Part 4](https://bit.ly/3MAQORL).
+* ReVens Packages [Part 5](https://bit.ly/3mCDiSR).
+* ReVens Packages [Part 6](https://bit.ly/3odaocI).
+* ReVens Packages [Part 7](https://bit.ly/3L5HLqV).
+* ReVens Packages [Part 8](https://bit.ly/3MAR8jr).
+* ReVens Packages [Part 9](https://bit.ly/406sIRY).
 
 ## Screenshot
 
 This is how it looks, Built with {heart} using **Electron.js** + Some legacy {stuff}.
 
-<img src="./assets/screenshot.png" width="100%" alt="ReVen AIO">
+<img src="./assets/screenshot.png" width="100%" alt="ReVens AIO">
 
 *The App background is the electron DevTools itself*.
 
@@ -69,7 +69,7 @@ bash build.sh
 
 ## Packages
   
-ReVen packages includes:
+ReVens packages includes:
 
 ### Analysing
 

@@ -1,6 +1,6 @@
 /**
  * Author  : Jihad Sinnaour (Jakiboy)
- * package : ReVen | Reverse Engineering Toolkit AIO
+ * package : ReVens | Reverse Engineering Toolkit AIO
  * version : 1.0.0
  */
 
@@ -66,13 +66,13 @@ const template = [
 			{
 				"label": 'Update',
 				"accelerator": 'Ctrl+U',
-				click() { openURL('https://github.com/Jakiboy/ReVen/releases'); }
+				click() { openURL('https://github.com/Jakiboy/ReVens/releases'); }
 			}, ,
 			{ "type": 'separator' },
 			{
 				"label": 'Report issue',
 				"accelerator": 'Ctrl+I',
-				click() { openURL('https://github.com/Jakiboy/ReVen/issues'); }
+				click() { openURL('https://github.com/Jakiboy/ReVens/issues'); }
 			},
 			{ "type": 'separator' },
 			{
@@ -112,7 +112,7 @@ app.once('ready', () => {
 
 	// Name
 	if (process.platform === 'win32') {
-		app.setAppUserModelId('ReVen');
+		app.setAppUserModelId('ReVens');
 	}
 
 	// Shortcut
@@ -142,7 +142,7 @@ app.once('ready', () => {
 
 	// Setup Main
 	win = new BrowserWindow({
-		"title": 'ReVen - Reverse Engineering AIO',
+		"title": 'ReVens - Reverse Engineering AIO',
 		"frame": true,
 		"width": 1000,
 		"height": 700,
@@ -184,7 +184,7 @@ app.once('ready', () => {
 		e.preventDefault();
 		win.hide();
 		tray = new Tray(Path.join(__dirname, '/assets/img/icon.ico'));
-		tray.setToolTip('ReVen');
+		tray.setToolTip('ReVens');
 		const template = [
 			{
 				"label": 'Explore',
@@ -271,7 +271,7 @@ function getPath(dir) {
 function notify(msg) {
 	if (Notification.isSupported()) {
 		new Notification({
-			"title": 'ReVen',
+			"title": 'ReVens',
 			"body": msg,
 			"icon": Path.join(__dirname, '/assets/img/icon.png')
 		}).show();
@@ -285,7 +285,7 @@ function downloadPackages() {
 
 	// Confirm
 	const response = dialog.showMessageBoxSync(win, {
-		"title": 'ReVen',
+		"title": 'ReVens',
 		"buttons": ['No', 'Yes'],
 		"message": 'Do you want to download packages?'
 	});
@@ -297,7 +297,7 @@ function downloadPackages() {
 	const count = 1;
 	for (let i = 0; i < count; i++) {
 		const part = i+1;
-		const file = `ReVen.zip.00${part}`;
+		const file = `ReVens.zip.00${part}`;
 		const url = `${host}/${file}`;
 		download(url, file, part, count);
 	}
@@ -354,7 +354,7 @@ function displayProgress() {
             	'nodeIntegration': true
         	}
 		},
-		"title": 'ReVen',
+		"title": 'ReVens',
 		"text": 'Downloading packages...',
 		"detail": 'Please wait',
 		"style": {
