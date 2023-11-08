@@ -3,12 +3,41 @@
       "path": "Analysing/Binary/FileAlyzer/FileAlyzer2.exe",
       "type": "exe"
    },
+   "capa-cli": {
+      "path": "Analysing/Binary/Capa/capa.exe",
+      "type": "cli",
+      "cmd": "--help"
+   },
+   "malzilla": {
+      "path": "Analysing/Binary/Malzilla/malzilla.exe",
+      "type": "exe"
+   },
+   "spyre": {
+      "path": "Analysing/Binary/Spyre/x64/spyre.exe",
+      "type": "exe"
+   },
    "alternate-dll-analyzer": {
       "path": "Analysing/Binary/Alternate DLL Analyzer/DllAnalyzer.exe",
       "type": "exe"
    },
    "exeinfo": {
       "path": "Analysing/Binary/ExeInfo.zip",
+      "type": "exe"
+   },
+   "pebear": {
+      "path": "Analysing/Binary/PE-bear.zip",
+      "type": "exe"
+   },
+   "manalyze": {
+      "path": "Analysing/Binary/Manalyze.zip",
+      "type": "exe"
+   },
+   "clamav": {
+      "path": "Analysing/Binary/ClamAV.zip",
+      "type": "exe"
+   },
+   "yara": {
+      "path": "Analysing/Binary/Yara.zip",
       "type": "exe"
    },
    "bytecode-viewer": {
@@ -52,7 +81,11 @@
       "type": "exe"
    },
    "searchmyfiles": {
-      "path": "Analysing/System/File/SearchMyFiles/SearchMyFiles.exe",
+      "path": "Analysing/System/File/SearchMyFiles/x64/SearchMyFiles.exe",
+      "type": "exe"
+   },
+   "exif-data-view": {
+      "path": "Analysing/System/File/Exif Data View/ExifDataView.exe",
       "type": "exe"
    },
    "sqlite-tools": {
@@ -80,7 +113,7 @@
       "type": "exe"
    },
    "deviceioview": {
-      "path": "Analysing/System/Process/DeviceIOView/DeviceIOView.exe",
+      "path": "Analysing/System/Process/DeviceIOView/x64/DeviceIOView.exe",
       "type": "exe"
    },
    "autoruns": {
@@ -107,8 +140,12 @@
       "path": "Analysing/System/API/DLL Function Viewer.zip",
       "type": "exe"
    },
+   "dependency-walker": {
+      "path": "Analysing/System/API/Dependency Walker.zip",
+      "type": "exe"
+   },
    "regdllview": {
-      "path": "Analysing/System/API/RegDLLView/RegDllView.exe",
+      "path": "Analysing/System/API/x64/RegDLLView/RegDllView.exe",
       "type": "exe"
    },
    "winobj": {
@@ -116,15 +153,15 @@
       "type": "exe"
    },
    "winid": {
-      "path": "Analysing/System/Window/WinID/WinID.exe",
+      "path": "Analysing/System/API/WinID/WinID.exe",
       "type": "exe"
    },
    "zero-dump": {
-      "path": "Analysing/System/Window/Zero Dump.zip",
+      "path": "Analysing/System/API/Zero Dump.zip",
       "type": "exe"
    },
    "heapmemview": {
-      "path": "Analysing/System/Memory/HeapMemView/HeapMemView.exe",
+      "path": "Analysing/System/Memory/HeapMemView/x64/HeapMemView.exe",
       "type": "exe"
    },
    "fiddler": {
@@ -133,6 +170,42 @@
    },
    "wireshark": {
       "path": "Analysing/System/Network/Wireshark.zip",
+      "type": "exe"
+   },
+   "tcpview": {
+      "path": "Analysing/System/Network/TCPView/TCPView.exe",
+      "type": "exe"
+   },
+   "aircrackng": {
+      "path": "Analysing/System/Network/Aircrack-ng/Aircrack-ng GUI.exe",
+      "type": "exe"
+   },
+   "intelwinfe": {
+      "path": "Analysing/System/Network/IntelWinFE/x64/PENetwork.exe",
+      "type": "exe"
+   },
+   "networkminer": {
+      "path": "Analysing/System/Network/NetworkMiner.zip",
+      "type": "exe"
+   },
+   "smartsniff": {
+      "path": "Analysing/System/Network/SmartSniff/x64/smsniff.exe",
+      "type": "exe"
+   },
+   "whois-this-domain": {
+      "path": "Analysing/System/Network/WhoIs This Domain/whoistd.exe",
+      "type": "exe"
+   },
+   "dns-lookup-view": {
+      "path": "Analysing/System/Network/DNS Lookup View/DNSLookupView.exe",
+      "type": "exe"
+   },
+   "sniffpass": {
+      "path": "Analysing/System/Network/SniffPass.zip",
+      "type": "exe"
+   },
+   "whois-connected-sniffer": {
+      "path": "Analysing/System/Network/WhoIs Connected Sniffer.zip",
       "type": "exe"
    },
    "alternate-math-solver": {
@@ -256,6 +329,10 @@
       "path": "Decoding/Hash Identifier.zip",
       "type": "exe"
    },
+   "hashcat": {
+      "path": "Decoding/Hashcat.zip",
+      "type": "exe"
+   },
    "rsa-tool-2": {
       "path": "Decoding/RSA-Tool 2.zip",
       "type": "exe"
@@ -273,15 +350,60 @@
       "type": "exe"
    },
    "dll-export-viewer": {
-      "path": "Extracting/DLL/DLL Export Viewer/dllexp.exe",
+      "path": "Extracting/DLL/DLL Export Viewer/x64/dllexp.exe",
       "type": "exe"
    },
-   "regfileexport": {
+   "regfileexport-cli": {
       "path": "Extracting/Registry/RegFileExport/RegFileExport.exe",
+      "type": "cli",
+      "cmd": "--help"
+   },
+   "regscanner": {
+      "path": "Extracting/Registry/RegScanner/RegScanner.exe",
+      "type": "exe"
+   },
+   "chromepass": {
+      "path": "Extracting/Passwords/ChromePass/ChromePass.exe",
+      "type": "exe"
+   },
+   "password-scanner": {
+      "path": "Extracting/Passwords/Password Scanner.zip",
+      "type": "exe"
+   },
+   "web-browser-pass-view": {
+      "path": "Extracting/Passwords/Web Browser Pass View.zip",
+      "type": "exe"
+   },
+   "passwordfox": {
+      "path": "Extracting/Passwords/PasswordFox.zip",
+      "type": "exe"
+   },
+   "product-key-scanner": {
+      "path": "Extracting/Passwords/Product Key Scanner.zip",
+      "type": "exe"
+   },
+   "produkey": {
+      "path": "Extracting/Passwords/ProduKey.zip",
+      "type": "exe"
+   },
+   "uefitool": {
+      "path": "Extracting/Binary/UEFITool/x64/UEFITool.exe",
+      "type": "exe"
+   },
+   "firmware-tables-view": {
+      "path": "Extracting/Binary/Firmware Tables View/x64/FirmwareTablesView.exe",
+      "type": "exe"
+   },
+   "bintext": {
+      "path": "Extracting/Binary/Bintext.zip",
       "type": "exe"
    },
    "regfromapp": {
       "path": "Extracting/Registry/RegFromApp.zip",
+      "type": "exe"
+   },
+   "regripper": {
+      "path": "Extracting/Registry/RegRipper.zip",
       "type": "exe"
    },
    "resourcesextract": {
@@ -336,8 +458,8 @@
       "path": "Extracting/Games/Ninja Ripper/x64/NinjaRipper2.exe",
       "type": "exe"
    },
-   "unity-assets-bundle-i": {
-      "path": "Extracting/Games/Unity Assets Bundle Extractor/x64/AssetBundleExtractor.exe",
+   "asset-bundle-extractor": {
+      "path": "Extracting/Games/Asset Bundle Extractor/x64/AssetBundleExtractor.exe",
       "type": "exe"
    },
    "dragon-unpacker": {
@@ -394,6 +516,10 @@
    },
    "radare2": {
       "path": "Debugging/Radare2.zip",
+      "type": "exe"
+   },
+   "renderdoc": {
+      "path": "Debugging/RenderDoc.zip",
       "type": "exe"
    },
    "ghidra": {
@@ -468,6 +594,14 @@
       "path": "Decompiling/Dis# Net decompiler.zip",
       "type": "exe"
    },
+   "ffdec": {
+      "path": "Decompiling/FFDec.zip",
+      "type": "exe"
+   },
+   "exe2aut": {
+      "path": "Decompiling/Exe2Aut.zip",
+      "type": "exe"
+   },
    "imhex": {
       "path": "Hexing/ImHex/imhex.exe",
       "type": "exe"
@@ -478,6 +612,34 @@
    },
    "hiew": {
       "path": "Hexing/Hiew.zip",
+      "type": "exe"
+   },
+   "rept-file-compare": {
+      "path": "Comparing/REPT file compare/REPT file compare.exe",
+      "type": "exe"
+   },
+   "winmerge": {
+      "path": "Comparing/WinMerge/WinMergeU.exe",
+      "type": "exe"
+   },
+   "table-text-compare": {
+      "path": "Comparing/Table Text Compare.zip",
+      "type": "exe"
+   },
+   "file-comparer": {
+      "path": "Comparing/File CompareR.zip",
+      "type": "exe"
+   },
+   "relox": {
+      "path": "Comparing/ReloX.zip",
+      "type": "exe"
+   },
+   "sidebyside": {
+      "path": "Comparing/SideBySide.zip",
+      "type": "exe"
+   },
+   "signman": {
+      "path": "Comparing/SignMan.zip",
       "type": "exe"
    },
    "resource-hacker": {
@@ -496,8 +658,12 @@
       "path": "Editing/PE/XPEViewer/x64/xpeviewer.exe",
       "type": "exe"
    },
-   "winmerge": {
-      "path": "Editing/PE/WinMerge/WinMergeU.exe",
+   "reclassex": {
+      "path": "Editing/PE/ReClassEx/x64/ReClassEx64.exe",
+      "type": "exe"
+   },
+   "reclassnet": {
+      "path": "Editing/PE/ReClass.NET/ReClass.NET.exe",
       "type": "exe"
    },
    "resedit": {
@@ -521,11 +687,40 @@
       "type": "exe"
    },
    "xelfviewer": {
-      "path": "Editing/ELF/XELFViewer/x64/xelfviewer.exe",
+      "path": "Editing/PE/XELFViewer/x64/xelfviewer.exe",
       "type": "exe"
+   },
+   "cheat-engine": {
+      "path": "Editing/PE/Cheat Engine.zip",
+      "type": "exe"
+   },
+   "scylla": {
+      "path": "Editing/PE/Scylla/Scylla_x64.exe",
+      "type": "exe"
+   },
+   "lordpe": {
+      "path": "Editing/PE/LordPE/LordPE.exe",
+      "type": "exe"
+   },
+   "imprec": {
+      "path": "Editing/PE/ImpREC.zip",
+      "type": "exe"
+   },
+   "exiftool": {
+      "path": "Editing/Binary/Exiftool/exiftool.exe",
+      "type": "cli",
+      "cmd": "--help"
    },
    "dll-addrfunc-converter": {
       "path": "Editing/DLL/DLL Addr&Func Converter.zip",
+      "type": "exe"
+   },
+   "xenos": {
+      "path": "Editing/DLL/Xenos/Xenos64.exe",
+      "type": "exe"
+   },
+   "robber": {
+      "path": "Editing/DLL/Robber/Robber.exe",
       "type": "exe"
    },
    "dll-injector-slait": {
@@ -548,20 +743,36 @@
       "path": "Editing/DLL/IID King.zip",
       "type": "exe"
    },
+   "easyhook": {
+      "path": "Editing/DLL/EasyHook.zip",
+      "type": "exe"
+   },
+   "dll-packager": {
+      "path": "Editing/DLL/DLL Packager/DLLPackager.exe",
+      "type": "exe"
+   },
+   "inno-setup": {
+      "path": "Editing/Universal/Inno Setup/Compil32.exe",
+      "type": "exe"
+   },
+   "inno-script-studio": {
+      "path": "Editing/Universal/ISStudio/ISStudio.exe",
+      "type": "exe"
+   },
    "codejock-skin-builder": {
-      "path": "Editing/Setup/Codejock Skin Builder/SkinBuilder.exe",
+      "path": "Editing/Universal/Codejock Skin Builder/SkinBuilder.exe",
       "type": "exe"
    },
    "codejock-resource-editor": {
-      "path": "Editing/Setup/Codejock Resource Editor/ResourceEditor.exe",
+      "path": "Editing/Universal/Codejock Resource Editor/ResourceEditor.exe",
       "type": "exe"
    },
    "codejock-markuppad": {
-      "path": "Editing/Setup/Codejock MarkupPad/MarkupPad.exe",
+      "path": "Editing/Universal/Codejock MarkupPad/MarkupPad.exe",
       "type": "exe"
    },
    "codejock-command-bars-i": {
-      "path": "Editing/Setup/Codejock Command Bars Designer/CommandBarsDesigner.exe",
+      "path": "Editing/Universal/Codejock Command Bars Designer/CommandBarsDesigner.exe",
       "type": "exe"
    },
    "far-manager": {
@@ -572,20 +783,12 @@
       "path": "Editing/Text/Notepad++/notepad++.exe",
       "type": "exe"
    },
-   "cheat-engine": {
-      "path": "Editing/PE/Cheat Engine.zip",
+   "dmcsveditor": {
+      "path": "Editing/Text/DMcsvEditor/dmcsv.exe",
       "type": "exe"
    },
-   "scylla": {
-      "path": "Rebuilding/Scylla/Scylla_x64.exe",
-      "type": "exe"
-   },
-   "dll-packager": {
-      "path": "Rebuilding/DLL Packager/DLLPackager.exe",
-      "type": "exe"
-   },
-   "imprec": {
-      "path": "Rebuilding/ImpREC.zip",
+   "xmltreeedit": {
+      "path": "Editing/Text/XMLTreeEdit/XMLTreeEdit.exe",
       "type": "exe"
    },
    "bat-to-exe": {
@@ -692,7 +895,7 @@
       "path": "Patching/Skin/RGNerator.zip",
       "type": "exe"
    },
-   "reven": {
+   "revens": {
       "path": "Patching/Assets/Skins/ReVens",
       "type": "exe"
    },
@@ -908,16 +1111,24 @@
       "path": "Assembling/Flat assembler/FASMW.EXE",
       "type": "exe"
    },
-   "winhasher": {
-      "path": "Encoding/WinHasher/WinHasher.exe",
+   "hasher": {
+      "path": "Encoding/Hasher/Hasher.exe",
       "type": "exe"
    },
    "alternate-hash-generator": {
-      "path": "Encoding/Alternate Hash-Generator/Hasher.exe",
+      "path": "Encoding/Alternate Hash Generator/Hasher.exe",
       "type": "exe"
    },
-   "putty": {
+   "xca": {
+      "path": "Encoding/XCA/xca.exe",
+      "type": "exe"
+   },
+   "putty-keygen": {
       "path": "Encoding/PuTTY/puttygen.exe",
+      "type": "exe"
+   },
+   "winhasher": {
+      "path": "Encoding/WinHasher.zip",
       "type": "exe"
    },
    "hashmyfiles": {
@@ -969,8 +1180,44 @@
       "path": "Packing/Amber.zip",
       "type": "exe"
    },
+   "etcher": {
+      "path": "Mobile/Universal/Etcher/Etcher.exe",
+      "type": "exe"
+   },
+   "otp-extractor": {
+      "path": "Mobile/Universal/OTP Extractor/otp-extractor.bat",
+      "type": "exe"
+   },
+   "whatsapp-extractor-cli": {
+      "path": "Mobile/Universal/WhatsApp Extractor/WhatsAppKeyDBExtract.bat",
+      "type": "exe"
+   },
+   "whatsapp-viewer": {
+      "path": "Mobile/Universal/WhatsApp Viewer/WhatsApp Viewer.exe",
+      "type": "exe"
+   },
    "apk-editor-studio": {
       "path": "Mobile/Android/APK Editor Studio/apk-editor-studio.exe",
+      "type": "exe"
+   },
+   "apk-easy-tool": {
+      "path": "Mobile/Android/APK Easy Tool/apkeasytool.exe",
+      "type": "exe"
+   },
+   "jadx": {
+      "path": "Mobile/Android/JADX/JADX.exe",
+      "type": "exe"
+   },
+   "adb-installer": {
+      "path": "Mobile/Android/ADB Installer/ADB Installer.exe",
+      "type": "exe"
+   },
+   "adb-driver-installer": {
+      "path": "Mobile/Android/ADB Driver Installer/ADB Driver Installer.exe",
+      "type": "exe"
+   },
+   "apk-installer": {
+      "path": "Mobile/Android/APK Installer.zip",
       "type": "exe"
    },
    "apktool-cli": {
@@ -978,27 +1225,71 @@
       "type": "exe"
    },
    "apk-protect": {
-      "path": "Mobile/Android/APK Protect/apkcrypt.exe",
+      "path": "Mobile/Android/APK Protect.zip",
       "type": "exe"
    },
    "xapk-detector": {
-      "path": "Mobile/Android/XAPK Detector/xapkd.exe",
+      "path": "Mobile/Android/XAPK Detector.zip",
       "type": "exe"
    },
    "apk-multi-tool": {
       "path": "Mobile/Android/APK Multi-Tool.zip",
       "type": "exe"
    },
-   "otp-extractor": {
-      "path": "Mobile/OTP Extractor/otp-extractor.exe",
+   "apk-multi-tool": {
+      "path": "Mobile/Android/APK Multi-Tool.zip",
       "type": "exe"
    },
-   "whatsapp-extractor-cli": {
-      "path": "Mobile/WhatsApp Extractor/WhatsAppKeyDBExtract.bat",
+   "odin3": {
+      "path": "Mobile/Android/Odin3.zip",
       "type": "exe"
    },
-   "whatsapp-viewer": {
-      "path": "Mobile/WhatsApp Viewer/WhatsApp Viewer.exe",
+   "3utools": {
+      "path": "Mobile/IOS/3uTools.zip",
+      "type": "exe"
+   },
+   "ssh-ramdisk": {
+      "path": "Mobile/IOS/SSH Ramdisk.zip",
+      "type": "exe"
+   },
+   "checkra1n-cli": {
+      "path": "Mobile/IOS/Checkra1n.zip",
+      "type": "exe"
+   },
+   "checkn1x-iso": {
+      "path": "Mobile/IOS/Checkn1x.zip",
+      "type": "exe"
+   },
+   "bootra1n-iso": {
+      "path": "Mobile/IOS/Bootra1n.zip",
+      "type": "exe"
+   },
+   "f0recast": {
+      "path": "Mobile/IOS/F0recast.zip",
+      "type": "exe"
+   },
+   "idetector": {
+      "path": "Mobile/IOS/iDetector.zip",
+      "type": "exe"
+   },
+   "pangu": {
+      "path": "Mobile/IOS/Pangu.zip",
+      "type": "exe"
+   },
+   "jailsn0w": {
+      "path": "Mobile/IOS/JailSn0w.zip",
+      "type": "exe"
+   },
+   "sn0wbreeze": {
+      "path": "Mobile/IOS/Sn0wbreeze.zip",
+      "type": "exe"
+   },
+   "p0sixspwn": {
+      "path": "Mobile/IOS/P0sixspwn.zip",
+      "type": "exe"
+   },
+   "ireb": {
+      "path": "Mobile/IOS/iREB.zip",
       "type": "exe"
    },
    "fritzing": {
@@ -1090,12 +1381,40 @@
       "path": "Programming/PyScripter/x64/PyScripter.exe",
       "type": "exe"
    },
+   "autoit": {
+      "path": "Programming/AutoIt/AutoIt3_x64.exe",
+      "type": "exe"
+   },
    "dev-c": {
       "path": "Programming/Dev-C++.zip",
       "type": "exe"
    },
    "small-basic": {
       "path": "Programming/Small Basic.zip",
+      "type": "exe"
+   },
+   "autoplay-media-studio": {
+      "path": "Programming/AutoPlay Media Studio.zip",
+      "type": "exe"
+   },
+   "mastering-reverse-engineering": {
+      "path": "Documentation/Books/Mastering Reverse Engineering.pdf",
+      "type": "exe"
+   },
+   "learning-malware-analysis": {
+      "path": "Documentation/Books/Learning Malware Analysis.pdf",
+      "type": "exe"
+   },
+   "the-art-of-memory-forensics": {
+      "path": "Documentation/Books/The Art of Memory Forensics.pdf",
+      "type": "exe"
+   },
+   "rootkits-and-bootkits": {
+      "path": "Documentation/Books/Rootkits and Bootkits.pdf",
+      "type": "exe"
+   },
+   "network-security-monitoring": {
+      "path": "Documentation/Books/Network Security Monitoring.pdf",
       "type": "exe"
    },
    "what-is-reverse-engineering": {

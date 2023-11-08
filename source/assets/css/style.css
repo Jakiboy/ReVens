@@ -1,7 +1,7 @@
 /* -------------------------------------- */
 /* Author  : Jihad Sinnaour (Jakiboy)
 /* package : ReVens | Reverse Engineering Toolkit AIO
-/* version : 1.0.0
+/* version : 1.0.1
 /* -------------------------------------- */
 
 html,
@@ -77,6 +77,10 @@ strong {
 }
 .section-description {
     font-size: 13px;
+}
+.section-separator {
+    width: 18%;
+    min-width: 218px;
 }
 
 /* ----------------------------- */

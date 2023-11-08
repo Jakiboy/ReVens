@@ -1,7 +1,7 @@
 /**
  * Author  : Jihad Sinnaour (Jakiboy)
  * package : ReVens | Reverse Engineering Toolkit AIO
- * version : 1.0.0
+ * version : 1.0.1
  */
 
 'use strict';
@@ -41,7 +41,7 @@ function checkConfiguration() {
 
   setTimeout(function () {
 
-    const dir = getPath('bin');
+    const dir = getPath('/');
     Fs.readdir(formatPath(dir), function (err, files) {
       if (err || !files.length) {
         log('Error: Missing packages');
@@ -108,7 +108,7 @@ function open() {
 
     const t = $(this).attr('data-type');
     const p = $(this).attr('data-path');
-    const base = getPath('bin');
+    const base = getPath('/');
     const launcher = formatPath(base + p);
 
     if (t == 'exe') {
