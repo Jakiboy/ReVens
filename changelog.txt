@@ -11,7 +11,7 @@ All notable changes to ReVens.
 
 ### Updated
 
-- HTML/CSS/JS
+- Launcher skeleton: HTML/CSS/JS
 - Alternate DLL Analyzer v1.930
 - Alternate Math Solver v1.810
 - Alternate HASH Generator v1.740
@@ -22,8 +22,10 @@ All notable changes to ReVens.
 - Ophcrack 3.8.0
 - Asset Bundle Extractor (Unity) v3
 - x64dbg v02-11-2023
+- Cutter v2.3.2
 - Ghidra v10.4
 - ImHex v1.31.0
+- PPEE(puppy) v1.13
 - Resource Hacker v5.2.4
 - WinMerge v2.16.34
 - Notepad++ v8.5.8
@@ -62,8 +64,10 @@ All notable changes to ReVens.
 - Capa v6.1.0
 - ClamAV v1.2.1
 - Manalyze v1.0
+- SysInspector v1.4.2
+- Windows Kernel Explorer v13
 - Exiftool v12.69
-- IntelWinFE v0.59.89
+- PE Network Manager v0.59.B9
 - Malzilla v1.2.0
 - NetworkMiner v2.8.1
 - Hashcat v6.2.6

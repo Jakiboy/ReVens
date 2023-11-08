@@ -1,1 +1,1 @@
-ReVens Packages lives here!
+Download & extract ReVens Packages here.

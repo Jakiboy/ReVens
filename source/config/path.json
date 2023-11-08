@@ -8,16 +8,24 @@
       "type": "cli",
       "cmd": "--help"
    },
+   "alternate-dll-analyzer": {
+      "path": "Analysing/Binary/Alternate DLL Analyzer/DllAnalyzer.exe",
+      "type": "exe"
+   },
+   "sysinspector": {
+      "path": "Analysing/Binary/SysInspector.zip",
+      "type": "exe"
+   },
+   "windows-kernel-explorer": {
+      "path": "Analysing/Binary/Windows Kernel Explorer.zip",
+      "type": "exe"
+   },
    "malzilla": {
-      "path": "Analysing/Binary/Malzilla/malzilla.exe",
+      "path": "Analysing/Binary/Malzilla.zip",
       "type": "exe"
    },
    "spyre": {
-      "path": "Analysing/Binary/Spyre/x64/spyre.exe",
-      "type": "exe"
-   },
-   "alternate-dll-analyzer": {
-      "path": "Analysing/Binary/Alternate DLL Analyzer/DllAnalyzer.exe",
+      "path": "Analysing/Binary/Spyre.zip",
       "type": "exe"
    },
    "exeinfo": {
@@ -92,8 +100,8 @@
       "path": "Analysing/System/File/SQLite Tools/sqlite3.exe",
       "type": "exe"
    },
-   "sqlite-viewer": {
-      "path": "Analysing/System/File/SQLite Viewer/x64/DB Browser for SQLite.exe",
+   "sqlite-browser": {
+      "path": "Analysing/System/File/SQLite Browser/x64/DB Browser for SQLite.exe",
       "type": "exe"
    },
    "grepwin": {
@@ -145,7 +153,7 @@
       "type": "exe"
    },
    "regdllview": {
-      "path": "Analysing/System/API/x64/RegDLLView/RegDllView.exe",
+      "path": "Analysing/System/API/RegDLLView/x64/RegDllView.exe",
       "type": "exe"
    },
    "winobj": {
@@ -180,8 +188,8 @@
       "path": "Analysing/System/Network/Aircrack-ng/Aircrack-ng GUI.exe",
       "type": "exe"
    },
-   "intelwinfe": {
-      "path": "Analysing/System/Network/IntelWinFE/x64/PENetwork.exe",
+   "pe-network-manager": {
+      "path": "Analysing/System/Network/PE Network Manager/x64/PENetwork.exe",
       "type": "exe"
    },
    "networkminer": {
@@ -1230,10 +1238,6 @@
    },
    "xapk-detector": {
       "path": "Mobile/Android/XAPK Detector.zip",
-      "type": "exe"
-   },
-   "apk-multi-tool": {
-      "path": "Mobile/Android/APK Multi-Tool.zip",
       "type": "exe"
    },
    "apk-multi-tool": {

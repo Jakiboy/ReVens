@@ -1,100 +1,12 @@
-# ReVens: Reverse Engineering Toolkit AIO
+# ReVens
 
-<img src="./assets/logo.png" width="100%" alt="ReVens">
+Reverse Engineering Toolkit AIO.
 
-ReVens is a Windows-based Reverse Engineering Toolkit "AIO", built for Security (Penetration testing) & Educational purposes **only**.  
-It contains almost everything about RE *-At least to begin-* .  
-ReVens is built to share personal experience (💜) in RE since **2008**, it can be useful for new future **Reversers** / **Developers**.
-
-🌍 [Online preview](https://revens.jihadsinnaour.com)
-
-## 🔧 Requirements
-
-To run ReVens:
-
-* **Windows 10/11 x64** *-Secured VM recommended-*.
-* **ReVens Packages ISO images** *-External ReVens packages-* not available in this repository (More than **300** items).
-
-To build ReVens:
-
-* **Node.js** ^24.
-
-## 💡 Notices
-
-* Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
-* You should make an **Antivirus** exception to avoid detection, or use a **secured** virtual machine.
-* **ReVens Packages** ARE NOT automatically downloaded.
-* **Packages** includes docs & basic tutorials about RE.
-* **100% clean**, *-but use it on your own responsibility-*.
-* **90% portable**.
-
-## 🔧 Download
-
-**ReVens AIO**
-
-* Download from: [Releases](https://github.com/Jakiboy/ReVens/releases).
-
-**ReVens Packages** (**~8Go**)
-
-Download packages manually from:
-
-* Part 1 - [Analysing](#)
-* Part 2 - [Assembling](#)
-* Part 3 - [Bypassing](#)
-* Part 4 - [Calculating](#)
-* Part 5 - [Comparing](#)
-* Part 6 - [Converting](#)
-* Part 7 - [Debugging](#)
-* Part 8 - [Decoding](#)
-* Part 10 - [Decompiling](#)
-* Part 11 - [Dependencies](#)
-* Part 12 - [Disassembling](#)
-* Part 13 - [Documentation](#)
-* Part 14 - [Editing](#)
-* Part 15 - [Encoding](#)
-* Part 16 - [Hexing](#)
-* Part 17 - [Mobile](#)
-* Part 18 - [Packing](#)
-* Part 19 - [Patching](#)
-* Part 20 - [Programming](#)
-* Part 21 - [Testing](#)
-* Part 22 - [Unpacking](#)
-* (Uploading new standalone packages in progress...)
-* ...
-
-Downloads should be extracted into */bin*.
-
-## 🔧 Screenshots
-
-This is how it looks, Built with {heart} using **Electron.js** + Some legacy {stuff}.
-
-![ReVens AIO](./assets/screenshot-1.png)
-
-*The App background is the electron DevTools itself*.
-
-<p float="left">
-    <img src="./assets/screenshot-2.png" width="48%">
-    <img src="./assets/screenshot-3.png" width="48%">
-</p>
-
-## 🔧 Install, Run & Build
-
-```bash
-bash global.sh
-bash init.sh
-bash run.sh
-bash build.sh
-```
-
-## 🔧 Packages
-  
-ReVens packages includes:
-
-### ⚡ Analysing
+## ⚡ Analysing
 
 Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 
-##### Binary
+### Binary
 
 *Analyse binary.*
 
@@ -111,7 +23,7 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 * **Sysinspector** - *Rootkits scanner.*
 * **Windows Kernel Explorer** - *Another rootkits scanner.*
 
-##### Compilation
+### Compilation
 
 *Analyse PE compilation.*
 
@@ -121,13 +33,13 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 * **PE Detective** - *Identifies PE files.*
 * **Signature Explorer** - *Manage advanced signatures.*
 
-##### Bytecode (p-code)
+### Bytecode (p-code)
 
 *Object code converted by interpreter into binary machine code to be read by CPU.*
 
 * **Bytecode Viewer** - *View, decompile Java/Android bytecode & more.*
 
-##### Packaging
+### Packaging
 
 *Analyse PE packaging / protection.*
 
@@ -136,7 +48,7 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 * **ARiD** - *Identifies archive formats.*
 * **UPX-Analyser** - *Analyzes UPX-packed files.*
 
-##### System
+### System
 
 *Analyse system (API, Process, Memory, Network, File).*
 
@@ -173,7 +85,7 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 * **WhoIs Connected Sniffer** - *Network packets discovery tool.*
 * **DNS Lookup View** - *DNS tracing tool.*
 
-### ⚡ Calculating
+## ⚡ Calculating
 
 Mathematical & reverse calculating.
 
@@ -187,7 +99,7 @@ Mathematical & reverse calculating.
 * **Base Calculator** - *Calculates in different bases.*
 * **Base Converter** - *Converts between bases.*
 
-### ⚡ Converting
+## ⚡ Converting
 
 Convert binary files.
 
@@ -201,7 +113,7 @@ Convert binary files.
 * **RegConvert (REG - EXE)**
 * **vbstoexe (CLI)**
 
-### ⚡ Decompiling
+## ⚡ Decompiling
 
 Revert the process of compilation. Transforming binary program file into a **structured higher-level language**.
 
@@ -217,7 +129,7 @@ Revert the process of compilation. Transforming binary program file into a **str
 * **Exe2Aut** - *AutoIt3 decompiler.*
 * **FFDec** - *Flash Decompiler.*
 
-### ⚡ Disassembling
+## ⚡ Disassembling
 
 Transforming machine code into a human readable mnemonic representation (**Assembly language**).
 
@@ -231,7 +143,7 @@ Transforming machine code into a human readable mnemonic representation (**Assem
 * **Refractor** - *.NET decompiler and assembly browser.*
 * **Win32Dasm** - *Windows 32-bit disassembler.*
 
-### ⚡ Debugging
+## ⚡ Debugging
 
 View and change the running state of a program. (**Disassembling, Decompiling, Hexing**).
 
@@ -243,7 +155,7 @@ View and change the running state of a program. (**Disassembling, Decompiling, H
 * **Radare2 (CLI)** - *A portable and multi-architecture reverse engineering framework.*
 * **RenderDoc** - *Stand-alone graphics debugger.*
 
-### ⚡ Hexing
+## ⚡ Hexing
 
 Edit binary **hexadecimal values**.
 
@@ -251,7 +163,7 @@ Edit binary **hexadecimal values**.
 * **Hiew** - *A hex viewer and editor for Windows.* (⭐)
 * **HEX Editor** - *A tool for viewing and editing hexadecimal files.*
 
-### ⚡ Rebuilding
+## ⚡ Rebuilding
 
 Rebuild PE import table (**Imports Reconstructor**).
 
@@ -260,7 +172,7 @@ Rebuild PE import table (**Imports Reconstructor**).
 * **DLL Packager** - *A tool for bundling DLLs with executables.*
 * **ImpREC** - *Import reconstructor for reconstructing imports in PE files.*
 
-### ⚡ Decoding
+## ⚡ Decoding
 
 Decode hash.
 
@@ -276,7 +188,7 @@ Decode hash.
 * **RSABox** - *Toolkit for working with RSA encryption.*
 * **MD5 Toolbox** - *Toolbox for working with MD5 hashes.*
 
-### ⚡ Comparing
+## ⚡ Comparing
 
 Binary compare.
 
@@ -288,7 +200,7 @@ Binary compare.
 * **SideBySide** - *Utility for side-by-side file comparison.*
 * **SignMan** - *Utility for managing digital signatures.*
 
-### ⚡ Editing
+## ⚡ Editing
 
 Binary edit (**EXE, RES, DLL**).
 
@@ -326,7 +238,7 @@ Binary edit (**EXE, RES, DLL**).
 * **DMcsvEditor** - *Simple CSV/Tab file editor.*
 * **XMLTreeEdit** - *Simple XML file editor.*
 
-### ⚡ Extracting
+## ⚡ Extracting
 
 Binary extracting (**EXE, RES, DLL**).
 
@@ -370,7 +282,7 @@ Binary extracting (**EXE, RES, DLL**).
 * **UnityEx** - *Utility for extracting assets from Unity games.*
 * **uTinyRipper** - *Unity asset extractor and exporter.*
 
-### ⚡ Unpacking
+## ⚡ Unpacking
 
 Unpack & remove binary protection (**EXE, DLL**).
 
@@ -388,9 +300,9 @@ Unpack & remove binary protection (**EXE, DLL**).
 * **Unpacker ExeCryptor** - *ExeCryptor unpacker.*
 * **Universal Unprotector** - *Another universal unpacker.*
 
-### ⚡ Patching
+## ⚡ Patching
 
-##### Patcher
+### Patcher
 
 *Generate patching program using binary compare.*
 
@@ -403,20 +315,20 @@ Unpack & remove binary protection (**EXE, DLL**).
 * **PEiD Patch Maker** - *Patch creator for PEiD signatures.*
 * **Graphical Patch Maker** - *Tool for creating graphical patches.*
 
-##### Loader
+### Loader
 
 *Build binary patch loader.*
 
 * **Advanced Loader Generator** - *Tool for generating loaders.*
 * **Abel Loader Generator** - *Another tool for generating loaders.*
 
-##### Keygen
+### Keygen
 
 *Build Key generator.*
 
 * **REPT Keygen Maker** - *Tool for generating keygens.*
 
-##### Skin
+### Skin
 
 *Build patcher skin.*
 
@@ -427,7 +339,7 @@ Unpack & remove binary protection (**EXE, DLL**).
 * **uPPP2AP Skin Converter** - *Converts skins for uPPP2AP software.*
 * **RGNerator** - *Generates resource scripts for skinning tools.*
 
-##### Release
+### Release
 
 *Build patcher release file.*
 
@@ -440,7 +352,7 @@ Unpack & remove binary protection (**EXE, DLL**).
 * **NFO View** - *View NFO files with syntax highlighting.*
 * **NFO Viewer 2** - *View NFO files with enhanced features.*
 
-##### ASCII
+### ASCII
 
 *Build patcher release ASCII.*
 
@@ -452,7 +364,7 @@ Unpack & remove binary protection (**EXE, DLL**).
 * **ASCII Table** - *Display an ASCII character table.*
 * **Magic ASCII Pic** - *Create ASCII art from images.*
 
-##### Sound
+### Sound
 
 *Build patcher sound (MX).*
 
@@ -462,9 +374,9 @@ Unpack & remove binary protection (**EXE, DLL**).
 * **ModPlug Player** - *Player for module files including MOD, S3M, and XM.*
 * **ChipRip** - *Tool for extracting audio from chiptune files.*
 
-### ⚡ Bypassing
+## ⚡ Bypassing
 
-##### Trial
+### Trial
 
 *Trial reset.*
 
@@ -472,7 +384,7 @@ Unpack & remove binary protection (**EXE, DLL**).
 * **DateHack** - *Tool for modifying system dates for software trials.*
 * **Trial-Reset** - *Tool for extending trial periods of software.*
 
-##### System
+### System
 
 *Bypassing system.*
 
@@ -481,13 +393,13 @@ Unpack & remove binary protection (**EXE, DLL**).
 
 ---
 
-### ⚡ Assembling
+## ⚡ Assembling
 
 Assembling **Machine code**.
 
 * **Flat assembler (FASM)** - *A fast, self-hosting assembly language compiler for x86 architecture.* (⭐)
 
-### ⚡ Programming
+## ⚡ Programming
 
 Programming tools (**Compilators**).
 
@@ -498,7 +410,7 @@ Programming tools (**Compilators**).
 * **AutoPlay Media Studio (AMS)** - *Easy-to-use & visual drag-and-drop software development tool.* (⭐)
 * **Embarcadero Dev-C++** - *Integrated development environment for C and C++ programming.*
 
-### ⚡ Encoding
+## ⚡ Encoding
 
 Data encoding (**Hash**).
 
@@ -516,7 +428,7 @@ Data encoding (**Hash**).
 * **DSS-DSA Generator** - *Tool for generating DSA keys.*
 * **gRn-Rsa-Donkey** - *RSA key generator.*
 
-### ⚡ Packing
+## ⚡ Packing
 
 Executable packing.
 
@@ -525,9 +437,9 @@ Executable packing.
 * **Alternate EXE Packer** - *A program to pack executable files.*
 * **Amber** - *Cryptographic hashing tool for files.*
 
-### ⚡ Testing
+## ⚡ Testing
 
-##### Simulating
+### Simulating
 
 Circuit / Logical simulation.
 
@@ -541,7 +453,7 @@ Circuit / Logical simulation.
 * **SimulIDE** - *Real-time electronics simulator.*
 * **Circuit Simulator** - *Software for simulating electronic circuits.*
 
-##### Sandboxing
+### Sandboxing
 
 *Executables safe testing.*
 
@@ -550,9 +462,9 @@ Circuit / Logical simulation.
 
 ---
 
-### ⚡ Mobile
+## ⚡ Mobile
 
-##### Universal
+### Universal
 
 Universal mobile toolkits.
 
@@ -561,7 +473,7 @@ Universal mobile toolkits.
 * **WhatsApp Extractor (CLI)** - *Command-line tool for extracting WhatsApp data.*
 * **WhatsApp Viewer** - *Viewer for WhatsApp chat histories.*
 
-##### Android
+### Android
 
 * **APK Editor Studio** - *Powerful APK editing tool.* (⭐)
 * **APK Easy Tool** - *APK management utility for Windows.*
@@ -575,7 +487,7 @@ Universal mobile toolkits.
 * **XAPK Detector** - *Detects and handles XAPK files.*
 * **APK Multi-Tool** - *Tool for managing and modifying Android APK files.*
 
-##### iOS
+### iOS
 
 * **3uTools** - *Tool for flashing and jailbreaking iOS.* (⭐)
 * **SSH Ramdisk** - *iPhone ramdisk control.* (⭐)
@@ -590,19 +502,12 @@ Universal mobile toolkits.
 * **P0sixspwn** - *Yet another iOS jailbreaking tool.*
 * **iREB** - *iTunes custom IPSWs bypass tool.*
 
-## 🔧 TODO
-
-* Improve UI using **React.js**.
-* Update **Electron.js** to the latest (+ Dependencies).
-* Use public cloud for packages hosting.
-* Maybe use internal **Node.js** packages extractor.
-* Update Docs, (Add Links to active RE challenges, Remove outdated...).
+---
 
 ## Authors:
 
 * [Jakiboy](https://github.com/Jakiboy) (*Initial work*)
-* Any Pull is welcome!
 
-### ⭐ Support:
+## ⭐ Support:
 
 Please give it a Star if you like the project.
