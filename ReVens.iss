@@ -72,20 +72,11 @@ Source: "{#InstallerRoot}\build\{#InstallerAppName}\v8_context_snapshot.bin"; De
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vk_swiftshader.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vk_swiftshader_icd.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vulkan-1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#InstallerRoot}\build\{#InstallerAppName}\changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#InstallerRoot}\build\{#InstallerAppName}\ReVens.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\bin\*"; DestDir: "{app}\bin"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\locales\*"; DestDir: "{app}\locales"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
-
-; Temp files:
-Source: "{tmp}/ReVens.zip.001"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVens.zip.002"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVens.zip.003"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVens.zip.004"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVens.zip.005"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVens.zip.006"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVens.zip.007"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVens.zip.008"; DestDir: "{app}\bin"; Flags: external;
-Source: "{tmp}/ReVens.zip.009"; DestDir: "{app}\bin"; Flags: external;
 
 ; Icons:
 
@@ -96,61 +87,8 @@ Name: "{autodesktop}\{#InstallerAppName}"; Filename: "{app}\{#InstallerAppExeNam
 ; Run:
 
 [Run]
-; Extract ReVens packages
-Filename: "{app}\bin\extract.bat"; Parameters: "install"; Flags: runhidden
-
 ; Hide ReVens Source
 Filename: "{app}\protect.bat"; Parameters: "install"; Flags: runhidden
 
 ; Start ReVens
 Filename: "{app}\{#InstallerAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(InstallerAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-
-; Code:
-
-[Code]
-
-// Download external files:
-var
-  DownloadPage: TDownloadWizardPage;
-
-function OnDownloadProgress(const Url, FileName: String; const Progress, ProgressMax: Int64): Boolean;
-begin
-  if Progress = ProgressMax then
-    Log(Format('Successfully downloaded file to {tmp}: %s', [FileName]));
-  Result := True;
-end;
-
-procedure InitializeWizard;
-begin
-  DownloadPage := CreateDownloadPage(SetupMessage(msgWizardPreparing), SetupMessage(msgPreparingDesc), @OnDownloadProgress);
-end;
-
-function NextButtonClick(CurPageID: Integer): Boolean;
-begin
-  if CurPageID = wpReady then begin
-    DownloadPage.Clear;
-    // Download ReVens packages
-    DownloadPage.Add('https://bit.ly/3mot7kZ', 'ReVens.zip.001', '');
-    DownloadPage.Add('https://bit.ly/3zRjQVE', 'ReVens.zip.002', '');
-    DownloadPage.Add('https://bit.ly/415MEpp', 'ReVens.zip.003', '');
-    DownloadPage.Add('https://bit.ly/3MAQORL', 'ReVens.zip.004', '');
-    DownloadPage.Add('https://bit.ly/3mCDiSR', 'ReVens.zip.005', '');
-    DownloadPage.Add('https://bit.ly/3odaocI', 'ReVens.zip.006', '');
-    DownloadPage.Add('https://bit.ly/3L5HLqV', 'ReVens.zip.007', '');
-    DownloadPage.Add('https://bit.ly/3MAR8jr', 'ReVens.zip.008', '');
-    DownloadPage.Add('https://bit.ly/406sIRY', 'ReVens.zip.009', '');
-    DownloadPage.Show;
-    try
-      try
-        DownloadPage.Download;
-        Result := True;
-      except
-        SuppressibleMsgBox(AddPeriod(GetExceptionMessage), mbCriticalError, MB_OK, IDOK);
-        Result := False;
-      end;
-    finally
-      DownloadPage.Hide;
-    end;
-  end else
-    Result := True;
-end;

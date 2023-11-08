@@ -45,6 +45,8 @@ if [ ! -f "./assets/bin/7z.exe" ]; then
     clear
 fi
 cp -r "./assets/bin" "./${OUTPUT}/${NAME}/bin"
+cp -r "./changelog.txt" "./${OUTPUT}/${NAME}/changelog.txt"
+cp -r "./${NAME}.md" "./${OUTPUT}/${NAME}/${NAME}.md"
 sleep 2
 clear
 
