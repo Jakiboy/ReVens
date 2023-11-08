@@ -1,4 +1,10 @@
 {
+   "host": "https://revens.jihadsinnaour.com",
+   "packages": [
+		"test 1.iso",
+		"test 2.iso",
+		"test 3.iso"
+   ],
    "baseDir": false,
    "debug": false
 }

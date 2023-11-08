@@ -4,7 +4,7 @@
   "CompanyName": "Jihad Sinnaour (Jakiboy)",
   "FileDescription": "Reverse Engineering Toolkit AIO",
   "LegalCopyright": "Jakiboy (Jihad Sinnaour) 2023",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reverse Engineering Toolkit AIO",
   "main": "app.js",
   "scripts": {

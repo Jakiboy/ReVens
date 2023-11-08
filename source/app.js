@@ -1,7 +1,7 @@
 /**
  * Author  : Jihad Sinnaour (Jakiboy)
  * package : ReVens | Reverse Engineering Toolkit AIO
- * version : 1.0.0
+ * version : 1.0.1
  */
 
 'use strict';
@@ -62,6 +62,16 @@ const template = [
 				"accelerator": 'Ctrl+D',
 				click() { openDoc(); }
 			},
+			{
+				"label": 'Packages',
+				"accelerator": 'Ctrl+P',
+				click() { openInfo(); }
+			},
+			{
+				"label": 'Changelog',
+				"accelerator": 'Ctrl+X',
+				click() { openChangelog(); }
+			},
 			{ "type": 'separator' },
 			{
 				"label": 'Update',
@@ -73,6 +83,10 @@ const template = [
 				"label": 'Report issue',
 				"accelerator": 'Ctrl+I',
 				click() { openURL('https://github.com/Jakiboy/ReVens/issues'); }
+			},
+			{
+				"label": 'Edit packages',
+				click() { openURL('https://github.com/Jakiboy/ReVens/pulls'); }
 			},
 			{ "type": 'separator' },
 			{
@@ -293,14 +307,33 @@ function downloadPackages() {
 
 	// Download
 	displayProgress();
-	const host = 'https://reven.jihadsinnaour.com';
-	const count = 1;
-	for (let i = 0; i < count; i++) {
-		const part = i+1;
-		const file = `ReVens.zip.00${part}`;
-		const url = `${host}/${file}`;
-		download(url, file, part, count);
-	}
+	
+	const config = formatPath(
+		Path.join(__dirname, '/config/app.json')
+	);
+
+	Fs.readFile(config, "utf8", (err, json) => {
+		if (!err) {
+			
+			const c = JSON.parse(json);
+			let packages = [], host;
+
+			packages = c.packages;
+			host = c.host;
+
+			if ( !packages || !host ) {
+				notify('Download failed: Invalid config');
+				return;
+			}
+
+			let part = 0;
+			packages.forEach(function(file) {
+				part++;
+				const url = `${host}/${file}`;
+				download(url, file, part, packages.length);
+			});
+		}
+	});
 }
 
 /**
@@ -316,15 +349,16 @@ async function download(url, file, part, count) {
 	});
 
 	// Pipe
-	const path = getPath('bin') + file;
-	response.data.pipe(Fs.createWriteStream(formatPath(path)));
+	let path = getPath('bin') + file;
+	path = formatPath(path);
+	response.data.pipe(Fs.createWriteStream(path));
 
 	// End
 	response.data.on('end', () => {
-		notify(`Package "${file}" succesfully downloaded`);
-		complateProgress();
+		extractPackage(file);
 		if ( part == count ) {
-			extractPackages();
+			complateProgress();
+			notify('Packages succesfully downloaded');
 		}
 	});
 
@@ -381,11 +415,37 @@ function complateProgress () {
 }
 
 /**
- * Extract packages.
+ * Extract package.
  */
-function extractPackages() {
-	const bat = getPath('bin') + 'extract.bat';
-	shell.openPath(bat);
+function extractPackage(file) {
+	const name = file.replace('.iso', '');
+	const bat = getPath('bin') + `${name}.bat`;
+
+	let cmd  = `7z.exe x "./${name}.iso" -y`;
+	    cmd += "\n";
+	    cmd += `del \\f "./${name}.iso"`;
+
+	Fs.writeFile(bat, cmd, function (err) {});
+
+	setTimeout(function() {
+		shell.openPath(bat);
+	}, 2000);
+}
+
+/**
+ * Open info.
+ */
+function openInfo() {
+	const md = getPath('/') + 'ReVens.md';
+	shell.openPath(md);
+}
+
+/**
+ * Open changelog.
+ */
+function openChangelog() {
+	const c = getPath('/') + 'changelog.txt';
+	shell.openPath(c);
 }
 
 /**---------------------------------------------------
