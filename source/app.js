@@ -1,7 +1,7 @@
 /**
- * Author  : Jihad Sinnaour (Jakiboy)
+ * Author  : Jakiboy (Jihad Sinnaour)
  * package : ReVens | Reverse Engineering Toolkit AIO
- * version : 1.0.1
+ * version : 1.0.2
  */
 
 'use strict';
@@ -41,11 +41,6 @@ const template = [
 				"label": 'Explore',
 				"accelerator": 'Ctrl+E',
 				click() { openBinFolder(); }
-			},
-			{ "type": 'separator' },
-			{
-				"label": 'Download packages',
-				click() { downloadPackages(); }
 			},
 			{ "type": 'separator' },
 			{

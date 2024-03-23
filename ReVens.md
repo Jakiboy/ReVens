@@ -2,6 +2,9 @@
 
 Reverse Engineering Toolkit AIO.
 
+Download packages from https://github.com/Jakiboy/ReVens#-download
+Downloads should be extracted into /bin folder.
+
 ## ⚡ Analysing
 
 Analyse binary executable files (**EXE, DLL, OCX, SYS...**).

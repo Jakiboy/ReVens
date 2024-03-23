@@ -831,6 +831,14 @@
       "path": "Converting/PHP-EXE/RapidEXE/rapidexe.exe",
       "type": "exe"
    },
+   "dll-to-exe-cli": {
+      "path": "Converting/DLL-EXE/dll-to-exe.exe",
+      "type": "exe"
+   },
+   "exe-to-dll-cli": {
+      "path": "Converting/EXE-DLL/x64/exe-to-dll.exe",
+      "type": "exe"
+   },
    "vbstoexe-cli": {
       "path": "Converting/VBS-EXE/vbstoexe.zip",
       "type": "exe"
