@@ -3,6 +3,28 @@ All notable changes to ReVens.
 
 --------------------------
 
+## [1.0.2] - 20-03-2024
+
+### Added
+
+- DLL-EXE
+- EXE-DLL
+
+### Updated
+
+- DiE v3.09
+- Alternate DLL Analyzer v2.110
+
+--------------------------
+
+## [1.0.1] - 30-11-2023
+
+### Updated
+
+- Resource Hacker v5.2.7
+
+--------------------------
+
 ## [1.0.1] - 03-11-2023
 
 ### Fixed

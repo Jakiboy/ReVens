@@ -2,9 +2,8 @@
 
 <img src="./assets/logo.png" width="100%" alt="ReVens">
 
-ReVens is a Windows-based Reverse Engineering Toolkit "AIO", built for Security (Penetration testing) & Educational purposes **only**.  
-It contains almost everything about RE *-At least to begin-* .  
-ReVens is built to share personal experience (💜) in RE since **2008**, it can be useful for new future **Reversers** / **Developers**.
+ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Penetration testing)</u> & <u>Educational purposes only</u>.  
+I made ReVens AIO app to share personal experience in RE since **2008**.
 
 🌍 [Online preview](https://revens.jihadsinnaour.com)
 
@@ -13,7 +12,6 @@ ReVens is built to share personal experience (💜) in RE since **2008**, it can
 To run ReVens:
 
 * **Windows 10/11 x64** *-Secured VM recommended-*.
-* **ReVens Packages ISO images** *-External ReVens packages-* not available in this repository (More than **300** items).
 
 To build ReVens:
 
@@ -22,51 +20,52 @@ To build ReVens:
 ## 💡 Notices
 
 * Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
+* **100% clean**: All detections are **false positives**, there's no malware included.
 * You should make an **Antivirus** exception to avoid detection, or use a **secured** virtual machine.
 * **ReVens Packages** ARE NOT automatically downloaded.
-* **Packages** includes docs & basic tutorials about RE.
-* **100% clean**, *-but use it on your own responsibility-*.
+* Many of the included tools are **outdated** and provided solely for legacy purposes.
+* **Packages** includes basic docs & tutorials about RE.
 * **90% portable**.
+* *-Use it on your own responsibility-*
 
 ## 🔧 Download
 
-**ReVens AIO**
+**ReVens GUI**
 
 * Download from: [Releases](https://github.com/Jakiboy/ReVens/releases).
 
-**ReVens Packages** (**~8Go**)
+**ReVens Packages**
 
-Download packages manually from:
+Download packages manually from (**~8Go**) :
 
-* Part 1 - [Analysing](#)
-* Part 2 - [Assembling](#)
-* Part 3 - [Bypassing](#)
-* Part 4 - [Calculating](#)
-* Part 5 - [Comparing](#)
-* Part 6 - [Converting](#)
-* Part 7 - [Debugging](#)
-* Part 8 - [Decoding](#)
-* Part 10 - [Decompiling](#)
-* Part 11 - [Dependencies](#)
-* Part 12 - [Disassembling](#)
-* Part 13 - [Documentation](#)
-* Part 14 - [Editing](#)
-* Part 15 - [Encoding](#)
-* Part 16 - [Hexing](#)
-* Part 17 - [Mobile](#)
-* Part 18 - [Packing](#)
-* Part 19 - [Patching](#)
-* Part 20 - [Programming](#)
-* Part 21 - [Testing](#)
-* Part 22 - [Unpacking](#)
-* (Uploading new standalone packages in progress...)
-* ...
+* Part 1 - [Analysing](https://bit.ly/3x14Vd8)
+* Part 2 - [Assembling](https://bit.ly/3VsyuhU)
+* Part 3 - [Bypassing](https://bit.ly/4a24MFb)
+* Part 4 - [Calculating](https://bit.ly/3INWc0F)
+* Part 5 - [Comparing](https://bit.ly/3x6G1ZO)
+* Part 6 - [Converting](https://bit.ly/4a6RozE)
+* Part 7 - [Debugging](https://bit.ly/3TxhwMG)
+* Part 8 - [Decoding](https://bit.ly/4a63rgs)
+* Part 9 - [Decompiling](https://bit.ly/3Tqzi4t)
+* Part 10 - [Dependencies](https://bit.ly/4a4p8xv)
+* Part 11 - [Disassembling](https://bit.ly/3x8J43J)
+* Part 12 - [Documentation](https://bit.ly/3TLUmU9)
+* Part 13 - [Editing](https://bit.ly/498HUCo)
+* Part 14 - [Encoding](https://bit.ly/4a3nQCV)
+* Part 15 - [Extracting](https://bit.ly/3vnBu4F)
+* Part 16 - [Hexing](https://bit.ly/4cv6TTB)
+* Part 17 - [Mobile](https://bit.ly/3IQT5VC)
+* Part 18 - [Packing](https://bit.ly/4apwGuw)
+* Part 19 - [Patching](https://bit.ly/3Vppjit)
+* Part 20 - [Programming](https://bit.ly/4a4nOux)
+* Part 21 - [Testing](https://bit.ly/43sQgDU)
+* Part 22 - [Unpacking](https://bit.ly/4aph2iQ)
 
-Downloads should be extracted into */bin*.
+Downloads should be extracted into */bin* folder.
 
 ## 🔧 Screenshots
 
-This is how it looks, Built with {heart} using **Electron.js** + Some legacy {stuff}.
+This is how it looks, Made with {heart} using **Electron.js** + Some old {stuff}.
 
 ![ReVens AIO](./assets/screenshot-1.png)
 
@@ -195,6 +194,8 @@ Convert binary files.
 * **PS1 to EXE**
 * **VBS to EXE**
 * **JAR to EXE**
+* **DLL to EXE**
+* **EXE to DLL**
 * **PNG to ICO**
 * **Audio Video to EXE**
 * **RapidEXE (PHP - EXE) (CLI)**
@@ -595,13 +596,14 @@ Universal mobile toolkits.
 * Improve UI using **React.js**.
 * Update **Electron.js** to the latest (+ Dependencies).
 * Use public cloud for packages hosting.
-* Maybe use internal **Node.js** packages extractor.
-* Update Docs, (Add Links to active RE challenges, Remove outdated...).
+* Use internal **Node.js** packages downloader & extractor.
+* Add updater (including packages **path.json**).
+* Update Docs, (Add Links to active RE challenges & Forums, Remove outdated...).
 
 ## Authors:
 
 * [Jakiboy](https://github.com/Jakiboy) (*Initial work*)
-* Any Pull is welcome!
+* Any PR is welcome!
 
 ### ⭐ Support:
 

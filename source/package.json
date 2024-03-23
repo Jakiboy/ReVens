@@ -1,10 +1,10 @@
 {
   "name": "revens",
   "productName": "ReVens",
-  "CompanyName": "Jihad Sinnaour (Jakiboy)",
+  "CompanyName": "Jakiboy (Jihad Sinnaour)",
   "FileDescription": "Reverse Engineering Toolkit AIO",
-  "LegalCopyright": "Jakiboy (Jihad Sinnaour) 2023",
-  "version": "1.0.1",
+  "LegalCopyright": "Jihad Sinnaour 2024",
+  "version": "1.0.2",
   "description": "Reverse Engineering Toolkit AIO",
   "main": "app.js",
   "scripts": {

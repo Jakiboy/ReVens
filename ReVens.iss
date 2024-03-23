@@ -1,18 +1,18 @@
 ; ======================================================================================================================
 ; ReVens | Reverse Engineering Toolkit AIO
 ;
-; Author: Jihad Sinnaour (Jakiboy) <j.sinnaour.official@gmail.com>
-; URL: https://github.com/Jakiboy/reven
-; Copyright (C) 2023 Jihad Sinnaour. All rights reserved.
+; Author: Jakiboy (Jihad Sinnaour) <mail@jihadsinnaour.com>
+; URL: https://github.com/Jakiboy/ReVens
+; Copyright (C) 2024 Jihad Sinnaour. All rights reserved.
 ; ======================================================================================================================
 
 ; Define:
 
 #define InstallerRoot "."
 #define InstallerAppName "ReVens"
-#define InstallerAppVersion "1.0.1"
-#define InstallerAppPublisher "Jihad Sinnaour (Jakiboy)"
-#define InstallerAppURL "https://github.com/Jakiboy/reven"
+#define InstallerAppVersion "1.0.2"
+#define InstallerAppPublisher "Jakiboy (Jihad Sinnaour)"
+#define InstallerAppURL "https://github.com/Jakiboy/ReVens"
 #define InstallerAppExeName "ReVens.exe"
 
 ; Setup:
@@ -22,7 +22,7 @@ AppId={{6BC257DE-E3DC-4298-ADF8-314D054DB461}
 AppName={#InstallerAppName}
 AppVersion={#InstallerAppVersion}
 VersionInfoVersion={#InstallerAppVersion}
-VersionInfoCopyright="Copyright (c) 2023 {#InstallerAppPublisher}"
+VersionInfoCopyright="Copyright (c) 2024 {#InstallerAppPublisher}"
 AppPublisher={#InstallerAppPublisher}
 AppPublisherURL={#InstallerAppURL}
 AppSupportURL={#InstallerAppURL}
