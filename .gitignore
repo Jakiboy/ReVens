@@ -1,6 +1,7 @@
 build
 compiler
+dist
 node_modules
-source/inc/vendor
+src/inc/vendor
 assets/bin/7z.*
 package-lock.json

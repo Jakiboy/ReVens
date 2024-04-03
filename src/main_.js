@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy (Jihad Sinnaour)
- * package : ReVens | Reverse Engineering Toolkit AIO
- * version : 1.0.2
+ * Package : ReVens | Reverse Engineering Toolkit AIO
+ * Version : 1.2.0
  */
 
 'use strict';
@@ -14,11 +14,11 @@ const { app, shell, dialog, Menu, Tray, Notification, BrowserWindow, globalShort
 /**
  * Dependencies init.
  */
-const Path = require('path');
-const Url = require('url');
-const Progress = require('electron-progressbar');
-const Fs = require('fs');
+const path = require('path');
+const url = require('url');
+const fs = require('fs');
 const Axios = require('axios');
+const Progress = require('electron-progressbar');
 
 /**
  * Tray init.
@@ -143,8 +143,8 @@ app.once('ready', () => {
 	splash.removeMenu();
 
 	// Load Splash
-	splash.loadURL(Url.format({
-		"pathname": Path.join(__dirname, 'splash.html'),
+	splash.loadURL(url.format({
+		"pathname": path.join(__dirname, 'splash.html'),
 		"protocol": 'file:',
 		"slashes": true
 	}));
@@ -154,7 +154,7 @@ app.once('ready', () => {
 		"title": 'ReVens - Reverse Engineering AIO',
 		"frame": true,
 		"width": 1000,
-		"height": 700,
+		"height": 720,
 		"opacity": 0.95,
 		"show": false,
 		"center": true,
@@ -165,17 +165,17 @@ app.once('ready', () => {
 		"fullscreen": false,
 		"skipTaskbar": false,
 		"closable": true,
-		"icon": Path.join(__dirname, '/assets/img/icon.png'),
+		"icon": path.join(__dirname, '../app/assets/img/icon.png'),
 		"webPreferences": {
-			"devTools": false,
+			"devTools": true,
 			"nodeIntegration": true,
 			"contextIsolation": false
 		}
 	});
 
 	// Load Main
-	win.loadURL(Url.format({
-		"pathname": Path.join(__dirname, 'main.html'),
+	win.loadURL(url.format({
+		"pathname": path.join(__dirname, 'main.html'),
 		"protocol": 'file:',
 		"slashes": true
 	}));
@@ -192,7 +192,7 @@ app.once('ready', () => {
 	win.on('minimize', (e) => {
 		e.preventDefault();
 		win.hide();
-		tray = new Tray(Path.join(__dirname, '/assets/img/icon.ico'));
+		tray = new Tray(path.join(__dirname, './app/assets/img/icon.ico'));
 		tray.setToolTip('ReVens');
 		const template = [
 			{
@@ -226,7 +226,7 @@ app.once('ready', () => {
 	});
 
 	// Dev
-	// win.webContents.openDevTools();
+	win.webContents.openDevTools();
 
 });
 
@@ -268,10 +268,10 @@ function openBinFolder() {
  * Get path.
  */
 function getPath(dir) {
-	const root = Path.dirname(
-		Path.dirname(__dirname)
+	const root = path.dirname(
+		path.dirname(__dirname)
 	);
-	return Path.join(root, dir + '/');
+	return path.join(root, dir + '/');
 }
 
 /**
@@ -282,7 +282,7 @@ function notify(msg) {
 		new Notification({
 			"title": 'ReVens',
 			"body": msg,
-			"icon": Path.join(__dirname, '/assets/img/icon.png')
+			"icon": path.join(__dirname, '../app/assets/img/icon.png')
 		}).show();
 	}
 }
@@ -304,10 +304,10 @@ function downloadPackages() {
 	displayProgress();
 	
 	const config = formatPath(
-		Path.join(__dirname, '/config/app.json')
+		path.join(__dirname, '/config/app.json')
 	);
 
-	Fs.readFile(config, "utf8", (err, json) => {
+	fs.readFile(config, "utf8", (err, json) => {
 		if (!err) {
 			
 			const c = JSON.parse(json);
@@ -346,7 +346,7 @@ async function download(url, file, part, count) {
 	// Pipe
 	let path = getPath('bin') + file;
 	path = formatPath(path);
-	response.data.pipe(Fs.createWriteStream(path));
+	response.data.pipe(fs.createWriteStream(path));
 
 	// End
 	response.data.on('end', () => {
@@ -378,7 +378,7 @@ function displayProgress() {
 		"browserWindow": {
 			"parent": win,
 			"modal": true,
-			"icon": Path.join(__dirname, '/assets/img/icon.ico'),
+			"icon": path.join(__dirname, './app/assets/img/icon.ico'),
 			'webPreferences': {
             	'nodeIntegration': true
         	}
@@ -420,7 +420,7 @@ function extractPackage(file) {
 	    cmd += "\n";
 	    cmd += `del \\f "./${name}.iso"`;
 
-	Fs.writeFile(bat, cmd, function (err) {});
+	fs.writeFile(bat, cmd, function (err) {});
 
 	setTimeout(function() {
 		shell.openPath(bat);
@@ -466,15 +466,15 @@ function openAbout() {
 		"autoHideMenuBar": true,
 		"minimizable": false,
 		"maximizable": false,
-		"icon": Path.join(__dirname, '/assets/img/icon.png')
+		"icon": path.join(__dirname, '../app/assets/img/icon.png')
 	});
 
 	// Remove menu
 	about.removeMenu();
 
 	// Load About
-	about.loadURL(Url.format({
-		"pathname": Path.join(__dirname, 'about.html'),
+	about.loadURL(url.format({
+		"pathname": path.join(__dirname, 'about.html'),
 		"protocol": 'file:',
 		"slashes": true
 	}));
@@ -516,15 +516,15 @@ function openDoc() {
 		"autoHideMenuBar": true,
 		"minimizable": false,
 		"maximizable": false,
-		"icon": Path.join(__dirname, '/assets/img/icon.png')
+		"icon": path.join(__dirname, '../app/assets/img/icon.png')
 	});
 
 	// Remove menu
 	doc.removeMenu();
 
 	// Load Doc
-	doc.loadURL(Url.format({
-		"pathname": Path.join(__dirname, 'doc.html'),
+	doc.loadURL(url.format({
+		"pathname": path.join(__dirname, 'doc.html'),
 		"protocol": 'file:',
 		"slashes": true
 	}));

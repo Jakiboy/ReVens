@@ -1,0 +1,218 @@
+{
+    "sections": [
+        {
+            "name": "Analysing",
+            "icon": "magnifier",
+            "description": "Analyse executable files (<strong>EXE, DLL, OCX, SYS</strong>)",
+            "subs": [
+                {
+                    "title": "Binary",
+                    "description": "Analyse binary / bytecode"
+                },
+                {
+                    "title": "Compilation",
+                    "description": "Analyse PE compilation / signature"
+                },
+                {
+                    "title": "Packaging",
+                    "description": "Analyse PE packaging / protection"
+                },
+                {
+                    "title": "System",
+                    "description": "Dynamic system analysis (API, Process, Memory, Network, File)"
+                },
+                {
+                    "title": "Comparing",
+                    "description": "Compare binary files"
+                },
+                {
+                    "title": "Calculating",
+                    "description": "Mathematical & reverse calculating"
+                },
+                {
+                    "title": "Sandboxing",
+                    "description": "Executables safe testing"
+                }
+            ]
+        },
+        {
+            "name": "Unpacking",
+            "icon": "puzzle",
+            "description": "Unpack & remove binary protection (<strong>UPX, ASPack</strong>)",
+            "subs": [
+                {
+                    "title": "Unprotect",
+                    "description": "Remove PE protection"
+                },
+                {
+                    "title": "Decoding",
+                    "description": "Decode hash, encrypt / decrypt keys"
+                },
+                {
+                    "title": "Extracting",
+                    "description": "Extract binary executable files"
+                }
+            ]
+        },
+        {
+            "name": "Debugging",
+            "icon": "chemistry",
+            "description": "View and change the running state of a program (<strong>Disassembling, Decompiling, Hexing</strong>)",
+            "subs": [
+                {
+                    "title": "Manipulation",
+                    "description": "Manipulate PE using debugging platforms"
+                },
+                {
+                    "title": "Disassembling",
+                    "description": "Transforme machine code into <strong>Assembly language</strong>"
+                },
+                {
+                    "title": "Decompiling",
+                    "description": "Revert the process of compilation"
+                },
+                {
+                    "title": "Hexing",
+                    "description": "Edit PE hexadecimal"
+                }
+            ]
+        },
+        {
+            "name": "Editing",
+            "icon": "equalizer",
+            "description": "Edit executable files",
+            "subs": [
+                {
+                    "title": "Hack",
+                    "description": "Hack into PE ressources"
+                },
+                {
+                    "title": "Building",
+                    "description": "Build (PE, Setup, Res)"
+                },
+                {
+                    "title": "Rebuilding",
+                    "description": "Rebuild PE import table / DLL"
+                },
+                {
+                    "title": "Converting",
+                    "description": "Convert scripts / binary files"
+                }
+            ]
+        },
+        {
+            "name": "Patching",
+            "icon": "fire",
+            "description": "Generate patching program using <strong>binary compare</strong>",
+            "subs": [
+                {
+                    "title": "Patcher",
+                    "description": "Build binary patcher"
+                },
+                {
+                    "title": "Loader",
+                    "description": "Build binary patch loader"
+                },
+                {
+                    "title": "Keygen",
+                    "description": "Build Key generator"
+                },
+                {
+                    "title": "Skin",
+                    "description": "Build patcher skin",
+                    "extra": [
+                        "Patcher skins"
+                    ]
+                },
+                {
+                    "title": "Release",
+                    "description": "Build patcher release / NFO file"
+                },
+                {
+                    "title": "ASCII",
+                    "description": "Build patcher release ASCII"
+                },
+                {
+                    "title": "Sound",
+                    "description": "Build patcher sound (MX)",
+                    "extra": [
+                        "Patcher sounds"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Bypassing",
+            "icon": "umbrella",
+            "description": "Bypassing executable process",
+            "subs": [
+                {
+                    "title": "Trial",
+                    "description": "Trial reset"
+                },
+                {
+                    "title": "System",
+                    "description": "Bypassing system"
+                }
+            ]
+        },
+        {
+            "name": "Misc",
+            "icon": "plus",
+            "description": "Extra miscellaneous ressources",
+            "subs": [
+                {
+                    "title": "Assembling",
+                    "description": "Assembling Machine code"
+                },
+                {
+                    "title": "Encoding",
+                    "description": "Data encoding"
+                },
+                {
+                    "title": "Packing",
+                    "description": "Protect executable files"
+                },
+                {
+                    "title": "Mobile",
+                    "description": "Universal mobile toolkits",
+                    "extra": [
+                        "Android",
+                        "IOS"
+                    ]
+                },
+                {
+                    "title": "Simulating",
+                    "description": "Circuit / Logical simulation"
+                },
+                {
+                    "title": "Programming",
+                    "description": "Programming tools (+ Compilators)"
+                },
+                {
+                    "title": "Editing",
+                    "description": "Editing text files"
+                },
+                {
+                    "title": "Dependencies",
+                    "description": "Toolkit's standalone & offline dependencies"
+                }
+            ]
+        },
+        {
+            "name": "Docs",
+            "icon": "notebook",
+            "description": "Reverse Engineering Docs (Beginners)",
+            "subs": [
+                {
+                    "title": "Introduction",
+                    "description": "Introducing Reverse Engineering"
+                },
+                {
+                    "title": "Cracking",
+                    "description": "Learn about cracking"
+                }
+            ]
+        }
+    ]
+}
