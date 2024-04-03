@@ -1,6 +1,6 @@
 # ReVens: Reverse Engineering Toolkit AIO
 
-<img src="./assets/logo.png" width="100%" alt="ReVens">
+<img src="./app/assets/logo.png" width="100%" alt="ReVens">
 
 ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Penetration testing)</u> & <u>Educational purposes only</u>.  
 I made ReVens AIO app to share personal experience in RE since **2008**.
@@ -15,7 +15,7 @@ To run ReVens:
 
 To build ReVens:
 
-* **Node.js** ^24.
+* **Node.js** ^20.0
 
 ## 💡 Notices
 
@@ -72,8 +72,8 @@ This is how it looks, Made with {heart} using **Electron.js** + Some old {stuff}
 *The App background is the electron DevTools itself*.
 
 <p float="left">
-    <img src="./assets/screenshot-2.png" width="48%">
-    <img src="./assets/screenshot-3.png" width="48%">
+    <img src="./app/assets/screenshot-2.png" width="48%">
+    <img src="./app/assets/screenshot-3.png" width="48%">
 </p>
 
 ## 🔧 Install, Run & Build
