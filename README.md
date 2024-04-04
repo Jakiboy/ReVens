@@ -1,6 +1,6 @@
 # ReVens: Reverse Engineering Toolkit AIO
 
-<img src="./assets/logo.png" width="100%" alt="ReVens">
+<img src="./.static/preview/banner.png" width="100%" alt="ReVens">
 
 ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Penetration testing)</u> & <u>Educational purposes only</u>.  
 I made ReVens AIO app to share personal experience in RE since **2008**.
