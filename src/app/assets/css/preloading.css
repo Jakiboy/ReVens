@@ -1,0 +1,21 @@
+/* -------------------------------------- */
+/* Author  : Jakiboy (Jihad Sinnaour)
+/* package : ReVens | Reverse Engineering Toolkit AIO
+/* version : 1.2.0
+/* -------------------------------------- */
+
+html,
+body {
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    overflow: hidden;
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    background: #303030 url(../img/screenshot.png);
+    color: #bdbdbf;
+}

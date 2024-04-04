@@ -3,10 +3,7 @@
 /* package : ReVens | Reverse Engineering Toolkit AIO
 /* version : 1.2.0
 /* -------------------------------------- */
-@font-face {
-    font-family: 'Oxanium';
-    src: local('Oxanium'), url('font/Oxanium.ttf') format('truetype');
-}
+
 html,
 body {
     user-select: none;
@@ -15,12 +12,13 @@ body {
     -moz-user-drag: none;
     -o-user-drag: none;
     overflow: hidden;
+    background-color: #303030;
+    color: #bdbdbf;
     font-family: "Oxanium", sans-serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
-    background-color: #303030;
-    color: #bdbdbf;
+    height: 100%;
 }
 img {
     max-width: 100%;
@@ -30,6 +28,14 @@ img {
 }
 strong {
     font-weight: 500;
+}
+
+/* ----------------------------- */
+/* main */
+/* ----------------------------- */
+.main {
+    background: #303030 url(../img/screenshot.png);
+    color: #bdbdbf;
 }
 
 /* ----------------------------- */
@@ -220,14 +226,6 @@ strong {
 }
 
 /* ----------------------------- */
-/* main */
-/* ----------------------------- */
-.main {
-    background: #303030 url(../img/screenshot.png);
-    color: #bdbdbf;
-}
-
-/* ----------------------------- */
 /* about */
 /* ----------------------------- */
 .about {
@@ -245,6 +243,14 @@ strong {
 }
 .about a:hover {
     text-decoration: underline;
+}
+
+/* ----------------------------- */
+/* font */
+/* ----------------------------- */
+@font-face {
+    font-family: 'Oxanium';
+    src: local('Oxanium'), url('font/oxanium.ttf') format('truetype');
 }
 
 /* responsive */
