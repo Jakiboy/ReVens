@@ -1,33 +1,40 @@
 {
     "sections": [
         {
-            "name": "Analysing",
+            "name": "Analyzing",
             "icon": "magnifier",
-            "description": "Analyse executable files (<strong>EXE, DLL, OCX, SYS</strong>)",
+            "description": "Analyze executable files (<strong>EXE, DLL, OCX, SYS, ELF</strong>)",
             "subs": [
                 {
                     "title": "Binary",
-                    "description": "Analyse binary / bytecode"
+                    "description": "Analyze binary (<strong>Bytecode, Mach-O</strong>)"
                 },
                 {
                     "title": "Compilation",
-                    "description": "Analyse PE compilation / signature"
+                    "description": "Analyze PE compilation, signature and more"
                 },
                 {
                     "title": "Packaging",
-                    "description": "Analyse PE packaging / protection"
+                    "description": "Analyze PE packaging and protection"
                 },
                 {
                     "title": "System",
-                    "description": "Dynamic system analysis (API, Process, Memory, Network, File)"
+                    "description": "Dynamic system analysis (<strong>Runtime</strong>)",
+                    "extra": [
+                        "API",
+                        "Process",
+                        "Memory",
+                        "Network",
+                        "File"
+                    ]
                 },
                 {
                     "title": "Comparing",
-                    "description": "Compare binary files"
+                    "description": "Compare binary files (<strong>Binary diffing</strong>)"
                 },
                 {
                     "title": "Calculating",
-                    "description": "Mathematical & reverse calculating"
+                    "description": "Mathematical and reverse calculating"
                 },
                 {
                     "title": "Sandboxing",
@@ -38,15 +45,15 @@
         {
             "name": "Unpacking",
             "icon": "puzzle",
-            "description": "Unpack & remove binary protection (<strong>UPX, ASPack</strong>)",
+            "description": "Unpack and remove binary protection (<strong>UPX, ASPack, VMProtect</strong>)",
             "subs": [
                 {
                     "title": "Unprotect",
-                    "description": "Remove PE protection"
+                    "description": "Remove PE protection and obfuscation"
                 },
                 {
                     "title": "Decoding",
-                    "description": "Decode hash, encrypt / decrypt keys"
+                    "description": "Decode hashed values (<strong>Crypto</strong>)"
                 },
                 {
                     "title": "Extracting",
@@ -61,7 +68,7 @@
             "subs": [
                 {
                     "title": "Manipulation",
-                    "description": "Manipulate PE using debugging platforms"
+                    "description": "Interactive disassembly and runtime manipulation"
                 },
                 {
                     "title": "Disassembling",
@@ -73,7 +80,7 @@
                 },
                 {
                     "title": "Hexing",
-                    "description": "Edit PE hexadecimal"
+                    "description": "Edit PE hexadecimal representation"
                 }
             ]
         },
@@ -83,20 +90,20 @@
             "description": "Edit executable files",
             "subs": [
                 {
-                    "title": "Hack",
-                    "description": "Hack into PE ressources"
+                    "title": "Manipulating",
+                    "description": "Manipulate PE ressources"
                 },
                 {
                     "title": "Building",
-                    "description": "Build (PE, Setup, Res)"
+                    "description": "Compile and build (<strong>PE, Setup, Res</strong>)"
                 },
                 {
                     "title": "Rebuilding",
-                    "description": "Rebuild PE import table / DLL"
+                    "description": "Reconstruct PE files (<strong>DLL, Import tables</strong>)"
                 },
                 {
                     "title": "Converting",
-                    "description": "Convert scripts / binary files"
+                    "description": "Convert scripts and binary files"
                 }
             ]
         },
@@ -126,15 +133,15 @@
                 },
                 {
                     "title": "Release",
-                    "description": "Build patcher release / NFO file"
+                    "description": "Build patcher release and <strong>NFO</strong> file"
                 },
                 {
                     "title": "ASCII",
-                    "description": "Build patcher release ASCII"
+                    "description": "Build patcher release <strong>ASCII</strong>"
                 },
                 {
                     "title": "Sound",
-                    "description": "Build patcher sound (MX)",
+                    "description": "Build patcher sound (<strong>MX</strong>)",
                     "extra": [
                         "Patcher sounds"
                     ]
@@ -163,7 +170,7 @@
             "subs": [
                 {
                     "title": "Assembling",
-                    "description": "Assembling Machine code"
+                    "description": "Assembling <strong>Machine code</strong>"
                 },
                 {
                     "title": "Encoding",
@@ -175,7 +182,7 @@
                 },
                 {
                     "title": "Mobile",
-                    "description": "Universal mobile toolkits",
+                    "description": "Universal mobile RE toolkits",
                     "extra": [
                         "Android",
                         "IOS"
@@ -183,11 +190,11 @@
                 },
                 {
                     "title": "Simulating",
-                    "description": "Circuit / Logical simulation"
+                    "description": "Circuit and logical simulation"
                 },
                 {
                     "title": "Programming",
-                    "description": "Programming tools (+ Compilators)"
+                    "description": "Programming tools (<strong>+ Compilators</strong>)"
                 },
                 {
                     "title": "Editing",
@@ -195,7 +202,7 @@
                 },
                 {
                     "title": "Dependencies",
-                    "description": "Toolkit's standalone & offline dependencies"
+                    "description": "Toolkit's standalone and offline dependencies"
                 }
             ]
         },

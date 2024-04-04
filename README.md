@@ -38,7 +38,7 @@ To build ReVens:
 
 Download packages manually from (**~8Go**) :
 
-* Part 1 - [Analysing](https://bit.ly/3x14Vd8)
+* Part 1 - [Analyzing](https://bit.ly/3x14Vd8)
 * Part 2 - [Assembling](https://bit.ly/3VsyuhU)
 * Part 3 - [Bypassing](https://bit.ly/4a24MFb)
 * Part 4 - [Calculating](https://bit.ly/3INWc0F)
@@ -89,7 +89,7 @@ bash build.sh
   
 ReVens packages includes:
 
-### ⚡ Analysing
+### ⚡ Analyzing
 
 Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 

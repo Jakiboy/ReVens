@@ -13,7 +13,7 @@ import Footer from './components/footer';
 
 const Launcher = () => {
 
-  const [activeTab, setActiveTab] = useState('section-1');
+  const [activeTab, setActiveTab] = useState('analyzing');
 
   return (
     <>

@@ -3,1948 +3,3114 @@
         {
             "name":"filealyzer",
             "type":"exe",
-            "path":"Analysing\/Binary\/FileAlyzer\/FileAlyzer2.exe"
+            "path":"Analyzing\/Binary\/FileAlyzer\/FileAlyzer2.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"capa-cli",
             "type":"cli",
-            "path":"Analysing\/Binary\/Capa\/capa.exe"
+            "path":"Analyzing\/Binary\/Capa\/capa.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"alternate-dll-analyzer",
             "type":"exe",
-            "path":"Analysing\/Binary\/Alternate DLL Analyzer\/DllAnalyzer.exe"
+            "path":"Analyzing\/Binary\/Alternate DLL Analyzer\/DllAnalyzer.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sysinspector",
             "type":"exe",
-            "path":"Analysing\/Binary\/SysInspector.zip"
+            "path":"Analyzing\/Binary\/SysInspector.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"windows-kernel-explorer",
             "type":"exe",
-            "path":"Analysing\/Binary\/Windows Kernel Explorer.zip"
+            "path":"Analyzing\/Binary\/Windows Kernel Explorer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"malzilla",
             "type":"exe",
-            "path":"Analysing\/Binary\/Malzilla.zip"
+            "path":"Analyzing\/Binary\/Malzilla.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"spyre",
             "type":"exe",
-            "path":"Analysing\/Binary\/Spyre.zip"
+            "path":"Analyzing\/Binary\/Spyre.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"exeinfo",
             "type":"exe",
-            "path":"Analysing\/Binary\/ExeInfo.zip"
+            "path":"Analyzing\/Binary\/ExeInfo.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"pebear",
             "type":"exe",
-            "path":"Analysing\/Binary\/PE-bear.zip"
+            "path":"Analyzing\/Binary\/PE-bear.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"manalyze",
             "type":"exe",
-            "path":"Analysing\/Binary\/Manalyze.zip"
+            "path":"Analyzing\/Binary\/Manalyze.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"clamav",
             "type":"exe",
-            "path":"Analysing\/Binary\/ClamAV.zip"
+            "path":"Analyzing\/Binary\/ClamAV.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"yara",
             "type":"exe",
-            "path":"Analysing\/Binary\/Yara.zip"
+            "path":"Analyzing\/Binary\/Yara.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"bytecode-viewer",
             "type":"exe",
-            "path":"Analysing\/Bytecode\/Bytecode Viewer.zip"
+            "path":"Analyzing\/Bytecode\/Bytecode Viewer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"detect-it-easy-die",
             "type":"exe",
-            "path":"Analysing\/Compilation\/Detect It Easy\/x64\/die.exe"
+            "path":"Analyzing\/Compilation\/Detect It Easy\/x64\/die.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"nauz-file-detector",
             "type":"exe",
-            "path":"Analysing\/Compilation\/Nauz File Detector.zip"
+            "path":"Analyzing\/Compilation\/Nauz File Detector.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"language-2000",
             "type":"exe",
-            "path":"Analysing\/Compilation\/Language 2000.zip"
+            "path":"Analyzing\/Compilation\/Language 2000.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"pe-detective",
             "type":"exe",
-            "path":"Analysing\/Compilation\/PE Detective.zip"
+            "path":"Analyzing\/Compilation\/PE Detective.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"signature-explorer",
             "type":"exe",
-            "path":"Analysing\/Compilation\/Signature Explorer.zip"
+            "path":"Analyzing\/Compilation\/Signature Explorer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"peid",
             "type":"exe",
-            "path":"Analysing\/Packaging\/PEiD.zip"
+            "path":"Analyzing\/Packaging\/PEiD.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"exeinfo-pe",
             "type":"exe",
-            "path":"Analysing\/Packaging\/Exeinfo PE\/exeinfope.exe"
+            "path":"Analyzing\/Packaging\/Exeinfo PE\/exeinfope.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"arid",
             "type":"exe",
-            "path":"Analysing\/Packaging\/ARiD.zip"
+            "path":"Analyzing\/Packaging\/ARiD.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"upx-analyser",
             "type":"exe",
-            "path":"Analysing\/Packaging\/UPX-Analyser.zip"
+            "path":"Analyzing\/Packaging\/UPX-Analyzer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"searchmyfiles",
             "type":"exe",
-            "path":"Analysing\/System\/File\/SearchMyFiles\/x64\/SearchMyFiles.exe"
+            "path":"Analyzing\/System\/File\/SearchMyFiles\/x64\/SearchMyFiles.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"exif-data-view",
             "type":"exe",
-            "path":"Analysing\/System\/File\/Exif Data View\/ExifDataView.exe"
+            "path":"Analyzing\/System\/File\/Exif Data View\/ExifDataView.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sqlite-tools",
             "type":"exe",
-            "path":"Analysing\/System\/File\/SQLite Tools\/sqlite3.exe"
+            "path":"Analyzing\/System\/File\/SQLite Tools\/sqlite3.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sqlite-browser",
             "type":"exe",
-            "path":"Analysing\/System\/File\/SQLite Browser\/x64\/DB Browser for SQLite.exe"
+            "path":"Analyzing\/System\/File\/SQLite Browser\/x64\/DB Browser for SQLite.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"grepwin",
             "type":"exe",
-            "path":"Analysing\/System\/File\/grepWin.zip"
+            "path":"Analyzing\/System\/File\/grepWin.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hijackthis",
             "type":"exe",
-            "path":"Analysing\/System\/Process\/HijackThis\/HijackThis.exe"
+            "path":"Analyzing\/System\/Process\/HijackThis\/HijackThis.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"process-monitor",
             "type":"exe",
-            "path":"Analysing\/System\/Process\/Process Monitor\/Procmon64.exe"
+            "path":"Analyzing\/System\/Process\/Process Monitor\/Procmon64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"cpu-stress",
             "type":"exe",
-            "path":"Analysing\/System\/Process\/CPU Stress\/CPUStress.exe"
+            "path":"Analyzing\/System\/Process\/CPU Stress\/CPUStress.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"deviceioview",
             "type":"exe",
-            "path":"Analysing\/System\/Process\/DeviceIOView\/x64\/DeviceIOView.exe"
+            "path":"Analyzing\/System\/Process\/DeviceIOView\/x64\/DeviceIOView.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"autoruns",
             "type":"exe",
-            "path":"Analysing\/System\/Process\/Autoruns\/Autoruns64.exe"
+            "path":"Analyzing\/System\/Process\/Autoruns\/Autoruns64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"process-explorer",
             "type":"exe",
-            "path":"Analysing\/System\/Process\/Process Explorer.zip"
+            "path":"Analyzing\/System\/Process\/Process Explorer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"process-hacker",
             "type":"exe",
-            "path":"Analysing\/System\/Process\/Process Hacker.zip"
+            "path":"Analyzing\/System\/Process\/Process Hacker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"gdiview",
             "type":"exe",
-            "path":"Analysing\/System\/Process\/GDIView.zip"
+            "path":"Analyzing\/System\/Process\/GDIView.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"api-monitor",
             "type":"exe",
-            "path":"Analysing\/System\/API\/API Monitor\/apimonitor-x64.exe"
+            "path":"Analyzing\/System\/API\/API Monitor\/apimonitor-x64.exe",
+            "section":"Analyzing",
+            "sub":"system-api",
+            "url":false
         },
         {
             "name":"dll-function-viewer",
             "type":"exe",
-            "path":"Analysing\/System\/API\/DLL Function Viewer.zip"
+            "path":"Analyzing\/System\/API\/DLL Function Viewer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dependency-walker",
             "type":"exe",
-            "path":"Analysing\/System\/API\/Dependency Walker.zip"
+            "path":"Analyzing\/System\/API\/Dependency Walker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"regdllview",
             "type":"exe",
-            "path":"Analysing\/System\/API\/RegDLLView\/x64\/RegDllView.exe"
+            "path":"Analyzing\/System\/API\/RegDLLView\/x64\/RegDllView.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"winobj",
             "type":"exe",
-            "path":"Analysing\/System\/API\/WinObj\/WinObj.exe"
+            "path":"Analyzing\/System\/API\/WinObj\/WinObj.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"winid",
             "type":"exe",
-            "path":"Analysing\/System\/API\/WinID\/WinID.exe"
+            "path":"Analyzing\/System\/API\/WinID\/WinID.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"zero-dump",
             "type":"exe",
-            "path":"Analysing\/System\/API\/Zero Dump.zip"
+            "path":"Analyzing\/System\/API\/Zero Dump.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"heapmemview",
             "type":"exe",
-            "path":"Analysing\/System\/Memory\/HeapMemView\/x64\/HeapMemView.exe"
+            "path":"Analyzing\/System\/Memory\/HeapMemView\/x64\/HeapMemView.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"fiddler",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/Fiddler\/Fiddler.exe"
+            "path":"Analyzing\/System\/Network\/Fiddler\/Fiddler.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"wireshark",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/Wireshark.zip"
+            "path":"Analyzing\/System\/Network\/Wireshark.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"tcpview",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/TCPView\/TCPView.exe"
+            "path":"Analyzing\/System\/Network\/TCPView\/TCPView.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"aircrackng",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/Aircrack-ng\/Aircrack-ng GUI.exe"
+            "path":"Analyzing\/System\/Network\/Aircrack-ng\/Aircrack-ng GUI.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"pe-network-manager",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/PE Network Manager\/x64\/PENetwork.exe"
+            "path":"Analyzing\/System\/Network\/PE Network Manager\/x64\/PENetwork.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"networkminer",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/NetworkMiner.zip"
+            "path":"Analyzing\/System\/Network\/NetworkMiner.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"smartsniff",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/SmartSniff\/x64\/smsniff.exe"
+            "path":"Analyzing\/System\/Network\/SmartSniff\/x64\/smsniff.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"whois-this-domain",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/WhoIs This Domain\/whoistd.exe"
+            "path":"Analyzing\/System\/Network\/WhoIs This Domain\/whoistd.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dns-lookup-view",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/DNS Lookup View\/DNSLookupView.exe"
+            "path":"Analyzing\/System\/Network\/DNS Lookup View\/DNSLookupView.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sniffpass",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/SniffPass.zip"
+            "path":"Analyzing\/System\/Network\/SniffPass.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"whois-connected-sniffer",
             "type":"exe",
-            "path":"Analysing\/System\/Network\/WhoIs Connected Sniffer.zip"
+            "path":"Analyzing\/System\/Network\/WhoIs Connected Sniffer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"alternate-math-solver",
             "type":"exe",
-            "path":"Calculating\/Alternate Math Solver\/MathSolver.exe"
+            "path":"Calculating\/Alternate Math Solver\/MathSolver.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"reverser-calculator",
             "type":"exe",
-            "path":"Calculating\/Reverser Calculator\/ReverserCalculator.exe"
+            "path":"Calculating\/Reverser Calculator\/ReverserCalculator.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hex-dec",
             "type":"exe",
-            "path":"Calculating\/Hex-Dec\/HexDec.exe"
+            "path":"Calculating\/Hex-Dec\/HexDec.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jmp-calculator",
             "type":"exe",
-            "path":"Calculating\/JMP Calculator\/JMPCalc.exe"
+            "path":"Calculating\/JMP Calculator\/JMPCalc.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xopcodecalc",
             "type":"exe",
-            "path":"Calculating\/XOpcodeCalc.zip"
+            "path":"Calculating\/XOpcodeCalc.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hash-calculator",
             "type":"exe",
-            "path":"Calculating\/Hash Calculator.zip"
+            "path":"Calculating\/Hash Calculator.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"base-calculator",
             "type":"exe",
-            "path":"Calculating\/Base Calculator.zip"
+            "path":"Calculating\/Base Calculator.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"base-converter",
             "type":"exe",
-            "path":"Calculating\/Base Converter.zip"
+            "path":"Calculating\/Base Converter.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jump-to-hex",
             "type":"exe",
-            "path":"Calculating\/Jump to Hex.zip"
+            "path":"Calculating\/Jump to Hex.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sandboxie-plus",
             "type":"exe",
-            "path":"Testing\/Sandboxing\/Sandboxie\/Sandboxie Plus\/x64\/SandMan.exe"
+            "path":"Testing\/Sandboxing\/Sandboxie\/Sandboxie Plus\/x64\/SandMan.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sandboxie-classic",
             "type":"exe",
-            "path":"Testing\/Sandboxing\/Sandboxie\/Sandboxie Classic.zip"
+            "path":"Testing\/Sandboxing\/Sandboxie\/Sandboxie Classic.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xvolkolak",
             "type":"exe",
-            "path":"Unpacking\/XVolkolak\/xvlk.exe"
+            "path":"Unpacking\/XVolkolak\/xvlk.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"net-reactor-slayer",
             "type":"exe",
-            "path":"Unpacking\/.NET Reactor Slayer\/NETReactorSlayer.exe"
+            "path":"Unpacking\/.NET Reactor Slayer\/NETReactorSlayer.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"confuserex-unpacker-cli",
             "type":"cli",
-            "path":"Unpacking\/ConfuserEx Unpacker\/ConfuserEx-Unpacker.exe"
+            "path":"Unpacking\/ConfuserEx Unpacker\/ConfuserEx-Unpacker.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ilprotector-unpacker",
             "type":"exe",
-            "path":"Unpacking\/ILProtector Unpacker.zip"
+            "path":"Unpacking\/ILProtector Unpacker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rldeupx",
             "type":"exe",
-            "path":"Unpacking\/RL!deUPX.zip"
+            "path":"Unpacking\/RL!deUPX.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rldeaspack",
             "type":"exe",
-            "path":"Unpacking\/RL!deASPack.zip"
+            "path":"Unpacking\/RL!deASPack.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rldepacker",
             "type":"exe",
-            "path":"Unpacking\/RL!dePacker.zip"
+            "path":"Unpacking\/RL!dePacker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"gunpacker",
             "type":"exe",
-            "path":"Unpacking\/GUnPacker.zip"
+            "path":"Unpacking\/GUnPacker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"de4dot",
             "type":"exe",
-            "path":"Unpacking\/de4dot.zip"
+            "path":"Unpacking\/de4dot.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"aspack-unpacker",
             "type":"exe",
-            "path":"Unpacking\/ASPack Unpacker.zip"
+            "path":"Unpacking\/ASPack Unpacker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"isxunpack",
             "type":"exe",
-            "path":"Unpacking\/IsXunpack.zip"
+            "path":"Unpacking\/IsXunpack.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"unpacker-execryptor",
             "type":"exe",
-            "path":"Unpacking\/Unpacker ExeCryptor.zip"
+            "path":"Unpacking\/Unpacker ExeCryptor.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"universal-unprotector",
             "type":"exe",
-            "path":"Unpacking\/Universal Unprotector.zip"
+            "path":"Unpacking\/Universal Unprotector.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ophcrack",
             "type":"exe",
-            "path":"Decoding\/Ophcrack\/x64\/ophcrack.exe"
+            "path":"Decoding\/Ophcrack\/x64\/ophcrack.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"armadillo-keytool",
             "type":"exe",
-            "path":"Decoding\/Armadillo KeyTool.zip"
+            "path":"Decoding\/Armadillo KeyTool.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"keygener-assistant",
             "type":"exe",
-            "path":"Decoding\/Keygener Assistant.zip"
+            "path":"Decoding\/Keygener Assistant.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"cyberchef",
             "type":"exe",
-            "path":"Decoding\/CyberChef.zip"
+            "path":"Decoding\/CyberChef.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"snd-reverse-tool",
             "type":"exe",
-            "path":"Decoding\/SND Reverse Tool.zip"
+            "path":"Decoding\/SND Reverse Tool.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hash-identifier",
             "type":"exe",
-            "path":"Decoding\/Hash Identifier.zip"
+            "path":"Decoding\/Hash Identifier.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hashcat",
             "type":"exe",
-            "path":"Decoding\/Hashcat.zip"
+            "path":"Decoding\/Hashcat.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rsa-tool-2",
             "type":"exe",
-            "path":"Decoding\/RSA-Tool 2.zip"
+            "path":"Decoding\/RSA-Tool 2.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rsatool",
             "type":"exe",
-            "path":"Decoding\/RSATool.zip"
+            "path":"Decoding\/RSATool.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rsabox",
             "type":"exe",
-            "path":"Decoding\/RSABox.zip"
+            "path":"Decoding\/RSABox.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"md5-toolbox",
             "type":"exe",
-            "path":"Decoding\/MD5 Toolbox.zip"
+            "path":"Decoding\/MD5 Toolbox.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-export-viewer",
             "type":"exe",
-            "path":"Extracting\/DLL\/DLL Export Viewer\/x64\/dllexp.exe"
+            "path":"Extracting\/DLL\/DLL Export Viewer\/x64\/dllexp.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"regfileexport-cli",
             "type":"cli",
-            "path":"Extracting\/Registry\/RegFileExport\/RegFileExport.exe"
+            "path":"Extracting\/Registry\/RegFileExport\/RegFileExport.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"regscanner",
             "type":"exe",
-            "path":"Extracting\/Registry\/RegScanner\/RegScanner.exe"
+            "path":"Extracting\/Registry\/RegScanner\/RegScanner.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"chromepass",
             "type":"exe",
-            "path":"Extracting\/Passwords\/ChromePass\/ChromePass.exe"
+            "path":"Extracting\/Passwords\/ChromePass\/ChromePass.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"password-scanner",
             "type":"exe",
-            "path":"Extracting\/Passwords\/Password Scanner.zip"
+            "path":"Extracting\/Passwords\/Password Scanner.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"web-browser-pass-view",
             "type":"exe",
-            "path":"Extracting\/Passwords\/Web Browser Pass View.zip"
+            "path":"Extracting\/Passwords\/Web Browser Pass View.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"passwordfox",
             "type":"exe",
-            "path":"Extracting\/Passwords\/PasswordFox.zip"
+            "path":"Extracting\/Passwords\/PasswordFox.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"product-key-scanner",
             "type":"exe",
-            "path":"Extracting\/Passwords\/Product Key Scanner.zip"
+            "path":"Extracting\/Passwords\/Product Key Scanner.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"produkey",
             "type":"exe",
-            "path":"Extracting\/Passwords\/ProduKey.zip"
+            "path":"Extracting\/Passwords\/ProduKey.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"uefitool",
             "type":"exe",
-            "path":"Extracting\/Binary\/UEFITool\/x64\/UEFITool.exe"
+            "path":"Extracting\/Binary\/UEFITool\/x64\/UEFITool.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"firmware-tables-view",
             "type":"exe",
-            "path":"Extracting\/Binary\/Firmware Tables View\/x64\/FirmwareTablesView.exe"
+            "path":"Extracting\/Binary\/Firmware Tables View\/x64\/FirmwareTablesView.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"bintext",
             "type":"exe",
-            "path":"Extracting\/Binary\/Bintext.zip"
+            "path":"Extracting\/Binary\/Bintext.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"regfromapp",
             "type":"exe",
-            "path":"Extracting\/Registry\/RegFromApp.zip"
+            "path":"Extracting\/Registry\/RegFromApp.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"regripper",
             "type":"exe",
-            "path":"Extracting\/Registry\/RegRipper.zip"
+            "path":"Extracting\/Registry\/RegRipper.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"resourcesextract",
             "type":"exe",
-            "path":"Extracting\/Resources\/ResourcesExtract.zip"
+            "path":"Extracting\/Resources\/ResourcesExtract.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dotnetresextract",
             "type":"exe",
-            "path":"Extracting\/Resources\/DotNetResExtract.zip"
+            "path":"Extracting\/Resources\/DotNetResExtract.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"uniextract2",
             "type":"exe",
-            "path":"Extracting\/Setup\/Universal\/UniExtract2\/UniExtract.exe"
+            "path":"Extracting\/Setup\/Universal\/UniExtract2\/UniExtract.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"inno-extractor",
             "type":"exe",
-            "path":"Extracting\/Setup\/Inno Setup\/Inno Extractor.zip"
+            "path":"Extracting\/Setup\/Inno Setup\/Inno Extractor.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"innoextract-cli",
             "type":"exe",
-            "path":"Extracting\/Setup\/Inno Setup\/Innoextract.zip"
+            "path":"Extracting\/Setup\/Inno Setup\/Innoextract.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"innounp-cli",
             "type":"exe",
-            "path":"Extracting\/Setup\/Inno Setup\/Innounp.zip"
+            "path":"Extracting\/Setup\/Inno Setup\/Innounp.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"msi-unpacker",
             "type":"exe",
-            "path":"Extracting\/Setup\/MSI\/MSI Unpacker.zip"
+            "path":"Extracting\/Setup\/MSI\/MSI Unpacker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"fearless-msi-unpacker",
             "type":"exe",
-            "path":"Extracting\/Setup\/MSI\/Fearless MSI Unpacker.zip"
+            "path":"Extracting\/Setup\/MSI\/Fearless MSI Unpacker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"lessmsi-cli",
             "type":"exe",
-            "path":"Extracting\/Setup\/MSI\/LessMSI.zip"
+            "path":"Extracting\/Setup\/MSI\/LessMSI.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"mmextract-cli",
             "type":"exe",
-            "path":"Extracting\/Setup\/MSI\/Mmextract.zip"
+            "path":"Extracting\/Setup\/MSI\/Mmextract.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"exedumper",
             "type":"exe",
-            "path":"Extracting\/PE\/ExeDumper.zip"
+            "path":"Extracting\/PE\/ExeDumper.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"table-extractor",
             "type":"exe",
-            "path":"Extracting\/PE\/Table Extractor.zip"
+            "path":"Extracting\/PE\/Table Extractor.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ninja-ripper",
             "type":"exe",
-            "path":"Extracting\/Games\/Ninja Ripper\/x64\/NinjaRipper2.exe"
+            "path":"Extracting\/Games\/Ninja Ripper\/x64\/NinjaRipper2.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"asset-bundle-extractor",
             "type":"exe",
-            "path":"Extracting\/Games\/Asset Bundle Extractor\/x64\/AssetBundleExtractor.exe"
+            "path":"Extracting\/Games\/Asset Bundle Extractor\/x64\/AssetBundleExtractor.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dragon-unpacker",
             "type":"exe",
-            "path":"Extracting\/Games\/Dragon UnPACKer\/drgunpack5.exe"
+            "path":"Extracting\/Games\/Dragon UnPACKer\/drgunpack5.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"3d-ripper-dx",
             "type":"exe",
-            "path":"Extracting\/Games\/3D Ripper DX.zip"
+            "path":"Extracting\/Games\/3D Ripper DX.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"quickbms",
             "type":"exe",
-            "path":"Extracting\/Games\/QuickBMS.zip"
+            "path":"Extracting\/Games\/QuickBMS.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"unity-asset-editor",
             "type":"exe",
-            "path":"Extracting\/Games\/Unity Asset Editor.zip"
+            "path":"Extracting\/Games\/Unity Asset Editor.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"devx-unity-unpacker",
             "type":"exe",
-            "path":"Extracting\/Games\/DevX Unity Unpacker.zip"
+            "path":"Extracting\/Games\/DevX Unity Unpacker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"unity-studio",
             "type":"exe",
-            "path":"Extracting\/Games\/Unity Studio.zip"
+            "path":"Extracting\/Games\/Unity Studio.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"unityex",
             "type":"exe",
-            "path":"Extracting\/Games\/UnityEx.zip"
+            "path":"Extracting\/Games\/UnityEx.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"utinyripper",
             "type":"exe",
-            "path":"Extracting\/Games\/uTinyRipper.zip"
+            "path":"Extracting\/Games\/uTinyRipper.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"x64dbg",
             "type":"exe",
-            "path":"Debugging\/x64dbg\/x96dbg.exe"
+            "path":"Debugging\/x64dbg\/x96dbg.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"immunity-debugger",
             "type":"exe",
-            "path":"Debugging\/Immunity Debugger.zip"
+            "path":"Debugging\/Immunity Debugger.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"cutter",
             "type":"exe",
-            "path":"Debugging\/Cutter.zip"
+            "path":"Debugging\/Cutter.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dnspy",
             "type":"exe",
-            "path":"Debugging\/dnSpy.zip"
+            "path":"Debugging\/dnSpy.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ollydbg",
             "type":"exe",
-            "path":"Debugging\/OllyDbg.zip"
+            "path":"Debugging\/OllyDbg.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"radare2",
             "type":"exe",
-            "path":"Debugging\/Radare2.zip"
+            "path":"Debugging\/Radare2.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"renderdoc",
             "type":"exe",
-            "path":"Debugging\/RenderDoc.zip"
+            "path":"Debugging\/RenderDoc.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ghidra",
             "type":"exe",
-            "path":"Disassembling\/Ghidra\/ghidraRun.bat"
+            "path":"Disassembling\/Ghidra\/ghidraRun.bat",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ida",
             "type":"exe",
-            "path":"Disassembling\/IDA.zip"
+            "path":"Disassembling\/IDA.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"capstone-cli",
             "type":"exe",
-            "path":"Disassembling\/Capstone.zip"
+            "path":"Disassembling\/Capstone.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"delphi-disassembler",
             "type":"exe",
-            "path":"Disassembling\/Delphi Disassembler.zip"
+            "path":"Disassembling\/Delphi Disassembler.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"bddisasm-cli",
             "type":"exe",
-            "path":"Disassembling\/bddisasm.zip"
+            "path":"Disassembling\/bddisasm.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"disasm",
             "type":"exe",
-            "path":"Disassembling\/Disasm.zip"
+            "path":"Disassembling\/Disasm.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"refractor",
             "type":"exe",
-            "path":"Disassembling\/Refractor.zip"
+            "path":"Disassembling\/Refractor.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"radasm",
             "type":"exe",
-            "path":"Disassembling\/RadASM.zip"
+            "path":"Disassembling\/RadASM.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"win32dasm",
             "type":"exe",
-            "path":"Disassembling\/Win32Dasm.zip"
+            "path":"Disassembling\/Win32Dasm.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"binaryninja",
             "type":"exe",
-            "path":"Decompiling\/BinaryNinja\/binaryninja.exe"
+            "path":"Decompiling\/BinaryNinja\/binaryninja.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ilspy",
             "type":"exe",
-            "path":"Decompiling\/ILSpy.zip"
+            "path":"Decompiling\/ILSpy.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dotpeek",
             "type":"exe",
-            "path":"Decompiling\/dotPeek.zip"
+            "path":"Decompiling\/dotPeek.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"net-reflector",
             "type":"exe",
-            "path":"Decompiling\/.NET Reflector.zip"
+            "path":"Decompiling\/.NET Reflector.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"java-decompiler",
             "type":"exe",
-            "path":"Decompiling\/Java Decompiler.zip"
+            "path":"Decompiling\/Java Decompiler.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jbytemod",
             "type":"exe",
-            "path":"Decompiling\/JByteMod.zip"
+            "path":"Decompiling\/JByteMod.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"vb-decompiler",
             "type":"exe",
-            "path":"Decompiling\/VB Decompiler.zip"
+            "path":"Decompiling\/VB Decompiler.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dj-java-decompiler",
             "type":"exe",
-            "path":"Decompiling\/DJ Java Decompiler.zip"
+            "path":"Decompiling\/DJ Java Decompiler.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dis-net-decompiler",
             "type":"exe",
-            "path":"Decompiling\/Dis# Net decompiler.zip"
+            "path":"Decompiling\/Dis# Net decompiler.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ffdec",
             "type":"exe",
-            "path":"Decompiling\/FFDec.zip"
+            "path":"Decompiling\/FFDec.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"exe2aut",
             "type":"exe",
-            "path":"Decompiling\/Exe2Aut.zip"
+            "path":"Decompiling\/Exe2Aut.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"imhex",
             "type":"exe",
-            "path":"Hexing\/ImHex\/imhex.exe"
+            "path":"Hexing\/ImHex\/imhex.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hex-editor",
             "type":"exe",
-            "path":"Hexing\/HEX Editor.zip"
+            "path":"Hexing\/HEX Editor.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hiew",
             "type":"exe",
-            "path":"Hexing\/Hiew.zip"
+            "path":"Hexing\/Hiew.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rept-file-compare",
             "type":"exe",
-            "path":"Comparing\/REPT file compare\/REPT file compare.exe"
+            "path":"Comparing\/REPT file compare\/REPT file compare.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"winmerge",
             "type":"exe",
-            "path":"Comparing\/WinMerge\/WinMergeU.exe"
+            "path":"Comparing\/WinMerge\/WinMergeU.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"table-text-compare",
             "type":"exe",
-            "path":"Comparing\/Table Text Compare.zip"
+            "path":"Comparing\/Table Text Compare.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"file-comparer",
             "type":"exe",
-            "path":"Comparing\/File CompareR.zip"
+            "path":"Comparing\/File CompareR.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"relox",
             "type":"exe",
-            "path":"Comparing\/ReloX.zip"
+            "path":"Comparing\/ReloX.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sidebyside",
             "type":"exe",
-            "path":"Comparing\/SideBySide.zip"
+            "path":"Comparing\/SideBySide.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"signman",
             "type":"exe",
-            "path":"Comparing\/SignMan.zip"
+            "path":"Comparing\/SignMan.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"resource-hacker",
             "type":"exe",
-            "path":"Editing\/PE\/Resource Hacker\/ResourceHacker.exe"
+            "path":"Editing\/PE\/Resource Hacker\/ResourceHacker.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ppee",
             "type":"exe",
-            "path":"Editing\/PE\/PPEE\/PPEE.exe"
+            "path":"Editing\/PE\/PPEE\/PPEE.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"pe-lab",
             "type":"exe",
-            "path":"Editing\/PE\/PE Lab\/PELab.exe"
+            "path":"Editing\/PE\/PE Lab\/PELab.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xpeviewer",
             "type":"exe",
-            "path":"Editing\/PE\/XPEViewer\/x64\/xpeviewer.exe"
+            "path":"Editing\/PE\/XPEViewer\/x64\/xpeviewer.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"reclassex",
             "type":"exe",
-            "path":"Editing\/PE\/ReClassEx\/x64\/ReClassEx64.exe"
+            "path":"Editing\/PE\/ReClassEx\/x64\/ReClassEx64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"reclassnet",
             "type":"exe",
-            "path":"Editing\/PE\/ReClass.NET\/ReClass.NET.exe"
+            "path":"Editing\/PE\/ReClass.NET\/ReClass.NET.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"resedit",
             "type":"exe",
-            "path":"Editing\/PE\/ResEdit.zip"
+            "path":"Editing\/PE\/ResEdit.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"cff-explorer",
             "type":"exe",
-            "path":"Editing\/PE\/CFF Explorer.zip"
+            "path":"Editing\/PE\/CFF Explorer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"resource-builder",
             "type":"exe",
-            "path":"Editing\/PE\/Resource Builder.zip"
+            "path":"Editing\/PE\/Resource Builder.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"splash-injector",
             "type":"exe",
-            "path":"Editing\/PE\/Splash Injector.zip"
+            "path":"Editing\/PE\/Splash Injector.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"kdiff3",
             "type":"exe",
-            "path":"Editing\/PE\/KDiff3.zip"
+            "path":"Editing\/PE\/KDiff3.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xelfviewer",
             "type":"exe",
-            "path":"Editing\/PE\/XELFViewer\/x64\/xelfviewer.exe"
+            "path":"Editing\/PE\/XELFViewer\/x64\/xelfviewer.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"cheat-engine",
             "type":"exe",
-            "path":"Editing\/PE\/Cheat Engine.zip"
+            "path":"Editing\/PE\/Cheat Engine.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"scylla",
             "type":"exe",
-            "path":"Editing\/PE\/Scylla\/Scylla_x64.exe"
+            "path":"Editing\/PE\/Scylla\/Scylla_x64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"lordpe",
             "type":"exe",
-            "path":"Editing\/PE\/LordPE\/LordPE.exe"
+            "path":"Editing\/PE\/LordPE\/LordPE.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"imprec",
             "type":"exe",
-            "path":"Editing\/PE\/ImpREC.zip"
+            "path":"Editing\/PE\/ImpREC.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"exiftool",
             "type":"cli",
-            "path":"Editing\/Binary\/Exiftool\/exiftool.exe"
+            "path":"Editing\/Binary\/Exiftool\/exiftool.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-addrfunc-converter",
             "type":"exe",
-            "path":"Editing\/DLL\/DLL Addr&Func Converter.zip"
+            "path":"Editing\/DLL\/DLL Addr&Func Converter.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xenos",
             "type":"exe",
-            "path":"Editing\/DLL\/Xenos\/Xenos64.exe"
+            "path":"Editing\/DLL\/Xenos\/Xenos64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"robber",
             "type":"exe",
-            "path":"Editing\/DLL\/Robber\/Robber.exe"
+            "path":"Editing\/DLL\/Robber\/Robber.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-injector-slait",
             "type":"exe",
-            "path":"Editing\/DLL\/DLL Injector Slait\/DLL-Injector.exe"
+            "path":"Editing\/DLL\/DLL Injector Slait\/DLL-Injector.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-injector",
             "type":"exe",
-            "path":"Editing\/DLL\/DLL Injector.zip"
+            "path":"Editing\/DLL\/DLL Injector.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-rebaser",
             "type":"exe",
-            "path":"Editing\/DLL\/DLL Rebaser.zip"
+            "path":"Editing\/DLL\/DLL Rebaser.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-loader",
             "type":"exe",
-            "path":"Editing\/DLL\/DLL Loader.zip"
+            "path":"Editing\/DLL\/DLL Loader.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"iid-king",
             "type":"exe",
-            "path":"Editing\/DLL\/IID King.zip"
+            "path":"Editing\/DLL\/IID King.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"easyhook",
             "type":"exe",
-            "path":"Editing\/DLL\/EasyHook.zip"
+            "path":"Editing\/DLL\/EasyHook.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-packager",
             "type":"exe",
-            "path":"Editing\/DLL\/DLL Packager\/DLLPackager.exe"
+            "path":"Editing\/DLL\/DLL Packager\/DLLPackager.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"inno-setup",
             "type":"exe",
-            "path":"Editing\/Universal\/Inno Setup\/Compil32.exe"
+            "path":"Editing\/Universal\/Inno Setup\/Compil32.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"inno-script-studio",
             "type":"exe",
-            "path":"Editing\/Universal\/ISStudio\/ISStudio.exe"
+            "path":"Editing\/Universal\/ISStudio\/ISStudio.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"codejock-skin-builder",
             "type":"exe",
-            "path":"Editing\/Universal\/Codejock Skin Builder\/SkinBuilder.exe"
+            "path":"Editing\/Universal\/Codejock Skin Builder\/SkinBuilder.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"codejock-resource-editor",
             "type":"exe",
-            "path":"Editing\/Universal\/Codejock Resource Editor\/ResourceEditor.exe"
+            "path":"Editing\/Universal\/Codejock Resource Editor\/ResourceEditor.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"codejock-markuppad",
             "type":"exe",
-            "path":"Editing\/Universal\/Codejock MarkupPad\/MarkupPad.exe"
+            "path":"Editing\/Universal\/Codejock MarkupPad\/MarkupPad.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"codejock-command-bars-i",
             "type":"exe",
-            "path":"Editing\/Universal\/Codejock Command Bars Designer\/CommandBarsDesigner.exe"
+            "path":"Editing\/Universal\/Codejock Command Bars Designer\/CommandBarsDesigner.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"far-manager",
             "type":"exe",
-            "path":"Editing\/Universal\/Far Manager.zip"
+            "path":"Editing\/Universal\/Far Manager.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"notepad",
             "type":"exe",
-            "path":"Editing\/Text\/Notepad++\/notepad++.exe"
+            "path":"Editing\/Text\/Notepad++\/notepad++.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dmcsveditor",
             "type":"exe",
-            "path":"Editing\/Text\/DMcsvEditor\/dmcsv.exe"
+            "path":"Editing\/Text\/DMcsvEditor\/dmcsv.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xmltreeedit",
             "type":"exe",
-            "path":"Editing\/Text\/XMLTreeEdit\/XMLTreeEdit.exe"
+            "path":"Editing\/Text\/XMLTreeEdit\/XMLTreeEdit.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"bat-to-exe",
             "type":"exe",
-            "path":"Converting\/BAT-EXE\/Bat To Exe\/x64\/BatToExe.exe"
+            "path":"Converting\/BAT-EXE\/Bat To Exe\/x64\/BatToExe.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ps1-to-exe",
             "type":"exe",
-            "path":"Converting\/PS1-EXE\/Ps1 To Exe\/Ps1ToExe.exe"
+            "path":"Converting\/PS1-EXE\/Ps1 To Exe\/Ps1ToExe.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"vbs-to-exe",
             "type":"exe",
-            "path":"Converting\/VBS-EXE\/Vbs To Exe\/x64\/VbsToExe.exe"
+            "path":"Converting\/VBS-EXE\/Vbs To Exe\/x64\/VbsToExe.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jar-to-exe",
             "type":"exe",
-            "path":"Converting\/JAR-EXE\/Jar To Exe\/j2ewiz.exe"
+            "path":"Converting\/JAR-EXE\/Jar To Exe\/j2ewiz.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"reg-to-exe",
             "type":"exe",
-            "path":"Converting\/REG-EXE\/RegConvert\/RegConvert.exe"
+            "path":"Converting\/REG-EXE\/RegConvert\/RegConvert.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"png-to-ico",
             "type":"exe",
-            "path":"Converting\/PNG-ICO\/ToYcon\/ToYcon.exe"
+            "path":"Converting\/PNG-ICO\/ToYcon\/ToYcon.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"audio-video-to-exe",
             "type":"exe",
-            "path":"Converting\/Media-EXE\/Audio Video To Exe\/AudioVideoToExe.exe"
+            "path":"Converting\/Media-EXE\/Audio Video To Exe\/AudioVideoToExe.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"php-to-exe-cli",
             "type":"exe",
-            "path":"Converting\/PHP-EXE\/RapidEXE\/rapidexe.exe"
+            "path":"Converting\/PHP-EXE\/RapidEXE\/rapidexe.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-to-exe-cli",
             "type":"exe",
-            "path":"Converting\/DLL-EXE\/dll-to-exe.exe"
+            "path":"Converting\/DLL-EXE\/dll-to-exe.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"exe-to-dll-cli",
             "type":"exe",
-            "path":"Converting\/EXE-DLL\/x64\/exe-to-dll.exe"
+            "path":"Converting\/EXE-DLL\/x64\/exe-to-dll.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"vbstoexe-cli",
             "type":"exe",
-            "path":"Converting\/VBS-EXE\/vbstoexe.zip"
+            "path":"Converting\/VBS-EXE\/vbstoexe.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dup-2",
             "type":"exe",
-            "path":"Patching\/Patcher\/dUP 2\/dup2.exe"
+            "path":"Patching\/Patcher\/dUP 2\/dup2.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"at4re-patcher",
             "type":"exe",
-            "path":"Patching\/Patcher\/AT4RE Patcher.zip"
+            "path":"Patching\/Patcher\/AT4RE Patcher.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"apatch",
             "type":"exe",
-            "path":"Patching\/Patcher\/Apatch.zip"
+            "path":"Patching\/Patcher\/Apatch.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"codefusion",
             "type":"exe",
-            "path":"Patching\/Patcher\/CodeFusion.zip"
+            "path":"Patching\/Patcher\/CodeFusion.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"graphical-patch-maker",
             "type":"exe",
-            "path":"Patching\/Patcher\/Graphical Patch Maker.zip"
+            "path":"Patching\/Patcher\/Graphical Patch Maker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xdelta-patch-maker",
             "type":"exe",
-            "path":"Patching\/Patcher\/Inno Setup XDELTA Patch Maker.zip"
+            "path":"Patching\/Patcher\/Inno Setup XDELTA Patch Maker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"uppp",
             "type":"exe",
-            "path":"Patching\/Patcher\/uPPP.zip"
+            "path":"Patching\/Patcher\/uPPP.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"peid-patch-maker",
             "type":"exe",
-            "path":"Patching\/Patcher\/PEiD Patch Maker.zip"
+            "path":"Patching\/Patcher\/PEiD Patch Maker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"advanced-loader-generator",
             "type":"exe",
-            "path":"Patching\/Loader\/Advanced Loader Generator\/Alg.exe"
+            "path":"Patching\/Loader\/Advanced Loader Generator\/Alg.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"abel-loader-generator",
             "type":"exe",
-            "path":"Patching\/Loader\/Abel Loader Generator.zip"
+            "path":"Patching\/Loader\/Abel Loader Generator.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rept-keygen-maker",
             "type":"exe",
-            "path":"Patching\/Keygen\/REPT Keygen Maker\/Team Rept KeyGen Maker.exe"
+            "path":"Patching\/Keygen\/REPT Keygen Maker\/Team Rept KeyGen Maker.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dup2ap-skin-converter",
             "type":"exe",
-            "path":"Patching\/Skin\/Dup2AP Skin Converter\/Dup2AP.exe"
+            "path":"Patching\/Skin\/Dup2AP Skin Converter\/Dup2AP.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"image-flipper",
             "type":"exe",
-            "path":"Patching\/Skin\/Image Flipper\/Image Flipper.exe"
+            "path":"Patching\/Skin\/Image Flipper\/Image Flipper.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"skin-builder",
             "type":"exe",
-            "path":"Patching\/Skin\/Skin Builder\/Skin Builder.exe"
+            "path":"Patching\/Skin\/Skin Builder\/Skin Builder.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"skin-extractor",
             "type":"exe",
-            "path":"Patching\/Skin\/Skin Extractor\/Skin Extractor.exe"
+            "path":"Patching\/Skin\/Skin Extractor\/Skin Extractor.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"uppp2ap-skin-converter",
             "type":"exe",
-            "path":"Patching\/Skin\/uPPP2AP Skin Converter.zip"
+            "path":"Patching\/Skin\/uPPP2AP Skin Converter.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rgnerator",
             "type":"exe",
-            "path":"Patching\/Skin\/RGNerator.zip"
+            "path":"Patching\/Skin\/RGNerator.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"revens",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/ReVens"
+            "path":"Patching\/Assets\/Skins\/ReVens",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"vista-pinstripe",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Vista PinStripe.zip"
+            "path":"Patching\/Assets\/Skins\/Vista PinStripe.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"blackitem-gui-irec",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Blackitem Gui IREC.zip"
+            "path":"Patching\/Assets\/Skins\/Blackitem Gui IREC.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"blackitem-gui-snd",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Blackitem Gui SND.zip"
+            "path":"Patching\/Assets\/Skins\/Blackitem Gui SND.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"blackitem-gui-kit",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Blackitem Gui Kit.zip"
+            "path":"Patching\/Assets\/Skins\/Blackitem Gui Kit.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"classic-fight",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Classic Fight!.zip"
+            "path":"Patching\/Assets\/Skins\/Classic Fight!.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"code-cracker",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Code Cracker!.zip"
+            "path":"Patching\/Assets\/Skins\/Code Cracker!.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"danger-skin",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Danger Skin.zip"
+            "path":"Patching\/Assets\/Skins\/Danger Skin.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"secureteam",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Secureteam.zip"
+            "path":"Patching\/Assets\/Skins\/Secureteam.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"windows-8",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Windows 8.zip"
+            "path":"Patching\/Assets\/Skins\/Windows 8.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"undf",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/UNDF.zip"
+            "path":"Patching\/Assets\/Skins\/UNDF.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"undf2b",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/UNDF2b.zip"
+            "path":"Patching\/Assets\/Skins\/UNDF2b.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"tcct-metal",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/TCCT Metal.zip"
+            "path":"Patching\/Assets\/Skins\/TCCT Metal.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"wordbeast",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/Wordbeast.zip"
+            "path":"Patching\/Assets\/Skins\/Wordbeast.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"macosx",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/MacOSX.zip"
+            "path":"Patching\/Assets\/Skins\/MacOSX.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"gct-19",
             "type":"exe",
-            "path":"Patching\/Assets\/Skins\/GCT 19.zip"
+            "path":"Patching\/Assets\/Skins\/GCT 19.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"release-builder",
             "type":"exe",
-            "path":"Patching\/Release\/Release Builder\/ReleaseBuilder.exe"
+            "path":"Patching\/Release\/Release Builder\/ReleaseBuilder.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dizview",
             "type":"exe",
-            "path":"Patching\/Release\/DizView\/DizView.exe"
+            "path":"Patching\/Release\/DizView\/DizView.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"fast-cracktro-maker",
             "type":"exe",
-            "path":"Patching\/Release\/Fast Cracktro Maker.zip"
+            "path":"Patching\/Release\/Fast Cracktro Maker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"mrelease-builder",
             "type":"exe",
-            "path":"Patching\/Release\/mRelease Builder.zip"
+            "path":"Patching\/Release\/mRelease Builder.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"nfo-maker",
             "type":"exe",
-            "path":"Patching\/Release\/NFO Maker.zip"
+            "path":"Patching\/Release\/NFO Maker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"nfo-scroller",
             "type":"exe",
-            "path":"Patching\/Release\/NFO Scroller.zip"
+            "path":"Patching\/Release\/NFO Scroller.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"nfo-view",
             "type":"exe",
-            "path":"Patching\/Release\/NFO View.zip"
+            "path":"Patching\/Release\/NFO View.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"nfo-viewer-2",
             "type":"exe",
-            "path":"Patching\/Release\/NFO Viewer 2.zip"
+            "path":"Patching\/Release\/NFO Viewer 2.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ascgen",
             "type":"exe",
-            "path":"Patching\/ASCII\/Ascgen\/Ascgen.exe"
+            "path":"Patching\/ASCII\/Ascgen\/Ascgen.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"1337-converter",
             "type":"exe",
-            "path":"Patching\/ASCII\/1337 Converter.zip"
+            "path":"Patching\/ASCII\/1337 Converter.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ascii-art-studio",
             "type":"exe",
-            "path":"Patching\/ASCII\/ASCII Art studio.zip"
+            "path":"Patching\/ASCII\/ASCII Art studio.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ascii-converter",
             "type":"exe",
-            "path":"Patching\/ASCII\/ASCII Converter.zip"
+            "path":"Patching\/ASCII\/ASCII Converter.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ascii-generator",
             "type":"exe",
-            "path":"Patching\/ASCII\/ASCII Generator.zip"
+            "path":"Patching\/ASCII\/ASCII Generator.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ascii-table",
             "type":"exe",
-            "path":"Patching\/ASCII\/ASCII Table.zip"
+            "path":"Patching\/ASCII\/ASCII Table.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"magic-ascii-pic",
             "type":"exe",
-            "path":"Patching\/ASCII\/Magic ASCII Pic.zip"
+            "path":"Patching\/ASCII\/Magic ASCII Pic.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"fasttracker-2",
             "type":"exe",
-            "path":"Patching\/Sound\/FastTracker 2\/x64\/ft2-clone-win64.exe"
+            "path":"Patching\/Sound\/FastTracker 2\/x64\/ft2-clone-win64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"milkytracker",
             "type":"exe",
-            "path":"Patching\/Sound\/MilkyTracker.zip"
+            "path":"Patching\/Sound\/MilkyTracker.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"openmpt",
             "type":"exe",
-            "path":"Patching\/Sound\/OpenMPT.zip"
+            "path":"Patching\/Sound\/OpenMPT.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"modplug-player",
             "type":"exe",
-            "path":"Patching\/Sound\/ModPlug Player.zip"
+            "path":"Patching\/Sound\/ModPlug Player.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"chiprip",
             "type":"exe",
-            "path":"Patching\/Sound\/ChipRip.zip"
+            "path":"Patching\/Sound\/ChipRip.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"brd-teleport-pro",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/BRD - Teleport Pro.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/BRD - Teleport Pro.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"aaocg-mirc",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/AAOCG - mIRC.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/AAOCG - mIRC.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"core-get-backup-pro",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/CORE - Get Backup Pro.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/CORE - Get Backup Pro.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"core-power-iso",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/CORE - Power ISO.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/CORE - Power ISO.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dynamite-winamp",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/DYNAMITE - Winamp.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/DYNAMITE - Winamp.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"eclipse-battleship-chess",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/ECLiPSE - Battleship Chess.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/ECLiPSE - Battleship Chess.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"fff-ab-commander",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/FFF - AB Commander.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/FFF - AB Commander.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"fff-acdsee",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/FFF - ACDSee.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/FFF - ACDSee.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"brd-video-converter",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/BRD - Video Converter.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Famous\/BRD - Video Converter.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"tetris",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Games\/Tetris.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Games\/Tetris.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"super-mario-bros",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Games\/Super Mario Bros.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Games\/Super Mario Bros.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"super-mario-cave",
             "type":"xm",
-            "path":"Patching\/Assets\/Sounds\/XM\/Games\/Super Mario Cave.xm"
+            "path":"Patching\/Assets\/Sounds\/XM\/Games\/Super Mario Cave.xm",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"runasdate",
             "type":"exe",
-            "path":"Bypassing\/Trial\/RunAsDate\/x64\/RunAsDate.exe"
+            "path":"Bypassing\/Trial\/RunAsDate\/x64\/RunAsDate.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"datehack",
             "type":"exe",
-            "path":"Bypassing\/Trial\/DateHack.zip"
+            "path":"Bypassing\/Trial\/DateHack.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"trial-reset",
             "type":"exe",
-            "path":"Bypassing\/Trial\/Trial-Reset.zip"
+            "path":"Bypassing\/Trial\/Trial-Reset.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"runfromprocess",
             "type":"exe",
-            "path":"Bypassing\/System\/RunFromProcess\/RunFromProcess.exe"
+            "path":"Bypassing\/System\/RunFromProcess\/RunFromProcess.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"scyllahide",
             "type":"exe",
-            "path":"Bypassing\/System\/ScyllaHide\/ScyllaHideIDASrvx64.exe"
+            "path":"Bypassing\/System\/ScyllaHide\/ScyllaHideIDASrvx64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"flat-assembler-fasm",
             "type":"exe",
-            "path":"Assembling\/Flat assembler\/FASMW.EXE"
+            "path":"Assembling\/Flat assembler\/FASMW.EXE",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hasher",
             "type":"exe",
-            "path":"Encoding\/Hasher\/Hasher.exe"
+            "path":"Encoding\/Hasher\/Hasher.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"alternate-hash-generator",
             "type":"exe",
-            "path":"Encoding\/Alternate Hash Generator\/Hasher.exe"
+            "path":"Encoding\/Alternate Hash Generator\/Hasher.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xca",
             "type":"exe",
-            "path":"Encoding\/XCA\/xca.exe"
+            "path":"Encoding\/XCA\/xca.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"putty-keygen",
             "type":"exe",
-            "path":"Encoding\/PuTTY\/puttygen.exe"
+            "path":"Encoding\/PuTTY\/puttygen.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"winhasher",
             "type":"exe",
-            "path":"Encoding\/WinHasher.zip"
+            "path":"Encoding\/WinHasher.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"hashmyfiles",
             "type":"exe",
-            "path":"Encoding\/HashMyFiles.zip"
+            "path":"Encoding\/HashMyFiles.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xor",
             "type":"exe",
-            "path":"Encoding\/XOR.zip"
+            "path":"Encoding\/XOR.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"base64-cli",
             "type":"exe",
-            "path":"Encoding\/Base64.zip"
+            "path":"Encoding\/Base64.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"md5-cli",
             "type":"exe",
-            "path":"Encoding\/MD5.zip"
+            "path":"Encoding\/MD5.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sha1-cli",
             "type":"exe",
-            "path":"Encoding\/SHA1.zip"
+            "path":"Encoding\/SHA1.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dissecting-rc4-algorithm",
             "type":"exe",
-            "path":"Encoding\/Dissecting RC4 Algorithm.zip"
+            "path":"Encoding\/Dissecting RC4 Algorithm.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dss-dsa-generator",
             "type":"exe",
-            "path":"Encoding\/DSS-DSA Generator.zip"
+            "path":"Encoding\/DSS-DSA Generator.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"grn-rsa-donkey",
             "type":"exe",
-            "path":"Encoding\/gRn-Rsa-Donkey.zip"
+            "path":"Encoding\/gRn-Rsa-Donkey.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"upx-cli",
             "type":"cli",
-            "path":"Packing\/UPX\/x64\/upx.exe"
+            "path":"Packing\/UPX\/x64\/upx.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"confuserex",
             "type":"exe",
-            "path":"Packing\/ConfuserEx\/ConfuserEx.exe"
+            "path":"Packing\/ConfuserEx\/ConfuserEx.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"alternate-exe-packer",
             "type":"exe",
-            "path":"Packing\/Alternate EXE Packer\/ExePacker.exe"
+            "path":"Packing\/Alternate EXE Packer\/ExePacker.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"amber",
             "type":"exe",
-            "path":"Packing\/Amber.zip"
+            "path":"Packing\/Amber.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"etcher",
             "type":"exe",
-            "path":"Mobile\/Universal\/Etcher\/Etcher.exe"
+            "path":"Mobile\/Universal\/Etcher\/Etcher.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"otp-extractor",
             "type":"exe",
-            "path":"Mobile\/Universal\/OTP Extractor\/otp-extractor.bat"
+            "path":"Mobile\/Universal\/OTP Extractor\/otp-extractor.bat",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"whatsapp-extractor-cli",
             "type":"exe",
-            "path":"Mobile\/Universal\/WhatsApp Extractor\/WhatsAppKeyDBExtract.bat"
+            "path":"Mobile\/Universal\/WhatsApp Extractor\/WhatsAppKeyDBExtract.bat",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"whatsapp-viewer",
             "type":"exe",
-            "path":"Mobile\/Universal\/WhatsApp Viewer\/WhatsApp Viewer.exe"
+            "path":"Mobile\/Universal\/WhatsApp Viewer\/WhatsApp Viewer.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"apk-editor-studio",
             "type":"exe",
-            "path":"Mobile\/Android\/APK Editor Studio\/apk-editor-studio.exe"
+            "path":"Mobile\/Android\/APK Editor Studio\/apk-editor-studio.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"apk-easy-tool",
             "type":"exe",
-            "path":"Mobile\/Android\/APK Easy Tool\/apkeasytool.exe"
+            "path":"Mobile\/Android\/APK Easy Tool\/apkeasytool.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jadx",
             "type":"exe",
-            "path":"Mobile\/Android\/JADX\/JADX.exe"
+            "path":"Mobile\/Android\/JADX\/JADX.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"adb-installer",
             "type":"exe",
-            "path":"Mobile\/Android\/ADB Installer\/ADB Installer.exe"
+            "path":"Mobile\/Android\/ADB Installer\/ADB Installer.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"adb-driver-installer",
             "type":"exe",
-            "path":"Mobile\/Android\/ADB Driver Installer\/ADB Driver Installer.exe"
+            "path":"Mobile\/Android\/ADB Driver Installer\/ADB Driver Installer.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"apk-installer",
             "type":"exe",
-            "path":"Mobile\/Android\/APK Installer.zip"
+            "path":"Mobile\/Android\/APK Installer.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"apktool-cli",
             "type":"exe",
-            "path":"Mobile\/Android\/Apktool\/apktool.bat"
+            "path":"Mobile\/Android\/Apktool\/apktool.bat",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"apk-protect",
             "type":"exe",
-            "path":"Mobile\/Android\/APK Protect.zip"
+            "path":"Mobile\/Android\/APK Protect.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"xapk-detector",
             "type":"exe",
-            "path":"Mobile\/Android\/XAPK Detector.zip"
+            "path":"Mobile\/Android\/XAPK Detector.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"apk-multi-tool",
             "type":"exe",
-            "path":"Mobile\/Android\/APK Multi-Tool.zip"
+            "path":"Mobile\/Android\/APK Multi-Tool.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"odin3",
             "type":"exe",
-            "path":"Mobile\/Android\/Odin3.zip"
+            "path":"Mobile\/Android\/Odin3.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"3utools",
             "type":"exe",
-            "path":"Mobile\/IOS\/3uTools.zip"
+            "path":"Mobile\/IOS\/3uTools.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ssh-ramdisk",
             "type":"exe",
-            "path":"Mobile\/IOS\/SSH Ramdisk.zip"
+            "path":"Mobile\/IOS\/SSH Ramdisk.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"checkra1n-cli",
             "type":"exe",
-            "path":"Mobile\/IOS\/Checkra1n.zip"
+            "path":"Mobile\/IOS\/Checkra1n.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"checkn1x-iso",
             "type":"exe",
-            "path":"Mobile\/IOS\/Checkn1x.zip"
+            "path":"Mobile\/IOS\/Checkn1x.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"bootra1n-iso",
             "type":"exe",
-            "path":"Mobile\/IOS\/Bootra1n.zip"
+            "path":"Mobile\/IOS\/Bootra1n.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"f0recast",
             "type":"exe",
-            "path":"Mobile\/IOS\/F0recast.zip"
+            "path":"Mobile\/IOS\/F0recast.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"idetector",
             "type":"exe",
-            "path":"Mobile\/IOS\/iDetector.zip"
+            "path":"Mobile\/IOS\/iDetector.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"pangu",
             "type":"exe",
-            "path":"Mobile\/IOS\/Pangu.zip"
+            "path":"Mobile\/IOS\/Pangu.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jailsn0w",
             "type":"exe",
-            "path":"Mobile\/IOS\/JailSn0w.zip"
+            "path":"Mobile\/IOS\/JailSn0w.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"sn0wbreeze",
             "type":"exe",
-            "path":"Mobile\/IOS\/Sn0wbreeze.zip"
+            "path":"Mobile\/IOS\/Sn0wbreeze.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"p0sixspwn",
             "type":"exe",
-            "path":"Mobile\/IOS\/P0sixspwn.zip"
+            "path":"Mobile\/IOS\/P0sixspwn.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"ireb",
             "type":"exe",
-            "path":"Mobile\/IOS\/iREB.zip"
+            "path":"Mobile\/IOS\/iREB.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"fritzing",
             "type":"exe",
-            "path":"Testing\/Simulating\/Fritzing\/Fritzing.exe"
+            "path":"Testing\/Simulating\/Fritzing\/Fritzing.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"simulide",
             "type":"exe",
-            "path":"Testing\/Simulating\/SimulIDE\/simulide.exe"
+            "path":"Testing\/Simulating\/SimulIDE\/simulide.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"arduino-simulator",
             "type":"exe",
-            "path":"Testing\/Simulating\/Arduino Simulator\/Arduino Simulator.exe"
+            "path":"Testing\/Simulating\/Arduino Simulator\/Arduino Simulator.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"arduino-cli",
             "type":"cli",
-            "path":"Testing\/Simulating\/Arduino CLI\/arduino-cli.exe"
+            "path":"Testing\/Simulating\/Arduino CLI\/arduino-cli.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"picsimlab",
             "type":"exe",
-            "path":"Testing\/Simulating\/PICSimLab\/picsimlab.exe"
+            "path":"Testing\/Simulating\/PICSimLab\/picsimlab.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"unoardusim",
             "type":"exe",
-            "path":"Testing\/Simulating\/UnoArduSim\/UnoArduSim.exe"
+            "path":"Testing\/Simulating\/UnoArduSim\/UnoArduSim.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"circuit-simulator",
             "type":"exe",
-            "path":"Testing\/Simulating\/Circuit Simulator.zip"
+            "path":"Testing\/Simulating\/Circuit Simulator.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dia",
             "type":"exe",
-            "path":"Testing\/Simulating\/Dia\/bin\/dia.exe"
+            "path":"Testing\/Simulating\/Dia\/bin\/dia.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"logisim",
             "type":"exe",
-            "path":"Testing\/Simulating\/Logisim\/logisim-generic.jar"
+            "path":"Testing\/Simulating\/Logisim\/logisim-generic.jar",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"net-framework-48-aio",
             "type":"exe",
-            "path":"Dependencies\/.NET Framework 4.8 AIO.exe"
+            "path":"Dependencies\/.NET Framework 4.8 AIO.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"directx-90",
             "type":"exe",
-            "path":"Dependencies\/DirectX 9.0.exe"
+            "path":"Dependencies\/DirectX 9.0.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jdk-20-x64",
             "type":"exe",
-            "path":"Dependencies\/JDK 20 x64.exe"
+            "path":"Dependencies\/JDK 20 x64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jdk-20-x86",
             "type":"exe",
-            "path":"Dependencies\/JDK 20 x86.exe"
+            "path":"Dependencies\/JDK 20 x86.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jre-8-x64",
             "type":"exe",
-            "path":"Dependencies\/JRE 8 x64.exe"
+            "path":"Dependencies\/JRE 8 x64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"jre-8-x86",
             "type":"exe",
-            "path":"Dependencies\/JRE 8 x86.exe"
+            "path":"Dependencies\/JRE 8 x86.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"python-27-x64",
             "type":"exe",
-            "path":"Dependencies\/Python 2.7 x64.msi"
+            "path":"Dependencies\/Python 2.7 x64.msi",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"python-3112-x64",
             "type":"exe",
-            "path":"Dependencies\/Python 3.11.2 x64.exe"
+            "path":"Dependencies\/Python 3.11.2 x64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"visual-c-aio",
             "type":"exe",
-            "path":"Dependencies\/Visual C++ AIO.exe"
+            "path":"Dependencies\/Visual C++ AIO.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"npcap-173",
             "type":"exe",
-            "path":"Dependencies\/Npcap 1.73.exe"
+            "path":"Dependencies\/Npcap 1.73.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"zip-30",
             "type":"exe",
-            "path":"Dependencies\/Zip 3.0.exe"
+            "path":"Dependencies\/Zip 3.0.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"embarcadero-dev-c",
             "type":"exe",
-            "path":"Programming\/Embarcadero Dev-C++\/devcpp.exe"
+            "path":"Programming\/Embarcadero Dev-C++\/devcpp.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"pyscripter",
             "type":"exe",
-            "path":"Programming\/PyScripter\/x64\/PyScripter.exe"
+            "path":"Programming\/PyScripter\/x64\/PyScripter.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"autoit",
             "type":"exe",
-            "path":"Programming\/AutoIt\/AutoIt3_x64.exe"
+            "path":"Programming\/AutoIt\/AutoIt3_x64.exe",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dev-c",
             "type":"exe",
-            "path":"Programming\/Dev-C++.zip"
+            "path":"Programming\/Dev-C++.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"small-basic",
             "type":"exe",
-            "path":"Programming\/Small Basic.zip"
+            "path":"Programming\/Small Basic.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"autoplay-media-studio",
             "type":"exe",
-            "path":"Programming\/AutoPlay Media Studio.zip"
+            "path":"Programming\/AutoPlay Media Studio.zip",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"mastering-reverse-engineering",
             "type":"exe",
-            "path":"Documentation\/Books\/Mastering Reverse Engineering.pdf"
+            "path":"Documentation\/Books\/Mastering Reverse Engineering.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"learning-malware-analysis",
             "type":"exe",
-            "path":"Documentation\/Books\/Learning Malware Analysis.pdf"
+            "path":"Documentation\/Books\/Learning Malware Analysis.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"the-art-of-memory-forensics",
             "type":"exe",
-            "path":"Documentation\/Books\/The Art of Memory Forensics.pdf"
+            "path":"Documentation\/Books\/The Art of Memory Forensics.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"rootkits-and-bootkits",
             "type":"exe",
-            "path":"Documentation\/Books\/Rootkits and Bootkits.pdf"
+            "path":"Documentation\/Books\/Rootkits and Bootkits.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"network-security-monitoring",
             "type":"exe",
-            "path":"Documentation\/Books\/Network Security Monitoring.pdf"
+            "path":"Documentation\/Books\/Network Security Monitoring.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"what-is-reverse-engineering",
             "type":"exe",
-            "path":"Documentation\/0 - Introduction\/What is Reverse Engineering.pdf"
+            "path":"Documentation\/0 - Introduction\/What is Reverse Engineering.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"pc-assembly-language",
             "type":"exe",
-            "path":"Documentation\/0 - Introduction\/PC Assembly Language.pdf"
+            "path":"Documentation\/0 - Introduction\/PC Assembly Language.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"memory-computer-architecture",
             "type":"exe",
-            "path":"Documentation\/0 - Introduction\/Memory & Computer Architecture.pdf"
+            "path":"Documentation\/0 - Introduction\/Memory & Computer Architecture.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"reverse-engineering-toolbox",
             "type":"exe",
-            "path":"Documentation\/1 - Reverse Engineering Toolbox\/Reverse Engineering Toolbox.pdf"
+            "path":"Documentation\/1 - Reverse Engineering Toolbox\/Reverse Engineering Toolbox.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"introducing-ollydbg",
             "type":"exe",
-            "path":"Documentation\/2 - Introducing OllyDbg\/Introducing OllyDbg.pdf"
+            "path":"Documentation\/2 - Introducing OllyDbg\/Introducing OllyDbg.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"using-ollydbg-part-1",
             "type":"exe",
-            "path":"Documentation\/3 - Using OllyDbg (Part 1)\/Using OllyDbg (Part 1).pdf"
+            "path":"Documentation\/3 - Using OllyDbg (Part 1)\/Using OllyDbg (Part 1).pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"using-ollydbg-part-2",
             "type":"exe",
-            "path":"Documentation\/4 - Using OllyDbg (Part 2)\/Using OllyDbg (Part 2).pdf"
+            "path":"Documentation\/4 - Using OllyDbg (Part 2)\/Using OllyDbg (Part 2).pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"first-sort-of-crack",
             "type":"exe",
-            "path":"Documentation\/5 - First (Sort Of) Crack\/First (Sort Of) Crack.pdf"
+            "path":"Documentation\/5 - First (Sort Of) Crack\/First (Sort Of) Crack.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"first-true-crack",
             "type":"exe",
-            "path":"Documentation\/6 - First (True) Crack\/First (True) Crack.pdf"
+            "path":"Documentation\/6 - First (True) Crack\/First (True) Crack.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"more-crackmes",
             "type":"exe",
-            "path":"Documentation\/7 - More Crackmes\/More Crackmes.pdf"
+            "path":"Documentation\/7 - More Crackmes\/More Crackmes.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"frame-of-reference",
             "type":"exe",
-            "path":"Documentation\/8 - Frame Of Reference\/Frame Of Reference.pdf"
+            "path":"Documentation\/8 - Frame Of Reference\/Frame Of Reference.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"no-strings-attached",
             "type":"exe",
-            "path":"Documentation\/9 - No Strings Attached\/No Strings Attached.pdf"
+            "path":"Documentation\/9 - No Strings Attached\/No Strings Attached.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"the-levels-of-patching",
             "type":"exe",
-            "path":"Documentation\/10 - The Levels of Patching\/The Levels of Patching.pdf"
+            "path":"Documentation\/10 - The Levels of Patching\/The Levels of Patching.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"breaking-in-our-noob-skills",
             "type":"exe",
-            "path":"Documentation\/11 - Breaking In Our Noob Skills\/Breaking In Our Noob Skills.pdf"
+            "path":"Documentation\/11 - Breaking In Our Noob Skills\/Breaking In Our Noob Skills.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"tougher-nooby-example",
             "type":"exe",
-            "path":"Documentation\/12 - Tougher NOOBy Example\/Tougher NOOBy Example.pdf"
+            "path":"Documentation\/12 - Tougher NOOBy Example\/Tougher NOOBy Example.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"cracking-real-program",
             "type":"exe",
-            "path":"Documentation\/13 - Cracking Real Program\/Cracking Real Program.pdf"
+            "path":"Documentation\/13 - Cracking Real Program\/Cracking Real Program.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"removing-nag-screen",
             "type":"exe",
-            "path":"Documentation\/14 - Removing Nag Screen\/Removing Nag Screen.pdf"
+            "path":"Documentation\/14 - Removing Nag Screen\/Removing Nag Screen.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"using-the-call-stack",
             "type":"exe",
-            "path":"Documentation\/15 - Using the Call Stack\/Using the Call Stack.pdf"
+            "path":"Documentation\/15 - Using the Call Stack\/Using the Call Stack.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"windows-messages",
             "type":"exe",
-            "path":"Documentation\/16 - Windows Messages\/Windows Messages.pdf"
+            "path":"Documentation\/16 - Windows Messages\/Windows Messages.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"bruteforcing",
             "type":"exe",
-            "path":"Documentation\/17 - Bruteforcing\/Bruteforcing.pdf"
+            "path":"Documentation\/17 - Bruteforcing\/Bruteforcing.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"self-modifying-code",
             "type":"exe",
-            "path":"Documentation\/18 - Self Modifying Code\/Self Modifying Code.pdf"
+            "path":"Documentation\/18 - Self Modifying Code\/Self Modifying Code.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"trial-hardware-breakpoints",
             "type":"exe",
-            "path":"Documentation\/19 - Trial & Hardware Breakpoints\/Trial & Hardware Breakpoints.pdf"
+            "path":"Documentation\/19 - Trial & Hardware Breakpoints\/Trial & Hardware Breakpoints.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"creating-patchers",
             "type":"exe",
-            "path":"Documentation\/20 - Creating Patchers\/Creating Patchers.pdf"
+            "path":"Documentation\/20 - Creating Patchers\/Creating Patchers.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"visual-basic-binaries-part-1",
             "type":"exe",
-            "path":"Documentation\/21 - Visual Basic Binaries (Part 1)\/Visual Basic Binaries (Part 1).pdf"
+            "path":"Documentation\/21 - Visual Basic Binaries (Part 1)\/Visual Basic Binaries (Part 1).pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"visual-basic-binaries-part-2",
             "type":"exe",
-            "path":"Documentation\/22 - Visual Basic Binaries (Part 2)\/Visual Basic Binaries (Part 2).pdf"
+            "path":"Documentation\/22 - Visual Basic Binaries (Part 2)\/Visual Basic Binaries (Part 2).pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"delphi-binaries",
             "type":"exe",
-            "path":"Documentation\/23 - Delphi Binaries\/Delphi Binaries.pdf"
+            "path":"Documentation\/23 - Delphi Binaries\/Delphi Binaries.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"code-caves-pe-sections",
             "type":"exe",
-            "path":"Documentation\/24 - Code Caves & PE Sections\/Code Caves & PE Sections.pdf"
+            "path":"Documentation\/24 - Code Caves & PE Sections\/Code Caves & PE Sections.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"tls-callbacks",
             "type":"exe",
-            "path":"Documentation\/25 - TLS Callbacks\/TLS Callbacks.pdf"
+            "path":"Documentation\/25 - TLS Callbacks\/TLS Callbacks.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"adding-menu-item",
             "type":"exe",
-            "path":"Documentation\/26 - Adding Menu Item\/Adding Menu Item.pdf"
+            "path":"Documentation\/26 - Adding Menu Item\/Adding Menu Item.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"injecting-splash-screen",
             "type":"exe",
-            "path":"Documentation\/27 - Injecting Splash Screen\/Injecting Splash Screen.pdf"
+            "path":"Documentation\/27 - Injecting Splash Screen\/Injecting Splash Screen.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"adding-splash-dialog",
             "type":"exe",
-            "path":"Documentation\/28 - Adding Splash Dialog\/Adding Splash Dialog.pdf"
+            "path":"Documentation\/28 - Adding Splash Dialog\/Adding Splash Dialog.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"dll-injection-msg-box",
             "type":"exe",
-            "path":"Documentation\/29 - DLL Injection & Msg Box\/DLL Injection & Msg Box.pdf"
+            "path":"Documentation\/29 - DLL Injection & Msg Box\/DLL Injection & Msg Box.pdf",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         },
         {
             "name":"extras",
             "type":"exe",
-            "path":"Documentation\/30 - Extras"
+            "path":"Documentation\/30 - Extras",
+            "section":"Analyzing",
+            "sub":"binary",
+            "url":false
         }
-    ],
-    "host": "https://revens.jihadsinnaour.com/download"
+    ]
 }

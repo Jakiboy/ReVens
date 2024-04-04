@@ -52,13 +52,19 @@ strong {
 /* ----------------------------- */
 /* content */
 /* ----------------------------- */
-.content-wrapper {
-    min-height: 300px;
-}
 .content-wrapper .tab-content {
     background: #272727;
     padding: 20px;
     border-radius: 10px;
+    min-height: calc(100vh - 230px);
+}
+.content-wrapper .tab-content.has-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-wrapper .tab-content.has-error p {
+    text-align: center;
 }
 
 /* ----------------------------- */
@@ -82,10 +88,10 @@ strong {
 }
 .copyright {
     font-size: 12px;
-    color: #828282;
+    color: #dadada;
 }
 .copyright a {
-    color: #c3c3c3 !important;
+    color: #eeeeee !important;
 }
 .copyright a:hover {
     text-decoration: underline;
