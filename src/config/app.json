@@ -8,7 +8,7 @@
    	"packages": {
 		"host": "https://revens.jihadsinnaour.com/download",
 		"parts": [
-			"Analysing.iso",
+			"Analyzing.iso",
 			"Assembling.iso",
 			"Bypassing.iso",
 			"Calculating.iso",

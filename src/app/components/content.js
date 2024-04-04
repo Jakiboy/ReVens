@@ -6,120 +6,50 @@
 
 import React from 'react';
 import { MDBBtn as Btn } from 'mdb-react-ui-kit';
+import { generateSlug } from '../helper';
+import strings from './../../config/strings.json';
+import sConfig from './../../config/sections.json';
+import pConfig from './../../config/packages.json';
 
 const Content = ({ activeTab }) => {
+
+  const activeSection = sConfig.sections.find(
+    section => generateSlug(section.name) === activeTab
+  );
+
+  if ( !activeSection ) {
+    return (
+      <div className="tab-content has-error">
+        <p>
+          <strong><i className="icon-exclamation"></i> {strings.error.title}</strong>:
+          <span className="space"></span> {strings.error.section}
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <>
-      {activeTab === 'section-1' && (
-        <div className="tab-content" id="tab-content-1">
-          <div className="tab-pane fade show active" id="section-1" role="tabpanel" aria-labelledby="section-1-tab">
-            <p>Section 1 description.</p>
-            <div className="section-container app-scroller">
-              <div className="section-wrapper">
-                <h3 className="section-title">Sub section 1</h3>
-                <p className="section-description">Sub section 1 description.</p>
-                <div className="button-wrapper">
-                  <Btn>
-                    <i className="icon-control-play"></i> Software 1
+    <div className="tab-content" id={`tab-content-${generateSlug(activeSection.name)}`}>
+      <div className="tab-pane fade show active" id={generateSlug(activeSection.name)} role="tabpanel" aria-labelledby={`${generateSlug(activeSection.name)}-tab`}>
+        <p dangerouslySetInnerHTML={{ __html: activeSection.description }}></p>
+        <div className="section-container app-scroller">
+          {activeSection.subs.map((sub, index) => (
+            <div className="section-wrapper" key={index}>
+              <h3 className="section-title">{sub.title}</h3>
+              <p className="section-description" dangerouslySetInnerHTML={{ __html: sub.description }}></p>
+              <div className="button-wrapper">
+                {pConfig.packages.filter(pkg => pkg.section === activeSection.name && pkg.sub === sub.title).map((software, index) => (
+                  <Btn key={index}>
+                    <i className={`icon-${software.icon}`}></i> {software.name}
                   </Btn>
-                  <Btn className="archived">
-                    <i className="icon-folder"></i> Software 2
-                  </Btn>
-                  <Btn className="cli">
-                    <i className="icon-frame"></i> Software 3
-                  </Btn>
-                </div>
-              </div>
-              <div className="section-wrapper">
-                <h3 className="section-title">Sub section 2</h3>
-                <p className="section-description">Sub section 2 description.</p>
-                <div className="button-wrapper">
-                    <Btn>
-                      <i className="icon-control-play"></i> Software 4
-                    </Btn>
-                    <Btn className="archived">
-                      <i className="icon-folder"></i> Software 5
-                    </Btn>
-                    <Btn className="cli">
-                      <i className="icon-frame"></i> Software 6
-                    </Btn>
-                </div>
+                ))}
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      )}
-      {activeTab === 'section-2' && (
-        <div className="tab-content" id="tab-content-2">
-          <div className="tab-pane fade show active" id="section-2" role="tabpanel" aria-labelledby="section-2-tab">
-            <p>Section 2 description.</p>
-            <div className="section-container app-scroller">
-              <div className="section-wrapper">
-                <h3 className="section-title">Sub section 1</h3>
-                <p className="section-description">Sub section 1 description.</p>
-                <div className="button-wrapper">
-                  <Btn>
-                    <i className="icon-control-play"></i> Software 1
-                  </Btn>
-                  <Btn className="archived">
-                    <i className="icon-folder"></i> Software 2
-                  </Btn>
-                  <Btn className="cli">
-                    <i className="icon-frame"></i> Software 3
-                  </Btn>
-                </div>
-              </div>
-              <div className="section-wrapper">
-                <h3 className="section-title">Sub section 2</h3>
-                <p className="section-description">Sub section 2 description.</p>
-                <div className="button-wrapper">
-                  <Btn>
-                    <i className="icon-control-play"></i> Software 4
-                  </Btn>
-                  <Btn className="archived">
-                    <i className="icon-folder"></i> Software 5
-                  </Btn>
-                  <Btn className="cli">
-                    <i className="icon-frame"></i> Software 6
-                  </Btn>
-                </div>
-              </div>
-              <div className="section-wrapper">
-                <h3 className="section-title">Sub section 3</h3>
-                <p className="section-description">Sub section 2 description.</p>
-                <div className="button-wrapper">
-                  <Btn>
-                    <i className="icon-control-play"></i> Software 7
-                  </Btn>
-                  <Btn className="archived">
-                    <i className="icon-folder"></i> Software 8
-                  </Btn>
-                  <Btn className="cli">
-                    <i className="icon-frame"></i> Software 9
-                  </Btn>
-                </div>
-              </div>
-              <div className="section-wrapper">
-                <h3 className="section-title">Sub section 4</h3>
-                <p className="section-description">Sub section 2 description.</p>
-                <div className="button-wrapper">
-                  <Btn>
-                    <i className="icon-control-play"></i> Software 10
-                  </Btn>
-                  <Btn className="archived">
-                    <i className="icon-folder"></i> Software 11
-                  </Btn>
-                  <Btn className="cli">
-                    <i className="icon-frame"></i> Software 12
-                  </Btn>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
-  )
+      </div>
+    </div>
+  );
 };
-  
+
 export default Content;
