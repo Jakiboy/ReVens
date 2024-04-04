@@ -6,6 +6,7 @@
 
 const { BrowserWindow } = require('electron');
 const { getPath } = require('./helper');
+const config = require('../config/app.json');
 
 function createLauncher() {
 
@@ -26,7 +27,7 @@ function createLauncher() {
         closable: true,
         icon: getPath('./app/assets/img/icon.png'),
         webPreferences: {
-            devTools: true,
+            devTools: config.debug,
             nodeIntegration: false,
             contextIsolation: true
         }

@@ -7,12 +7,13 @@
 'use strict';
 
 const { app } = require('electron');
-const { config, isWindows, getPath, formatUrl } = require('./main/helper');
+const { setup, isWindows, getPath, formatUrl, openUrl } = require('./main/helper');
 const createLauncher = require('./main/launcher');
 const createSplash = require('./main/splash');
 const createMenu = require('./main/menu');
 const createTray = require('./main/tray');
 const registerShortcuts = require('./main/shortcut');
+const config = require('./config/app.json');
 
 let launcher = null;
 let tray = null;
@@ -34,7 +35,7 @@ if ( !locked ) {
 
 app.once('ready', () => {
 
-    config();
+    setup();
 
     if ( isWindows() ) {
         app.setAppUserModelId('ReVens');
@@ -82,6 +83,8 @@ app.once('ready', () => {
 		return { action: 'deny' }
     });
 
-    launcher.webContents.openDevTools();
-
+    if ( config.debug ) {
+        launcher.webContents.openDevTools();
+    }
+    
 });

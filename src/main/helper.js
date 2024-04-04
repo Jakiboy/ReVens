@@ -13,9 +13,9 @@ const Axios = require('axios');
 const Progress = require('electron-progressbar');
 
 /**
- * Setup.
+ * Setup env.
  */
-function config() {
+function setup() {
 	process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
 }
 
@@ -251,7 +251,7 @@ function openChangelog() {
 }
 
 module.exports = {
-    config,
+    setup,
     isWindows,
     openUrl,
     formatUrl,

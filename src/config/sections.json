@@ -7,7 +7,7 @@
             "subs": [
                 {
                     "title": "Binary",
-                    "description": "Analyze binary (<strong>Bytecode, Mach-O</strong>)"
+                    "description": "Analyze binary (<strong>PE, Bytecode, Mach-O</strong>)"
                 },
                 {
                     "title": "Compilation",
