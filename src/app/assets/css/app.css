@@ -76,15 +76,22 @@ strong {
   align-items: center;
   flex-wrap: wrap;
 }
-.copyright, .logger {
+.copyright,
+.logger {
   flex: 1 1 auto;
   margin: 0;
+  color: #dadada;
+  height: 20px;
 }
 .logger {
     position: relative;
-    color: #dadada;
     font-size: 11px;
     text-align: right;
+}
+.logger .status {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .copyright {
     font-size: 12px;
