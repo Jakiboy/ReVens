@@ -12,8 +12,10 @@ body {
     -moz-user-drag: none;
     -o-user-drag: none;
     overflow: hidden;
-    font-family: 'Roboto';
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 100;
+    font-style: normal;
     background-color: #303030;
     color: #bdbdbf;
 }
