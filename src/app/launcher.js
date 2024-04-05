@@ -24,7 +24,7 @@ const Launcher = () => {
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
           <Content activeTab={activeTab} />
         </div>
-        <hr className="my-3" />
+        <hr className="separator my-3" />
         <Footer />
       </div>
     </>

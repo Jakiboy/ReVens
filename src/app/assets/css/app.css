@@ -219,7 +219,7 @@ strong {
 /* scrollbar */
 /* ----------------------------- */
 .app-scroller {
-    height: 355px;
+    height: calc(100vh - 350px);
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 10px;
@@ -288,6 +288,13 @@ strong {
         width: 100%;
     }
     .logger {
+        display: none;
+    }
+}
+@media only screen and (max-height: 640px)
+{
+    .separator,
+    .footer-wrapper {
         display: none;
     }
 }
