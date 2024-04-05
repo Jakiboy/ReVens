@@ -31,5 +31,8 @@
 			"Unpacking.iso"
 		]
 	},
+   	"resizable": false,
+   	"width": 1000,
+   	"height": 740,
    	"debug": true
 }

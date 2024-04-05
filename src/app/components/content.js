@@ -28,26 +28,39 @@ const Content = ({ activeTab }) => {
     );
   }
 
+  const _section = generateSlug(activeSection.name);
+  const _subs = activeSection.subs;
+  const _packages = pConfig.packages;
+
   return (
-    <div className="tab-content" id={`tab-content-${generateSlug(activeSection.name)}`}>
-      <div className="tab-pane fade show active" id={generateSlug(activeSection.name)} role="tabpanel" aria-labelledby={`${generateSlug(activeSection.name)}-tab`}>
-        <p dangerouslySetInnerHTML={{ __html: activeSection.description }}></p>
-        <div className="section-container app-scroller">
-          {activeSection.subs.map((sub, index) => (
-            <div className="section-wrapper" key={index}>
-              <h3 className="section-title">{sub.title}</h3>
-              <p className="section-description" dangerouslySetInnerHTML={{ __html: sub.description }}></p>
-              <div className="button-wrapper">
-                {pConfig.packages.filter(pkg => pkg.section === activeSection.name && pkg.sub === sub.title).map((software, index) => (
-                  <Btn key={index}>
-                    <i className={`icon-${software.icon}`}></i> {software.name}
-                  </Btn>
-                ))}
-              </div>
+    <div className="tab-content" id={`tab-content-${_section}`}>
+        <div className="tab-pane fade show active" id={_section} role="tabpanel" aria-labelledby={`${_section}-tab`}>
+            <p dangerouslySetInnerHTML={{ __html: activeSection.description }}></p>
+            <div className="section-container app-scroller">
+              {_subs.map((sub, index) => {
+                const _sub = generateSlug(sub.title);
+                return (
+                  <div className="section-wrapper" key={index}>
+                      <h3 className="section-title">{sub.title}</h3>
+                      <p className="section-description" dangerouslySetInnerHTML={{ __html: sub.description }}></p>
+                      <div className="button-wrapper">
+                        {_packages.map((file, index) => {
+                          const _fsection = generateSlug(file.section);
+                          const _fsub = generateSlug(file.sub);
+                          if ( (_fsection === _section) && (_fsub === _sub) ) {
+                            return (
+                              <Btn key={index}>
+                                <i className={`icon-${file.icon}`}></i> {file.name}
+                              </Btn>
+                            );
+                          }
+                        })}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          ))}
         </div>
-      </div>
     </div>
   );
 };
