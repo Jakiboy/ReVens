@@ -53,7 +53,7 @@ strong {
 /* content */
 /* ----------------------------- */
 .content-wrapper .tab-content {
-    background: #272727;
+    background: #212121;
     padding: 20px;
     border-radius: 10px;
     min-height: calc(100vh - 230px);
@@ -175,7 +175,7 @@ strong {
     font-weight: 400;
     margin-right: 5px;
     vertical-align: middle;
-    background-color: #1e1e1e;
+    background-color: #181818;
     border: 1.5px solid #ccc;
     border-radius: 10px;
     box-shadow: none;
@@ -184,7 +184,7 @@ strong {
 .button-wrapper .btn:hover,
 .button-wrapper .btn:active, 
 .button-wrapper .btn:focus {
-    background: none;
+    background: inherit;
     box-shadow: none;
     border-color: #bc0e12;
 }
