@@ -5,8 +5,6 @@
  */
 
 const { Menu } = require('electron');
-const openAbout = require('./about');
-const openDoc = require('./doc');
 const { reload, openBinFolder, openInfo, openChangelog, openUrl } = require('./helper');
 
 function createMenu(launcher) {
@@ -39,7 +37,7 @@ function getTemplate(launcher) {
                 {
                     "label": 'Documentation',
                     "accelerator": 'Ctrl+D',
-                    click() { openDoc(); }
+                    click() { /*openDoc();*/ }
                 },
                 {
                     "label": 'Packages',
@@ -71,7 +69,9 @@ function getTemplate(launcher) {
                 {
                     "label": 'About',
                     "accelerator": 'Ctrl+A',
-                    click() { openAbout(launcher); }
+                    click() {
+                        launcher.webContents.send('open-about');
+                    }
                 }
             ]
         }
