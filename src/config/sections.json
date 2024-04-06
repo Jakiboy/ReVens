@@ -35,10 +35,6 @@
                 {
                     "title": "Calculating",
                     "description": "Mathematical and reverse calculating"
-                },
-                {
-                    "title": "Sandboxing",
-                    "description": "Executables safe testing"
                 }
             ]
         },
@@ -198,7 +194,7 @@
                 },
                 {
                     "title": "Editing",
-                    "description": "Editing text files"
+                    "description": "Editing files (Text)"
                 },
                 {
                     "title": "Dependencies",
