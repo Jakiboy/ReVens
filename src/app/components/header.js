@@ -9,7 +9,7 @@ import React from 'react';
 const Header = () => (
   <div className="heading-wrapper">
     <div className="image-wrapper">
-      <img src="./app/assets/img/large.png" width="100px" />
+      <img src="./app/assets/img/icon-main.png" className="img-fluid" width="100px" />
     </div>
   </div>
 );
