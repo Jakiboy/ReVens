@@ -5,11 +5,12 @@
  */
 
 const { ipcMain } = require('electron');
+const { openItem } = require('./helper');
 
 function setupIpcListeners() {
-    ipcMain.on('button-click', (event, buttonId) => {
-        console.log(`Button clicked: ${buttonId}`);
-    });
+  ipcMain.on('open-item', async (event, path) => {
+    await openItem(path);
+  });
 }
 
 module.exports = setupIpcListeners;
