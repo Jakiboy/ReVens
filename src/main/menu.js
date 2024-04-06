@@ -71,7 +71,7 @@ function getTemplate(launcher) {
                 {
                     "label": 'About',
                     "accelerator": 'Ctrl+A',
-                    click() { openAbout(); }
+                    click() { openAbout(launcher); }
                 }
             ]
         }
