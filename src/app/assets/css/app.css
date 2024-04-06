@@ -56,7 +56,7 @@ strong {
     background: #212121;
     padding: 20px;
     border-radius: 10px;
-    min-height: calc(100vh - 230px);
+    min-height: calc(100vh - 260px);
 }
 .content-wrapper .tab-content.has-error {
     display: flex;
@@ -194,7 +194,8 @@ strong {
     box-shadow: none;
     border-color: #bc0e12;
 }
-.button-wrapper .btn.archived {
+.button-wrapper .btn.type-zip,
+.button-wrapper .btn.type-folder {
     background-color: #292929;
 }
 .button-wrapper .btn i {
@@ -269,7 +270,7 @@ strong {
 /* ----------------------------- */
 @font-face {
     font-family: 'Oxanium';
-    src: local('Oxanium'), url('font/oxanium.ttf') format('truetype');
+    src: local('Oxanium'), url('font/oxanium.woff2') format('woff2');
 }
 
 /* responsive */

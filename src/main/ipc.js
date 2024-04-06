@@ -7,10 +7,9 @@
 const { ipcMain } = require('electron');
 
 function setupIpcListeners() {
-    ipcMain.on('some-event', (event, arg) => {
-        console.log(arg);
-        event.reply('some-event-reply', 'pong');
+    ipcMain.on('button-click', (event, buttonId) => {
+        console.log(`Button clicked: ${buttonId}`);
     });
 }
 
-module.exports = { setupIpcListeners };
+module.exports = setupIpcListeners;
