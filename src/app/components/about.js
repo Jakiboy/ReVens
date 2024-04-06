@@ -4,44 +4,54 @@
  * Version : 1.2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
-  MDBBtn,
-  MDBModal,
-  MDBModalDialog,
-  MDBModalContent,
-  MDBModalHeader,
-  MDBModalTitle,
-  MDBModalBody,
-  MDBModalFooter,
+  MDBModal as Modal,
+  MDBModalDialog as Dialog,
+  MDBModalContent as Content,
+  MDBModalBody as Body,
+  MDBModalFooter as Footer,
+  MDBBtn as Btn
 } from 'mdb-react-ui-kit';
 
 const About = () => {
 
-  const [basicModal, setBasicModal] = useState(false);
-  const toggleOpen = () => setBasicModal(!basicModal);
+  const [openedModal, setOpenedModal] = useState(false);
+
+  useEffect(() => {
+
+    const openAbout = () => {
+      setOpenedModal(true);
+    };
+
+    window.electron.on('open-about', openAbout);
+
+    return () => {
+      window.electron.off('open-about', openAbout);
+    };
+
+  }, []);
+
+  const handleClose = () => {
+    setOpenedModal(false);
+  };
 
   return (
     <>
-      <MDBBtn onClick={toggleOpen}>LAUNCH DEMO MODAL</MDBBtn>
-      <MDBModal open={basicModal} setOpen={setBasicModal} tabIndex='-1'>
-        <MDBModalDialog>
-          <MDBModalContent>
-            <MDBModalHeader>
-              <MDBModalTitle>Modal title</MDBModalTitle>
-              <MDBBtn className='btn-close' color='none' onClick={toggleOpen}></MDBBtn>
-            </MDBModalHeader>
-            <MDBModalBody>...</MDBModalBody>
-
-            <MDBModalFooter>
-              <MDBBtn color='secondary' onClick={toggleOpen}>
+      <Modal open={openedModal} onClose={handleClose} tabIndex='-1'>
+        <Dialog centered>
+          <Content>
+            <Body>
+              .....
+            </Body>
+            <Footer>
+              <Btn color='primary' onClick={handleClose}>
                 Close
-              </MDBBtn>
-              <MDBBtn>Save changes</MDBBtn>
-            </MDBModalFooter>
-          </MDBModalContent>
-        </MDBModalDialog>
-      </MDBModal>
+              </Btn>
+            </Footer>
+          </Content>
+        </Dialog>
+      </Modal>
     </>
   );
 };

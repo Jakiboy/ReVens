@@ -8,7 +8,7 @@ const { ipcMain } = require('electron');
 const { openItem } = require('./helper');
 
 function setupIpcListeners() {
-  ipcMain.on('open-item', async (event, path) => {
+  ipcMain.on('open-item', async (e, path) => {
     await openItem(path);
   });
 }

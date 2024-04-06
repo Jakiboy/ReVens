@@ -6,11 +6,14 @@
 
 const { contextBridge, ipcRenderer } = require('electron');
 
-contextBridge.exposeInMainWorld(
-  'electron',
-  {
-    click: (buttonId) => {
-      ipcRenderer.send('open-item', buttonId);
-    }
+contextBridge.exposeInMainWorld('electron', {
+  click: (path) => {
+    ipcRenderer.send('open-item', path);
+  },
+  on: (channel, func) => {
+    ipcRenderer.on(channel, (e, ...args) => func(...args));
+  },
+  off: (channel, func) => {
+    ipcRenderer.off(channel, func);
   }
-);
+});
