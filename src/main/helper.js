@@ -7,6 +7,7 @@
 const { shell, dialog, Notification } = require('electron');
 const config = require('../config/app.json');
 const path = require('path');
+const exec = require('child_process').execFile;
 const url = require('url');
 // const fs = require('fs');
 // const Axios = require('axios');
@@ -55,19 +56,48 @@ function formatPath(path) {
 }
 
 /**
+ * Get extension.
+ */
+function getExtension(item) {
+	let ext = path.extname(item);
+	return ext.replace(/[^\w]|[\s]/g, '');
+}
+
+/**
+ * Open item with program.
+ */
+function openWith(item, program) {
+	exec(program, [item], (error, stdout, stderr) => {
+		if (error) {
+		  console.error('Error opening file:', error);
+		}
+	});
+}
+
+/**
  * Open item.
  */
-async function openItem(path) {
+async function openItem(item) {
+
 	let baseDir = config.baseDir;
 	if ( !baseDir ) {
 		baseDir = getRoot('bin');
 	}
-	path = formatPath(baseDir + path);
-	path = `"${path}"`;
-	try {
-		console.log(path);
-		await shell.openPath(path);
-	} catch (error) {}
+
+	item = formatPath(baseDir + item);
+	const ext = getExtension(item);
+
+	if (['xm'].includes(ext)) {
+		const player = formatPath(baseDir + config.player);
+		openWith(item, player);
+
+	} else {
+		try {
+			await shell.openPath(`"${item}"`);
+		} catch (error) {}
+	}
+
+	console.log(item);
 }
 
 /**

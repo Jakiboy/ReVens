@@ -5,7 +5,7 @@
 	"url": "https://github.com/Jakiboy/ReVens",
 	"version": "1.2.0",
    	"baseDir": "E:/Toolkit/Security/Reverse Engineering",
-   	"packages": {
+   	"items": {
 		"host": "https://revens.jihadsinnaour.com/download",
 		"parts": [
 			"Analyzing.iso",
@@ -31,6 +31,7 @@
 			"Unpacking.iso"
 		]
 	},
+   	"player": "/Patching/Sound/FastTracker/x64/ft2.exe",
    	"resizable": false,
    	"width": 1000,
    	"height": 740,
