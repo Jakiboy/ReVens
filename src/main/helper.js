@@ -5,7 +5,7 @@
  */
 
 const { shell, dialog, Notification } = require('electron');
-
+const config = require('../config/app.json');
 const path = require('path');
 const url = require('url');
 const fs = require('fs');
@@ -52,6 +52,22 @@ function formatUrl(objct) {
  */
 function formatPath(path) {
 	return path.replace(/\//g, '\\');
+}
+
+/**
+ * Open item.
+ */
+async function openItem(path) {
+	let baseDir = config.baseDir;
+	if ( !baseDir ) {
+		baseDir = getRoot('bin');
+	}
+	path = formatPath(baseDir + path);
+	path = `"${path}"`;
+	try {
+		console.log(path);
+		await shell.openPath(path);
+	} catch (error) {}
 }
 
 /**
@@ -257,6 +273,7 @@ module.exports = {
     formatUrl,
     getPath,
     reload,
+    openItem,
     openInfo,
     openChangelog,
     openBinFolder,

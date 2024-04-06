@@ -3,7 +3,7 @@
         {
             "name":"FileAlyzer",
             "type":"exe",
-            "path":"/Analyzing/PE/FileAlyzer2.exe",
+            "path":"/Analyzing/PE/FileAlyzer/FileAlyzer2.exe",
             "section":"Analyzing",
             "sub":"Binary",
             "extra":false,
@@ -13,7 +13,7 @@
         {
             "name":"Capa",
             "type":"cli",
-            "path":"/Analyzing/PE/Capa/capa.bat",
+            "path":"/Analyzing/PE/Capa/capa.cmd",
             "section":"Analyzing",
             "sub":"Binary",
             "extra":false,

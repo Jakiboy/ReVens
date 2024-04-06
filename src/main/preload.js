@@ -10,7 +10,7 @@ contextBridge.exposeInMainWorld(
   'electron',
   {
     click: (buttonId) => {
-      ipcRenderer.send('button-click', buttonId);
+      ipcRenderer.send('open-item', buttonId);
     }
   }
 );
