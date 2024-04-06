@@ -151,7 +151,7 @@ function getRoot(dir) {
 // 		new Notification({
 // 			"title": 'ReVens',
 // 			"body": msg,
-// 			"icon": path.join(__dirname, '../app/assets/img/icon.png')
+// 			"icon": path.join(__dirname, '../app/assets/img/icon-64.png')
 // 		}).show();
 // 	}
 // }

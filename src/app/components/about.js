@@ -16,36 +16,27 @@ import {
 
 const About = () => {
 
-  const [openedModal, setOpenedModal] = useState(false);
+  const [isOpened, setModalStatus] = useState(false);
+  const openModal  = () => setModalStatus(true);
+  const closeModal = () => setModalStatus(false);
 
   useEffect(() => {
-
-    const openAbout = () => {
-      setOpenedModal(true);
-    };
-
-    window.electron.on('open-about', openAbout);
-
+    window.electron.on('open-about', openModal);
     return () => {
-      window.electron.off('open-about', openAbout);
+      window.electron.off('open-about', showModal);
     };
-
   }, []);
-
-  const handleClose = () => {
-    setOpenedModal(false);
-  };
 
   return (
     <>
-      <Modal open={openedModal} onClose={handleClose} tabIndex='-1'>
+      <Modal tabIndex="-1" staticBackdrop open={isOpened} setOpen={setModalStatus}>
         <Dialog centered>
           <Content>
             <Body>
               .....
             </Body>
             <Footer>
-              <Btn color='primary' onClick={handleClose}>
+              <Btn color="primary" onClick={closeModal}>
                 Close
               </Btn>
             </Footer>

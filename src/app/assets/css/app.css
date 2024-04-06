@@ -34,7 +34,7 @@ strong {
 /* main */
 /* ----------------------------- */
 .main {
-    background: #303030 url(../img/screenshot.png);
+    background: #303030 url(../img/bg-main.png);
     color: #bdbdbf;
 }
 
@@ -43,7 +43,6 @@ strong {
 /* ----------------------------- */
 .heading-wrapper img {
     margin: 10px 0;
-    width: 100px;
 }
 .heading-wrapper {
     text-align: center;
@@ -278,6 +277,16 @@ strong {
 }
 .about a:hover {
     text-decoration: underline;
+}
+
+/* ----------------------------- */
+/* modal */
+/* ----------------------------- */
+.modal-content {
+    background-color: #131313;
+}
+.modal-backdrop {
+    background-color: rgb(125 125 125 / 50%);
 }
 
 /* ----------------------------- */
