@@ -13,6 +13,7 @@ const createSplash = require('./main/splash');
 const createMenu = require('./main/menu');
 const createTray = require('./main/tray');
 const registerShortcuts = require('./main/shortcut');
+const setupIpcListeners = require('./main/ipc.js');
 const config = require('./config/app.json');
 
 let launcher = null;
@@ -42,6 +43,7 @@ app.once('ready', () => {
     }
     
     registerShortcuts();
+    setupIpcListeners();
 
     const splash = createSplash();
     launcher = createLauncher();

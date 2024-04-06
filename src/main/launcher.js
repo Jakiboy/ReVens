@@ -29,6 +29,7 @@ function createLauncher() {
         closable: true,
         icon: getPath('./app/assets/img/icon.png'),
         webPreferences: {
+            preload: getPath('./main/preload.js'),
             devTools: config.debug,
             nodeIntegration: false,
             contextIsolation: true

@@ -28,6 +28,7 @@ const Section = ({ section, items }) => {
                   {items.map((item, index) => {
                     const _isection = generateSlug(item.section);
                     const _isub = generateSlug(item.sub);
+                    let name = item.name;
                     let icon;
                     switch (item.type) {
                       case 'zip':
@@ -37,13 +38,17 @@ const Section = ({ section, items }) => {
                       case 'doc':
                         icon = 'notebook';
                         break;
+                      case 'cli':
+                        icon = 'control-play';
+                        name = `${name} (CLI)`;
+                        break;
                       default:
                         icon = 'control-play';
                     }
                     if ((_isection === _section) && (_isub === _sub) && !item.extra) {
                       return (
-                        <Btn key={index}>
-                          <i className={`icon-${icon}`}></i> {item.name}
+                        <Btn className={`type-${item.type}`} key={index} onClick={() => window.electron.click(item.path)}>
+                          <i className={`icon-${icon}`}></i> {name}
                         </Btn>
                       );
                     }
@@ -60,6 +65,7 @@ const Section = ({ section, items }) => {
                             const _isection = generateSlug(item.section);
                             const _isub = generateSlug(item.sub);
                             const _iextra = generateSlug(item.extra);
+                            let name = item.name;
                             let icon;
                             switch (item.type) {
                               case 'zip':
@@ -69,13 +75,16 @@ const Section = ({ section, items }) => {
                               case 'doc':
                                 icon = 'notebook';
                                 break;
+                                case 'cli':
+                                  icon = 'control-play';
+                                  name = `${name} (CLI)`;
                               default:
                                 icon = 'control-play';
                             }
                             if ((_isection === _section) && (_isub === _sub) && (_iextra === _extra)) {
                               return (
-                                <Btn key={index}>
-                                  <i className={`icon-${icon}`}></i> {item.name}
+                                <Btn className={`type-${item.type}`} key={index} onClick={() => window.electron.click(item.path)}>
+                                  <i className={`icon-${icon}`}></i> {name}
                                 </Btn>
                               );
                             }
