@@ -131,6 +131,12 @@ strong {
     width: 18%;
     min-width: 218px;
 }
+.extra-wrapper {
+    border-top: 1px solid #363636;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
 
 /* ----------------------------- */
 /* nav */
