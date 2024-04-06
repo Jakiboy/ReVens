@@ -37,6 +37,8 @@ const Section = ({ section, items }) => {
                         break;
                       case 'doc':
                         icon = 'notebook';
+                      case 'sound':
+                        icon = 'music-tone';
                         break;
                       case 'cli':
                         icon = 'control-play';
@@ -75,9 +77,13 @@ const Section = ({ section, items }) => {
                               case 'doc':
                                 icon = 'notebook';
                                 break;
-                                case 'cli':
+                              case 'sound':
+                                icon = 'music-tone';
+                                break;
+                              case 'cli':
                                   icon = 'control-play';
                                   name = `${name} (CLI)`;
+                                break;
                               default:
                                 icon = 'control-play';
                             }

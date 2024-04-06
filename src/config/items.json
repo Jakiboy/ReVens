@@ -33,7 +33,7 @@
         {
             "name":"Bytecode Viewer",
             "type":"exe",
-            "path":"/Analyzing/Bytecode Viewer/bytecode-viewer.cmd",
+            "path":"/Analyzing/Binary/Bytecode Viewer/bytecode-viewer.cmd",
             "section":"Analyzing",
             "sub":"Binary",
             "extra":false,
@@ -56,7 +56,7 @@
         {
             "name":"Spyre",
             "type":"exe",
-            "path":"/Analyzing/Binary/x64/spyre.exe",
+            "path":"/Analyzing/Binary/Spyre/x64/spyre.exe",
             "section":"Analyzing",
             "sub":"Binary",
             "extra":false,
@@ -66,7 +66,7 @@
         {
             "name":"ClamAV",
             "type":"cli",
-            "path":"/Analyzing/Binary/clamav.cmd",
+            "path":"/Analyzing/Binary/ClamAV/clamav.cmd",
             "section":"Analyzing",
             "sub":"Binary",
             "extra":false,
@@ -228,7 +228,7 @@
         {
             "name":"UPX-Analyser",
             "type":"zip",
-            "path":"/Analyzing/Packaging/UPX-Analyzer.zip",
+            "path":"/Analyzing/Packaging/UPX-Analyser.zip",
             "section":"Analyzing",
             "sub":"Packaging",
             "extra":false,
@@ -324,7 +324,7 @@
         {
             "name":"Regalyz",
             "type":"exe",
-            "path":"/Analyzing/System/API/Regalyz/ntldd.cmd",
+            "path":"/Analyzing/System/API/Regalyz/RegAlyzer.exe",
             "section":"Analyzing",
             "sub":"System",
             "extra":"API",
@@ -2800,14 +2800,17 @@
             "url":false
         },
         {
-            "name":"fasttracker-2",
+            "name":"FastTracker",
             "type":"exe",
-            "path":"Patching/Sound/FastTracker 2/x64/ft2-clone-win64.exe",
-            "section":"XXXXX",
-            "sub":"binary",
+            "path":"/Patching/Sound/FastTracker/x64/ft2.exe",
+            "section":"Patching",
+            "sub":"Sound",
             "extra":false,
-            "version":false,
-            "url":false
+            "version":"1.79",
+            "url":[
+                "https://16-bits.org/ft2-clone-v{version}-win64.zip",
+                "https://16-bits.org/ft2-clone-v{version}-win32.zip"
+            ]
         },
         {
             "name":"milkytracker",
@@ -2850,12 +2853,12 @@
             "url":false
         },
         {
-            "name":"brd-teleport-pro",
-            "type":"xm",
-            "path":"Patching/Assets/Sounds/XM/Famous/BRD - Teleport Pro.xm",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
+            "name":"BRD - Teleport Pro",
+            "type":"sound",
+            "path":"/Patching/Assets/Sounds/XM/Famous/BRD - Teleport Pro.xm",
+            "section":"Patching",
+            "sub":"Sound",
+            "extra":"Patcher sounds",
             "version":false,
             "url":false
         },
