@@ -5,7 +5,7 @@
 ; Link    : https://github.com/Jakiboy/ReVens
 ; license : MIT
 ;
-; Copyright (C) 2024 Jihad Sinnaour. All rights reserved.
+; Copyright (c) 2024 Jihad Sinnaour <mail@jihadsinnaour.com>
 ; ======================================================================================================================
 
 ; Define:
