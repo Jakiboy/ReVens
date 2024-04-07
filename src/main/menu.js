@@ -37,7 +37,9 @@ function getTemplate(launcher) {
                 {
                     "label": 'Documentation',
                     "accelerator": 'Ctrl+D',
-                    click() { /*openDoc();*/ }
+                    click() {
+                        launcher.webContents.send('open-doc');
+                    }
                 },
                 {
                     "label": 'Packages',

@@ -11,6 +11,7 @@ import Tabs from './components/tabs';
 import Content from './components/content';
 import Footer from './components/footer';
 import About from './components/about';
+import Doc from './components/doc';
 
 const Launcher = () => {
 
@@ -28,6 +29,7 @@ const Launcher = () => {
         <hr className="separator my-3" />
         <Footer />
         <About />
+        <Doc />
       </div>
     </>
   );

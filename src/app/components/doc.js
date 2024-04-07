@@ -16,45 +16,36 @@ import {
   MDBRow as Row,
   MDBCol as Col
 } from 'mdb-react-ui-kit';
-import config from '../../config/app.json';
+// import config from '../../config/app.json';
 
-const About = () => {
+const Doc = () => {
 
   const [isOpened, setModalStatus] = useState(false);
   const openModal  = () => setModalStatus(true);
   const closeModal = () => setModalStatus(false);
 
   useEffect(() => {
-    window.electron.on('open-about', openModal);
+    window.electron.on('open-doc', openModal);
     return () => {
-      window.electron.off('open-about', showModal);
+      window.electron.off('open-doc', showModal);
     };
   }, []);
 
   return (
     <>
-      <Modal open={isOpened} setOpen={setModalStatus} className="about-modal" tabIndex="-1" staticBackdrop >
+      <Modal open={isOpened} setOpen={setModalStatus} className="doc-modal" tabIndex="-1" staticBackdrop >
         <Dialog centered>
           <Content>
             <Body>
             <Container className="d-flex align-items-center justify-content-center text-center">
             <Row>
               <Col>
-                <div className="image-wrapper">
-                  <img src="./app/assets/img/icon-64.png" className="img-fluid" />
-                </div>
-                <h1>{config.name}</h1>
-                <p><strong>Version</strong> {config.version} (x64)</p>
-                <p className="mb-2">{config.about.desctiption}.</p>
-                <p>
-                  <a href={config.url} className="page-link">
-                    <i className="icon-social-github"></i> Source
-                  </a>
-                </p>
+                <h1>XXX</h1>
+                <p><strong>Version</strong> XXXX (x64)</p>
+                <p className="mb-2">XXXXXXXX.</p>
                 <hr/>
                 <p>
-                  <strong>Copyright</strong> © {config.year} {config.author.name} <span className="space"></span>
-                  (<a href={config.author.url} className="page-link">{config.author.nickname}</a>)
+                  XXXX
                 </p>
               </Col>
             </Row>
@@ -72,4 +63,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Doc;
