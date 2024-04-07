@@ -112,7 +112,7 @@ This is how it looks, Made with {heart} using **Electron.js** + **React.js**.
 To build ReVens:
 
 * **Node.js** ^21.2.0
-* **Git bash** ^2.44.0
+* **MinGW-w64**
 
 ReVens command-line:
 
@@ -631,12 +631,7 @@ Universal mobile toolkits.
 
 ## 🔧 TODO
 
-* Improve UI using **React.js**.
-* Update **Electron.js** to the latest (+ Dependencies).
 * Use public cloud for packages hosting.
-* Use internal **Node.js** packages downloader & extractor.
-* Add updater (including packages **path.json**).
-* Update Docs, (Add Links to active RE challenges & Forums, Remove outdated...).
 
 ## Authors:
 
