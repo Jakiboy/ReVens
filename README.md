@@ -19,7 +19,7 @@ To build ReVens:
 
 ## 💡 Notices
 
-> [!NOTE]
+> [!Important]
 > Respecting the rights of software developers is paramount. Engaging in activities such as bypassing software protections or reverse engineering software without explicit permission is not only generally illegal, but also unethical. It’s essential to utilize software in the manner intended by its creators and in compliance with the stipulated terms of service or license agreement.
 
 * Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
