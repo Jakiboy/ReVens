@@ -41,22 +41,77 @@ To build ReVens:
 
 Download packages manually from (**~8Go**) :
 
+<table>
+  <tr>
+    <th>Part 1</th>
+    <th>Part 2</th>
+    <th>Part 3</th>
+    <th>Part 4</th>
+    <th>Part 5</th>
+    <th>Part 6</th>
+  </tr>
+  <tr>
+    <td><a href="https://bit.ly/3x14Vd8" target="_blank">Analyzing</a></td>
+    <td><a href="https://bit.ly/3VsyuhU" target="_blank">Assembling</a></td>
+    <td><a href="https://bit.ly/4a24MFb" target="_blank">Bypassing</a></td>
+    <td><a href="https://bit.ly/3INWc0F" target="_blank">Calculating</a></td>
+    <td><a href="https://bit.ly/3x6G1ZO" target="_blank">Comparing</a></td>
+    <td><a href="https://bit.ly/4a6RozE" target="_blank">Converting</a></td>
+  </tr>
+</table>
 
-|     Part 1     |     Part 2     |     Part 3     |     Part 4     |     Part 5     |     Part 6     |
-|----------------|:---------------|:---------------|:---------------|:---------------|:---------------|
-| [Analyzing](https://bit.ly/3x14Vd8) | [Assembling](https://bit.ly/3VsyuhU) | [Bypassing](https://bit.ly/4a24MFb) | [Calculating](https://bit.ly/3INWc0F) | [Comparing](https://bit.ly/3x6G1ZO) | [Converting](https://bit.ly/4a6RozE) |
+<table>
+  <tr>
+    <th>Part 7</th>
+    <th>Part 8</th>
+    <th>Part 9</th>
+    <th>Part 10</th>
+    <th>Part 11</th>
+    <th>Part 12</th>
+  </tr>
+  <tr>
+    <td><a href="https://bit.ly/3TxhwMG" target="_blank">Debugging</a></td>
+    <td><a href="https://bit.ly/4a63rgs" target="_blank">Decoding</a></td>
+    <td><a href="https://bit.ly/3Tqzi4t" target="_blank">Decompiling</a></td>
+    <td><a href="https://bit.ly/4a4p8xv" target="_blank">Dependencies</a></td>
+    <td><a href="https://bit.ly/3x8J43J" target="_blank">Disassembling</a></td>
+    <td><a href="https://bit.ly/3TLUmU9" target="_blank">Documentation</a></td>
+  </tr>
+</table>
 
-|     Part 7     |     Part 8     |     Part 9     |     Part 10    |     Part 11    |     Part 12    |
-|----------------|:---------------|:---------------|:---------------|:---------------|:---------------|
-| [Debugging](https://bit.ly/3TxhwMG) | [Decoding](https://bit.ly/4a63rgs) | [Decompiling](https://bit.ly/3Tqzi4t) | [Dependencies](https://bit.ly/4a4p8xv) | [Disassembling](https://bit.ly/3x8J43J) | [Documentation](https://bit.ly/3TLUmU9) |
+<table>
+  <tr>
+    <th>Part 13</th>
+    <th>Part 14</th>
+    <th>Part 15</th>
+    <th>Part 16</th>
+    <th>Part 17</th>
+    <th>Part 18</th>
+  </tr>
+  <tr>
+    <td><a href="https://bit.ly/498HUCo" target="_blank">Editing</a></td>
+    <td><a href="https://bit.ly/4a3nQCV" target="_blank">Encoding</a></td>
+    <td><a href="https://bit.ly/3vnBu4F" target="_blank">Extracting</a></td>
+    <td><a href="https://bit.ly/4cv6TTB" target="_blank">Hexing</a></td>
+    <td><a href="https://bit.ly/3IQT5VC" target="_blank">Mobile</a></td>
+    <td><a href="https://bit.ly/4apwGuw" target="_blank">Packing</a></td>
+  </tr>
+</table>
 
-|     Part 13    |     Part 14    |     Part 15    |     Part 16    |     Part 17    |     Part 18    |
-|----------------|:---------------|:---------------|:---------------|:---------------|:---------------|
-| [Editing](https://bit.ly/498HUCo) | [Encoding](https://bit.ly/4a3nQCV) | [Extracting](https://bit.ly/3vnBu4F) | [Hexing](https://bit.ly/4cv6TTB) | [Mobile](https://bit.ly/3IQT5VC) | [Packing](https://bit.ly/4apwGuw) |
-
-|     Part 19    |     Part 20    |     Part 21    |     Part 22    |
-|----------------|:---------------|:---------------|:---------------|
-| [Patching](https://bit.ly/3Vppjit) | [Programming](https://bit.ly/4a4nOux) | [Testing](https://bit.ly/43sQgDU) | [Unpacking](https://bit.ly/4aph2iQ) |
+<table>
+  <tr>
+    <th>Part 19</th>
+    <th>Part 20</th>
+    <th>Part 21</th>
+    <th>Part 22</th>
+  </tr>
+  <tr>
+    <td><a href="https://bit.ly/3Vppjit" target="_blank">Patching</a></td>
+    <td><a href="https://bit.ly/4a4nOux" target="_blank">Programming</a></td>
+    <td><a href="https://bit.ly/43sQgDU" target="_blank">Testing</a></td>
+    <td><a href="https://bit.ly/4aph2iQ" target="_blank">Unpacking</a></td>
+  </tr>
+</table>
 
 Downloads should be extracted into */bin* folder.
 
