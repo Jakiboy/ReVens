@@ -11,11 +11,11 @@ I made ReVens AIO app to share personal experience in RE since **2008**.
 
 To run ReVens:
 
-* **Windows 10/11 x64** *-Secured VM recommended-*.
+* **Windows 10/11 x64**
 
 To build ReVens:
 
-* **Node.js** ^20.0
+* **Node.js** ^21.2.0
 
 ## 💡 Notices
 
