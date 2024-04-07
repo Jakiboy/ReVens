@@ -9,12 +9,6 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 > RE Tools are priceless, especially the legacy ones. They deserve a nice place where they can live in peace.  
 > [Watch online preview](https://revens.jihadsinnaour.com).
 
-## 🔧 Requirements
-
-To run ReVens:
-
-* **Windows** 10/11 (x64)
-
 ## 💡 Notices
 
 > [!Important]
@@ -29,89 +23,81 @@ To run ReVens:
 * **90% portable**.
 * *-Use it on your own responsibility-*
 
+## 🔧 Requirements
+
+To run ReVens, **Windows** 10/11 (x64) is required.
+
 ## 🔧 Download
 
-**ReVens GUI**
+* Download ReVens GUI from: [Releases](https://github.com/Jakiboy/ReVens/releases).
+* Download packages manually (**~8Go**) from:
 
-* Download from: [Releases](https://github.com/Jakiboy/ReVens/releases).
-
-**ReVens Packages**
-
-Download packages manually from (**~8Go**) :
-
-<table style="width:100%">
+<table>
   <tr>
-    <th style="width:16.67%">Part 1</th>
-    <th style="width:16.67%">Part 2</th>
-    <th style="width:16.67%">Part 3</th>
-    <th style="width:16.67%">Part 4</th>
-    <th style="width:16.67%">Part 5</th>
-    <th style="width:16.67%">Part 6</th>
+    <th>Part 1</th>
+    <th>Part 2</th>
+    <th>Part 3</th>
+    <th>Part 4</th>
+    <th>Part 5</th>
+    <th>Part 6</th>
+    <th>Part 7</th>
   </tr>
   <tr>
-    <td style="width:16.67%"><a href="https://bit.ly/3x14Vd8" target="_blank">Analyzing</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/3VsyuhU" target="_blank">Assembling</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/4a24MFb" target="_blank">Bypassing</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/3INWc0F" target="_blank">Calculating</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/3x6G1ZO" target="_blank">Comparing</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/4a6RozE" target="_blank">Converting</a></td>
+    <td><a href="https://bit.ly/3x14Vd8" target="_blank">Analyzing</a></td>
+    <td><a href="https://bit.ly/3VsyuhU" target="_blank">Assembling</a></td>
+    <td><a href="https://bit.ly/4a24MFb" target="_blank">Bypassing</a></td>
+    <td><a href="https://bit.ly/3INWc0F" target="_blank">Calculating</a></td>
+    <td><a href="https://bit.ly/3x6G1ZO" target="_blank">Comparing</a></td>
+    <td><a href="https://bit.ly/4a6RozE" target="_blank">Converting</a></td>
+    <td><a href="https://bit.ly/3TxhwMG" target="_blank">Debugging</a></td>
   </tr>
 </table>
 
-<table style="width:100%">
+<table>
   <tr>
-    <th style="width:16.67%">Part 7</th>
-    <th style="width:16.67%">Part 8</th>
-    <th style="width:16.67%">Part 9</th>
-    <th style="width:16.67%">Part 10</th>
-    <th style="width:16.67%">Part 11</th>
-    <th style="width:16.67%">Part 12</th>
+    <th>Part 8</th>
+    <th>Part 9</th>
+    <th>Part 10</th>
+    <th>Part 11</th>
+    <th>Part 12</th>
+    <th>Part 13</th>
   </tr>
   <tr>
-    <td style="width:16.67%"><a href="https://bit.ly/3TxhwMG" target="_blank">Debugging</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/4a63rgs" target="_blank">Decoding</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/3Tqzi4t" target="_blank">Decompiling</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/4a4p8xv" target="_blank">Dependencies</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/3x8J43J" target="_blank">Disassembling</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/3TLUmU9" target="_blank">Documentation</a></td>
-  </tr>
-</table>
-
-<table style="width:100%">
-  <tr>
-    <th style="width:16.67%">Part 13</th>
-    <th style="width:16.67%">Part 14</th>
-    <th style="width:16.67%">Part 15</th>
-    <th style="width:16.67%">Part 16</th>
-    <th style="width:16.67%">Part 17</th>
-    <th style="width:16.67%">Part 18</th>
-  </tr>
-  <tr>
-    <td style="width:16.67%"><a href="https://bit.ly/498HUCo" target="_blank">Editing</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/4a3nQCV" target="_blank">Encoding</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/3vnBu4F" target="_blank">Extracting</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/4cv6TTB" target="_blank">Hexing</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/3IQT5VC" target="_blank">Mobile</a></td>
-    <td style="width:16.67%"><a href="https://bit.ly/4apwGuw" target="_blank">Packing</a></td>
+    <td><a href="https://bit.ly/4a63rgs" target="_blank">Decoding</a></td>
+    <td><a href="https://bit.ly/3Tqzi4t" target="_blank">Decompiling</a></td>
+    <td><a href="https://bit.ly/4a4p8xv" target="_blank">Dependencies</a></td>
+    <td><a href="https://bit.ly/3x8J43J" target="_blank">Disassembling</a></td>
+    <td><a href="https://bit.ly/3TLUmU9" target="_blank">Documentation</a></td>
+    <td><a href="https://bit.ly/4aph2iQ" target="_blank">Unpacking</a></td>
   </tr>
 </table>
 
-<table style="width:100%">
+<table>
   <tr>
-    <th style="width:8%">Part 19</th>
-    <th style="width:8%">Part 20</th>
-    <th style="width:8%">Part 21</th>
-    <th style="width:8%">Part 22</th>
+    <th>Part 14</th>
+    <th>Part 15</th>
+    <th>Part 16</th>
+    <th>Part 17</th>
+    <th>Part 18</th>
+    <th>Part 19</th>
+    <th>Part 20</th>
+    <th>Part 21</th>
+    <th>Part 22</th>
   </tr>
   <tr>
-    <td style="width:8%"><a href="https://bit.ly/3Vppjit" target="_blank">Patching</a></td>
-    <td style="width:8%"><a href="https://bit.ly/4a4nOux" target="_blank">Programming</a></td>
-    <td style="width:8%"><a href="https://bit.ly/43sQgDU" target="_blank">Testing</a></td>
-    <td style="width:8%"><a href="https://bit.ly/4aph2iQ" target="_blank">Unpacking</a></td>
+    <td><a href="https://bit.ly/498HUCo" target="_blank">Editing</a></td>
+    <td><a href="https://bit.ly/4a3nQCV" target="_blank">Encoding</a></td>
+    <td><a href="https://bit.ly/3vnBu4F" target="_blank">Extracting</a></td>
+    <td><a href="https://bit.ly/4cv6TTB" target="_blank">Hexing</a></td>
+    <td><a href="https://bit.ly/3IQT5VC" target="_blank">Mobile</a></td>
+    <td><a href="https://bit.ly/4apwGuw" target="_blank">Packing</a></td>
+    <td><a href="https://bit.ly/3Vppjit" target="_blank">Patching</a></td>
+    <td><a href="https://bit.ly/4a4nOux" target="_blank">Programming</a></td>
+    <td><a href="https://bit.ly/43sQgDU" target="_blank">Testing</a></td>
   </tr>
 </table>
 
-Downloads should be extracted into */bin* folder.
+Downloads should be extracted into ReVens */bin* folder.
 
 ## 🔧 Screenshot
 
