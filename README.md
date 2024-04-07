@@ -43,19 +43,19 @@ Download packages manually from (**~8Go**) :
 
 
 |     Part 1     |     Part 2     |     Part 3     |     Part 4     |     Part 5     |     Part 6     |
-|----------------|:---------------|:---------------|:---------------|:---------------|----------------|
+|----------------|:---------------|:---------------|:---------------|:---------------|:---------------|
 | [Analyzing](https://bit.ly/3x14Vd8) | [Assembling](https://bit.ly/3VsyuhU) | [Bypassing](https://bit.ly/4a24MFb) | [Calculating](https://bit.ly/3INWc0F) | [Comparing](https://bit.ly/3x6G1ZO) | [Converting](https://bit.ly/4a6RozE) |
 
 |     Part 7     |     Part 8     |     Part 9     |     Part 10    |     Part 11    |     Part 12    |
-|----------------|:---------------|:---------------|:---------------|:---------------|----------------|
+|----------------|:---------------|:---------------|:---------------|:---------------|:---------------|
 | [Debugging](https://bit.ly/3TxhwMG) | [Decoding](https://bit.ly/4a63rgs) | [Decompiling](https://bit.ly/3Tqzi4t) | [Dependencies](https://bit.ly/4a4p8xv) | [Disassembling](https://bit.ly/3x8J43J) | [Documentation](https://bit.ly/3TLUmU9) |
 
 |     Part 13    |     Part 14    |     Part 15    |     Part 16    |     Part 17    |     Part 18    |
-|----------------|:---------------|:---------------|:---------------|:---------------|----------------|
+|----------------|:---------------|:---------------|:---------------|:---------------|:---------------|
 | [Editing](https://bit.ly/498HUCo) | [Encoding](https://bit.ly/4a3nQCV) | [Extracting](https://bit.ly/3vnBu4F) | [Hexing](https://bit.ly/4cv6TTB) | [Mobile](https://bit.ly/3IQT5VC) | [Packing](https://bit.ly/4apwGuw) |
 
 |     Part 19    |     Part 20    |     Part 21    |     Part 22    |
-|----------------|:---------------|:---------------|----------------|
+|----------------|:---------------|:---------------|:---------------|
 | [Patching](https://bit.ly/3Vppjit) | [Programming](https://bit.ly/4a4nOux) | [Testing](https://bit.ly/43sQgDU) | [Unpacking](https://bit.ly/4aph2iQ) |
 
 Downloads should be extracted into */bin* folder.
