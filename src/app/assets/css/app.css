@@ -48,7 +48,7 @@ a {
     background: #212121;
     padding: 20px;
     border-radius: 10px;
-    min-height: calc(100vh - 260px);
+    min-height: calc(100vh - 240px);
 }
 .content-wrapper .tab-content.has-error {
     display: flex;
@@ -236,7 +236,7 @@ a {
 /* scrollbar */
 /* ----------------------------- */
 .app-scroller {
-    height: calc(100vh - 350px);
+    height: calc(100vh - 330px);
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 10px;
