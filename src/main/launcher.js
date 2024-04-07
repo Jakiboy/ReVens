@@ -27,7 +27,7 @@ function createLauncher() {
         fullscreen: false,
         skipTaskbar: false,
         closable: true,
-        icon: getPath('./app/assets/img/icon-64.png'),
+        icon: getPath('./app/assets/img/icon-32.png'),
         webPreferences: {
             preload: getPath('./main/preload.js'),
             devTools: config.debug,

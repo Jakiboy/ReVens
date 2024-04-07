@@ -3,7 +3,7 @@ const { getPath, openBinFolder } = require('./helper');
 
 function createTray(app) {
 
-    const tray = new Tray(getPath('./app/assets/img/icon.ico'));
+    const tray = new Tray(getPath('./app/assets/img/blank.ico'));
     tray.setToolTip('ReVens');
 
     const context = Menu.buildFromTemplate(

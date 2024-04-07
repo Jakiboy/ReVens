@@ -4,6 +4,15 @@
 	"notice": "For Security testing & Educational purposes only",
 	"url": "https://github.com/Jakiboy/ReVens",
 	"version": "1.2.0",
+	"year": "2024",
+	"author": {
+		"name": "Jihad Sinnaour",
+		"nickname": "Jakiboy",
+		"url": "https://github.com/Jakiboy"
+	},
+	"about":{
+		"desctiption":"Reverse Engineering Toolkit AIO"
+	},
    	"baseDir": "E:/Toolkit/Security/Reverse Engineering",
    	"items": {
 		"host": "https://revens.jihadsinnaour.com/download",
@@ -34,6 +43,6 @@
    	"player": "/Patching/Sound/FastTracker/x64/ft2.exe",
    	"resizable": false,
    	"width": 1000,
-   	"height": 740,
+   	"height": 750,
    	"debug": true
 }

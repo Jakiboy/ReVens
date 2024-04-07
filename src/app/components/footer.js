@@ -11,8 +11,9 @@ const Footer = () => (
   <div className="footer-wrapper">
     <p className="copyright">
       <a href={config.url}>
-      <i className="icon-social-github"></i> {config.name}</a>
-      <span className="space"></span> v{config.version} | {config.notice}
+        <i className="icon-social-github"></i> {config.name}
+      </a>
+      <span className="space"></span> | {config.notice}
     </p>
     <p className="logger">
       <span className="status">[ ]</span>
