@@ -68,7 +68,7 @@ Downloads should be extracted into */bin* folder.
 
 ## 🔧 Screenshot
 
-This is how it looks, Made with {heart} using **Electron.js** + Some old {stuff}.
+This is how it looks, Made with {heart} using **Electron.js** + **React.js**.
 
 ![ReVens AIO](./.static/preview/screenshot.png)
 
