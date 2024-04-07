@@ -2,10 +2,11 @@
 
 <img src="./.static/preview/banner.png" width="100%" alt="ReVens">
 
-ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Penetration testing)</u> & <u>Educational purposes only</u>.  
-I made ReVens AIO app to share personal experience in RE since **2008**.
+ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Penetration testing)</u> & <u>Educational purposes only</u>.
 
-🌍 [Online preview](https://revens.jihadsinnaour.com)
+> [!Note]
+> I made ReVens AIO software to share personal experience in RE since **2008**.  
+> [Watch online preview](https://revens.jihadsinnaour.com).
 
 ## 🔧 Requirements
 
@@ -20,7 +21,7 @@ To build ReVens:
 ## 💡 Notices
 
 > [!Important]
-> Respecting the rights of software developers is paramount. Engaging in activities such as bypassing software protections or reverse engineering software without explicit permission is not only generally illegal, but also unethical. It’s essential to utilize software in the manner intended by its creators and in compliance with the stipulated terms of service or license agreement.
+> Respecting the rights of software developers is paramount. Engaging in activities such as bypassing software protections or reverse engineering software without explicit permission is not only generally illegal, but also unethical. It's essential to utilize software in the manner intended by its creators and in compliance with the stipulated terms of service or license agreement.
 
 * Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
 * **100% clean**: All detections are **false positives**, there's no malware included.
@@ -654,4 +655,4 @@ Universal mobile toolkits.
 
 ### ⭐ Support:
 
-Please give it a Star if you like the project.
+Don't buy me a coffee! Just **star the project** if you like it.
