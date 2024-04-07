@@ -2,6 +2,8 @@
  * Author  : Jakiboy (Jihad Sinnaour)
  * Package : ReVens | Reverse Engineering Toolkit AIO
  * Version : 1.2.0
+ * Link    : https://github.com/Jakiboy/ReVens
+ * license : MIT
  */
 
 import React, { useState, useEffect } from 'react';
@@ -61,9 +63,7 @@ const About = () => {
           </Container>
             </Body>
             <Footer>
-              <Btn color="primary" onClick={closeModal}>
-                Close
-              </Btn>
+              <Btn color="primary" onClick={closeModal}>Close</Btn>
             </Footer>
           </Content>
         </Dialog>

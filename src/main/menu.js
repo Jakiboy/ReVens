@@ -2,6 +2,8 @@
  * Author  : Jakiboy (Jihad Sinnaour)
  * Package : ReVens | Reverse Engineering Toolkit AIO
  * Version : 1.2.0
+ * Link    : https://github.com/Jakiboy/ReVens
+ * license : MIT
  */
 
 const { Menu } = require('electron');
@@ -30,6 +32,13 @@ function getTemplate(launcher) {
                     click() { reload(launcher); }
                 }
             ]
+        },
+        {
+            "label": 'Settings',
+            "accelerator": 'Ctrl+S',
+            click() {
+                launcher.webContents.send('open-settings');
+            }
         },
         {
             "label": 'Help',

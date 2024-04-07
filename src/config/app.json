@@ -13,6 +13,9 @@
 	"about":{
 		"desctiption":"The Ultimate Reverse Engineering Toolkit AIO"
 	},
+	"doc":{
+		"desctiption":"Windows-based Reverse Engineering Toolkit 'All-In-One', Built for <strong>Security (Penetration testing)</strong> & <strong>Educational purposes only</strong>."
+	},
    	"baseDir": "E:/Toolkit/Security/Reverse Engineering",
    	"items": {
 		"host": "https://revens.jihadsinnaour.com/download",
