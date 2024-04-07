@@ -45,7 +45,7 @@ const About = () => {
                 </div>
                 <h1>{config.name}</h1>
                 <p><strong>Version</strong> {config.version} (x64)</p>
-                <p className="mb-2">{config.about.desctiption}</p>
+                <p className="mb-2">{config.about.desctiption}.</p>
                 <p>
                   <a href={config.url} className="page-link">
                     <i className="icon-social-github"></i> Source

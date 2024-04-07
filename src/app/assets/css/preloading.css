@@ -12,10 +12,6 @@ body {
     -moz-user-drag: none;
     -o-user-drag: none;
     overflow: hidden;
-    font-family: "Oxanium", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
     background: #303030 url(../img/bg-main.png);
     color: #bdbdbf;
 }
