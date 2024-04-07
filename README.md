@@ -70,7 +70,7 @@ Downloads should be extracted into */bin* folder.
 
 This is how it looks, Made with {heart} using **Electron.js** + Some old {stuff}.
 
-![ReVens AIO](./assets/screenshot-1.png)
+![ReVens AIO](./.static/preview/screenshot.png)
 
 *The App background is the electron DevTools itself*.
 
