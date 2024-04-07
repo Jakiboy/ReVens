@@ -1,8 +1,10 @@
 ; ======================================================================================================================
-; ReVens | Reverse Engineering Toolkit AIO
+; Author  : Jakiboy (Jihad Sinnaour)
+; Package : ReVens | Reverse Engineering Toolkit AIO
+; Version : 1.2.0
+; Link    : https://github.com/Jakiboy/ReVens
+; license : MIT
 ;
-; Author: Jakiboy (Jihad Sinnaour) <mail@jihadsinnaour.com>
-; URL: https://github.com/Jakiboy/ReVens
 ; Copyright (C) 2024 Jihad Sinnaour. All rights reserved.
 ; ======================================================================================================================
 

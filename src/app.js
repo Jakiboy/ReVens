@@ -2,6 +2,8 @@
  * Author  : Jakiboy (Jihad Sinnaour)
  * Package : ReVens | Reverse Engineering Toolkit AIO
  * Version : 1.2.0
+ * Link    : https://github.com/Jakiboy/ReVens
+ * license : MIT
  */
 
 'use strict';

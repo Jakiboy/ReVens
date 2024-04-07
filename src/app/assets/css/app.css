@@ -308,7 +308,14 @@ a {
 .modal .modal-footer {
     background-color: #0b0b0b;
 }
-
+.modal .app-scroller {
+    padding-right: 20px;
+}
+.modal .app-scroller::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 30px;
+    background-color: #484848;
+}
 /* ----------------------------- */
 /* font */
 /* ----------------------------- */
