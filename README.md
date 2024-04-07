@@ -66,7 +66,7 @@ Download packages manually from (**~8Go**) :
 
 Downloads should be extracted into */bin* folder.
 
-## 🔧 Screenshots
+## 🔧 Screenshot
 
 This is how it looks, Made with {heart} using **Electron.js** + Some old {stuff}.
 
@@ -74,22 +74,17 @@ This is how it looks, Made with {heart} using **Electron.js** + Some old {stuff}
 
 *The App background is the electron DevTools itself*.
 
-<p float="left">
-    <img src="./app/assets/screenshot-2.png" width="48%">
-    <img src="./app/assets/screenshot-3.png" width="48%">
-</p>
-
 ## 🔧 Install, Run & Build
 
 ```bash
-bash global.sh
 bash init.sh
+# bash dev.sh
 bash run.sh
 bash build.sh
 ```
 
 ## 🔧 Packages
-  
+
 ReVens packages includes:
 
 ### ⚡ Analyzing
