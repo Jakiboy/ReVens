@@ -6,17 +6,14 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 
 > [!Note]
 > I made ReVens AIO software to share personal experience in RE since **2008**.  
+> RE Tools are priceless, especially the legacy ones. They deserve a nice place where they can live in peace.  
 > [Watch online preview](https://revens.jihadsinnaour.com).
 
 ## 🔧 Requirements
 
 To run ReVens:
 
-* **Windows 10/11 x64**
-
-To build ReVens:
-
-* **Node.js** ^21.2.0
+* **Windows** 10/11 (x64)
 
 ## 💡 Notices
 
@@ -126,9 +123,16 @@ This is how it looks, Made with {heart} using **Electron.js** + **React.js**.
 
 ## 🔧 Install, Run & Build
 
+To build ReVens:
+
+* **Node.js** ^21.2.0
+* **Git bash** ^2.44.0
+
+ReVens command-line:
+
 ```bash
 bash init.sh
-# bash dev.sh
+bash dev.sh
 bash run.sh
 bash build.sh
 ```
