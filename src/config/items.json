@@ -236,6 +236,16 @@
             "url":"https://github.com/bdunlap9/UPX-Unpackers/raw/master/UPX-Analyser%20{version}/UPX-Analyser.exe"
         },
         {
+            "name":"RDG Packer Detector",
+            "type":"zip",
+            "path":"/Analyzing/Packaging/RDG Packer Detector.zip",
+            "section":"Analyzing",
+            "sub":"Packaging",
+            "extra":false,
+            "version":"0.7.6",
+            "url":false
+        },
+        {
             "name":"SysInspector",
             "type":"exe",
             "path":"/Analyzing/System/Universal/SysInspector/x64/Sysinspector64.exe",
@@ -925,6 +935,312 @@
             "url":false
         },
         {
+            "name":"XVolkolak",
+            "type":"exe",
+            "path":"/Unpacking/XVolkolak/xvlk.exe",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"0.22",
+            "url":"https://www.dropbox.com/s/nziop8xznuu09ra/xvlk_win32_public_{version}.zip?dl=1"
+        },
+        {
+            "name":".NET Reactor Slayer",
+            "type":"exe",
+            "path":"/Unpacking/.NET Reactor Slayer/NETReactorSlayer.exe",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"6.4.0.0",
+            "url":"https://github.com/SychicBoy/NETReactorSlayer/releases/download/v{version}/NETReactorSlayer-windows.zip"
+        },
+        {
+            "name":"ConfuserEx",
+            "type":"exe",
+            "path":"/Unpacking/ConfuserEx/ConfuserEx.exe",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"1.6.0",
+            "url":"https://github.com/mkaring/ConfuserEx/releases/download/v{version}/ConfuserEx.zip"
+        },
+        {
+            "name":"MalUnpack",
+            "type":"cli",
+            "path":"/Unpacking/MalUnpack/x64/malunpack.exe",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"0.9.9",
+            "url":[
+                "https://github.com/hasherezade/mal_unpack/releases/download/{version}/mal_unpack64.zip",
+                "https://github.com/hasherezade/mal_unpack/releases/download/{version}/mal_unpack32.zip"
+            ]
+        },
+        {
+            "name":"ILPUnpack",
+            "type":"cli",
+            "path":"/Unpacking/ILPUnpack/.Net 4.5/ILPUnpack.cmd",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"1.1.0",
+            "url":false
+        },
+        {
+            "name":"ConfuserEx Unpacker",
+            "type":"zip",
+            "path":"/Unpacking/ConfuserEx-Unpacker.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"2.0",
+            "url":false
+        },
+        {
+            "name":"ILProtector Unpacker",
+            "type":"zip",
+            "path":"/Unpacking/ILProtectorUnpacker.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"1.4",
+            "url":"https://github.com/RexProg/ILProtectorUnpacker/releases/download/{version}/ILProtectorUnpacker.V{version}.rar"
+        },
+        {
+            "name":"RL!deUPX",
+            "type":"zip",
+            "path":"/Unpacking/RL!deUPX.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":false,
+            "url":false
+        },
+        {
+            "name":"RL!deASPack",
+            "type":"zip",
+            "path":"/Unpacking/RL!deASPack.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":false,
+            "url":false
+        },
+        {
+            "name":"RL!dePacker",
+            "type":"zip",
+            "path":"/Unpacking/RL!dePacker.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"1.4.1",
+            "url":false
+        },
+        {
+            "name":"GUnPacker",
+            "type":"zip",
+            "path":"/Unpacking/GUnPacker.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"0.50",
+            "url":false
+        },
+        {
+            "name":"de4dot",
+            "type":"zip",
+            "path":"/Unpacking/de4dot.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"4.0.0",
+            "url":"https://github.com/ViRb3/de4dot-cex/releases/download/v{version}/de4dot-cex.zip"
+        },
+        {
+            "name":"ASPack Unpacker",
+            "type":"zip",
+            "path":"/Unpacking/ASPack Unpacker.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"1.13",
+            "url":false
+        },
+        {
+            "name":"IsXunpack",
+            "type":"zip",
+            "path":"/Unpacking/IsXunpack.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"0.99",
+            "url":false
+        },
+        {
+            "name":"ISx",
+            "type":"zip",
+            "path":"/Unpacking/ISx.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"0.3.8",
+            "url":"https://github.com/lifenjoiner/ISx/releases/download/v{version}/ISx-v{version}-win32.7z"
+        },
+        {
+            "name":"Unpacker ExeCryptor",
+            "type":"zip",
+            "path":"/Unpacking/Unpacker ExeCryptor.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"1.0",
+            "url":false
+        },
+        {
+            "name":"Universal Unprotector",
+            "type":"zip",
+            "path":"/Unpacking/Universal Unprotector.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"1.0",
+            "url":false
+        },
+        {
+            "name":"Quick Unpack",
+            "type":"zip",
+            "path":"/Unpacking/Quick Unpack.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"2.2",
+            "url":false
+        },
+        {
+            "name":"Magicmida",
+            "type":"zip",
+            "path":"/Unpacking/Magicmida.zip",
+            "section":"Unpacking",
+            "sub":"Unprotect",
+            "extra":false,
+            "version":"2023-01-14",
+            "url":"https://github.com/Hendi48/Magicmida/releases/download/{version}/Magicmida.zip"
+        },
+        {
+            "name":"Ophcrack",
+            "type":"exe",
+            "path":"/Decoding/Ophcrack/x64/ophcrack.exe",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":"3.8.0",
+            "url":"https://sourceforge.net/projects/ophcrack/files/ophcrack/{version}/ophcrack-{version}-bin.zip/download"
+        },
+        {
+            "name":"Armadillo Key Tool",
+            "type":"exe",
+            "path":"/Decoding/Armadillo Key Tool/AKT/ArmadilloKeyTool.exe",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":"0.4",
+            "url":[
+                "https://github.com/mrexodia/akt/releases/download/v{version}/akt04.zip",
+                "https://github.com/mrexodia/akt/releases/download/v{version}/armastuff.zip"
+            ]
+        },
+        {
+            "name":"Keygener Assistant",
+            "type":"zip",
+            "path":"/Decoding/Keygener Assistant.zip",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":false,
+            "url":"2.1.2"
+        },
+        {
+            "name":"CyberChef",
+            "type":"zip",
+            "path":"/Decoding/CyberChef.zip",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":false,
+            "url":false
+        },
+        {
+            "name":"SND Reverse Tool",
+            "type":"zip",
+            "path":"/Decoding/SND Reverse Tool.zip",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":"1.4",
+            "url":false
+        },
+        {
+            "name":"Hash Identifier",
+            "type":"zip",
+            "path":"/Decoding/Hash Identifier.zip",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":false,
+            "url":false
+        },
+        {
+            "name":"Hashcat",
+            "type":"cli",
+            "path":"/Decoding/Hashcat/hashcat.cmd",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":"6.2.6",
+            "url":"https://hashcat.net/files/hashcat-{version}.7z"
+        },
+        {
+            "name":"RSA-Tool 2",
+            "type":"zip",
+            "path":"/Decoding/RSA-Tool 2.zip",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":false,
+            "url":false
+        },
+        {
+            "name":"RSATool",
+            "type":"zip",
+            "path":"/Decoding/RSATool.zip",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":"1.18",
+            "url":false
+        },
+        {
+            "name":"RSABox",
+            "type":"zip",
+            "path":"/Decoding/RSABox.zip",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":"1.5",
+            "url":false
+        },
+        {
+            "name":"MD5 Toolbox",
+            "type":"zip",
+            "path":"/Decoding/MD5 Toolbox.zip",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":false,
+            "url":false
+        },
+        {
             "name":"Sandboxie",
             "type":"zip",
             "path":"/Testing/Dep/Sandboxie 1.13.4.zip",
@@ -938,246 +1254,6 @@
                 "https://github.com/sandboxie-plus/Sandboxie/releases/download/v{version}/Sandboxie-Classic-x64-v5.68.3.exe",
                 "https://github.com/sandboxie-plus/Sandboxie/releases/download/v{version}/Sandboxie-Classic-x86-v5.68.3.exe"
             ]
-        },
-        {
-            "name":"xvolkolak",
-            "type":"exe",
-            "path":"Unpacking/XVolkolak/xvlk.exe",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"net-reactor-slayer",
-            "type":"exe",
-            "path":"Unpacking/.NET Reactor Slayer/NETReactorSlayer.exe",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"confuserex-unpacker-cli",
-            "type":"cli",
-            "path":"Unpacking/ConfuserEx Unpacker/ConfuserEx-Unpacker.exe",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"ilprotector-unpacker",
-            "type":"exe",
-            "path":"Unpacking/ILProtector Unpacker.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"rldeupx",
-            "type":"exe",
-            "path":"Unpacking/RL!deUPX.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"rldeaspack",
-            "type":"exe",
-            "path":"Unpacking/RL!deASPack.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"rldepacker",
-            "type":"exe",
-            "path":"Unpacking/RL!dePacker.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"gunpacker",
-            "type":"exe",
-            "path":"Unpacking/GUnPacker.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"de4dot",
-            "type":"exe",
-            "path":"Unpacking/de4dot.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"aspack-unpacker",
-            "type":"exe",
-            "path":"Unpacking/ASPack Unpacker.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"isxunpack",
-            "type":"exe",
-            "path":"Unpacking/IsXunpack.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"unpacker-execryptor",
-            "type":"exe",
-            "path":"Unpacking/Unpacker ExeCryptor.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"universal-unprotector",
-            "type":"exe",
-            "path":"Unpacking/Universal Unprotector.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"ophcrack",
-            "type":"exe",
-            "path":"Decoding/Ophcrack/x64/ophcrack.exe",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"armadillo-keytool",
-            "type":"exe",
-            "path":"Decoding/Armadillo KeyTool.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"keygener-assistant",
-            "type":"exe",
-            "path":"Decoding/Keygener Assistant.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"cyberchef",
-            "type":"exe",
-            "path":"Decoding/CyberChef.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"snd-reverse-tool",
-            "type":"exe",
-            "path":"Decoding/SND Reverse Tool.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"hash-identifier",
-            "type":"exe",
-            "path":"Decoding/Hash Identifier.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"hashcat",
-            "type":"exe",
-            "path":"Decoding/Hashcat.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"rsa-tool-2",
-            "type":"exe",
-            "path":"Decoding/RSA-Tool 2.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"rsatool",
-            "type":"exe",
-            "path":"Decoding/RSATool.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"rsabox",
-            "type":"exe",
-            "path":"Decoding/RSABox.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
-        },
-        {
-            "name":"md5-toolbox",
-            "type":"exe",
-            "path":"Decoding/MD5 Toolbox.zip",
-            "section":"XXXXX",
-            "sub":"binary",
-            "extra":false,
-            "version":false,
-            "url":false
         },
         {
             "name":"dll-export-viewer",
