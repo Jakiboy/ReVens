@@ -6,7 +6,7 @@
  * license : MIT
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from './components/head';
 import Header from './components/header';
 import Tabs from './components/tabs';
@@ -18,7 +18,12 @@ import Settings from './components/settings';
 
 const Launcher = () => {
 
-  const [activeTab, setActiveTab] = useState('analyzing');
+  const initialTab = localStorage.getItem('activeTab') || 'analyzing';
+  const [activeTab, setActiveTab] = useState(initialTab);
+
+  useEffect(() => {
+    localStorage.setItem('activeTab', activeTab);
+  }, [activeTab]);
 
   return (
     <>
