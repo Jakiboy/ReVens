@@ -2,12 +2,23 @@
 
 <img src="./.static/preview/banner.png" width="100%" alt="ReVens">
 
-ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Penetration testing)</u> & <u>Educational purposes only</u>.
+ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>.
 
 > [!Note]
 > I made ReVens AIO software to share personal experience in RE since **2008**.  
-> RE Tools are priceless, especially the legacy ones. They deserve a nice place where they can live in peace.  
+> RE tools are priceless, especially the legacy ones. They deserve a nice place where they can live in peace.  
 > [Watch online preview](https://revens.jihadsinnaour.com).
+
+## 🔧 Features
+
+* **Modern UI** "Blackhat style" software launcher
+* **100% clean**: All detections are **false positives**, No malware injected
+* **90% portable** (Resolved dependencies)
+* Original assets (e.g. **BRD - Teleport Pro.mx**, **CORE - Power ISO.xm**)
+* Dynamic **Tools manager** (JSON based launcher)
+* Packages **Auto-updater**
+* Boilerplate code for **Electron.js** + **React.js**
+* Explore the power of **Node.js**
 
 ## 💡 Notices
 
@@ -15,12 +26,10 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 > Respecting the rights of software developers is paramount. Engaging in activities such as bypassing software protections or reverse engineering software without explicit permission is not only generally illegal, but also unethical. It's essential to utilize software in the manner intended by its creators and in compliance with the stipulated terms of service or license agreement.
 
 * Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
-* **100% clean**: All detections are **false positives**, there's no malware included.
 * You should make an **Antivirus** exception to avoid detection, or use a **secured** virtual machine.
 * **ReVens Packages** ARE NOT automatically downloaded.
 * Many of the included tools are **outdated** and provided solely for legacy purposes.
 * **Packages** includes basic docs & tutorials about RE.
-* **90% portable**.
 * *-Use it on your own responsibility-*
 
 ## 🔧 Requirements
