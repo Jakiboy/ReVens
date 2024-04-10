@@ -41,14 +41,14 @@ Download packages manually from (**~8Go**) :
 * Part 1 - [Analysing](https://bit.ly/3x14Vd8)
 * Part 2 - [Assembling](https://bit.ly/3VsyuhU)
 * Part 3 - [Bypassing](https://bit.ly/4a24MFb)
-* Part 4 - [Calculating](https://bit.ly/3INWc0F)
+* Part 4 - [Calculating](https://bit.ly/43QXQs9) - False positive
 * Part 5 - [Comparing](https://bit.ly/3x6G1ZO)
 * Part 6 - [Converting](https://bit.ly/4a6RozE)
 * Part 7 - [Debugging](https://bit.ly/3TxhwMG)
 * Part 8 - [Decoding](https://bit.ly/4a63rgs)
 * Part 9 - [Decompiling](https://bit.ly/3Tqzi4t)
-* Part 10 - [Dependencies](https://bit.ly/4a4p8xv)
-* Part 11 - [Disassembling](https://bit.ly/3x8J43J)
+* Part 10 - [Dependencies](https://bit.ly/4a4p8xv) - Uplading to GG Drive...
+* Part 11 - [Disassembling](https://bit.ly/3x8J43J) - Uplading to GG Drive...
 * Part 12 - [Documentation](https://bit.ly/3TLUmU9)
 * Part 13 - [Editing](https://bit.ly/498HUCo)
 * Part 14 - [Encoding](https://bit.ly/4a3nQCV)
@@ -58,7 +58,7 @@ Download packages manually from (**~8Go**) :
 * Part 18 - [Packing](https://bit.ly/4apwGuw)
 * Part 19 - [Patching](https://bit.ly/3Vppjit)
 * Part 20 - [Programming](https://bit.ly/4a4nOux)
-* Part 21 - [Testing](https://bit.ly/43sQgDU)
+* Part 21 - [Testing](https://bit.ly/43sQgDU) - Uplading to GG Drive...
 * Part 22 - [Unpacking](https://bit.ly/4aph2iQ)
 
 Downloads should be extracted into */bin* folder.
