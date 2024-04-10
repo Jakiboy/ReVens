@@ -7,6 +7,8 @@ I made ReVens AIO app to share personal experience in RE since **2008**.
 
 🌍 [Online preview](https://revens.jihadsinnaour.com)
 
+❗ [New update in progress: Packages Auto-updater...](https://github.com/Jakiboy/ReVens/tree/dev) 
+
 ## 🔧 Requirements
 
 To run ReVens:
