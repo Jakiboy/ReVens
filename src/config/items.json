@@ -1151,6 +1151,16 @@
             ]
         },
         {
+            "name":"Hashcat",
+            "type":"cli",
+            "path":"/Decoding/Hashcat/hashcat.cmd",
+            "section":"Unpacking",
+            "sub":"Decoding",
+            "extra":false,
+            "version":"6.2.6",
+            "url":"https://hashcat.net/files/hashcat-{version}.7z"
+        },
+        {
             "name":"Keygener Assistant",
             "type":"zip",
             "path":"/Decoding/Keygener Assistant.zip",
@@ -1189,16 +1199,6 @@
             "extra":false,
             "version":false,
             "url":false
-        },
-        {
-            "name":"Hashcat",
-            "type":"cli",
-            "path":"/Decoding/Hashcat/hashcat.cmd",
-            "section":"Unpacking",
-            "sub":"Decoding",
-            "extra":false,
-            "version":"6.2.6",
-            "url":"https://hashcat.net/files/hashcat-{version}.7z"
         },
         {
             "name":"RSA-Tool 2",
