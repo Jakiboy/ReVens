@@ -312,6 +312,26 @@
             ]
         },
         {
+            "name":"Regshot",
+            "type":"exe",
+            "path":"/Analyzing/System/API/Regshot/Regshot-x64-Unicode.exe",
+            "section":"Analyzing",
+            "sub":"System",
+            "extra":"API",
+            "version":"1.9.0",
+            "url":"https://github.com/Seabreg/Regshot/archive/refs/heads/master.zip"
+        },
+        {
+            "name":"NTLDD",
+            "type":"cli",
+            "path":"/Analyzing/System/API/NTLDD/ntldd.cmd",
+            "section":"Analyzing",
+            "sub":"System",
+            "extra":"API",
+            "version":"0.2",
+            "url":"https://github.com/LRN/ntldd/releases/download/{version}/i686-ntldd-{version}.tar.xz"
+        },
+        {
             "name":"WinObj",
             "type":"exe",
             "path":"/Analyzing/System/API/WinObj/WinObj.exe",
@@ -333,23 +353,13 @@
         },
         {
             "name":"Regalyz",
-            "type":"exe",
-            "path":"/Analyzing/System/API/Regalyz/RegAlyzer.exe",
+            "type":"zip",
+            "path":"/Analyzing/System/API/Regalyz.zip",
             "section":"Analyzing",
             "sub":"System",
             "extra":"API",
             "version":"1.6.2.16",
             "url":"https://download.spybot.info/RegAlyzer/regalyz-{version}.exe"
-        },
-        {
-            "name":"NTLDD",
-            "type":"cli",
-            "path":"/Analyzing/System/API/NTLDD/ntldd.cmd",
-            "section":"Analyzing",
-            "sub":"System",
-            "extra":"API",
-            "version":"0.2",
-            "url":"https://github.com/LRN/ntldd/releases/download/{version}/i686-ntldd-{version}.tar.xz"
         },
         {
             "name":"Zero Dump",
@@ -521,16 +531,6 @@
             "url":"https://download.spybot.info/ProcAlyzer/procalyz-{version}.zip"
         },
         {
-            "name":"Fiddler (Classic)",
-            "type":"exe",
-            "path":"/Analyzing/System/Network/Fiddler/Fiddler.exe",
-            "section":"Analyzing",
-            "sub":"System",
-            "extra":"Network",
-            "version":"5.0",
-            "url":"https://downloads.getfiddler.com/fiddler-classic/FiddlerSetup.{version}.{year}2.10753-latest.exe"
-        },
-        {
             "name":"TCP View",
             "type":"exe",
             "path":"/Analyzing/System/Network/TCPView/TCPView.exe",
@@ -539,6 +539,16 @@
             "extra":"Network",
             "version":"4.19",
             "url":"https://download.sysinternals.com/files/TCPView.zip"
+        },
+        {
+            "name":"Fiddler (Classic)",
+            "type":"exe",
+            "path":"/Analyzing/System/Network/Fiddler/Fiddler.exe",
+            "section":"Analyzing",
+            "sub":"System",
+            "extra":"Network",
+            "version":"5.0",
+            "url":"https://downloads.getfiddler.com/fiddler-classic/FiddlerSetup.{version}.{year}2.10753-latest.exe"
         },
         {
             "name":"Aircrack-ng",
@@ -756,6 +766,19 @@
             ]
         },
         {
+            "name":"SQLiteStudio",
+            "type":"zip",
+            "path":"/Analyzing/System/File/SQLiteStudio.zip",
+            "section":"Analyzing",
+            "sub":"System",
+            "extra":"File",
+            "version":"3.4.4",
+            "url":[
+                "https://github.com/pawelsalawa/sqlitestudio/releases/download/{version}/sqlitestudio_x64-{version}.zip",
+                "https://github.com/pawelsalawa/sqlitestudio/releases/download/{version}/sqlitestudio_i386-{version}.zip"
+            ]
+        },
+        {
             "name":"GrepWin",
             "type":"zip",
             "path":"/Analyzing/System/File/GrepWin.zip",
@@ -862,16 +885,6 @@
             "url":false
         },
         {
-            "name":"Hex-Dec",
-            "type":"exe",
-            "path":"/Calculating/Hex-Dec/HexDec.exe",
-            "section":"Analyzing",
-            "sub":"Calculating",
-            "extra":false,
-            "version":"0.02",
-            "url":false
-        },
-        {
             "name":"Jump Calculator",
             "type":"exe",
             "path":"/Calculating/Jump Calculator/JMPCalc.exe",
@@ -893,6 +906,26 @@
                 "https://github.com/horsicq/XOpcodeCalc/releases/download/{version}/xopcodecalc_win64_portable_{version}.zip",
                 "https://github.com/horsicq/XOpcodeCalc/releases/download/{version}/xopcodecalc_win32_portable_{version}.zip"
             ]
+        },
+        {
+            "name":"RHash",
+            "type":"zip",
+            "path":"/Calculating/RHash.zip",
+            "section":"Analyzing",
+            "sub":"Calculating",
+            "extra":false,
+            "version":"1.4.4",
+            "url":"https://deac-ams.dl.sourceforge.net/project/rhash/rhash/{version}/rhash-{version}-english-win64.zip"
+        },
+        {
+            "name":"Hex-Dec",
+            "type":"zip",
+            "path":"/Calculating/Hex-Dec.zip",
+            "section":"Analyzing",
+            "sub":"Calculating",
+            "extra":false,
+            "version":"0.02",
+            "url":false
         },
         {
             "name":"Hash Calculator",
