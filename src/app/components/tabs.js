@@ -12,7 +12,7 @@ import { generateSlug } from '../helper';
 
 const Tabs = ({ activeTab, setActiveTab }) => {
   return (
-    <ul className="nav nav-tabs mb-3" id="revens-tab" role="tablist">
+    <ul className="nav nav-tabs mb-2 mt-2" id="revens-tab" role="tablist">
       {config.sections.map((section, index) => {
         const slug = generateSlug(section.name);
         return (

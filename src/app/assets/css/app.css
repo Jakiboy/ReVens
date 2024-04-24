@@ -35,10 +35,13 @@ a {
 /* heading */
 /* ----------------------------- */
 .heading-wrapper img {
-    margin: 10px 0;
+    margin-top: 15px;
 }
 .heading-wrapper {
     text-align: center;
+}
+.heading-wrapper.--no-header {
+    display: none;
 }
 
 /* ----------------------------- */
