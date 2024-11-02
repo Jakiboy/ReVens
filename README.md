@@ -50,7 +50,7 @@ Download packages manually from (**~8Go**) :
 * Part 8 - [Decoding](https://revens.jihadsinnaour.com/download/Decoding.iso)
 * Part 9 - [Decompiling](https://revens.jihadsinnaour.com/download/Decompiling.iso)
 * Part 10 - [Dependencies](https://revens.jihadsinnaour.com/download/Dependencies.iso)
-* Part 11 - [Disassembling](https://revens.jihadsinnaour.com/download/Disassembling.iso) - [Removed from storage]
+* Part 11 - [Disassembling](https://revens.jihadsinnaour.com/download/Disassembling.iso)
 * Part 12 - [Documentation](https://revens.jihadsinnaour.com/download/Documentation.iso)
 * Part 13 - [Editing](https://revens.jihadsinnaour.com/download/Editing.iso)
 * Part 14 - [Encoding](https://revens.jihadsinnaour.com/download/Encoding.iso)
