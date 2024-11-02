@@ -40,28 +40,28 @@ To build ReVens:
 
 Download packages manually from (**~8Go**) :
 
-* Part 1 - [Analysing](https://bit.ly/3x14Vd8)
-* Part 2 - [Assembling](https://bit.ly/3VsyuhU)
-* Part 3 - [Bypassing](https://bit.ly/4a24MFb)
-* Part 4 - [Calculating](https://bit.ly/43QXQs9) - Fixed (False positive)
-* Part 5 - [Comparing](https://bit.ly/3x6G1ZO)
-* Part 6 - [Converting](https://bit.ly/4a6RozE)
-* Part 7 - [Debugging](https://bit.ly/3TxhwMG)
-* Part 8 - [Decoding](https://bit.ly/4a63rgs)
-* Part 9 - [Decompiling](https://bit.ly/3Tqzi4t)
-* Part 10 - [Dependencies](https://bit.ly/4a4p8xv) - Uplading to GG Drive...
-* Part 11 - [Disassembling](https://bit.ly/3PX1v1O) - Fixed
-* Part 12 - [Documentation](https://bit.ly/3TLUmU9)
-* Part 13 - [Editing](https://bit.ly/498HUCo)
-* Part 14 - [Encoding](https://bit.ly/4a3nQCV)
-* Part 15 - [Extracting](https://bit.ly/3vnBu4F)
-* Part 16 - [Hexing](https://bit.ly/4cv6TTB)
-* Part 17 - [Mobile](https://bit.ly/3IQT5VC)
-* Part 18 - [Packing](https://bit.ly/4apwGuw)
-* Part 19 - [Patching](https://bit.ly/3Vppjit)
-* Part 20 - [Programming](https://bit.ly/4a4nOux)
-* Part 21 - [Testing](https://bit.ly/43sQgDU) - Uplading to GG Drive...
-* Part 22 - [Unpacking](https://bit.ly/4aph2iQ)
+* Part 1 - [Analysing](https://revens.jihadsinnaour.com/download/Analysing.iso)
+* Part 2 - [Assembling](https://revens.jihadsinnaour.com/download/Assembling.iso)
+* Part 3 - [Bypassing](https://revens.jihadsinnaour.com/download/Bypassing.iso)
+* Part 4 - [Calculating](https://revens.jihadsinnaour.com/download/Calculating.iso)
+* Part 5 - [Comparing](https://revens.jihadsinnaour.com/download/Comparing.iso)
+* Part 6 - [Converting](https://revens.jihadsinnaour.com/download/Converting.iso)
+* Part 7 - [Debugging](https://revens.jihadsinnaour.com/download/Debugging.iso)
+* Part 8 - [Decoding](https://revens.jihadsinnaour.com/download/Decoding.iso)
+* Part 9 - [Decompiling](https://revens.jihadsinnaour.com/download/Decompiling.iso)
+* Part 10 - [Dependencies](https://revens.jihadsinnaour.com/download/Dependencies.iso) - [Removed from storage]
+* Part 11 - [Disassembling](https://revens.jihadsinnaour.com/download/Disassembling.iso) - [Removed from storage]
+* Part 12 - [Documentation](https://revens.jihadsinnaour.com/download/Documentation.iso)
+* Part 13 - [Editing](https://revens.jihadsinnaour.com/download/Editing.iso)
+* Part 14 - [Encoding](https://revens.jihadsinnaour.com/download/Encoding.iso)
+* Part 15 - [Extracting](https://revens.jihadsinnaour.com/download/Extracting.iso)
+* Part 16 - [Hexing](https://revens.jihadsinnaour.com/download/Hexing.iso)
+* Part 17 - [Mobile](https://revens.jihadsinnaour.com/download/Mobile.iso)
+* Part 18 - [Packing](https://revens.jihadsinnaour.com/download/Packing.iso)
+* Part 19 - [Patching](https://revens.jihadsinnaour.com/download/Patching.iso)
+* Part 20 - [Programming](https://revens.jihadsinnaour.com/download/Programming.iso)
+* Part 21 - [Testing](https://revens.jihadsinnaour.com/download/Testing.iso) - [Removed from storage]
+* Part 22 - [Unpacking](https://revens.jihadsinnaour.com/download/Unpacking.iso)
 
 Downloads should be extracted into */bin* folder.
 
