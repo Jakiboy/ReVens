@@ -60,7 +60,7 @@ Download packages manually from (**~8Go**) :
 * Part 18 - [Packing](https://revens.jihadsinnaour.com/download/Packing.iso)
 * Part 19 - [Patching](https://revens.jihadsinnaour.com/download/Patching.iso)
 * Part 20 - [Programming](https://revens.jihadsinnaour.com/download/Programming.iso)
-* Part 21 - [Testing](https://revens.jihadsinnaour.com/download/Testing.iso) - [Removed from storage]
+* Part 21 - [Testing](https://revens.jihadsinnaour.com/download/Testing.iso)
 * Part 22 - [Unpacking](https://revens.jihadsinnaour.com/download/Unpacking.iso)
 
 Downloads should be extracted into */bin* folder.
