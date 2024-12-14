@@ -5,7 +5,7 @@
 ; Link    : https://github.com/Jakiboy/ReVens
 ; license : MIT
 ;
-; Copyright (c) 2024 Jihad Sinnaour <mail@jihadsinnaour.com>
+; Copyright (c) 2025 Jihad Sinnaour <mail@jihadsinnaour.com>
 ; ======================================================================================================================
 
 ; Define:
@@ -24,7 +24,7 @@ AppId={{6BC257DE-E3DC-4298-ADF8-314D054DB461}
 AppName={#InstallerAppName}
 AppVersion={#InstallerAppVersion}
 VersionInfoVersion={#InstallerAppVersion}
-VersionInfoCopyright="Copyright (c) 2024 {#InstallerAppPublisher}"
+VersionInfoCopyright="Copyright (c) 2025 {#InstallerAppPublisher}"
 AppPublisher={#InstallerAppPublisher}
 AppPublisherURL={#InstallerAppURL}
 AppSupportURL={#InstallerAppURL}

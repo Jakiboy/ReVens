@@ -30,6 +30,7 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 * **ReVens Packages** ARE NOT automatically downloaded.
 * Many of the included tools are **outdated** and provided solely for legacy purposes.
 * **Packages** includes basic docs & tutorials about RE.
+* Packages primary architecture is x64, but other architectures (x86, ARM) can also be supported.
 * *-Use it on your own responsibility-*
 
 ## 🔧 Requirements
