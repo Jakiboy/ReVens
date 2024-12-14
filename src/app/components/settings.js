@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy (Jihad Sinnaour)
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.2.0
+ * Version : 1.2.1
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -27,7 +27,7 @@ const Settings = () => {
   const [setting1, setSetting1] = useState('');
   const [setting2, setSetting2] = useState('');
 
-  const openModal  = () => setModalStatus(true);
+  const openModal = () => setModalStatus(true);
   const closeModal = () => setModalStatus(false);
 
   const handleSetting1Change = (event) => setSetting1(event.target.value);
@@ -52,18 +52,18 @@ const Settings = () => {
         <Dialog centered>
           <Content>
             <Body>
-            <Container className="d-flex align-items-center justify-content-center text-center">
-            <Row>
-              <Col>
-                <h1>Settings</h1>
-                <form onSubmit={handleSubmit}>
-                  <Input label="Setting 1" id="setting1" type="text" value={setting1} onChange={handleSetting1Change} />
-                  <Input label="Setting 2" id="setting2" type="text" value={setting2} onChange={handleSetting2Change} />
-                  <Btn color="primary" type="submit">Save</Btn>
-                </form>
-              </Col>
-            </Row>
-          </Container>
+              <Container className="d-flex align-items-center justify-content-center text-center">
+                <Row>
+                  <Col>
+                    <h1>Settings</h1>
+                    <form onSubmit={handleSubmit}>
+                      <Input label="Setting 1" id="setting1" type="text" value={setting1} onChange={handleSetting1Change} />
+                      <Input label="Setting 2" id="setting2" type="text" value={setting2} onChange={handleSetting2Change} />
+                      <Btn color="primary" type="submit">Save</Btn>
+                    </form>
+                  </Col>
+                </Row>
+              </Container>
             </Body>
             <Footer>
               <Btn color="secondary" onClick={closeModal}>Close</Btn>

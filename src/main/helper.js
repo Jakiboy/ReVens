@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy (Jihad Sinnaour)
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.2.0
+ * Version : 1.2.1
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -47,7 +47,7 @@ function openUrl(url) {
  * Format URL.
  */
 function formatUrl(objct) {
-    return url.format(objct);
+	return url.format(objct);
 }
 
 /**
@@ -71,7 +71,7 @@ function getExtension(item) {
 function openWith(item, program) {
 	exec(program, [item], (error, stdout, stderr) => {
 		if (error) {
-		  console.error('Error opening file:', error);
+			console.error('Error opening file:', error);
 		}
 	});
 }
@@ -82,7 +82,7 @@ function openWith(item, program) {
 async function openItem(item) {
 
 	let baseDir = config.baseDir;
-	if ( !baseDir ) {
+	if (!baseDir) {
 		baseDir = getRoot('bin');
 	}
 
@@ -96,7 +96,7 @@ async function openItem(item) {
 	} else {
 		try {
 			await shell.openPath(`"${item}"`);
-		} catch (error) {}
+		} catch (error) { }
 	}
 
 	console.log(item);
@@ -132,7 +132,7 @@ function openChangelog() {
  */
 function getPath(file) {
 	const root = path.resolve(__dirname, '..');
-    return formatPath(
+	return formatPath(
 		path.join(root, file)
 	);
 }
@@ -142,7 +142,7 @@ function getPath(file) {
  */
 function getRoot(dir) {
 	let root = path.resolve(__dirname, '..', '..');
-    return dir ? path.resolve(root, dir) : root;
+	return dir ? path.resolve(root, dir) : root;
 }
 
 /**
@@ -173,14 +173,14 @@ function getRoot(dir) {
 
 // 	// Download
 // 	displayProgress();
-	
+
 // 	const config = formatPath(
 // 		path.join(__dirname, '/config/app.json')
 // 	);
 
 // 	fs.readFile(config, "utf8", (err, json) => {
 // 		if (!err) {
-			
+
 // 			const c = JSON.parse(json);
 // 			let packages = [], host;
 
@@ -244,7 +244,7 @@ function getRoot(dir) {
 // 		bar.close();
 // 		bar = null;
 // 	}
-	
+
 // 	bar = new Progress({
 // 		"browserWindow": {
 // 			"parent": win,
@@ -263,7 +263,7 @@ function getRoot(dir) {
 // 			}
 // 		}
 // 	});
-	
+
 // 	bar.on('completed', function() {
 // 		bar.detail = 'Download completed. Exiting...';
 // 		bar.close();
@@ -299,14 +299,14 @@ function getRoot(dir) {
 // }
 
 module.exports = {
-    setup,
-    isWindows,
-    openUrl,
-    formatUrl,
-    getPath,
-    reload,
-    openItem,
-    openInfo,
-    openChangelog,
-    openBinFolder,
+	setup,
+	isWindows,
+	openUrl,
+	formatUrl,
+	getPath,
+	reload,
+	openItem,
+	openInfo,
+	openChangelog,
+	openBinFolder,
 };

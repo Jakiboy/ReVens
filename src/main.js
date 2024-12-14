@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy (Jihad Sinnaour)
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.2.0
+ * Version : 1.2.1
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -22,12 +22,12 @@ let launcher = null;
 let tray = null;
 
 const locked = app.requestSingleInstanceLock();
-if ( !locked ) {
+if (!locked) {
     app.quit();
 
 } else {
     app.on('second-instance', (e, cmd, dir) => {
-        if ( launcher ) {
+        if (launcher) {
             if (launcher.isMinimized() && tray === undefined) {
                 launcher.restore();
             }
@@ -40,17 +40,17 @@ app.once('ready', () => {
 
     setup();
 
-    if ( isWindows() ) {
+    if (isWindows()) {
         app.setAppUserModelId('ReVens');
     }
-    
+
     registerShortcuts();
     setupIpcListeners();
 
     const splash = createSplash();
     launcher = createLauncher();
     createMenu(launcher);
-    
+
     launcher.loadURL(formatUrl({
         pathname: getPath('main.html'),
         protocol: 'file:',
@@ -74,21 +74,21 @@ app.once('ready', () => {
             launcher.show();
             tray.destroy();
         });
-        
+
     });
 
     launcher.webContents.on('will-navigate', (e, url) => {
-		e.preventDefault();
-		openUrl(url);
+        e.preventDefault();
+        openUrl(url);
     });
 
     launcher.webContents.setWindowOpenHandler(({ url }) => {
-		openUrl(url);
-		return { action: 'deny' }
+        openUrl(url);
+        return { action: 'deny' }
     });
 
-    if ( config.debug ) {
+    if (config.debug) {
         launcher.webContents.openDevTools();
     }
-    
+
 });

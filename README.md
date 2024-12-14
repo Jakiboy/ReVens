@@ -120,7 +120,7 @@ This is how it looks, Made with {heart} using **Electron.js** + **React.js**.
 
 To build ReVens:
 
-* **Node.js** ^21.2.0
+* **Electron.js** ^29.4.6 (Node 20.9.0)
 * **MinGW-w64**
 
 ReVens command-line:
