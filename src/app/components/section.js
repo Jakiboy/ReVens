@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy (Jihad Sinnaour)
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.2.0
+ * Version : 1.2.1
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -83,8 +83,8 @@ const Section = ({ section, items }) => {
                                 icon = 'music-tone';
                                 break;
                               case 'cli':
-                                  icon = 'control-play';
-                                  name = `${name} (CLI)`;
+                                icon = 'control-play';
+                                name = `${name} (CLI)`;
                                 break;
                               default:
                                 icon = 'control-play';

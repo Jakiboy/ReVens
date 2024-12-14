@@ -4,7 +4,7 @@
   "CompanyName": "Jakiboy (Jihad Sinnaour)",
   "FileDescription": "Reverse Engineering Toolkit AIO",
   "LegalCopyright": "Jihad Sinnaour 2024",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Reverse Engineering Toolkit AIO",
   "main": "main.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "@babel/preset-react": "^7.24.1",
     "babel-loader": "^9.1.3",
     "css-loader": "^6.10.0",
-    "electron": "^29.1.6",
+    "electron": "^29.4.6",
     "electron-packager": "^17.1.1",
     "electron-reload": "^2.0.0-alpha.1",
     "style-loader": "^3.3.4",

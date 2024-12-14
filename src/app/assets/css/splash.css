@@ -1,7 +1,7 @@
 /* -------------------------------------- */
 /* Author  : Jakiboy (Jihad Sinnaour)
 /* package : ReVens | Reverse Engineering Toolkit AIO
-/* version : 1.2.0
+/* Version : 1.2.1
 /* -------------------------------------- */
 
 html,
@@ -24,6 +24,7 @@ body {
     position: relative;
     text-align: center;
 }
+
 .image-wrapper:before {
     content: '';
     display: block;
@@ -31,6 +32,7 @@ body {
     height: 100%;
     position: absolute;
 }
+
 .image-wrapper img {
     max-width: 100%;
     border-radius: 10px;

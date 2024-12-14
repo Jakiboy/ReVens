@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "chouzz.vscode-innosetup",
+        "dsznajder.es7-react-js-snippets",
+        "dbaeumer.vscode-eslint",
+        "eriklynd.json-tools"
+    ]
+}
