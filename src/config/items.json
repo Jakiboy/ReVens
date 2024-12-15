@@ -2,7 +2,7 @@
     "items": [
         {
             "name": "FileAlyzer",
-            "desc": "Analyze executable files",
+            "desc": "Understand files by analyzing their structure",
             "type": "exe",
             "path": "/Analyzing/PE/FileAlyzer/FileAlyzer2.exe",
             "section": "Analyzing",
@@ -288,6 +288,16 @@
             "extra": false,
             "version": "0.3.4.47",
             "url": "https://download.spybot.info/RootAlyzer/rootalyz-{version}.zip"
+        },
+        {
+            "name": "Open Hardware Monitor",
+            "type": "zip",
+            "path": "/Analyzing/System/Universal/Open Hardware Monitor.zip",
+            "section": "Analyzing",
+            "sub": "System",
+            "extra": false,
+            "version": "0.9.6",
+            "url": "https://openhardwaremonitor.org/files/openhardwaremonitor-v{version}.zip"
         },
         {
             "name": "API Monitor",
@@ -2963,9 +2973,9 @@
             "url": false
         },
         {
-            "name": "BRD - Teleport Pro",
+            "name": "BRD - Teleport Pro (Kg)",
             "type": "sound",
-            "path": "/Patching/Assets/Sounds/XM/Famous/BRD - Teleport Pro.xm",
+            "path": "/Patching/Assets/Sounds/XM/Famous/BRD - Teleport Pro (Kg).xm",
             "section": "Patching",
             "sub": "Sound",
             "extra": "Patcher sounds",

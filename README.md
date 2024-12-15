@@ -145,7 +145,7 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 
 *Analyse binary.*
 
-* **FileAlyzer** - *Analyze executable files.* (⭐)
+* **FileAlyzer** - *Understand files by analyzing their structure.* (⭐)
 * **Capa (CLI)** - *Identify capabilities in executables.* (⭐)
 * **Alternate DLL Analyzer** - *Display function names in DLLs.*
 * **ExeInfo** - *Universal binary analyzer.*

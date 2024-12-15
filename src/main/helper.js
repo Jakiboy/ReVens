@@ -11,6 +11,7 @@ const config = require('../config/app.json');
 const path = require('path');
 const exec = require('child_process').execFile;
 const url = require('url');
+
 // const fs = require('fs');
 // const Axios = require('axios');
 // const Progress = require('electron-progressbar');
@@ -81,16 +82,13 @@ function openWith(item, program) {
  */
 async function openItem(item) {
 
-	let baseDir = config.baseDir;
-	if (!baseDir) {
-		baseDir = getRoot('bin');
-	}
+	let baseDir = config.baseDir || getRoot('bin');
 
-	item = formatPath(baseDir + item);
+	item = formatPath(`${baseDir}${item}`);
 	const ext = getExtension(item);
 
 	if (['xm'].includes(ext)) {
-		const player = formatPath(baseDir + config.player);
+		const player = formatPath(`${baseDir}${config.player}`);
 		openWith(item, player);
 
 	} else {
