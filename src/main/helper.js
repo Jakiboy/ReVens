@@ -96,8 +96,6 @@ async function openItem(item) {
 			await shell.openPath(`"${item}"`);
 		} catch (error) { }
 	}
-
-	console.log(item);
 }
 
 /**
