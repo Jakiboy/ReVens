@@ -2,4 +2,3 @@
 *.cmd linguist-detectable=false
 *.html linguist-detectable=false
 *.css linguist-detectable=false
-*.png filter=lfs diff=lfs merge=lfs -text
