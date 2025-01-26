@@ -53,13 +53,13 @@ To run ReVens, **Windows** 10/11 (x64) is required.
     <th>Part 7</th>
   </tr>
   <tr>
-    <td><a href="https://bit.ly/3x14Vd8" target="_blank">Analyzing</a></td>
-    <td><a href="https://bit.ly/3VsyuhU" target="_blank">Assembling</a></td>
-    <td><a href="https://bit.ly/4a24MFb" target="_blank">Bypassing</a></td>
-    <td><a href="https://bit.ly/3INWc0F" target="_blank">Calculating</a></td>
-    <td><a href="https://bit.ly/3x6G1ZO" target="_blank">Comparing</a></td>
-    <td><a href="https://bit.ly/4a6RozE" target="_blank">Converting</a></td>
-    <td><a href="https://bit.ly/3TxhwMG" target="_blank">Debugging</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Analysing.iso" target="_blank">Analysing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Assembling.iso" target="_blank">Assembling</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Bypassing.iso" target="_blank">Bypassing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Calculating.iso" target="_blank">Calculating</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Comparing.iso" target="_blank">Comparing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Converting.iso" target="_blank">Converting</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Debugging.iso" target="_blank">Debugging</a></td>
   </tr>
 </table>
 
@@ -73,12 +73,12 @@ To run ReVens, **Windows** 10/11 (x64) is required.
     <th>Part 13</th>
   </tr>
   <tr>
-    <td><a href="https://bit.ly/4a63rgs" target="_blank">Decoding</a></td>
-    <td><a href="https://bit.ly/3Tqzi4t" target="_blank">Decompiling</a></td>
-    <td><a href="https://bit.ly/4a4p8xv" target="_blank">Dependencies</a></td>
-    <td><a href="https://bit.ly/3x8J43J" target="_blank">Disassembling</a></td>
-    <td><a href="https://bit.ly/3TLUmU9" target="_blank">Documentation</a></td>
-    <td><a href="https://bit.ly/4aph2iQ" target="_blank">Unpacking</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Decoding.iso" target="_blank">Decoding</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Decompiling.iso" target="_blank">Decompiling</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Dependencies.iso" target="_blank">Dependencies</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Disassembling.iso" target="_blank">Disassembling</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Documentation.iso" target="_blank">Documentation</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Unpacking.iso" target="_blank">Unpacking</a></td>
   </tr>
 </table>
 
@@ -95,15 +95,15 @@ To run ReVens, **Windows** 10/11 (x64) is required.
     <th>Part 22</th>
   </tr>
   <tr>
-    <td><a href="https://bit.ly/498HUCo" target="_blank">Editing</a></td>
-    <td><a href="https://bit.ly/4a3nQCV" target="_blank">Encoding</a></td>
-    <td><a href="https://bit.ly/3vnBu4F" target="_blank">Extracting</a></td>
-    <td><a href="https://bit.ly/4cv6TTB" target="_blank">Hexing</a></td>
-    <td><a href="https://bit.ly/3IQT5VC" target="_blank">Mobile</a></td>
-    <td><a href="https://bit.ly/4apwGuw" target="_blank">Packing</a></td>
-    <td><a href="https://bit.ly/3Vppjit" target="_blank">Patching</a></td>
-    <td><a href="https://bit.ly/4a4nOux" target="_blank">Programming</a></td>
-    <td><a href="https://bit.ly/43sQgDU" target="_blank">Testing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Editing.iso" target="_blank">Editing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Encoding.iso" target="_blank">Encoding</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Extracting.iso" target="_blank">Extracting</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Hexing.iso" target="_blank">Hexing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Mobile.iso" target="_blank">Mobile</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Packing.iso" target="_blank">Packing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Patching.iso" target="_blank">Patching</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Programming.iso" target="_blank">Programming</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Testing.iso" target="_blank">Testing</a></td>
   </tr>
 </table>
 
