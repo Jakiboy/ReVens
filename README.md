@@ -2,7 +2,7 @@
 
 <img src="./.static/preview/banner.png" width="100%" alt="ReVens">
 
-ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>.
+ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>. **-V2 Under development-**
 
 > [!Note]
 > I made ReVens AIO software to share personal experience in RE since **2008**.  
@@ -11,14 +11,12 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 
 ## 🔧 Features
 
-* **Modern UI** "Blackhat style" software launcher
+* **Cross-platform & Modern UI** software launcher "Blackhat style"
 * **100% clean**: All detections are **false positives**, No malware injected
-* **90% portable** (Resolved dependencies)
+* **90% portable** (Resolved/Included dependencies)
 * Original assets (e.g. **BRD - Teleport Pro.mx**, **CORE - Power ISO.xm**)
-* Dynamic **Tools manager** (JSON based launcher)
-* Packages **Auto-updater**
-* Boilerplate code for **Electron.js** + **React.js**
-* Explore the power of **Node.js**
+* Packages **Auto-updater** (JSON based source file)
+* Boilerplate of <s>Electron.js</s> **Bun** + **React.js**
 
 ## 💡 Notices
 
@@ -27,8 +25,8 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 
 * Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
 * You should make an **Antivirus** exception to avoid detection, or use a **secured** virtual machine.
-* **ReVens Packages** ARE NOT automatically downloaded.
-* Many of the included tools are **outdated** and provided solely for legacy purposes.
+* **ReVens Packages** ARE <s>NOT</s> automatically downloaded from GitHub.
+* Many of the included tools are **outdated** and provided solely for legacy purposes!
 * **Packages** includes basic docs & tutorials about RE.
 * Packages primary architecture is x64, but other architectures (x86, ARM) can also be supported.
 * *-Use it on your own responsibility-*
@@ -111,17 +109,17 @@ Downloads should be extracted into ReVens */bin* folder.
 
 ## 🔧 Screenshot
 
-This is how it looks, Made with {heart} using **Electron.js** + **React.js**.
+This is how it looks, Made with {heart} using <s>Electron.js</s> **Bun** + **React.js**.
 
 ![ReVens AIO](./.static/preview/screenshot.png)
 
-*The App background is the electron DevTools itself*.
+*The App background is the WebView DevTools itself*.
 
 ## 🔧 Install, Run & Build
 
 To build ReVens:
 
-* **Electron.js** ^29.4.6 (Node 20.9.0)
+* <s>Electron.js ^29.4.0 (Node 20.9.0)</s> **Bun** ^1.2.0
 * **MinGW-w64**
 
 ReVens command-line:
@@ -641,13 +639,12 @@ Universal mobile toolkits.
 
 ## 🔧 TODO
 
-* Use public cloud for packages hosting.
-
-## Authors:
-
-* [Jakiboy](https://github.com/Jakiboy) (*Initial work*)
-* Any PR is welcome!
+* Upload legacy packages (.iso) on GitHub.
+* Use [Rust](https://www.rust-lang.org/) WebView & [Bun](https://bun.sh/) instead of [Electron.js](https://www.electronjs.org/) (Performance).
+* Migrate to TypeScript.
+* Add AI-powered Reverse Engineering Agent.
+* Add Browser-level Reverse Engineering Resources ([WASM](https://webassembly.org/)).
 
 ### ⭐ Support:
 
-Don't buy me a coffee! Just **star the project** if you like it.
+Skip the coffee! If you like the project, a **star** would mean a lot.
