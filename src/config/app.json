@@ -1,0 +1,51 @@
+{
+	"name": "ReVens",
+	"desctiption": "Reverse Engineering Toolkit AIO",
+	"notice": "Pentesting 1.2.1 Beta",
+	"url": "https://github.com/Jakiboy/ReVens",
+	"version": "1.2.1 Beta",
+	"year": "2025",
+	"author": {
+		"name": "Jihad Sinnaour",
+		"nickname": "Jakiboy",
+		"url": "https://github.com/Jakiboy"
+	},
+	"about": {
+		"desctiption": "The Ultimate Reverse Engineering Toolkit AIO"
+	},
+	"doc": {
+		"desctiption": "Windows-based Reverse Engineering Toolkit 'All-In-One', Built for <strong>Security (Penetration testing)</strong> & <strong>Educational purposes only</strong>."
+	},
+	"baseDir": "E:/Toolkit/Security/Reverse Engineering",
+	"items": {
+		"host": "https://revens.jihadsinnaour.com/download",
+		"parts": [
+			"Analyzing.iso",
+			"Assembling.iso",
+			"Bypassing.iso",
+			"Calculating.iso",
+			"Comparing.iso",
+			"Converting.iso",
+			"Debugging.iso",
+			"Decoding.iso",
+			"Decompiling.iso",
+			"Dependencies.iso",
+			"Disassembling.iso",
+			"Documentation.iso",
+			"Editing.iso",
+			"Encoding.iso",
+			"Hexing.iso",
+			"Mobile.iso",
+			"Packing.iso",
+			"Patching.iso",
+			"Programming.iso",
+			"Testing.iso",
+			"Unpacking.iso"
+		]
+	},
+	"player": "/Patching/Sound/FastTracker/x64/ft2.exe",
+	"resizable": false,
+	"width": 1000,
+	"height": 750,
+	"debug": true
+}

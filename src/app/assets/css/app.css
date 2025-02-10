@@ -1,0 +1,422 @@
+/* -------------------------------------- */
+/* Author  : Jakiboy (Jihad Sinnaour)
+/* package : ReVens | Reverse Engineering Toolkit AIO
+/* Version : 1.2.1
+/* -------------------------------------- */
+
+html,
+body {
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    overflow: hidden;
+    background: #303030 url(../img/bg-main.png);
+    color: #bdbdbf;
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+strong {
+    font-weight: 500;
+}
+
+a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+/* ----------------------------- */
+/* heading */
+/* ----------------------------- */
+.heading-wrapper img {
+    margin-top: 15px;
+}
+
+.heading-wrapper {
+    text-align: center;
+}
+
+.heading-wrapper.--no-header {
+    display: none;
+}
+
+/* ----------------------------- */
+/* content */
+/* ----------------------------- */
+.content-wrapper .tab-content {
+    background: #212121;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: calc(100vh - 240px);
+}
+
+.content-wrapper .tab-content.has-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper .tab-content.has-error p {
+    text-align: center;
+}
+
+/* ----------------------------- */
+/* footer */
+/* ----------------------------- */
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.copyright,
+.logger {
+    flex: 1 1 auto;
+    margin: 0;
+    color: #dadada;
+    height: 20px;
+}
+
+.logger {
+    position: relative;
+    font-size: 11px;
+    text-align: right;
+}
+
+.logger .status {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #dadada;
+}
+
+.copyright a {
+    color: #eeeeee !important;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------- */
+/* section */
+/* ----------------------------- */
+.section-container {
+    display: block;
+}
+
+.section-wrapper {
+    border-bottom: 1px solid #616161;
+    border-top: 0;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.section-container .section-wrapper:last-child {
+    border: 0;
+}
+
+.section-title {
+    font-size: 20px;
+    margin: 0;
+    color: #bdbdbf;
+}
+
+.section-description {
+    font-size: 13px;
+}
+
+.section-separator {
+    width: 18%;
+    min-width: 218px;
+}
+
+.extra-wrapper {
+    border-top: 1px solid #363636;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+/* ----------------------------- */
+/* nav */
+/* ----------------------------- */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #bb252a;
+    border-color: #bb252a;
+}
+
+.nav-tabs .nav-link {
+    border-width: 0 0 3px;
+    font-size: 14px;
+    padding: 10px 17px;
+}
+
+.nav-tabs .nav-link i {
+    font-weight: bold;
+}
+
+/* ----------------------------- */
+/* btn */
+/* ----------------------------- */
+.btn {
+    text-transform: none;
+}
+
+.ripple-surface {
+    overflow: initial;
+}
+
+.ripple-surface:active,
+.ripple-surface:focus {
+    overflow: hidden;
+}
+
+.btn:first-child,
+.btn-primary:focus-visible,
+.btn-primary {
+    background-color: #bb252a;
+    color: #fff;
+    box-shadow: none;
+    border: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:first-child:hover,
+.btn:first-child:active {
+    background-color: #bb252a;
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button-wrapper .btn {
+    min-width: 214px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 400;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-color: #181818;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.button-wrapper .btn:hover,
+.button-wrapper .btn:active,
+.button-wrapper .btn:focus {
+    background: inherit;
+    box-shadow: none;
+    border-color: #bb252a;
+}
+
+.button-wrapper .btn.type-zip,
+.button-wrapper .btn.type-folder {
+    background-color: #292929;
+}
+
+.button-wrapper .btn i {
+    font-weight: 800;
+    margin-right: 3px;
+}
+
+.doc-wrapper .btn {
+    min-width: 286px;
+}
+
+/* ----------------------------- */
+/* image */
+/* ----------------------------- */
+.image-wrapper {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.image-wrapper:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* ----------------------------- */
+/* scrollbar */
+/* ----------------------------- */
+.app-scroller {
+    height: calc(100vh - 330px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+}
+
+.app-scroller::-webkit-scrollbar-track {
+    border-radius: 30px;
+    background-color: #484848;
+}
+
+.app-scroller::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 30px;
+    background-color: #484848;
+}
+
+.app-scroller::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background-color: #bb252a;
+}
+
+/* ----------------------------- */
+/* about */
+/* ----------------------------- */
+.about {
+    font-size: 12px;
+    padding: 15px;
+}
+
+.about p {
+    margin-bottom: 5px;
+}
+
+.about .content-wrapper {
+    padding: 10px;
+}
+
+.about a {
+    color: #ffa163 !important;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------- */
+/* modal */
+/* ----------------------------- */
+.modal-content {
+    background-color: #131313;
+}
+
+.modal-backdrop {
+    background-color: rgb(125 125 125 / 50%);
+}
+
+.modal .modal-body h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.modal .image-wrapper {
+    margin-bottom: 10px;
+}
+
+.modal .modal-body p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.modal .modal-body .page-link {
+    color: #ff6368;
+    display: inline-block;
+}
+
+.modal .modal-body .page-link:hover {
+    text-decoration: underline;
+}
+
+.modal .modal-body hr {
+    margin: 8px 0;
+}
+
+.modal .modal-footer {
+    background-color: #0b0b0b;
+}
+
+.modal .app-scroller {
+    padding-right: 20px;
+}
+
+.modal .app-scroller::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 30px;
+    background-color: #484848;
+}
+
+/* ----------------------------- */
+/* font */
+/* ----------------------------- */
+@font-face {
+    font-family: 'Oxanium';
+    src: local('Oxanium'), url('font/oxanium.woff2') format('woff2');
+}
+
+/* responsive */
+/*-----------------------------------*/
+/* medium */
+@media only screen and (max-width: 800px) {
+    .app-scroller {
+        height: 290px;
+    }
+
+    .tab-title {
+        display: none;
+    }
+}
+
+/* small */
+@media only screen and (max-width: 600px) {
+    .app-scroller {
+        height: 250px;
+    }
+
+    .button-wrapper .btn {
+        width: 100%;
+    }
+
+    .logger {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 640px) {
+
+    .separator,
+    .footer-wrapper {
+        display: none;
+    }
+}
+
+/* tiny */
+@media only screen and (max-width: 400px) {
+    .app-scroller {
+        height: 200px;
+    }
+}

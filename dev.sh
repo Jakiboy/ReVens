@@ -1,3 +1,3 @@
 #!/bin/bash
 cd src
-npm start
+npx webpack --watch

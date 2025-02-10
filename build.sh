@@ -4,12 +4,12 @@ G='\033[0;32m'
 B='\033[0;96m'
 
 NAME='ReVens'
-VERSION='1.0.1'
+VERSION='1.2.1'
 DESCRIPTION='ReVens - Reverse Engineering Toolkit AIO 2023'
 AUTHOR='Jakiboy (Jihad Sinnaour)'
 COPYRIGHT="Copyright (c) 2023 ${AUTHOR}"
 OUTPUT='build' # Output path
-SOURCE='source' # Source path
+SOURCE='src' # Source path
 RESOURCES='resources' # Resources folder
 
 # Creating output folder
@@ -23,7 +23,7 @@ clear
 
 # Building package
 echo -e "${G}Building package..."
-electron-packager "${SOURCE}" --icon="./assets/icon.ico" --out="./${OUTPUT}" --app-copyright="${COPYRIGHT}" --app-version="${VERSION}" --win32metadata.CompanyName="${AUTHOR}" --win32metadata.FileDescription="${DESCRIPTION}" # --x64
+electron-packager "${SOURCE}" --icon="./app/assets/icon.ico" --out="./${OUTPUT}" --app-copyright="${COPYRIGHT}" --app-version="${VERSION}" --win32metadata.CompanyName="${AUTHOR}" --win32metadata.FileDescription="${DESCRIPTION}" # --x64
 sleep 2
 clear
 
@@ -34,17 +34,17 @@ clear
 
 # Adding pre-install files
 echo -e "${G}Adding pre-install files..."
-cp "./assets/protect.bat" "./${OUTPUT}/${NAME}/protect.bat"
-if [ ! -f "./assets/bin/7z.exe" ]; then
+cp "./app/assets/protect.bat" "./${OUTPUT}/${NAME}/protect.bat"
+if [ ! -f "./app/assets/bin/7z.exe" ]; then
     echo "Download 7z..."
-    git clone "https://github.com/Jakiboy/7z.git/" "./assets/bin/temp"
-    mv "./assets/bin/temp/bin/7z.exe" "./assets/bin/7z.exe"
-    mv "./assets/bin/temp/bin/7z.dll" "./assets/bin/7z.dll"
-    rm -rf "./assets/bin/temp"
+    git clone "https://github.com/Jakiboy/7z.git/" "./app/assets/bin/temp"
+    mv "./app/assets/bin/temp/bin/7z.exe" "./app/assets/bin/7z.exe"
+    mv "./app/assets/bin/temp/bin/7z.dll" "./app/assets/bin/7z.dll"
+    rm -rf "./app/assets/bin/temp"
     sleep 2
     clear
 fi
-cp -r "./assets/bin" "./${OUTPUT}/${NAME}/bin"
+cp -r "./app/assets/bin" "./${OUTPUT}/${NAME}/bin"
 cp -r "./changelog.txt" "./${OUTPUT}/${NAME}/changelog.txt"
 cp -r "./${NAME}.md" "./${OUTPUT}/${NAME}/${NAME}.md"
 sleep 2
@@ -59,7 +59,7 @@ clear
 
 # Minify JS files
 echo -e "${G}Minify JS files..."
-uglifyjs "./${OUTPUT}/${NAME}/${RESOURCES}/app/app.js" -c -m --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/app.js"
+uglifyjs "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.js" -c -m --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.js"
 uglifyjs "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/js/main.js" -c -m --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/js/main.js"
 sleep 2
 clear

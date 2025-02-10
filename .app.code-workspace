@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "launch": {},
+    "settings": {
+        "[javascript]": {
+            "editor.defaultFormatter": "vscode.typescript-language-features",
+            "editor.formatOnSave": true
+        },
+        "[json]": {
+            "editor.defaultFormatter": "vscode.json-language-features",
+            "editor.formatOnSave": true
+        },
+        "[css]": {
+            "editor.defaultFormatter": "vscode.css-language-features",
+            "editor.formatOnSave": true
+        },
+        "[html]": {
+            "editor.defaultFormatter": "vscode.html-language-features",
+            "editor.formatOnSave": true
+        }
+    }
+}

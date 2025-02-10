@@ -1,97 +1,141 @@
 # ReVens: Reverse Engineering Toolkit AIO
 
-<img src="./assets/logo.png" width="100%" alt="ReVens">
+<img src="./.static/preview/banner.png" width="100%" alt="ReVens">
 
-ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Penetration testing)</u> & <u>Educational purposes only</u>.  
-I made ReVens AIO app to share personal experience in RE since **2008**.
+ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>. **-V2 Under development-**
 
-🌍 [Online preview](https://revens.jihadsinnaour.com)
+> [!Note]
+> I made ReVens AIO software to share personal experience in RE since **2008**.  
+> RE tools are priceless, especially the legacy ones. They deserve a nice place where they can live in peace.  
+> [Watch online preview](https://revens.jihadsinnaour.com).
 
-❗ [New update in progress: Packages Auto-updater...](https://github.com/Jakiboy/ReVens/tree/dev) 
+## 🔧 Features
 
-## 🔧 Requirements
-
-To run ReVens:
-
-* **Windows 10/11 x64** *-Secured VM recommended-*.
-
-To build ReVens:
-
-* **Node.js** ^24.
+* **Cross-platform & Modern UI** software launcher "Blackhat style"
+* **100% clean**: All detections are **false positives**, No malware injected
+* **90% portable** (Resolved/Included dependencies)
+* Original assets (e.g. **BRD - Teleport Pro.mx**, **CORE - Power ISO.xm**)
+* Packages **Auto-updater** (JSON based source file)
+* Boilerplate of <s>Electron.js</s> **Bun** + **React.js**
 
 ## 💡 Notices
 
+> [!Important]
+> Respecting the rights of software developers is paramount. Engaging in activities such as bypassing software protections or reverse engineering software without explicit permission is not only generally illegal, but also unethical. It's essential to utilize software in the manner intended by its creators and in compliance with the stipulated terms of service or license agreement.
+
 * Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
-* **100% clean**: All detections are **false positives**, there's no malware included.
 * You should make an **Antivirus** exception to avoid detection, or use a **secured** virtual machine.
-* **ReVens Packages** ARE NOT automatically downloaded.
-* Many of the included tools are **outdated** and provided solely for legacy purposes.
+* **ReVens Packages** ARE <s>NOT</s> automatically downloaded from GitHub.
+* Many of the included tools are **outdated** and provided solely for legacy purposes!
 * **Packages** includes basic docs & tutorials about RE.
-* **90% portable**.
+* Packages primary architecture is x64, but other architectures (x86, ARM) can also be supported.
 * *-Use it on your own responsibility-*
+
+## 🔧 Requirements
+
+To run ReVens, **Windows** 10/11 (x64) is required.
 
 ## 🔧 Download
 
-**ReVens GUI**
+* Download ReVens GUI from: [Releases](https://github.com/Jakiboy/ReVens/releases).
+* Download packages manually (**~8Go**) from:
 
-* Download from: [Releases](https://github.com/Jakiboy/ReVens/releases).
+<table>
+  <tr>
+    <th>Part 1</th>
+    <th>Part 2</th>
+    <th>Part 3</th>
+    <th>Part 4</th>
+    <th>Part 5</th>
+    <th>Part 6</th>
+    <th>Part 7</th>
+  </tr>
+  <tr>
+    <td><a href="https://revens.jihadsinnaour.com/download/Analysing.iso" target="_blank">Analysing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Assembling.iso" target="_blank">Assembling</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Bypassing.iso" target="_blank">Bypassing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Calculating.iso" target="_blank">Calculating</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Comparing.iso" target="_blank">Comparing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Converting.iso" target="_blank">Converting</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Debugging.iso" target="_blank">Debugging</a></td>
+  </tr>
+</table>
 
-**ReVens Packages**
+<table>
+  <tr>
+    <th>Part 8</th>
+    <th>Part 9</th>
+    <th>Part 10</th>
+    <th>Part 11</th>
+    <th>Part 12</th>
+    <th>Part 13</th>
+  </tr>
+  <tr>
+    <td><a href="https://revens.jihadsinnaour.com/download/Decoding.iso" target="_blank">Decoding</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Decompiling.iso" target="_blank">Decompiling</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Dependencies.iso" target="_blank">Dependencies</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Disassembling.iso" target="_blank">Disassembling</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Documentation.iso" target="_blank">Documentation</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Unpacking.iso" target="_blank">Unpacking</a></td>
+  </tr>
+</table>
 
-Download packages manually from (**~8Go**) :
+<table>
+  <tr>
+    <th>Part 14</th>
+    <th>Part 15</th>
+    <th>Part 16</th>
+    <th>Part 17</th>
+    <th>Part 18</th>
+    <th>Part 19</th>
+    <th>Part 20</th>
+    <th>Part 21</th>
+    <th>Part 22</th>
+  </tr>
+  <tr>
+    <td><a href="https://revens.jihadsinnaour.com/download/Editing.iso" target="_blank">Editing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Encoding.iso" target="_blank">Encoding</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Extracting.iso" target="_blank">Extracting</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Hexing.iso" target="_blank">Hexing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Mobile.iso" target="_blank">Mobile</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Packing.iso" target="_blank">Packing</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Patching.iso" target="_blank">Patching</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Programming.iso" target="_blank">Programming</a></td>
+    <td><a href="https://revens.jihadsinnaour.com/download/Testing.iso" target="_blank">Testing</a></td>
+  </tr>
+</table>
 
-* Part 1 - [Analysing](https://revens.jihadsinnaour.com/download/Analysing.iso)
-* Part 2 - [Assembling](https://revens.jihadsinnaour.com/download/Assembling.iso)
-* Part 3 - [Bypassing](https://revens.jihadsinnaour.com/download/Bypassing.iso)
-* Part 4 - [Calculating](https://revens.jihadsinnaour.com/download/Calculating.iso)
-* Part 5 - [Comparing](https://revens.jihadsinnaour.com/download/Comparing.iso)
-* Part 6 - [Converting](https://revens.jihadsinnaour.com/download/Converting.iso)
-* Part 7 - [Debugging](https://revens.jihadsinnaour.com/download/Debugging.iso)
-* Part 8 - [Decoding](https://revens.jihadsinnaour.com/download/Decoding.iso)
-* Part 9 - [Decompiling](https://revens.jihadsinnaour.com/download/Decompiling.iso)
-* Part 10 - [Dependencies](https://revens.jihadsinnaour.com/download/Dependencies.iso)
-* Part 11 - [Disassembling](https://revens.jihadsinnaour.com/download/Disassembling.iso)
-* Part 12 - [Documentation](https://revens.jihadsinnaour.com/download/Documentation.iso)
-* Part 13 - [Editing](https://revens.jihadsinnaour.com/download/Editing.iso)
-* Part 14 - [Encoding](https://revens.jihadsinnaour.com/download/Encoding.iso)
-* Part 15 - [Extracting](https://revens.jihadsinnaour.com/download/Extracting.iso)
-* Part 16 - [Hexing](https://revens.jihadsinnaour.com/download/Hexing.iso)
-* Part 17 - [Mobile](https://revens.jihadsinnaour.com/download/Mobile.iso)
-* Part 18 - [Packing](https://revens.jihadsinnaour.com/download/Packing.iso)
-* Part 19 - [Patching](https://revens.jihadsinnaour.com/download/Patching.iso)
-* Part 20 - [Programming](https://revens.jihadsinnaour.com/download/Programming.iso)
-* Part 21 - [Testing](https://revens.jihadsinnaour.com/download/Testing.iso)
-* Part 22 - [Unpacking](https://revens.jihadsinnaour.com/download/Unpacking.iso)
+Downloads should be extracted into ReVens */bin* folder.
 
-Downloads should be extracted into */bin* folder.
+## 🔧 Screenshot
 
-## 🔧 Screenshots
+This is how it looks, Made with {heart} using <s>Electron.js</s> **Bun** + **React.js**.
 
-This is how it looks, Made with {heart} using **Electron.js** + Some old {stuff}.
+![ReVens AIO](./.static/preview/screenshot.png)
 
-![ReVens AIO](./assets/screenshot-1.png)
-
-*The App background is the electron DevTools itself*.
-
-<p float="left">
-    <img src="./assets/screenshot-2.png" width="48%">
-    <img src="./assets/screenshot-3.png" width="48%">
-</p>
+*The App background is the WebView DevTools itself*.
 
 ## 🔧 Install, Run & Build
 
+To build ReVens:
+
+* <s>Electron.js ^29.4.0 (Node 20.9.0)</s> **Bun** ^1.2.0
+* **MinGW-w64**
+
+ReVens command-line:
+
 ```bash
-bash global.sh
 bash init.sh
+bash dev.sh
 bash run.sh
 bash build.sh
 ```
 
 ## 🔧 Packages
-  
+
 ReVens packages includes:
 
-### ⚡ Analysing
+### ⚡ Analyzing
 
 Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 
@@ -99,7 +143,7 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 
 *Analyse binary.*
 
-* **FileAlyzer** - *Analyze executable files.* (⭐)
+* **FileAlyzer** - *Understand files by analyzing their structure.* (⭐)
 * **Capa (CLI)** - *Identify capabilities in executables.* (⭐)
 * **Alternate DLL Analyzer** - *Display function names in DLLs.*
 * **ExeInfo** - *Universal binary analyzer.*
@@ -595,18 +639,12 @@ Universal mobile toolkits.
 
 ## 🔧 TODO
 
-* Improve UI using **React.js**.
-* Update **Electron.js** to the latest (+ Dependencies).
-* Use public cloud for packages hosting.
-* Use internal **Node.js** packages downloader & extractor.
-* Add updater (including packages **path.json**).
-* Update Docs, (Add Links to active RE challenges & Forums, Remove outdated...).
-
-## Authors:
-
-* [Jakiboy](https://github.com/Jakiboy) (*Initial work*)
-* Any PR is welcome!
+* Upload legacy packages (.iso) on GitHub.
+* Use [Rust](https://www.rust-lang.org/) WebView & [Bun](https://bun.sh/) instead of [Electron.js](https://www.electronjs.org/) (Performance).
+* Migrate to TypeScript.
+* Add AI-powered Reverse Engineering Agent.
+* Add Browser-level Reverse Engineering Resources ([WASM](https://webassembly.org/)).
 
 ### ⭐ Support:
 
-Please give it a Star if you like the project.
+Skip the coffee! If you like the project, a **star** would mean a lot.
