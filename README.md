@@ -1,6 +1,6 @@
 # ReVens: Reverse Engineering Toolkit AIO
 
-<img src="./.static/preview/banner.png" width="100%" alt="ReVens">
+[![ReVens](https://media.githubusercontent.com/media/Jakiboy/ReVens/refs/heads/main/.static/preview/banner.png)](#)
 
 ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>. **-V2 Under development-**
 
@@ -111,7 +111,7 @@ Downloads should be extracted into ReVens */bin* folder.
 
 This is how it looks, Made with {heart} using <s>Electron.js</s> **Bun** + **React.js**.
 
-![ReVens AIO](./.static/preview/screenshot.png)
+[![Windows-based Reverse Engineering](https://media.githubusercontent.com/media/Jakiboy/ReVens/refs/heads/main/.static/preview/screenshot.png)](#)
 
 *The App background is the WebView DevTools itself*.
 
