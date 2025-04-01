@@ -131,6 +131,14 @@ bash run.sh
 bash build.sh
 ```
 
+## 🔧 TODO
+
+* Upload legacy packages (.iso) on GitHub.
+* Use [Rust](https://www.rust-lang.org/) WebView & [Bun](https://bun.sh/) instead of [Electron.js](https://www.electronjs.org/) (Performance).
+* Migrate to TypeScript.
+* Add AI-powered Reverse Engineering Agent.
+* Add Browser-level Reverse Engineering Resources ([WASM](https://webassembly.org/)).
+
 ## 🔧 Packages
 
 ReVens packages includes:
@@ -636,14 +644,6 @@ Universal mobile toolkits.
 * **Sn0wbreeze** - *Custom IPSWs generator.*
 * **P0sixspwn** - *Yet another iOS jailbreaking tool.*
 * **iREB** - *iTunes custom IPSWs bypass tool.*
-
-## 🔧 TODO
-
-* Upload legacy packages (.iso) on GitHub.
-* Use [Rust](https://www.rust-lang.org/) WebView & [Bun](https://bun.sh/) instead of [Electron.js](https://www.electronjs.org/) (Performance).
-* Migrate to TypeScript.
-* Add AI-powered Reverse Engineering Agent.
-* Add Browser-level Reverse Engineering Resources ([WASM](https://webassembly.org/)).
 
 ### ⭐ Support:
 
