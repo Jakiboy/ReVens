@@ -138,6 +138,7 @@ bash build.sh
 * Migrate to TypeScript.
 * Add AI-powered Reverse Engineering Agent.
 * Add Browser-level Reverse Engineering Resources ([WASM](https://webassembly.org/)).
+* Add Search feature to find tools by name. [By @MOAHSA](https://github.com/MOAHSA)).
 
 ## 🔧 Packages
 
