@@ -1,6 +1,6 @@
 # ReVens: Reverse Engineering Toolkit AIO
 
-[![ReVens](https://media.githubusercontent.com/media/Jakiboy/ReVens/refs/heads/main/.static/preview/banner.png)](#)
+[![ReVens](assets/preview/banner.png)](#)
 
 ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>. **-V2 Under development-**
 
@@ -17,6 +17,14 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 * Original assets (e.g. **BRD - Teleport Pro.mx**, **CORE - Power ISO.xm**)
 * Packages **Auto-updater** (JSON based source file)
 * Boilerplate of <s>Electron.js</s> **Bun** + **React.js**
+
+## 🔧 Screenshot
+
+This is how it looks, Made with {heart} using <s>Electron.js</s> **Bun** + **React.js**.
+
+[![Windows-based Reverse Engineering](assets/preview/screenshot.png)](#)
+
+*The App background is the WebView DevTools itself*.
 
 ## 💡 Notices
 
@@ -106,14 +114,6 @@ To run ReVens, **Windows** 10/11 (x64) is required.
 </table>
 
 Downloads should be extracted into ReVens */bin* folder.
-
-## 🔧 Screenshot
-
-This is how it looks, Made with {heart} using <s>Electron.js</s> **Bun** + **React.js**.
-
-[![Windows-based Reverse Engineering](https://media.githubusercontent.com/media/Jakiboy/ReVens/refs/heads/main/.static/preview/screenshot.png)](#)
-
-*The App background is the WebView DevTools itself*.
 
 ## 🔧 Install, Run & Build
 
