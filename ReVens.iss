@@ -75,7 +75,7 @@ Source: "{#InstallerRoot}\build\{#InstallerAppName}\vk_swiftshader.dll"; DestDir
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vk_swiftshader_icd.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vulkan-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#InstallerRoot}\build\{#InstallerAppName}\ReVens.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#InstallerRoot}\build\{#InstallerAppName}\README.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\bin\*"; DestDir: "{app}\bin"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\locales\*"; DestDir: "{app}\locales"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
