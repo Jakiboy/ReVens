@@ -153,23 +153,23 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 *Analyse binary.*
 
 * **FileAlyzer** - *Understand files by analyzing their structure.* (⭐)
-* **Capa (CLI)** - *Identify capabilities in executables.* (⭐)
+* **[Capa (CLI)](https://github.com/mandiant/capa)** - *Identify capabilities in executables.* (⭐)
 * **Alternate DLL Analyzer** - *Display function names in DLLs.*
 * **ExeInfo** - *Universal binary analyzer.*
-* **Yara** - *Malware pattern matching tool.*
-* **Spyre** - *Simple YARA-based scanner.*
-* **PE-bear** - *PE reversing tool.*
-* **ClamAV** - *Open-source antivirus engine.*
+* **[Yara](https://github.com/VirusTotal/yara)** - *Malware pattern matching tool.*
+* **[Spyre](https://github.com/spyre-project/spyre)** - *Simple YARA-based scanner.*
+* **[PE-bear](https://github.com/hasherezade/pe-bear-releases)** - *PE reversing tool.*
+* **[ClamAV](https://github.com/Cisco-Talos/clamav)** - *Open-source antivirus engine.*
 * **Malzilla** - *Detect malicious scripts.*
-* **Manalyze** - *Another malware analyzer.*
+* **[Manalyze](https://github.com/JusticeRage/Manalyze)** - *Another malware analyzer.*
 * **Sysinspector** - *Rootkits scanner.*
-* **Windows Kernel Explorer** - *Another rootkits scanner.*
+* **[Windows Kernel Explorer](https://github.com/AxtMueller/Windows-Kernel-Explorer)** - *Another rootkits scanner.*
 
 ##### Compilation
 
 *Analyse PE compilation.*
 
-* **Detect It Easy (DiE)** - *File type identifier.* (⭐)
+* **[Detect It Easy (DiE)](https://github.com/horsicq/Detect-It-Easy)** - *File type identifier.* (⭐)
 * **Nauz File Detector** - *Detects compiler tools.*
 * **Language 2000** - *Comprehensive compiler detector.*
 * **PE Detective** - *Identifies PE files.*
@@ -179,7 +179,7 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 
 *Object code converted by interpreter into binary machine code to be read by CPU.*
 
-* **Bytecode Viewer** - *View, decompile Java/Android bytecode & more.*
+* **[Bytecode Viewer](https://github.com/Konloch/bytecode-viewer)** - *View, decompile Java/Android bytecode & more.*
 
 ##### Packaging
 
@@ -194,10 +194,10 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 
 *Analyse system (API, Process, Memory, Network, File).*
 
-* **HijackThis** - *Malware analyser.* (⭐)
-* **Process Monitor** - *Advansed monitoring tool for Windows.* (⭐)
-* **API Monitor** - *Monitor Windows API calls.* (⭐)
-* **Fiddler** - *Web debugging proxy.* (⭐)
+* **[HijackThis](https://github.com/dragokas/hijackthis)** - *Malware analyser.* (⭐)
+* **[Process Monitor](https://github.com/Microsoft/ProcMon-for-Linux)** - *Advansed monitoring tool for Windows.* (⭐)
+* **[API Monitor](https://github.com/rohitab/API-Monitor)** - *Monitor Windows API calls.* (⭐)
+* **[Fiddler](https://github.com/telerik/fiddler-everywhere-app)** - *Web debugging proxy.* (⭐)
 * **SearchMyFiles** - *Advansed files finder.*
 * **RegDLLView** - *Display the list of all registered DLL/OCX/EXE.*
 * **WinObj** - *Windows object manager.*
@@ -206,22 +206,22 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 * **CPU Stress** - *CPU stress testing tool.*
 * **DeviceIOView** - *Monitor device I/O.*
 * **Autoruns** - *Manage startup programs.*
-* **Wireshark** - *Network packet analyzer.*
+* **[Wireshark](https://github.com/wireshark/wireshark)** - *Network packet analyzer.*
 * **DLL Function Viewer** - *View DLL functions.*
-* **Dependency Walker** - *32-bit/64-bit Windows module scanner.*
+* **[Dependency Walker](https://github.com/lucasg/Dependencies)** - *32-bit/64-bit Windows module scanner.*
 * **Exif Data View** - *Exif data Viewer.*
 * **SQLite Tools** - *SQLite database tools.*
 * **SQLite Browser** - *SQLite database browser.*
-* **Process Explorer** - *Detailed process viewer.*
-* **Process Hacker** - *Advanced process manager.*
+* **[Process Explorer](https://github.com/Microsoft/ProcExp-for-Linux)** - *Detailed process viewer.*
+* **[Process Hacker](https://github.com/processhacker/processhacker)** - *Advanced process manager.*
 * **Zero Dump** - *Create memory dumps.*
 * **GDIView** - *Inspect GDI handles.*
-* **grepWin** - *Search tool for Windows.*
+* **[grepWin](https://github.com/stefankueng/grepWin)** - *Search tool for Windows.*
 * **PE Network Manager** - *Network Manager.*
-* **NetworkMiner** - *Network forensics tool.*
+* **[NetworkMiner](https://github.com/netresec/NetworkMiner)** - *Network forensics tool.*
 * **SmartSniff** - *TCP/IP packets monitoring.*
 * **TCPView** - *TCP/UDP viewer.*
-* **Aircrack-ng** - *WiFi network security.*
+* **[Aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)** - *WiFi network security.*
 * **SniffPass** - *Network passwords monitoring.*
 * **WhoIs This Domain** - *Domain registration lookup utility.*
 * **WhoIs Connected Sniffer** - *Network packets discovery tool.*
@@ -261,28 +261,28 @@ Convert binary files.
 
 Revert the process of compilation. Transforming binary program file into a **structured higher-level language**.
 
-* **BinaryNinja** - *Advanced binary analysis platform.* (⭐)
+* **[BinaryNinja](https://github.com/Vector35/binaryninja-api)** - *Advanced binary analysis platform.* (⭐)
 * **.NET Reflector** - *.NET assembly browser and decompiler.* (⭐)
 * **Dis# Net Decompiler** - *.NET decompiler for C#.* (⭐)
-* **ILSpy** - *Open-source .NET assembly browser.*
-* **dotPeek** - *.NET decompiler and assembly browser.*
-* **Java Decompiler** - *Decompile Java class files.*
-* **JByteMod** - *Java bytecode editor and decompiler.*
+* **[ILSpy](https://github.com/icsharpcode/ILSpy)** - *Open-source .NET assembly browser.*
+* **[dotPeek](https://github.com/JetBrains/resharper-devguide)** - *.NET decompiler and assembly browser.*
+* **[Java Decompiler](https://github.com/java-decompiler/jd-gui)** - *Decompile Java class files.*
+* **[JByteMod](https://github.com/GraxCode/JByteMod-Beta)** - *Java bytecode editor and decompiler.*
 * **VB Decompiler** - *Decompile Visual Basic executables.*
 * **DJ Java Decompiler** - *Java decompiler and disassembler.*
 * **Exe2Aut** - *AutoIt3 decompiler.*
-* **FFDec** - *Flash Decompiler.*
+* **[FFDec](https://github.com/jindrapetrik/jpexs-decompiler)** - *Flash Decompiler.*
 
 ### ⚡ Disassembling
 
 Transforming machine code into a human readable mnemonic representation (**Assembly language**).
 
-* **Ghidra** - *Open-source software reverse engineering suite.* (⭐)
+* **[Ghidra](https://github.com/NationalSecurityAgency/ghidra)** - *Open-source software reverse engineering suite.* (⭐)
 * **IDA** - *Interactive Disassembler for binary analysis.* (⭐)
 * **RadASM** - *Rapid Application Development IDE.* (⭐)
-* **Capstone (CLI)** - *Lightweight multi-architecture disassembly framework.*
+* **[Capstone (CLI)](https://github.com/capstone-engine/capstone)** - *Lightweight multi-architecture disassembly framework.*
 * **Delphi Disassembler** - *Disassembler for Delphi executables.*
-* **bddisasm (CLI)** - *Binary Ninja's disassembly library.*
+* **[bddisasm (CLI)](https://github.com/bitdefender/bddisasm)** - *Binary Ninja's disassembly library.*
 * **Disasm** - *Generic disassembler for various architectures.*
 * **Refractor** - *.NET decompiler and assembly browser.*
 * **Win32Dasm** - *Windows 32-bit disassembler.*
@@ -291,19 +291,19 @@ Transforming machine code into a human readable mnemonic representation (**Assem
 
 View and change the running state of a program. (**Disassembling, Decompiling, Hexing**).
 
-* **x64dbg** - *Graphical debugger for x86 and x86-64 executables.* (⭐)
-* **Immunity Debugger** - *Powerful and flexible debugger for Windows.* (⭐)
+* **[x64dbg](https://github.com/x64dbg/x64dbg)** - *Graphical debugger for x86 and x86-64 executables.* (⭐)
+* **[Immunity Debugger](https://github.com/kbandla/ImmunityDebugger)** - *Powerful and flexible debugger for Windows.* (⭐)
 * **OllyDbg** - *Dynamic, 32-bit assembler level debugger for Windows.* (⭐)
-* **dnSpy** - *.NET assembly editor, decompiler, and debugger.*
-* **Cutter** - *Free and open-source reverse engineering platform.*
-* **Radare2 (CLI)** - *A portable and multi-architecture reverse engineering framework.*
-* **RenderDoc** - *Stand-alone graphics debugger.*
+* **[dnSpy](https://github.com/dnSpy/dnSpy)** - *.NET assembly editor, decompiler, and debugger.*
+* **[Cutter](https://github.com/rizinorg/cutter)** - *Free and open-source reverse engineering platform.*
+* **[Radare2 (CLI)](https://github.com/radareorg/radare2)** - *A portable and multi-architecture reverse engineering framework.*
+* **[RenderDoc](https://github.com/baldurk/renderdoc)** - *Stand-alone graphics debugger.*
 
 ### ⚡ Hexing
 
 Edit binary **hexadecimal values**.
 
-* **ImHex** - *A fast and powerful hex editor.* (⭐)
+* **[ImHex](https://github.com/WerWolv/ImHex)** - *A fast and powerful hex editor.* (⭐)
 * **Hiew** - *A hex viewer and editor for Windows.* (⭐)
 * **HEX Editor** - *A tool for viewing and editing hexadecimal files.*
 
@@ -311,7 +311,7 @@ Edit binary **hexadecimal values**.
 
 Rebuild PE import table (**Imports Reconstructor**).
 
-* **Scylla** - *A powerful and advanced x86/x86-64 executable unpacker.* (⭐)
+* **[Scylla](https://github.com/NtQuery/Scylla)** - *A powerful and advanced x86/x86-64 executable unpacker.* (⭐)
 * **LordPE** - *Another PE editor including imports reconstructing.* (⭐)
 * **DLL Packager** - *A tool for bundling DLLs with executables.*
 * **ImpREC** - *Import reconstructor for reconstructing imports in PE files.*
@@ -320,9 +320,9 @@ Rebuild PE import table (**Imports Reconstructor**).
 
 Decode hash.
 
-* **Ophcrack** - *Windows password cracker based on rainbow tables.* (⭐)
-* **CyberChef** - *A web app for analyzing and decoding data.* (⭐)
-* **Hashcat** - *Advanced password recovery.*
+* **[Ophcrack](https://github.com/Zyzonix/ophcrack)** - *Windows password cracker based on rainbow tables.* (⭐)
+* **[CyberChef](https://github.com/gchq/CyberChef)** - *A web app for analyzing and decoding data.* (⭐)
+* **[Hashcat](https://github.com/hashcat/hashcat)** - *Advanced password recovery.*
 * **Armadillo KeyTool** - *Tool for working with Armadillo software protection.*
 * **Keygener Assistant** - *Assists in generating keys for software.*
 * **SND Reverse Tool** - *Reverse engineering tool for Windows binaries.*
@@ -336,7 +336,7 @@ Decode hash.
 
 Binary compare.
 
-* **WinMerge** - *Open-source tool for visual file comparison and merging.* (⭐)
+* **[WinMerge](https://github.com/WinMerge/winmerge)** - *Open-source tool for visual file comparison and merging.* (⭐)
 * **REPT file compare** - *Tool for comparing binary files.* (⭐)
 * **File CompareR** - *Utility for comparing files and directories.*
 * **Table Text Compare** - *Simple CSV/Tab files compare.*
@@ -348,36 +348,36 @@ Binary compare.
 
 Binary edit (**EXE, RES, DLL**).
 
-* **Resource Hacker** - *Resource editor for Windows executables.* (⭐)
+* **[Resource Hacker](https://github.com/TDMakerInc/ResourceHacker)** - *Resource editor for Windows executables.* (⭐)
 * **PPEE** - *Powerful PE file viewer and editor.*
 * **PE Lab** - *Interactive PE file (executable) analysis tool.*
-* **Exiftool** - *Meta data editor.*
-* **ReClassEx** - *Structure class reverser.*
-* **ReClass.NET** - *.Net structure class reverser.*
+* **[Exiftool](https://github.com/exiftool/exiftool)** - *Meta data editor.*
+* **[ReClassEx](https://github.com/ReClassNET/ReClass.NET)** - *Structure class reverser.*
+* **[ReClass.NET](https://github.com/ReClassNET/ReClass.NET)** - *.Net structure class reverser.*
 * **XPEViewer** - *Executable file viewer and editor.*
 * **XELFViewer** - *Viewer for ELF (Executable and Linkable Format) files.*
 * **Robber** - *DLL hijacker.*
-* **Xenos** - *DLL injector.*
+* **[Xenos](https://github.com/DarthTon/Xenos)** - *DLL injector.*
 * **DLL Injector Slait** - *Tool for injecting DLLs into processes.*
 * **DLL Addr&Func Converter** - *Converts DLL addresses to function names.*
 * **DLL Injector** - *Tool for injecting DLLs into processes.*
 * **DLL Loader** - *Utility for loading DLL files into processes.*
 * **DLL Rebaser** - *Utility for rebasing DLLs.*
 * **ResEdit** - *Resource editor for Windows programs.*
-* **CFF Explorer** - *PE editor, hex editor, and more for Windows files.*
+* **[CFF Explorer](https://github.com/ntddk/CFF-Explorer)** - *PE editor, hex editor, and more for Windows files.*
 * **Resource Builder** - *Resource file editor and compiler.*
 * **Splash Injector** - *Tool for injecting splash screens into programs.*
-* **Far Manager** - *Text-based file and archive manager for Windows.*
-* **KDiff3** - *File and directory diff and merge tool.*
+* **[Far Manager](https://github.com/FarGroup/FarManager)** - *Text-based file and archive manager for Windows.*
+* **[KDiff3](https://github.com/KDE/kdiff3)** - *File and directory diff and merge tool.*
 * **IID King** - *Interface identifier lookup tool.*
-* **Cheat Engine** - *Memory scanner/debugger for games and applications.*
-* **EasyHook** - *Windows API Hooking.*
-* **Notepad++** - *Free source code editor and Notepad replacement.*
+* **[Cheat Engine](https://github.com/cheat-engine/cheat-engine)** - *Memory scanner/debugger for games and applications.*
+* **[EasyHook](https://github.com/EasyHook/EasyHook)** - *Windows API Hooking.*
+* **[Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus)** - *Free source code editor and Notepad replacement.*
 * **Codejock Skin Builder** - *Tool for building custom UI skins.*
 * **Codejock Resource Editor** - *Resource editor for Codejock software.*
 * **Codejock MarkupPad** - *Editor for creating Codejock markup files.*
 * **Codejock Command Bars Designer** - *Designer tool for command bars.*
-* **Inno Setup** - *Installer for Windows programs.*
+* **[Inno Setup](https://github.com/jrsoftware/issrc)** - *Installer for Windows programs.*
 * **Inno Script Studio** - *Inno Setup script manager GUI.*
 * **DMcsvEditor** - *Simple CSV/Tab file editor.*
 * **XMLTreeEdit** - *Simple XML file editor.*
@@ -386,7 +386,7 @@ Binary edit (**EXE, RES, DLL**).
 
 Binary extracting (**EXE, RES, DLL**).
 
-* **UniExtract2** - *Universal extractor for various archive formats.* (⭐)
+* **[UniExtract2](https://github.com/Bioruebe/UniExtract2)** - *Universal extractor for various archive formats.* (⭐)
 * **DLL Export Viewer** - *View exported functions of a DLL file.*
 * **Bintext** - *Fast and powerful text extractor.*
 * **RegFileExport** - *Extract registry entries to a .reg file.*
@@ -396,15 +396,15 @@ Binary extracting (**EXE, RES, DLL**).
 * **RegFromApp** - *Extracts registry entries created by an application.*
 * **RegRipper** - *Another registry extractor.*
 * **Inno Extractor** - *Tool for extracting Inno Setup installers.*
-* **Innoextract (CLI)** - *Command-line Inno Setup unpacker.*
-* **Innounp (CLI)** - *Inno Setup unpacker, a command-line version.*
+* **[Innoextract (CLI)](https://github.com/dscharrer/innoextract)** - *Command-line Inno Setup unpacker.*
+* **[Innounp (CLI)](https://github.com/kichik/innounp)** - *Inno Setup unpacker, a command-line version.*
 * **MSI Unpacker** - *Extract files from MSI installers.*
 * **Fearless MSI Unpacker** - *Tool for unpacking MSI installers.*
-* **LessMSI (CLI)** - *Command-line tool to extract data from MSI files.*
+* **[LessMSI (CLI)](https://github.com/activescott/lessmsi)** - *Command-line tool to extract data from MSI files.*
 * **Mmextract (CLI)** - *Command-line MSI and CAB extractor.*
 * **ExeDumper** - *Utility to dump executable files.*
 * **Table Extractor** - *Extract tables from executables or libraries.*
-* **UEFITool** - *UEFI firmware image viewer and editor.*
+* **[UEFITool](https://github.com/LongSoft/UEFITool)** - *UEFI firmware image viewer and editor.*
 * **Firmware Tables View** - *Firmware tables (ACPI, SMBIOS) viewer.*
 * **ChromePass** - *Google chrome password recovery tool.*
 * **PasswordFox** - *Mozilla firefox password recovery tool.*
@@ -415,16 +415,16 @@ Binary extracting (**EXE, RES, DLL**).
 
 **Games**
 
-* **Dragon UnPACKer** - *Tool for opening and extracting game resource files.*
-* **Unity Assets Bundle Extractor** - *Utility for extracting Unity assets.*
+* **[Dragon UnPACKer](https://github.com/elbereth/DragonUnPACKer)** - *Tool for opening and extracting game resource files.*
+* **[Unity Assets Bundle Extractor](https://github.com/SeriousCache/UABE)** - *Utility for extracting Unity assets.*
 * **Ninja Ripper** - *Tool for extracting 3D models from games.*
 * **3D Ripper DX** - *Capture 3D models from DirectX 9 games.*
-* **QuickBMS** - *File extraction and reimporting script engine.*
+* **[QuickBMS](https://github.com/Alkid/quickbms)** - *File extraction and reimporting script engine.*
 * **Unity Asset Editor** - *Tool for modifying Unity game assets.*
 * **DevX Unity Unpacker** - *Utility for unpacking Unity game files.*
 * **Unity Studio** - *Viewer and editor for Unity assets and bundles.*
-* **UnityEx** - *Utility for extracting assets from Unity games.*
-* **uTinyRipper** - *Unity asset extractor and exporter.*
+* **[UnityEx](https://github.com/Perfare/UnityStudio)** - *Utility for extracting assets from Unity games.*
+* **[uTinyRipper](https://github.com/mafaca/UtinyRipper)** - *Unity asset extractor and exporter.*
 
 ### ⚡ Unpacking
 
@@ -432,9 +432,9 @@ Unpack & remove binary protection (**EXE, DLL**).
 
 * **XVolkolak** - *Unpacker emulator.*
 * **.NET Reactor Slayer** - *Deobfuscator and unpacker for .NET Reactor.*
-* **ConfuserEx Unpacker (CLI)** - *Confuserex unpacker.*
+* **[ConfuserEx Unpacker (CLI)](https://github.com/NotPrab/.NET-Deobfuscator)** - *Confuserex unpacker.*
 * **ILProtector Unpacker** - *ILProtector unpacker.*
-* **de4dot** - *.NET deobfuscator and unpacker.*
+* **[de4dot](https://github.com/de4dot/de4dot)** - *.NET deobfuscator and unpacker.*
 * **RL!deUPX** - *UPX unpacker.*
 * **RL!deASPack** - *ASPack unpacker.*
 * **RL!dePacker** - *Generic unpacker.*
@@ -532,7 +532,7 @@ Unpack & remove binary protection (**EXE, DLL**).
 
 *Bypassing system.*
 
-* **ScyllaHide** - *Plugin for hiding processes from various process tools.* (⭐)
+* **[ScyllaHide](https://github.com/x64dbg/ScyllaHide)** - *Plugin for hiding processes from various process tools.* (⭐)
 * **RunFromProcess** - *Tool for running processes from a different process.*
 
 ---
@@ -541,18 +541,18 @@ Unpack & remove binary protection (**EXE, DLL**).
 
 Assembling **Machine code**.
 
-* **Flat assembler (FASM)** - *A fast, self-hosting assembly language compiler for x86 architecture.* (⭐)
+* **[Flat assembler (FASM)](https://github.com/tgrysztar/fasm)** - *A fast, self-hosting assembly language compiler for x86 architecture.* (⭐)
 
 ### ⚡ Programming
 
 Programming tools (**Compilators**).
 
 * **PyScripter** - *Free and open-source Python integrated development environment (IDE).* (⭐)
-* **AutoIt** - *Scripting language designed for automating the Windows GUI.* (⭐)
-* **Dev-C++** - *Free, portable, and open-source integrated development environment (IDE) for C and C++.* (⭐)
+* **[AutoIt](https://github.com/AutoIt/AutoIt-v3)** - *Scripting language designed for automating the Windows GUI.* (⭐)
+* **[Dev-C++](https://github.com/Embarcadero/Dev-Cpp)** - *Free, portable, and open-source integrated development environment (IDE) for C and C++.* (⭐)
 * **Small Basic** - *A simple, beginner-friendly programming language and IDE.* (⭐)
 * **AutoPlay Media Studio (AMS)** - *Easy-to-use & visual drag-and-drop software development tool.* (⭐)
-* **Embarcadero Dev-C++** - *Integrated development environment for C and C++ programming.*
+* **[Embarcadero Dev-C++](https://github.com/Embarcadero/Dev-Cpp)** - *Integrated development environment for C and C++ programming.*
 
 ### ⚡ Encoding
 
@@ -561,8 +561,8 @@ Data encoding (**Hash**).
 * **Hasher** - *Generate hash values for files using various algorithms.* (⭐)
 * **WinHasher** - *Hash generator and checker for Windows.*
 * **Alternate Hash Generator** - *Hashing tool for file verification.*
-* **PuTTY** - *A free SSH and telnet client for Windows.*
-* **XCA** - *A certificate generation tool.*
+* **[PuTTY](https://github.com/github/putty)** - *A free SSH and telnet client for Windows.*
+* **[XCA](https://github.com/chris2511/xca)** - *A certificate generation tool.*
 * **HashMyFiles** - *Tool to calculate and verify hash values.*
 * **XOR** - *Tool for bitwise XOR operations on files.*
 * **Base64 (CLI)** - *Command-line tool for Base64 encoding and decoding.*
@@ -576,8 +576,8 @@ Data encoding (**Hash**).
 
 Executable packing.
 
-* **UPX** - *Free, portable, and extendable executable packer.* (⭐)
-* **ConfuserEx** - *Open-source protector for .NET applications.*
+* **[UPX](https://github.com/upx/upx)** - *Free, portable, and extendable executable packer.* (⭐)
+* **[ConfuserEx](https://github.com/mkaring/ConfuserEx)** - *Open-source protector for .NET applications.*
 * **Alternate EXE Packer** - *A program to pack executable files.*
 * **Amber** - *Cryptographic hashing tool for files.*
 
@@ -587,21 +587,21 @@ Executable packing.
 
 Circuit / Logical simulation.
 
-* **Fritzing** - *An open-source electronics design software.* (⭐)
-* **Arduino Simulator** - *Software for simulating Arduino circuits.* (⭐)
-* **Arduino CLI** - *Command-line interface for Arduino.*
+* **[Fritzing](https://github.com/fritzing/fritzing-app)** - *An open-source electronics design software.* (⭐)
+* **[Arduino Simulator](https://github.com/simulator-io/simulator-arduino)** - *Software for simulating Arduino circuits.* (⭐)
+* **[Arduino CLI](https://github.com/arduino/arduino-cli)** - *Command-line interface for Arduino.*
 * **PICSimLab** - *PIC microcontroller simulator.*
 * **UnoArduSim** - *Arduino simulator and debugger.*
-* **Dia** - *Diagram creation software.*
-* **Logisim** - *Educational digital circuit simulator.*
-* **SimulIDE** - *Real-time electronics simulator.*
+* **[Dia](https://github.com/GNOME/dia)** - *Diagram creation software.*
+* **[Logisim](https://github.com/logisim-evolution/logisim-evolution)** - *Educational digital circuit simulator.*
+* **[SimulIDE](https://github.com/SimulIDE/SimulIDE)** - *Real-time electronics simulator.*
 * **Circuit Simulator** - *Software for simulating electronic circuits.*
 
 ##### Sandboxing
 
 *Executables safe testing.*
 
-* **Sandboxie Plus** - *Enhanced version of the popular sandboxing program.* (⭐)
+* **[Sandboxie Plus](https://github.com/sandboxie-plus/Sandboxie)** - *Enhanced version of the popular sandboxing program.* (⭐)
 * **Sandboxie Classic** - *Original version of the sandboxing program.* (⭐)
 
 ---
@@ -612,21 +612,21 @@ Circuit / Logical simulation.
 
 Universal mobile toolkits.
 
-* **Etcher** - *A cross-platform tool to flash OS images onto SD cards and USB.*
+* **[Etcher](https://github.com/balena-io/etcher)** - *A cross-platform tool to flash OS images onto SD cards and USB.*
 * **OTP Extractor** - *Tool for extracting OTPs (One-Time Passwords).*
 * **WhatsApp Extractor (CLI)** - *Command-line tool for extracting WhatsApp data.*
 * **WhatsApp Viewer** - *Viewer for WhatsApp chat histories.*
 
 ##### Android
 
-* **APK Editor Studio** - *Powerful APK editing tool.* (⭐)
+* **[APK Editor Studio](https://github.com/kefir500/apk-editor-studio)** - *Powerful APK editing tool.* (⭐)
 * **APK Easy Tool** - *APK management utility for Windows.*
-* **JADX** - *Dex to Java decompiler.*
+* **[JADX](https://github.com/skylot/jadx)** - *Dex to Java decompiler.*
 * **ADB Installer**
 * **ADB Driver Installer**
 * **APK Installer**
 * **Odin** - *Samsung Android ROM flashing Tool.*
-* **Apktool (CLI)** - *Tool for decompiling and recompiling Android APK files.*
+* **[Apktool (CLI)](https://github.com/iBotPeaches/Apktool)** - *Tool for decompiling and recompiling Android APK files.*
 * **APK Protect** - *Tool for protecting Android applications.*
 * **XAPK Detector** - *Detects and handles XAPK files.*
 * **APK Multi-Tool** - *Tool for managing and modifying Android APK files.*
