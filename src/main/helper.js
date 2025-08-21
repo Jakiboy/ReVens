@@ -111,7 +111,7 @@ function openBinFolder() {
  * Open info.
  */
 function openInfo() {
-	const md = getRoot('/') + 'ReVens.md';
+	const md = getRoot('/') + 'README.md';
 	shell.openPath(md);
 }
 
