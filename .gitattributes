@@ -2,4 +2,3 @@
 *.cmd linguist-detectable=false
 *.html linguist-detectable=false
 *.css linguist-detectable=false
-* !text !filter !merge !diff
