@@ -1,0 +1,7 @@
+# Tauri ignore file
+node_modules
+dist
+target
+.git
+.vscode
+*.log

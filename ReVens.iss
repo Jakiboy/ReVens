@@ -1,7 +1,7 @@
 ; ======================================================================================================================
 ; Author  : Jakiboy (Jihad Sinnaour)
 ; Package : ReVens | Reverse Engineering Toolkit AIO
-; Version : 1.2.1
+; Version : 2.0.0
 ; Link    : https://github.com/Jakiboy/ReVens
 ; license : MIT
 ;
@@ -12,7 +12,7 @@
 
 #define InstallerRoot "."
 #define InstallerAppName "ReVens"
-#define InstallerAppVersion "1.2.1"
+#define InstallerAppVersion "2.0.0"
 #define InstallerAppPublisher "Jakiboy (Jihad Sinnaour)"
 #define InstallerAppURL "https://github.com/Jakiboy/ReVens"
 #define InstallerAppExeName "ReVens.exe"

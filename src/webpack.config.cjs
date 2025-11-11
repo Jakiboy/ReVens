@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './app.js',
-  mode: 'development',
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -24,5 +24,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    fullySpecified: false
+  },
+  externals: {
+    // Tauri API will be loaded via script tag
+    '@tauri-apps/api/core': 'window.__TAURI__',
   },
 };

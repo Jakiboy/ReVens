@@ -1,9 +1,9 @@
 {
 	"name": "ReVens",
 	"desctiption": "Reverse Engineering Toolkit AIO",
-	"notice": "Pentesting 1.2.1 Beta",
+	"notice": "Pentesting 2.0.0 Beta",
 	"url": "https://github.com/Jakiboy/ReVens",
-	"version": "1.2.1 Beta",
+	"version": "2.0.0 Beta",
 	"year": "2025",
 	"author": {
 		"name": "Jihad Sinnaour",

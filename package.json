@@ -1,0 +1,9 @@
+{
+    "name": "revens-root",
+    "version": "2.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "cd src && npm run build:webpack && cd ../src-tauri && cargo tauri dev",
+        "build": "cd src && npm run build:webpack && cd ../src-tauri && cargo tauri build"
+    }
+}

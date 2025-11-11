@@ -1,3 +1,4 @@
 #!/bin/bash
 cd src
-npx webpack --watch
+echo "Starting Tauri development mode..."
+npm run dev

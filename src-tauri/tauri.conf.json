@@ -1,0 +1,123 @@
+{
+    "$schema": "https://schema.tauri.app/config/2",
+    "productName": "ReVens",
+    "version": "2.0.0",
+    "identifier": "com.jakiboy.revens",
+    "build": {
+        "beforeDevCommand": "",
+        "beforeBuildCommand": "",
+        "frontendDist": "../src"
+    },
+    "bundle": {
+        "active": true,
+        "category": "DeveloperTool",
+        "copyright": "Jihad Sinnaour 2025",
+        "shortDescription": "Reverse Engineering Toolkit AIO",
+        "longDescription": "The Ultimate Reverse Engineering Toolkit All-In-One. Built for Security (Penetration testing) & Educational purposes only.",
+        "targets": [
+            "msi",
+            "nsis"
+        ],
+        "windows": {
+            "certificateThumbprint": null,
+            "digestAlgorithm": "sha256",
+            "timestampUrl": "",
+            "wix": {
+                "language": "en-US"
+            },
+            "nsis": {
+                "compression": "lzma",
+                "displayLanguageSelector": false
+            }
+        },
+        "icon": [
+            "icons/32x32.png",
+            "icons/128x128.png",
+            "icons/128x128@2x.png",
+            "icons/icon.icns",
+            "icons/icon.ico"
+        ],
+        "resources": []
+    },
+    "app": {
+        "windows": [
+            {
+                "title": "ReVens - Reverse Engineering AIO",
+                "label": "main",
+                "width": 1000,
+                "height": 750,
+                "minWidth": 600,
+                "minHeight": 640,
+                "resizable": false,
+                "center": true,
+                "fullscreen": false,
+                "decorations": true,
+                "transparent": false,
+                "alwaysOnTop": false,
+                "skipTaskbar": false,
+                "visible": false,
+                "focus": true,
+                "url": "index.html"
+            },
+            {
+                "title": "ReVens Splash",
+                "label": "splash",
+                "width": 600,
+                "height": 400,
+                "minWidth": 600,
+                "minHeight": 400,
+                "maxWidth": 600,
+                "maxHeight": 400,
+                "resizable": false,
+                "center": true,
+                "fullscreen": false,
+                "decorations": false,
+                "transparent": true,
+                "alwaysOnTop": true,
+                "skipTaskbar": true,
+                "visible": true,
+                "focus": false,
+                "url": "splash.html"
+            }
+        ],
+        "security": {
+            "csp": null,
+            "assetProtocol": {
+                "enable": true,
+                "scope": [
+                    "$APPDATA/**",
+                    "$RESOURCE/**"
+                ]
+            }
+        },
+        "trayIcon": {
+            "id": "main-tray",
+            "iconPath": "icons/icon.png",
+            "iconAsTemplate": false,
+            "title": "ReVens"
+        }
+    },
+    "plugins": {
+        "shell": {
+            "open": true,
+            "scope": [
+                {
+                    "name": "open-item",
+                    "cmd": "cmd",
+                    "args": [
+                        "/c",
+                        "start",
+                        "",
+                        {
+                            "validator": ".*"
+                        }
+                    ],
+                    "sidecar": false
+                }
+            ]
+        },
+        "singleInstance": {
+            "enabled": true
+        }
+    }
+}
