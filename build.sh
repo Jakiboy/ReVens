@@ -4,10 +4,10 @@ G='\033[0;32m'
 B='\033[0;96m'
 
 NAME='ReVens'
-VERSION='1.2.1'
-DESCRIPTION='ReVens - Reverse Engineering Toolkit AIO 2023'
-AUTHOR='Jakiboy (Jihad Sinnaour)'
-COPYRIGHT="Copyright (c) 2023 ${AUTHOR}"
+VERSION='1.3.0'
+DESCRIPTION='ReVens - Reverse Engineering Toolkit AIO 2026'
+AUTHOR='Jakiboy'
+COPYRIGHT="Copyright (c) 2026 ${AUTHOR}"
 OUTPUT='build' # Output path
 SOURCE='src' # Source path
 RESOURCES='resources' # Resources folder
@@ -22,6 +22,7 @@ sleep 2
 clear
 
 # Building package
+npx webpack --production
 echo -e "${G}Building package..."
 electron-packager "${SOURCE}" --icon="./app/assets/icon.ico" --out="./${OUTPUT}" --app-copyright="${COPYRIGHT}" --app-version="${VERSION}" --win32metadata.CompanyName="${AUTHOR}" --win32metadata.FileDescription="${DESCRIPTION}" # --x64
 sleep 2

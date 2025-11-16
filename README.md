@@ -2,7 +2,7 @@
 
 [![ReVens](assets/preview/banner.png)](#)
 
-ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>. **-V2 Under development-**
+ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>. **-V1.3 Under development-**
 
 > [!Note]
 > I made ReVens AIO software to share personal experience in RE since **2008**.  
@@ -16,11 +16,11 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 * **90% portable** (Resolved/Included dependencies)
 * Original assets (e.g. **BRD - Teleport Pro.mx**, **CORE - Power ISO.xm**)
 * Packages **Auto-updater** (JSON based source file)
-* Boilerplate of <s>Electron.js</s> **Bun** + **React.js**
+* Boilerplate of **Electron.js** + **React.js**
 
 ## 🔧 Screenshot
 
-This is how it looks, Made with {heart} using <s>Electron.js</s> **Bun** + **React.js**.
+This is how it looks, Made with {heart} using **Electron.js** + **React.js**.
 
 [![Windows-based Reverse Engineering](assets/preview/screenshot.png)](#)
 
@@ -33,15 +33,35 @@ This is how it looks, Made with {heart} using <s>Electron.js</s> **Bun** + **Rea
 
 * Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
 * You should make an **Antivirus** exception to avoid detection, or use a **secured** virtual machine.
-* **ReVens Packages** ARE <s>NOT</s> automatically downloaded from GitHub.
+* ReVens Packages **ARE NOT** automatically downloaded from GitHub.
 * Many of the included tools are **outdated** and provided solely for legacy purposes!
 * **Packages** includes basic docs & tutorials about RE.
 * Packages primary architecture is x64, but other architectures (x86, ARM) can also be supported.
-* *-Use it on your own responsibility-*
+* *-Use it on your own responsibility, Better Call Saul!-*
 
 ## 🔧 Requirements
 
 To run ReVens, **Windows** 10/11 (x64) is required.
+
+## 🔧 Install, Run & Build
+
+To build ReVens:
+
+* **Electron.js ^29.4.0 (Node 20.9.0)** ^1.2.0
+* **MinGW-w64**
+
+ReVens command-line:
+
+```bash
+bash init.sh
+bash dev.sh
+bash run.sh
+bash build.sh
+```
+
+## 🔧 TODO
+
+* AI-powered Reverse Engineering Agent.
 
 ## 🔧 Download
 
@@ -115,31 +135,6 @@ To run ReVens, **Windows** 10/11 (x64) is required.
 
 Downloads should be extracted into ReVens */bin* folder.
 
-## 🔧 Install, Run & Build
-
-To build ReVens:
-
-* <s>Electron.js ^29.4.0 (Node 20.9.0)</s> **Bun** ^1.2.0
-* **MinGW-w64**
-
-ReVens command-line:
-
-```bash
-bash init.sh
-bash dev.sh
-bash run.sh
-bash build.sh
-```
-
-## 🔧 TODO
-
-* Upload legacy packages (.iso) on GitHub.
-* Use [Rust](https://www.rust-lang.org/) WebView & [Bun](https://bun.sh/) instead of [Electron.js](https://www.electronjs.org/) (Performance).
-* Migrate to TypeScript.
-* Add AI-powered Reverse Engineering Agent.
-* Add Browser-level Reverse Engineering Resources ([WASM](https://webassembly.org/)).
-* Add Search feature to find tools by name. ([By @MOAHSA](https://github.com/MOAHSA)).
-
 ## 🔧 Packages
 
 ReVens packages includes:
@@ -154,9 +149,10 @@ Analyse binary executable files (**EXE, DLL, OCX, SYS...**).
 
 * **FileAlyzer** - *Understand files by analyzing their structure.* (⭐)
 * **[Capa (CLI)](https://github.com/mandiant/capa)** - *Identify capabilities in executables.* (⭐)
-* **Alternate DLL Analyzer** - *Display function names in DLLs.*
+* **DLL Analyzer** - *Display function names in DLLs.*
 * **ExeInfo** - *Universal binary analyzer.*
 * **[Yara](https://github.com/VirusTotal/yara)** - *Malware pattern matching tool.*
+* **[PE-sieve](https://github.com/hasherezade/pe-sieve)** - *Scans a given process.*
 * **[Spyre](https://github.com/spyre-project/spyre)** - *Simple YARA-based scanner.*
 * **[PE-bear](https://github.com/hasherezade/pe-bear-releases)** - *PE reversing tool.*
 * **[ClamAV](https://github.com/Cisco-Talos/clamav)** - *Open-source antivirus engine.*

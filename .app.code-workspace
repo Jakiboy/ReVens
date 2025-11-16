@@ -1,7 +1,12 @@
 {
     "folders": [
         {
+            "name": "ReVens",
             "path": "."
+        },
+        {
+            "name": "Bin",
+            "path": "./assets/Bin"
         }
     ],
     "launch": {},

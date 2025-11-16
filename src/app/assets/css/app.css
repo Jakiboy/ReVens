@@ -1,7 +1,7 @@
 /* -------------------------------------- */
-/* Author  : Jakiboy (Jihad Sinnaour)
+/* Author  : Jakiboy
 /* package : ReVens | Reverse Engineering Toolkit AIO
-/* Version : 1.2.1
+/* Version : 1.3.x
 /* -------------------------------------- */
 
 html,
@@ -216,7 +216,8 @@ a {
 }
 
 .button-wrapper .btn {
-    min-width: 214px;
+    width: 214px;
+    max-width: 214px;
     margin-bottom: 5px;
     text-align: left;
     font-weight: 400;
@@ -227,6 +228,7 @@ a {
     border-radius: 10px;
     box-shadow: none;
     overflow: hidden;
+    word-break: break-all;
 }
 
 .button-wrapper .btn:hover,
@@ -368,6 +370,45 @@ a {
     width: 3px;
     border-radius: 30px;
     background-color: #484848;
+}
+
+/* ----------------------------- */
+/* search modal */
+/* ----------------------------- */
+.search-modal .form-outline .form-control:focus {
+    border-color: #bb252a !important;
+    box-shadow: none !important;
+}
+
+.search-modal .form-outline .form-control:focus~.form-label {
+    color: #bb252a !important;
+}
+
+.search-modal .form-outline .form-control:focus~.form-notch .form-notch-leading,
+.search-modal .form-outline .form-control:focus~.form-notch .form-notch-trailing {
+    border-color: #bb252a !important;
+    box-shadow: none !important;
+}
+
+.search-modal .form-outline .form-control:focus~.form-notch .form-notch-middle {
+    border-top: none !important;
+    border-bottom: 1px solid #bb252a !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
+.search-modal .search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid rgb(47 47 47);
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s;
+    border-radius: 3px;
+}
+
+.search-modal .search-result-item:hover {
+    background-color: #232323;
 }
 
 /* ----------------------------- */

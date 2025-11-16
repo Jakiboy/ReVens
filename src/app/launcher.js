@@ -1,7 +1,7 @@
 /**
- * Author  : Jakiboy (Jihad Sinnaour)
+ * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.2.1
+ * Version : 1.3.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -15,6 +15,7 @@ import Footer from './components/footer';
 import About from './components/about';
 import Doc from './components/doc';
 import Settings from './components/settings';
+import Search from './components/search';
 
 const Launcher = () => {
 
@@ -39,6 +40,7 @@ const Launcher = () => {
         <About />
         <Doc />
         <Settings />
+        <Search setActiveTab={setActiveTab} />
       </div>
     </>
   );

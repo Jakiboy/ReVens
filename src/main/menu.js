@@ -1,13 +1,14 @@
 /**
- * Author  : Jakiboy (Jihad Sinnaour)
+ * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.2.1
+ * Version : 1.3.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
 
 const { Menu } = require('electron');
 const { reload, openBinFolder, openInfo, openChangelog, openUrl } = require('./helper');
+const config = require('../config/app.json');
 
 function createMenu(launcher) {
     const menu = Menu.buildFromTemplate(
@@ -17,28 +18,54 @@ function createMenu(launcher) {
 }
 
 function getTemplate(launcher) {
-    return [
+    const toolsSubmenu = [
         {
-            "label": 'Tools',
-            "submenu": [
-                {
-                    "label": 'Explore',
-                    "accelerator": 'Ctrl+E',
-                    click() { openBinFolder(); }
-                },
-                { "type": 'separator' },
-                {
-                    "label": 'Reload',
-                    click() { reload(launcher); }
-                }
-            ]
+            "label": 'Add file',
+            "enabled": false,
+            click() { }
         },
         {
-            "label": 'Settings',
-            "accelerator": 'Ctrl+S',
+            "label": 'Search package',
+            "accelerator": 'Ctrl+F',
             click() {
-                launcher.webContents.send('open-settings');
+                launcher.webContents.send('open-search');
             }
+        },
+        { "type": 'separator' },
+        {
+            "label": 'Explore',
+            "accelerator": 'Ctrl+E',
+            click() { openBinFolder(); }
+        }
+    ];
+
+    if (config.debug) {
+        toolsSubmenu.push(
+            { "type": 'separator' },
+            {
+                "label": 'Reload',
+                click() { reload(launcher); }
+            }
+        );
+    }
+
+    return [
+        {
+            "label": 'File',
+            "submenu": toolsSubmenu
+        },
+        {
+            "label": 'Advanced',
+            "submenu": [
+                {
+                    "label": 'Settings',
+                    "enabled": false,
+                    "accelerator": 'Ctrl+S',
+                    click() {
+                        launcher.webContents.send('open-settings');
+                    }
+                }
+            ]
         },
         {
             "label": 'Help',
@@ -57,7 +84,7 @@ function getTemplate(launcher) {
                 },
                 {
                     "label": 'Changelog',
-                    "accelerator": 'Ctrl+X',
+                    "accelerator": 'Ctrl+Q',
                     click() { openChangelog(); }
                 },
                 { "type": 'separator' },

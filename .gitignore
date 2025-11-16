@@ -6,6 +6,9 @@ build
 .electron/
 dist/
 *.asar
+*.py
+*.backup.json
+!scripts/*.py
 Thumbs.db
 npm-debug.log*
 yarn-debug.log*

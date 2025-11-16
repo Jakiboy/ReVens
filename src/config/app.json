@@ -1,10 +1,10 @@
 {
 	"name": "ReVens",
 	"desctiption": "Reverse Engineering Toolkit AIO",
-	"notice": "Pentesting 1.2.1 Beta",
+	"notice": "Legacy v1.3.0 Beta",
 	"url": "https://github.com/Jakiboy/ReVens",
-	"version": "1.2.1 Beta",
-	"year": "2025",
+	"version": "1.3.0",
+	"year": "2026",
 	"author": {
 		"name": "Jihad Sinnaour",
 		"nickname": "Jakiboy",
@@ -16,12 +16,13 @@
 	"doc": {
 		"desctiption": "Windows-based Reverse Engineering Toolkit 'All-In-One', Built for <strong>Security (Penetration testing)</strong> & <strong>Educational purposes only</strong>."
 	},
-	"baseDir": "E:/Toolkit/Security/Reverse Engineering",
+	"baseDir": false,
 	"items": {
 		"host": "https://revens.jihadsinnaour.com/download",
 		"parts": [
 			"Analyzing.iso",
 			"Assembling.iso",
+			"Automating.iso",
 			"Bypassing.iso",
 			"Calculating.iso",
 			"Comparing.iso",
@@ -34,12 +35,13 @@
 			"Documentation.iso",
 			"Editing.iso",
 			"Encoding.iso",
+			"Extracting.iso",
 			"Hexing.iso",
 			"Mobile.iso",
 			"Packing.iso",
 			"Patching.iso",
 			"Programming.iso",
-			"Testing.iso",
+			"Simulating.iso",
 			"Unpacking.iso"
 		]
 	},

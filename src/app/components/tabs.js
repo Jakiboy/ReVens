@@ -1,7 +1,7 @@
 /**
- * Author  : Jakiboy (Jihad Sinnaour)
+ * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.2.1
+ * Version : 1.3.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -12,7 +12,7 @@ import { generateSlug } from '../helper';
 
 const Tabs = ({ activeTab, setActiveTab }) => {
   return (
-    <ul className="nav nav-tabs mb-2 mt-2" id="revens-tab" role="tablist">
+    <ul className="nav nav-tabs mb-2 mt-2 justify-content-center" id="revens-tab" role="tablist">
       {config.sections.map((section, index) => {
         const slug = generateSlug(section.name);
         return (

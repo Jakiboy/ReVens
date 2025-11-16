@@ -3,7 +3,28 @@ All notable changes to ReVens.
 
 --------------------------
 
-## [1.2.1] - 15-12-2024
+## [1.3.0] - 29-12-2025
+
+### Fixed
+
+- JSON-based packages manager.
+- Modals UI (CSS).
+
+### Removed
+
+- Removed default-initialized INI files ([@MOAHSA](https://github.com/Jakiboy/ReVens/issues/14)).
+
+### Added
+
+- Added test & fix /scripts.
+- Added ReverseKit ([@MOAHSA](https://github.com/Jakiboy/ReVens/issues/15)).
+- Added Search feature ([@Undertaker-afk](https://github.com/Jakiboy/ReVens/issues/16)).
+- Added WebAssembly Binary Toolkit.
+- Added direct download URLs for packages (GitHub, Source).
+
+--------------------------
+
+## [1.2.1] (Pre-release) - 15-12-2025
 
 ### Updated
 
@@ -11,7 +32,7 @@ All notable changes to ReVens.
 
 --------------------------
 
-## [1.2.0] - 31-03-2024
+## [1.0.2] (Pre-release) - 31-03-2024
 
 ### Updated
 
@@ -19,131 +40,9 @@ All notable changes to ReVens.
 
 --------------------------
 
-## [1.0.2] - 20-03-2024
+## [1.0.1] (Pre-release) - 03-11-2023
 
-### Added
-
-- DLL-EXE
-- EXE-DLL
-
-### Updated
-
-- DiE v3.09
-- Alternate DLL Analyzer v2.110
-
---------------------------
-
-## [1.0.1] - 30-11-2023
-
-### Updated
-
-- Resource Hacker v5.2.7
-
---------------------------
-
-## [1.0.1] - 03-11-2023
-
-### Fixed
-
-- Packages updater
-
-### Updated
-
-- Launcher skeleton: HTML/CSS/JS
-- Alternate DLL Analyzer v1.930
-- Alternate Math Solver v1.810
-- Alternate HASH Generator v1.740
-- Alternate EXE Packer v2.510
-- Process Monitor v3.96
-- Autoruns v14.1
-- Sandboxie Plus v1.11.4
-- Ophcrack 3.8.0
-- Asset Bundle Extractor (Unity) v3
-- x64dbg v02-11-2023
-- Cutter v2.3.2
-- Ghidra v10.4
-- ImHex v1.31.0
-- PPEE(puppy) v1.13
-- Resource Hacker v5.2.4
-- WinMerge v2.16.34
-- Notepad++ v8.5.8
-- APK Editor Studio v1.7.1
-- Apktool v2.9.0
-- OTP Extractor 2.6.0
-- PyScripter v4.3.3
-
-### Added
-
-- TCPView v4.19
-- APK Easy Tool v1.60
-- JADX v1.4.7
-- ADB Installer v1.4.3
-- ADB Driver Installer v2.0
-- APK Installer v1.0
-- Odin3 v3.14.4
-- Etcher v1.18.11
-- Bootra1n v0.10.2
-- Checkn1x v1.1.7
-- Checkra1n v0.12.4
-- SSH Ramdisk v06-12-2013
-- 3uTools v3.05.031
-- F0recast v1.4.2
-- iDetector v1.0
-- Pangu v1.2.1
-- JailSn0w v1.0
-- Sn0wbreeze v2.9.14
-- P0sixspwn v1.0
-- iREB v7
-- DMcsvEditor v2.9
-- XMLTreeEdit v0.1.0.35
-- Hasher v2.0
-- Bintext v3.0.3
-- Aircrack-ng v1.7
-- Capa v6.1.0
-- ClamAV v1.2.1
-- Manalyze v1.0
-- SysInspector v1.4.2
-- Windows Kernel Explorer v13
-- Exiftool v12.69
-- PE Network Manager v0.59.B9
-- Malzilla v1.2.0
-- NetworkMiner v2.8.1
-- Hashcat v6.2.6
-- XCA v2.5.0
-- PE-bear v0.6.5.2
-- RegRipper v3.0
-- UEFITool v67
-- AutoPlay Media Studio v8.5.0
-- Inno Setup v6.2.2
-- Inno Script Studio v2.5.1
-- LordPE v1.41
-- Xenos v2.3.2
-- ReClassEx v1.2.0
-- ReClass.NET v1.2
-- AutoIt v3
-- Exe2Aut v0.10.0
-- Robber v1.7
-- Yara 4.4.0
-- Spyre (Yara) v1.2.4
-- Dependency Walker 2.2.6
-- EasyHook v2.7
-- FFDec v19.1.2
-- RenderDoc v1.29
-- SmartSniff v2.29
-- SniffPass v1.13
-- WhoIs This Domain v2.46
-- WhoIs Connected Sniffer v1.28
-- DNS Lookup View v1.12
-- RegScanner v2.71
-- Firmware Tables View v1.02
-- Table Text Compare v1.20
-- Exif Data View v1.15
-- ChromePass v1.58
-- PasswordFox v1.70
-- WebBrowserPassView v2.12
-- Password Security Scanner v1.61
-- Product Key Scanner v1.02
-- ProduKey v1.97
+- Updated packages
 
 --------------------------
 
