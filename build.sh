@@ -168,7 +168,7 @@ if [ ! -d "compiler" ]; then
     sleep 2
     clear
 fi
-"$(pwd)/compiler/ISCC.exe" "$(pwd)/${NAME}.iss" # Abs. path
+"$(pwd)/compiler/ISCC.exe" "$(pwd)/assets/installer/${NAME}.iss" # Abs. path
 
 echo -e "${G}Building archive..."
 cd "./${OUTPUT}"
