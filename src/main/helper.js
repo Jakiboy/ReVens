@@ -71,7 +71,7 @@ function formatPath(path) {
  * Get bin directory path.
  */
 function getBinDir() {
-	return config.baseDir ? path.join(config.baseDir, 'bin') : getRoot('bin');
+	return config.baseDir ? config.baseDir : getRoot('bin');
 }
 
 /**

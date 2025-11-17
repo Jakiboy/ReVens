@@ -289,6 +289,10 @@ a {
     min-width: 286px;
 }
 
+.button-wrapper .btn i.icon-notebook {
+    font-weight: 400;
+}
+
 /* ----------------------------- */
 /* image */
 /* ----------------------------- */

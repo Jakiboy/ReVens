@@ -17,13 +17,20 @@ const getItemIcon = (type) => {
     case 'folder':
       return 'folder';
     case 'doc':
+    case 'pdf':
+    case 'md':
       return 'notebook';
     case 'sound':
+    case 'mx':
+    case 'mp3':
       return 'music-tone';
+    case 'exe':
     case 'cli':
+    case 'sh':
+    case 'ps1':
       return 'control-play';
     default:
-      return 'control-play';
+      return 'flag';
   }
 };
 

@@ -27,7 +27,7 @@ if errorlevel 1 (
 )
 
 REM Run the test script with arguments
-python "%~dp0test_items.py" --no-version --no-url --no-path -no-download %*
+python "%~dp0test_items.py" %*
 
 REM Capture exit code
 set TEST_EXIT_CODE=%errorlevel%

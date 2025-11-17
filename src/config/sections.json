@@ -220,11 +220,15 @@
             "sub": [
                 {
                     "title": "Introduction",
-                    "desc": "Introducing Reverse Engineering"
+                    "desc": "Introducing to Reverse Engineering"
                 },
                 {
-                    "title": "Todo",
-                    "desc": "..."
+                    "title": "Book",
+                    "desc": "Reverse Engineering Books"
+                },
+                {
+                    "title": "Tutorial",
+                    "desc": "Basic Software Reverse Engineering Tutorials"
                 }
             ]
         }

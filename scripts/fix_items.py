@@ -33,7 +33,7 @@ REQUIRED_PROPERTIES = {
 PROPERTY_ORDER = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "remove"]
 
 # Type order for sorting
-TYPE_ORDER = ["exe", "cli", "zip"]
+TYPE_ORDER = ["exe", "cli", "sound", "zip"]
 
 def load_section_order():
     """Load section order from sections.json (excluding AI)"""

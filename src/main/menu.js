@@ -103,17 +103,17 @@ function getTemplate(launcher) {
                 {
                     "label": 'Update',
                     "accelerator": 'Ctrl+U',
-                    click() { openUrl('https://github.com/Jakiboy/ReVens/releases'); }
+                    click() { openUrl(`${config.url}/releases`); }
                 },
                 { "type": 'separator' },
                 {
                     "label": 'Report issue',
                     "accelerator": 'Ctrl+I',
-                    click() { openUrl('https://github.com/Jakiboy/ReVens/issues'); }
+                    click() { openUrl(`${config.url}/issues`); }
                 },
                 {
                     "label": 'Edit packages',
-                    click() { openUrl('https://github.com/Jakiboy/ReVens/pulls'); }
+                    click() { openUrl(`${config.url}/pulls`); }
                 },
                 { "type": 'separator' },
                 {

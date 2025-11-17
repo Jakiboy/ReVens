@@ -16,7 +16,7 @@
 	"doc": {
 		"desctiption": "Windows-based Reverse Engineering Toolkit 'All-In-One', Built for <strong>Security (Penetration testing)</strong> & <strong>Educational purposes only</strong>."
 	},
-	"baseDir": false,
+	"baseDir": "D:\\Toolkit\\Security\\Reverse Engineering",
 	"items": {
 		"host": "https://revens.jihadsinnaour.com/download/test",
 		"password": "j0LfzCIvJy",
@@ -33,7 +33,7 @@
 			"Decompiling.zip",
 			"Dependencies.zip",
 			"Disassembling.zip",
-			"Documentation.zip",
+			"Docs.zip",
 			"Editing.zip",
 			"Encoding.zip",
 			"Extracting.zip",

@@ -180,14 +180,11 @@ def validate_items():
                         elif isinstance(value, list) and len(value) == 0:
                             warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is an empty array (should be false, valid URL, or non-empty array)"
                             empty_properties.append(warning)
-                # Special handling for 'version' - warn if false
+                # Special handling for 'version' - warn only if empty or undefined (False is acceptable)
                 elif prop == 'version':
                     if not IGNORE_VERSION_WARNINGS:
-                        if value is False:
-                            warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is set to false"
-                            empty_properties.append(warning)
-                        elif value == "" or value is None:
-                            warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is empty"
+                        if value == "" or value is None:
+                            warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is empty or undefined"
                             empty_properties.append(warning)
                 # Other properties should not be empty
                 else:
