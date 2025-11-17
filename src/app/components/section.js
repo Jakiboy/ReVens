@@ -10,6 +10,47 @@ import React, { useMemo } from 'react';
 import { MDBBtn as Btn } from 'mdb-react-ui-kit';
 import { generateSlug } from '../helper';
 
+// Helper function to get icon based on item type
+const getItemIcon = (type) => {
+  switch (type) {
+    case 'zip':
+    case 'folder':
+      return 'folder';
+    case 'doc':
+      return 'notebook';
+    case 'sound':
+      return 'music-tone';
+    case 'cli':
+      return 'control-play';
+    default:
+      return 'control-play';
+  }
+};
+
+// Helper function to format item name
+const formatItemName = (name, type) => {
+  const truncatedName = name.length > 23 ? name.substring(0, 23) : name;
+  return type === 'cli' ? `${truncatedName} (CLI)` : truncatedName;
+};
+
+// ItemButton component to reduce duplication
+const ItemButton = ({ item, isDisabled }) => {
+  const icon = getItemIcon(item.type);
+  const name = formatItemName(item.name, item.type);
+
+  return (
+    <Btn
+      className={`type-${item.type}`}
+      onClick={() => window.electron.click(item.path)}
+      title={item.desc || ''}
+      disabled={isDisabled(item.path)}
+      data-path={item.path}
+    >
+      <i className={`icon-${icon}`}></i> {name}
+    </Btn>
+  );
+};
+
 const Section = ({ section, items, disabledPaths = [] }) => {
 
   const _section = generateSlug(section.name);
@@ -31,90 +72,33 @@ const Section = ({ section, items, disabledPaths = [] }) => {
                 <h3 className="section-title">{sub.title}</h3>
                 <p className="section-description" dangerouslySetInnerHTML={{ __html: sub.desc }}></p>
                 <div className="button-wrapper">
-                  {items.map((item, index) => {
+                  {items.map((item, itemIndex) => {
                     const _isection = generateSlug(item.section);
                     const _isub = generateSlug(item.sub);
-                    let name = item.name.length > 23 ? item.name.substring(0, 23) : item.name;
-                    let icon;
-                    switch (item.type) {
-                      case 'zip':
-                      case 'folder':
-                        icon = 'folder';
-                        break;
-                      case 'doc':
-                        icon = 'notebook';
-                      case 'sound':
-                        icon = 'music-tone';
-                        break;
-                      case 'cli':
-                        icon = 'control-play';
-                        name = `${name} (CLI)`;
-                        break;
-                      default:
-                        icon = 'control-play';
-                    }
+
                     if ((_isection === _section) && (_isub === _sub) && !item.extra) {
-                      return (
-                        <Btn
-                          className={`type-${item.type}`}
-                          key={index}
-                          onClick={() => window.electron.click(item.path)}
-                          title={item.desc || ''}
-                          disabled={isDisabled(item.path)}
-                          data-path={item.path}
-                        >
-                          <i className={`icon-${icon}`}></i> {name}
-                        </Btn>
-                      );
+                      return <ItemButton key={itemIndex} item={item} isDisabled={isDisabled} />;
                     }
+                    return null;
                   })}
                 </div>
-                {sub.extra && sub.extra.map((extra, index) => {
+                {sub.extra && sub.extra.map((extra, extraIndex) => {
                   const _extra = generateSlug(extra);
                   return (
-                    <div className="extra-wrapper" key={index}>
+                    <div className="extra-wrapper" key={extraIndex}>
                       <p className="section-description">{extra}</p>
                       <div className="button-wrapper">
-                        {items.map((item, index) => {
-                          if (item.extra) {
-                            const _isection = generateSlug(item.section);
-                            const _isub = generateSlug(item.sub);
-                            const _iextra = generateSlug(item.extra);
-                            let name = item.name.length > 23 ? item.name.substring(0, 23) : item.name;
-                            let icon;
-                            switch (item.type) {
-                              case 'zip':
-                              case 'folder':
-                                icon = 'folder';
-                                break;
-                              case 'doc':
-                                icon = 'notebook';
-                                break;
-                              case 'sound':
-                                icon = 'music-tone';
-                                break;
-                              case 'cli':
-                                icon = 'control-play';
-                                name = `${name} (CLI)`;
-                                break;
-                              default:
-                                icon = 'control-play';
-                            }
-                            if ((_isection === _section) && (_isub === _sub) && (_iextra === _extra)) {
-                              return (
-                                <Btn
-                                  className={`type-${item.type}`}
-                                  key={index}
-                                  onClick={() => window.electron.click(item.path)}
-                                  title={item.desc || ''}
-                                  disabled={isDisabled(item.path)}
-                                  data-path={item.path}
-                                >
-                                  <i className={`icon-${icon}`}></i> {name}
-                                </Btn>
-                              );
-                            }
+                        {items.map((item, itemIndex) => {
+                          if (!item.extra) return null;
+
+                          const _isection = generateSlug(item.section);
+                          const _isub = generateSlug(item.sub);
+                          const _iextra = generateSlug(item.extra);
+
+                          if ((_isection === _section) && (_isub === _sub) && (_iextra === _extra)) {
+                            return <ItemButton key={itemIndex} item={item} isDisabled={isDisabled} />;
                           }
+                          return null;
                         })}
                       </div>
                     </div>

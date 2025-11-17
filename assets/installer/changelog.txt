@@ -10,7 +10,8 @@ All notable changes to ReVens.
 - Improved main UI
 - Updated Packages downloader
 - Updated Builder & Installer
-- Refactoring Backend
+- Refactoring Backend (Electron.js)
+- Refactoring Frontend (React.js)
 
 ### Added
 

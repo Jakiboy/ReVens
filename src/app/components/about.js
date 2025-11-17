@@ -29,7 +29,7 @@ const About = () => {
   useEffect(() => {
     window.electron.on('open-about', openModal);
     return () => {
-      window.electron.off('open-about', showModal);
+      window.electron.off('open-about', openModal);
     };
   }, []);
 
@@ -43,11 +43,11 @@ const About = () => {
                 <Row>
                   <Col>
                     <div className="image-wrapper">
-                      <img src="./app/assets/img/icon.svg" className="img-fluid" width="64px" height="64px" />
+                      <img src="./app/assets/img/icon.svg" className="img-fluid" width="64px" height="64px" alt="ReVens Icon" />
                     </div>
                     <h1>{config.name}</h1>
                     <p><strong>Version</strong> {config.version} (x64)</p>
-                    <p className="mb-2">{config.about.desctiption}.</p>
+                    <p className="mb-2">{config.about.description || config.about.desctiption}.</p>
                     <p>
                       <a href={config.url} className="page-link">
                         <i className="icon-social-github"></i> Source

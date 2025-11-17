@@ -6,7 +6,7 @@
  * license : MIT
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Head from './components/head';
 import Header from './components/header';
 import Tabs from './components/tabs';
@@ -20,31 +20,33 @@ import Download from './components/download';
 import iConfig from '../config/items.json';
 
 const Launcher = () => {
-
   const initialTab = localStorage.getItem('activeTab') || 'analyzing';
   const [activeTab, setActiveTab] = useState(initialTab);
   const [disabledPaths, setDisabledPaths] = useState([]);
+
+  // Memoize all paths for empty status fallback
+  const allPaths = useMemo(
+    () => iConfig.items.map(item => item.path).filter(Boolean),
+    []
+  );
 
   useEffect(() => {
     localStorage.setItem('activeTab', activeTab);
   }, [activeTab]);
 
   useEffect(() => {
-    window.electron.onPackageStatus((status) => {
-      // Handle disabledPaths based on status
+    const handlePackageStatus = (status) => {
       if (status.disabledPaths && Array.isArray(status.disabledPaths)) {
-        // Main process sent disabled paths
         setDisabledPaths(status.disabledPaths);
       } else if (status.status === 'empty') {
-        // Fallback: if bin folder is empty, disable all items
-        const allPaths = iConfig.items.map(item => item.path).filter(Boolean);
         setDisabledPaths(allPaths);
       } else {
-        // No disabled paths (all items available)
         setDisabledPaths([]);
       }
-    });
-  }, []);
+    };
+
+    window.electron.onPackageStatus(handlePackageStatus);
+  }, [allPaths]);
 
   return (
     <>

@@ -89,7 +89,7 @@ const Search = ({ setActiveTab }) => {
                             <Container className="text-center">
                                 <Row>
                                     <Col>
-                                        <h1 style={{ marginBottom: '20px' }}>Search packages</h1>
+                                        <h1 className="mb-4">Search packages</h1>
                                         <Input
                                             label="Type package name..."
                                             id="searchQuery"
@@ -98,7 +98,7 @@ const Search = ({ setActiveTab }) => {
                                             onChange={handleSearchChange}
                                             ref={searchInputRef}
                                         />
-                                        <div className="search-results app-scroller" style={{ maxHeight: '300px', overflowY: 'auto', marginTop: '20px' }}>
+                                        <div className="search-results app-scroller">
                                             {filteredItems.length > 0 ? (
                                                 filteredItems.map((item, index) => (
                                                     <div
@@ -110,11 +110,11 @@ const Search = ({ setActiveTab }) => {
                                                         <br />
                                                         <small>{item.desc}</small>
                                                         <br />
-                                                        <small style={{ color: '#666' }}>Section: {item.section} / {item.sub}</small>
+                                                        <small className="text-muted">Section: {item.section} / {item.sub}</small>
                                                     </div>
                                                 ))
                                             ) : searchQuery.trim() !== '' ? (
-                                                <p style={{ marginTop: '20px', color: '#999' }}>No packages found</p>
+                                                <p className="mt-4 text-muted">No packages found</p>
                                             ) : null}
                                         </div>
                                     </Col>

@@ -21,7 +21,6 @@ import {
 import appConfig from '../../config/app.json';
 
 const Download = () => {
-
     const [isOpened, setModalStatus] = useState(false);
     const [progress, setProgress] = useState(0);
     const [currentFile, setCurrentFile] = useState('');
@@ -35,13 +34,13 @@ const Download = () => {
         setStatus('Preparing download...');
         setIsDownloading(true);
         // Start download automatically when modal is opened from event
-        if (window.electron && window.electron.downloadPackages) {
+        if (window.electron?.downloadPackages) {
             window.electron.downloadPackages();
         }
     };
 
     const closeModal = () => {
-        if (isDownloading) {
+        if (isDownloading && window.electron?.abortDownload) {
             window.electron.abortDownload();
         }
         setModalStatus(false);
@@ -54,16 +53,17 @@ const Download = () => {
     };
 
     useEffect(() => {
-        window.electron.on('open-download', openModal);
-
-        window.electron.onDownloadProgress((data) => {
+        const handleDownloadProgress = (data) => {
             setProgress(data.progress);
             setCurrentFile(data.currentFile);
             setStatus(data.status);
             if (data.completed) {
                 setIsDownloading(false);
             }
-        });
+        };
+
+        window.electron.on('open-download', openModal);
+        window.electron.onDownloadProgress(handleDownloadProgress);
 
         return () => {
             window.electron.off('open-download', openModal);
@@ -78,8 +78,15 @@ const Download = () => {
                         <Header>Download Packages</Header>
                         <Body>
                             <div className="mb-3">
-                                <p className="mb-2"><strong>Status:</strong> {status}{!isDownloading && status.toLowerCase().includes('completed') ? ` Restart ${appConfig.productName || appConfig.name}` : ''}</p>
-                                {currentFile && <p className="mb-2"><strong>Current file:</strong> {currentFile}</p>}
+                                <p className="mb-2">
+                                    <strong>Status:</strong> {status}
+                                    {!isDownloading && status.toLowerCase().includes('completed') &&
+                                        ` Restart ${appConfig.productName || appConfig.name}`
+                                    }
+                                </p>
+                                {currentFile && (
+                                    <p className="mb-2"><strong>Current file:</strong> {currentFile}</p>
+                                )}
                             </div>
                             <Progress>
                                 <ProgressBar

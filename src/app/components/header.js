@@ -11,7 +11,7 @@ import React from 'react';
 const Header = () => (
   <div className="heading-wrapper">
     <div className="image-wrapper">
-      <img src="./app/assets/img/icon.svg" className="img-fluid" width="100px" height="100px" />
+      <img src="./app/assets/img/icon.svg" className="img-fluid" width="100px" height="100px" alt="ReVens Icon" />
     </div>
   </div>
 );

@@ -29,7 +29,7 @@ const Doc = () => {
   useEffect(() => {
     window.electron.on('open-doc', openModal);
     return () => {
-      window.electron.off('open-doc', showModal);
+      window.electron.off('open-doc', openModal);
     };
   }, []);
 
@@ -44,7 +44,7 @@ const Doc = () => {
                   <Col>
                     <div className="app-scroller">
                       <h1>{config.name}</h1>
-                      <p dangerouslySetInnerHTML={{ __html: config.doc.desctiption }} />
+                      <p dangerouslySetInnerHTML={{ __html: config.doc.description || config.doc.desctiption }} />
                       <hr />
                       <p>
                         Etenim si attendere diligenter, existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse, cui, utrum vellet, liceret, nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur. Sed ego Atratino, humanissimo atque optimo adulescenti meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis. Si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae. Ceteris non modo nihil ignoscendum, sed etiam acriter est resistendum.

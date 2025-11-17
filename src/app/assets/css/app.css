@@ -434,6 +434,12 @@ a {
     box-shadow: none !important;
 }
 
+.search-modal .search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
 .search-modal .search-result-item {
     padding: 10px;
     border-bottom: 1px solid rgb(47 47 47);
