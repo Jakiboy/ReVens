@@ -54,7 +54,6 @@ ReVens command-line:
 
 ```bash
 bash init.sh
-bash dev.sh
 bash run.sh
 bash build.sh
 ```
