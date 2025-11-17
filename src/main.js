@@ -8,8 +8,8 @@
 
 'use strict';
 
-const { app } = require('electron');
-const { setup, isWindows, getPath, formatUrl, openUrl, checkPackageStatus, abortDownload } = require('./main/helper');
+const { app, dialog } = require('electron');
+const { setup, isWindows, getPath, formatUrl, openUrl, checkPackageStatus, startDownload } = require('./main/helper');
 const createLauncher = require('./main/launcher');
 const createSplash = require('./main/splash');
 const createMenu = require('./main/menu');
@@ -17,6 +17,10 @@ const createTray = require('./main/tray');
 const registerShortcuts = require('./main/shortcut');
 const setupIpcListeners = require('./main/ipc.js');
 const config = require('./config/app.json');
+
+// Constants
+const SPLASH_DURATION = 3000;
+const STARTUP_CHECK_DELAY = 500;
 
 let launcher = null;
 let tray = null;
@@ -63,14 +67,12 @@ app.once('ready', () => {
         setTimeout(() => {
             launcher.webContents.send('package-status', status);
             if (status.status === 'empty') {
-                const { dialog } = require('electron');
-                const { startDownload } = require('./main/helper');
                 dialog.showMessageBox(launcher, {
                     type: 'question',
                     buttons: ['Download', 'Cancel'],
                     defaultId: 0,
                     title: 'No Packages Found',
-                    message: 'No packages found, do you want to start downloading?',
+                    message: 'No packages found, do you want to start downloading?'
                 }).then(result => {
                     if (result.response === 0) {
                         launcher.webContents.send('open-download');
@@ -78,18 +80,17 @@ app.once('ready', () => {
                     }
                 });
             }
-        }, 500);
+        }, STARTUP_CHECK_DELAY);
     });
 
     launcher.once('ready-to-show', () => {
-        setTimeout(function () {
+        setTimeout(() => {
             splash.destroy();
             launcher.show();
-        }, 3000);
+        }, SPLASH_DURATION);
     });
 
     launcher.on('minimize', (e) => {
-
         e.preventDefault();
         launcher.hide();
 
@@ -98,7 +99,6 @@ app.once('ready', () => {
             launcher.show();
             tray.destroy();
         });
-
     });
 
     launcher.webContents.on('will-navigate', (e, url) => {

@@ -8,9 +8,13 @@
 
 const { globalShortcut } = require('electron');
 
+/**
+ * Register global shortcuts.
+ */
 function registerShortcuts() {
-	globalShortcut.register('CommandOrControl+W', () => { return; });
-	globalShortcut.register('CommandOrControl+R', () => { return; });
+	// Disable default shortcuts that might interfere
+	globalShortcut.register('CommandOrControl+W', () => false);
+	globalShortcut.register('CommandOrControl+R', () => false);
 }
 
 module.exports = registerShortcuts;

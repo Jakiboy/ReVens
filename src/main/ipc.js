@@ -7,7 +7,7 @@
  */
 
 const { ipcMain } = require('electron');
-const { openItem, abortDownload } = require('./helper');
+const { openItem, abortDownload, startDownload } = require('./helper');
 
 let launcherInstance = null;
 
@@ -19,7 +19,6 @@ function setupIpcListeners(launcher) {
   });
 
   ipcMain.on('start-download', () => {
-    const { startDownload } = require('./helper');
     if (launcherInstance) {
       startDownload(launcherInstance);
     }

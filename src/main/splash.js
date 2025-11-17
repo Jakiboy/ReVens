@@ -8,10 +8,8 @@
 
 const { BrowserWindow } = require('electron');
 const { getPath, formatUrl } = require('./helper');
-const path = require('path');
 
 function createSplash() {
-
     const splash = new BrowserWindow({
         frame: false,
         width: 600,
@@ -23,11 +21,11 @@ function createSplash() {
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
-            preload: path.join(__dirname, 'preload.js')
+            preload: getPath('./main/preload.js')
         }
     });
 
-    splash.removeMenu();
+    splash.setMenu(null);
 
     splash.loadURL(formatUrl({
         pathname: getPath('splash.html'),

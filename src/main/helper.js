@@ -6,7 +6,7 @@
  * license : MIT
  */
 
-const { shell, dialog, Notification } = require('electron');
+const { shell, dialog } = require('electron');
 const config = require('../config/app.json');
 const path = require('path');
 const fs = require('fs');
@@ -68,10 +68,17 @@ function formatPath(path) {
 }
 
 /**
+ * Get bin directory path.
+ */
+function getBinDir() {
+	return config.baseDir ? path.join(config.baseDir, 'bin') : getRoot('bin');
+}
+
+/**
  * Get extension.
  */
 function getExtension(item) {
-	let ext = path.extname(item);
+	const ext = path.extname(item);
 	return ext.replace(/[^\w]|[\s]/g, '');
 }
 
@@ -90,20 +97,19 @@ function openWith(item, program) {
  * Open item.
  */
 async function openItem(item) {
+	const baseDir = getBinDir();
+	const itemPath = formatPath(path.join(baseDir, item));
+	const ext = getExtension(itemPath);
 
-	let baseDir = config.baseDir ? path.join(config.baseDir, 'bin') : getRoot('bin');
-
-	item = formatPath(`${baseDir}${item}`);
-	const ext = getExtension(item);
-
-	if (['xm'].includes(ext)) {
-		const player = formatPath(`${baseDir}${config.player}`);
-		openWith(item, player);
-
+	if (ext === 'xm') {
+		const playerPath = formatPath(path.join(baseDir, config.player));
+		openWith(itemPath, playerPath);
 	} else {
 		try {
-			await shell.openPath(`"${item}"`);
-		} catch (error) { }
+			await shell.openPath(itemPath);
+		} catch (error) {
+			console.error('Error opening item:', error);
+		}
 	}
 }
 
@@ -111,13 +117,7 @@ async function openItem(item) {
  * Open bin folder.
  */
 function openBinFolder() {
-	let baseDir;
-
-	if (config.baseDir) {
-		baseDir = path.join(config.baseDir, 'bin');
-	} else {
-		baseDir = getRoot('bin');
-	}
+	const baseDir = getBinDir();
 
 	// Create bin directory if it doesn't exist
 	if (!fs.existsSync(baseDir)) {
@@ -125,44 +125,35 @@ function openBinFolder() {
 			fs.mkdirSync(baseDir, { recursive: true });
 		} catch (error) {
 			console.error('Error creating bin folder:', error);
+			return;
 		}
 	}
 
-	shell.openPath(
-		formatPath(baseDir)
-	);
+	shell.openPath(formatPath(baseDir));
+}
+
+/**
+ * Get asset file path (handles dev/production modes).
+ */
+function getAssetPath(fileName) {
+	if (config.debug) {
+		return path.join(getRoot(), 'assets', 'installer', fileName);
+	}
+	return path.join(getRoot(), '..', fileName);
 }
 
 /**
  * Open info.
  */
 function openInfo() {
-	let infoPath;
-	if (config.debug) {
-		const fileName = 'packages.txt';
-		// Dev mode: assets/installer folder
-		infoPath = path.join(getRoot(), 'assets', 'installer', fileName);
-	} else {
-		// Production
-		infoPath = path.join(getRoot(), '..', fileName);
-	}
-	shell.openPath(infoPath);
+	shell.openPath(getAssetPath('packages.txt'));
 }
 
 /**
  * Open changelog.
  */
 function openChangelog() {
-	let changelogPath;
-	if (config.debug) {
-		const fileName = 'changelog.txt';
-		// Dev mode: assets/installer folder
-		changelogPath = path.join(getRoot(), 'assets', 'installer', fileName);
-	} else {
-		// Production
-		changelogPath = path.join(getRoot(), '..', fileName);
-	}
-	shell.openPath(changelogPath);
+	shell.openPath(getAssetPath('changelog.txt'));
 }
 
 /**
@@ -189,7 +180,7 @@ async function downloadPackages(launcher) {
  * Start downloading packages.
  */
 async function startDownload(launcher) {
-	const baseDir = config.baseDir ? path.join(config.baseDir, 'bin') : getRoot('bin');
+	const baseDir = getBinDir();
 
 	// Create bin directory if it doesn't exist
 	if (!fs.existsSync(baseDir)) {
@@ -199,7 +190,7 @@ async function startDownload(launcher) {
 			sendDownloadProgress(launcher, {
 				progress: 0,
 				currentFile: '',
-				status: 'Error creating bin folder',
+				status: `Error creating bin folder: ${error.message}`,
 				completed: true
 			});
 			return;
@@ -300,8 +291,14 @@ function downloadFile(fileUrl, filePath) {
 		const protocol = fileUrl.startsWith('https') ? https : http;
 		const file = fs.createWriteStream(filePath);
 
+		const cleanup = () => {
+			file.close();
+			fs.unlink(filePath, () => { });
+		};
+
 		protocol.get(fileUrl, (response) => {
 			if (response.statusCode !== 200) {
+				cleanup();
 				reject(new Error(`Failed to download: ${response.statusCode}`));
 				return;
 			}
@@ -311,19 +308,20 @@ function downloadFile(fileUrl, filePath) {
 			file.on('finish', () => {
 				file.close();
 				if (downloadAborted) {
+					fs.unlink(filePath, () => { });
 					reject(new Error('Download aborted'));
 				} else {
 					resolve();
 				}
 			});
 
-		}).on('error', (error) => {
-			fs.unlink(filePath, () => { });
-			reject(error);
-		});
+			file.on('error', (error) => {
+				cleanup();
+				reject(error);
+			});
 
-		file.on('error', (error) => {
-			fs.unlink(filePath, () => { });
+		}).on('error', (error) => {
+			cleanup();
 			reject(error);
 		});
 	});
@@ -386,7 +384,7 @@ function checkPackageStatus() {
 		const itemsPath = path.resolve(__dirname, '..', 'config', 'items.json');
 		const items = JSON.parse(fs.readFileSync(itemsPath, 'utf-8')).items;
 
-		const baseDir = config.baseDir ? path.join(config.baseDir, 'bin') : getRoot('bin');
+		const baseDir = getBinDir();
 
 		// Check if base directory exists
 		if (!fs.existsSync(baseDir)) {

@@ -6,7 +6,7 @@
  * license : MIT
  */
 
-const { Menu, app, dialog } = require('electron');
+const { Menu, app } = require('electron');
 const { reload, restart, openBinFolder, openInfo, openChangelog, openUrl, downloadPackages } = require('./helper');
 const config = require('../config/app.json');
 

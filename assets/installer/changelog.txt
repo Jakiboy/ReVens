@@ -10,6 +10,7 @@ All notable changes to ReVens.
 - Improved main UI
 - Updated Packages downloader
 - Updated Builder & Installer
+- Refactoring Backend
 
 ### Added
 
