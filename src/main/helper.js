@@ -257,7 +257,7 @@ async function startDownload(launcher) {
 				status: `Extracting ${i + 1}/${parts.length}...`
 			});
 
-			await extractZip(sevenZipPath, filePath, baseDir);
+			await extractArchive(sevenZipPath, filePath, baseDir);
 
 			// Delete zip file after extraction
 			if (fs.existsSync(filePath)) {
@@ -328,11 +328,11 @@ function downloadFile(fileUrl, filePath) {
 }
 
 /**
- * Extract zip file using 7z.exe.
+ * Extract archive (zip, 7z, rar, iso, etc.) using 7z.exe.
  */
-function extractZip(sevenZipPath, zipPath, outputDir) {
+function extractArchive(sevenZipPath, archivePath, outputDir) {
 	return new Promise((resolve, reject) => {
-		const args = ['x', zipPath, `-o${outputDir}`, '-y'];
+		const args = ['x', archivePath, `-o${outputDir}`, '-y'];
 
 		exec(sevenZipPath, args, (error, stdout, stderr) => {
 			if (error) {
