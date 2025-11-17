@@ -18,7 +18,7 @@
 	},
 	"baseDir": false,
 	"items": {
-		"host": "https://revens.jihadsinnaour.com/download/test",
+		"host": "https://revens.jihadsinnaour.com/download",
 		"password": "j0LfzCIvJy",
 		"parts": [
 			"Analyzing.iso",
