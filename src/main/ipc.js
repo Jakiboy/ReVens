@@ -1,17 +1,32 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.3.x
+ * Version : 1.4.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
 
 const { ipcMain } = require('electron');
-const { openItem } = require('./helper');
+const { openItem, abortDownload } = require('./helper');
 
-function setupIpcListeners() {
+let launcherInstance = null;
+
+function setupIpcListeners(launcher) {
+  launcherInstance = launcher;
+
   ipcMain.on('open-item', async (e, path) => {
     await openItem(path);
+  });
+
+  ipcMain.on('start-download', () => {
+    const { startDownload } = require('./helper');
+    if (launcherInstance) {
+      startDownload(launcherInstance);
+    }
+  });
+
+  ipcMain.on('abort-download', () => {
+    abortDownload();
   });
 }
 

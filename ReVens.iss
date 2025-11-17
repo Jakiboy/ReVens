@@ -1,7 +1,7 @@
 ; ======================================================================================================================
 ; Author  : Jakiboy
 ; Package : ReVens | Reverse Engineering Toolkit AIO
-; Version : 1.3.x
+; Version : 1.4.x
 ; Link    : https://github.com/Jakiboy/ReVens
 ; license : MIT
 ;
@@ -12,7 +12,7 @@
 
 #define InstallerRoot "."
 #define InstallerAppName "ReVens"
-#define InstallerAppVersion "1.3.0"
+#define InstallerAppVersion "1.4.1"
 #define InstallerAppPublisher "Jakiboy"
 #define InstallerAppURL "https://github.com/Jakiboy/ReVens"
 #define InstallerAppExeName "ReVens.exe"
@@ -32,12 +32,12 @@ AppUpdatesURL={#InstallerAppURL}
 DisableProgramGroupPage=yes
 DefaultDirName={commonpf64}\{#InstallerAppName}
 LicenseFile={#InstallerRoot}\LICENSE
-InfoBeforeFile={#InstallerRoot}\Readme.txt
+InfoBeforeFile={#InstallerRoot}\readme.txt
 OutputDir={#InstallerRoot}\build
 OutputBaseFilename="{#InstallerAppName}-v{#InstallerAppVersion}-Windows-Installer-x64"
-SetupIconFile={#InstallerRoot}\assets\icon.ico
-WizardImageFile={#InstallerRoot}\assets\large.bmp
-WizardSmallImageFile={#InstallerRoot}\assets\small.bmp
+SetupIconFile={#InstallerRoot}\assets\installer\icon.ico
+WizardImageFile={#InstallerRoot}\assets\installer\large.bmp
+WizardSmallImageFile={#InstallerRoot}\assets\installer\small.bmp
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -76,7 +76,7 @@ Source: "{#InstallerRoot}\build\{#InstallerAppName}\vk_swiftshader_icd.json"; De
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vulkan-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\README.md"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#InstallerRoot}\build\{#InstallerAppName}\bin\*"; DestDir: "{app}\bin"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\inc\*"; DestDir: "{app}\resources\inc"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\locales\*"; DestDir: "{app}\locales"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
 
@@ -90,7 +90,10 @@ Name: "{autodesktop}\{#InstallerAppName}"; Filename: "{app}\{#InstallerAppExeNam
 
 [Run]
 ; Hide ReVens Source
-Filename: "{app}\protect.bat"; Parameters: "install"; Flags: runhidden
+Filename: "{app}\protect.bat"; Parameters: "install"; Flags: runhidden waituntilterminated
+
+; Remove protect.bat after execution
+Filename: "{cmd}"; Parameters: "/c del ""{app}\protect.bat"""; Flags: runhidden waituntilterminated
 
 ; Start ReVens
 Filename: "{app}\{#InstallerAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(InstallerAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent

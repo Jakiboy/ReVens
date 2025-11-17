@@ -1,10 +1,11 @@
 const { Tray, Menu } = require('electron');
 const { getPath, openBinFolder } = require('./helper');
+const appConfig = require('../config/app.json');
 
 function createTray(app) {
 
     const tray = new Tray(getPath('./app/assets/img/blank.ico'));
-    tray.setToolTip('ReVens');
+    tray.setToolTip(appConfig.productName || appConfig.name);
 
     const context = Menu.buildFromTemplate(
         getTemplate(app)

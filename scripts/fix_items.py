@@ -11,6 +11,7 @@ from datetime import datetime
 # Paths
 ITEMS_JSON_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'items.json')
 SECTIONS_JSON_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'sections.json')
+APP_JSON_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'app.json')
 BACKUP_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'items.backup.json')
 
 # Required properties with empty values
@@ -24,11 +25,12 @@ REQUIRED_PROPERTIES = {
     "extra": False,
     "version": False,
     "url": False,
-    "download": False
+    "download": False,
+    "remove": False
 }
 
 # Property order for reordering items
-PROPERTY_ORDER = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download"]
+PROPERTY_ORDER = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "remove"]
 
 # Type order for sorting
 TYPE_ORDER = ["exe", "cli", "zip"]
@@ -46,6 +48,54 @@ def load_section_order():
     except Exception as e:
         print(f"Warning: Could not load sections.json: {e}")
         return []
+
+def load_base_directory():
+    """Load base directory from app.json"""
+    try:
+        with open(APP_JSON_PATH, 'r', encoding='utf-8') as f:
+            app_data = json.load(f)
+        base_dir = app_data.get('baseDir', '')
+        return base_dir
+    except Exception as e:
+        print(f"Warning: Could not load app.json: {e}")
+        return ''
+
+def safe_remove_file(file_path):
+    """Safely remove a file if it exists"""
+    try:
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            return True, f"Removed: {file_path}"
+        else:
+            return False, f"Not found: {file_path}"
+    except Exception as e:
+        return False, f"Error removing {file_path}: {e}"
+
+def process_remove_property(item, item_name, base_dir):
+    """Process the remove property for an item"""
+    remove_prop = item.get('remove', False)
+    
+    if remove_prop is False or remove_prop is None:
+        return []
+    
+    results = []
+    files_to_remove = []
+    
+    # Handle string (single file)
+    if isinstance(remove_prop, str):
+        files_to_remove = [remove_prop]
+    # Handle array (multiple files)
+    elif isinstance(remove_prop, list):
+        files_to_remove = remove_prop
+    
+    # Process each file
+    for file_path in files_to_remove:
+        # Build full path: base_dir + file_path
+        full_path = os.path.normpath(os.path.join(base_dir, file_path.lstrip('/\\')))
+        success, message = safe_remove_file(full_path)
+        results.append((success, message))
+    
+    return results
 
 def get_sort_key(item, section_order):
     """Generate a sort key for an item"""
@@ -87,6 +137,14 @@ def fix_items():
     print(f"Loaded section order: {', '.join(section_order)}")
     print()
     
+    # Load base directory
+    base_dir = load_base_directory()
+    if base_dir:
+        print(f"Base directory: {base_dir}")
+    else:
+        print("Warning: Base directory not found in app.json")
+    print()
+    
     # Load items.json
     try:
         with open(ITEMS_JSON_PATH, 'r', encoding='utf-8') as f:
@@ -114,6 +172,7 @@ def fix_items():
     
     fixed_count = 0
     reordered_count = 0
+    removed_files_count = 0
     
     for idx, item in enumerate(items):
         item_num = idx + 1
@@ -125,6 +184,14 @@ def fix_items():
             if prop not in item:
                 item[prop] = default_value
                 missing_props.append(prop)
+        
+        # Process remove property (delete files)
+        if base_dir:
+            remove_results = process_remove_property(item, item_name, base_dir)
+            for success, message in remove_results:
+                if success:
+                    removed_files_count += 1
+                    print(f"  🗑 {item_name}: {message}")
         
         # Reorder properties
         reordered_item = {}
@@ -156,6 +223,8 @@ def fix_items():
     print(f"✓ Successfully sorted and reordered {reordered_count} items")
     if fixed_count > 0:
         print(f"✓ Added missing properties to {fixed_count} items")
+    if removed_files_count > 0:
+        print(f"✓ Removed {removed_files_count} files")
     print(f"✓ Original file backed up to: {BACKUP_PATH}")
     return True
 

@@ -1,7 +1,7 @@
 /* -------------------------------------- */
 /* Author  : Jakiboy
 /* package : ReVens | Reverse Engineering Toolkit AIO
-/* Version : 1.3.x
+/* Version : 1.4.x
 /* -------------------------------------- */
 
 html,
@@ -36,4 +36,50 @@ body {
 .image-wrapper img {
     max-width: 100%;
     border-radius: 10px;
+}
+
+/* ----------------------------- */
+/* logger */
+/* ----------------------------- */
+.logger {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.status {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Loading animation */
+.loading-dots .dots::after {
+    content: '';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        content: '';
+    }
+
+    40% {
+        content: '.';
+    }
+
+    60% {
+        content: '..';
+    }
+
+    80%,
+    100% {
+        content: '...';
+    }
 }

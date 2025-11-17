@@ -1,13 +1,13 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.3.x
+ * Version : 1.4.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
 
-const { Menu } = require('electron');
-const { reload, openBinFolder, openInfo, openChangelog, openUrl } = require('./helper');
+const { Menu, app, dialog } = require('electron');
+const { reload, restart, openBinFolder, openInfo, openChangelog, openUrl, downloadPackages } = require('./helper');
 const config = require('../config/app.json');
 
 function createMenu(launcher) {
@@ -25,11 +25,16 @@ function getTemplate(launcher) {
             click() { }
         },
         {
-            "label": 'Search package',
+            "label": 'Search packages',
             "accelerator": 'Ctrl+F',
             click() {
                 launcher.webContents.send('open-search');
             }
+        },
+        {
+            "label": 'Download packages',
+            "accelerator": 'Ctrl+Shift+D',
+            click() { downloadPackages(launcher); }
         },
         { "type": 'separator' },
         {
@@ -39,9 +44,25 @@ function getTemplate(launcher) {
         }
     ];
 
+    const advancedSubmenu = [
+        {
+            "label": 'Settings',
+            "enabled": false,
+            "accelerator": 'Ctrl+S',
+            click() {
+                launcher.webContents.send('open-settings');
+            }
+        },
+        { "type": 'separator' },
+        {
+            "label": 'Restart',
+            "accelerator": 'Ctrl+R',
+            click() { restart(app); }
+        }
+    ];
+
     if (config.debug) {
-        toolsSubmenu.push(
-            { "type": 'separator' },
+        advancedSubmenu.push(
             {
                 "label": 'Reload',
                 click() { reload(launcher); }
@@ -56,16 +77,7 @@ function getTemplate(launcher) {
         },
         {
             "label": 'Advanced',
-            "submenu": [
-                {
-                    "label": 'Settings',
-                    "enabled": false,
-                    "accelerator": 'Ctrl+S',
-                    click() {
-                        launcher.webContents.send('open-settings');
-                    }
-                }
-            ]
+            "submenu": advancedSubmenu
         },
         {
             "label": 'Help',

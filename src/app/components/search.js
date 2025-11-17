@@ -1,12 +1,12 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.3.x
+ * Version : 1.4.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
     MDBModal as Modal,
     MDBModalDialog as Dialog,
@@ -27,6 +27,7 @@ const Search = ({ setActiveTab }) => {
     const [isOpened, setModalStatus] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredItems, setFilteredItems] = useState([]);
+    const searchInputRef = useRef(null);
 
     const openModal = () => setModalStatus(true);
     const closeModal = () => {
@@ -70,6 +71,15 @@ const Search = ({ setActiveTab }) => {
         };
     }, []);
 
+    useEffect(() => {
+        if (isOpened && searchInputRef.current) {
+            // Focus the input when modal opens
+            setTimeout(() => {
+                searchInputRef.current.focus();
+            }, 100);
+        }
+    }, [isOpened]);
+
     return (
         <>
             <Modal open={isOpened} setOpen={setModalStatus} className="search-modal" tabIndex="-1" staticBackdrop >
@@ -79,14 +89,14 @@ const Search = ({ setActiveTab }) => {
                             <Container className="text-center">
                                 <Row>
                                     <Col>
-                                        <h1 style={{ marginBottom: '20px' }}>Search Package</h1>
+                                        <h1 style={{ marginBottom: '20px' }}>Search packages</h1>
                                         <Input
                                             label="Type package name..."
                                             id="searchQuery"
                                             type="text"
                                             value={searchQuery}
                                             onChange={handleSearchChange}
-                                            autoFocus
+                                            ref={searchInputRef}
                                         />
                                         <div className="search-results app-scroller" style={{ maxHeight: '300px', overflowY: 'auto', marginTop: '20px' }}>
                                             {filteredItems.length > 0 ? (

@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.3.x
+ * Version : 1.4.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -13,7 +13,7 @@ import iConfig from './../../config/items.json';
 import Section from './section';
 import { generateSlug } from '../helper';
 
-const Content = ({ activeTab }) => {
+const Content = ({ activeTab, disabledPaths }) => {
 
   const activeSection = sConfig.sections.find(
     section => generateSlug(section.name) === activeTab
@@ -30,7 +30,7 @@ const Content = ({ activeTab }) => {
     );
   }
 
-  return <Section section={activeSection} items={iConfig.items} />;
+  return <Section section={activeSection} items={iConfig.items} disabledPaths={disabledPaths} />;
 };
 
 export default Content;

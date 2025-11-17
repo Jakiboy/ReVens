@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.3.x
+ * Version : 1.4.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -43,7 +43,7 @@ const About = () => {
                 <Row>
                   <Col>
                     <div className="image-wrapper">
-                      <img src="./app/assets/img/icon-64.png" className="img-fluid" />
+                      <img src="./app/assets/img/icon.svg" className="img-fluid" width="64px" height="64px" />
                     </div>
                     <h1>{config.name}</h1>
                     <p><strong>Version</strong> {config.version} (x64)</p>

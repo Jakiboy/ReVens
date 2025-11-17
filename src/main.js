@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.3.x
+ * Version : 1.4.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -9,7 +9,7 @@
 'use strict';
 
 const { app } = require('electron');
-const { setup, isWindows, getPath, formatUrl, openUrl } = require('./main/helper');
+const { setup, isWindows, getPath, formatUrl, openUrl, checkPackageStatus, abortDownload } = require('./main/helper');
 const createLauncher = require('./main/launcher');
 const createSplash = require('./main/splash');
 const createMenu = require('./main/menu');
@@ -45,10 +45,10 @@ app.once('ready', () => {
     }
 
     registerShortcuts();
-    setupIpcListeners();
 
     const splash = createSplash();
     launcher = createLauncher();
+    setupIpcListeners(launcher);
     createMenu(launcher);
 
     launcher.loadURL(formatUrl({
@@ -56,6 +56,30 @@ app.once('ready', () => {
         protocol: 'file:',
         slashes: true
     }));
+
+    // Check package status and send to launcher
+    launcher.webContents.on('did-finish-load', () => {
+        const status = checkPackageStatus();
+        setTimeout(() => {
+            launcher.webContents.send('package-status', status);
+            if (status.status === 'empty') {
+                const { dialog } = require('electron');
+                const { startDownload } = require('./main/helper');
+                dialog.showMessageBox(launcher, {
+                    type: 'question',
+                    buttons: ['Download', 'Cancel'],
+                    defaultId: 0,
+                    title: 'No Packages Found',
+                    message: 'No packages found, do you want to start downloading?',
+                }).then(result => {
+                    if (result.response === 0) {
+                        launcher.webContents.send('open-download');
+                        startDownload(launcher);
+                    }
+                });
+            }
+        }, 500);
+    });
 
     launcher.once('ready-to-show', () => {
         setTimeout(function () {

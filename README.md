@@ -2,7 +2,7 @@
 
 [![ReVens](assets/preview/banner.png)](#)
 
-ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>. **-V1.3 Under development-**
+ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>.
 
 > [!Note]
 > I made ReVens AIO software to share personal experience in RE since **2008**.  
@@ -15,7 +15,7 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 * **100% clean**: All detections are **false positives**, No malware injected
 * **90% portable** (Resolved/Included dependencies)
 * Original assets (e.g. **BRD - Teleport Pro.mx**, **CORE - Power ISO.xm**)
-* Packages **Auto-updater** (JSON based source file)
+* Packages  **Downloader** and **Auto-updater** (JSON based source file)
 * Boilerplate of **Electron.js** + **React.js**
 
 ## 🔧 Screenshot
@@ -47,7 +47,7 @@ To run ReVens, **Windows** 10/11 (x64) is required.
 
 To build ReVens:
 
-* **Electron.js ^29.4.0 (Node 20.9.0)** ^1.2.0
+* **Electron.js ^29.4.6 (Node 24.11.0)** ^1.4.0
 * **MinGW-w64**
 
 ReVens command-line:

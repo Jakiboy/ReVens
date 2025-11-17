@@ -4,7 +4,7 @@ G='\033[0;32m'
 B='\033[0;96m'
 
 NAME='ReVens'
-VERSION='1.3.0'
+VERSION='1.4.1'
 DESCRIPTION='ReVens - Reverse Engineering Toolkit AIO 2026'
 AUTHOR='Jakiboy'
 COPYRIGHT="Copyright (c) 2026 ${AUTHOR}"
@@ -18,50 +18,93 @@ if [ -d "${OUTPUT}" ]; then
     rm -rf "${OUTPUT}"
 fi
 mkdir "${OUTPUT}"
+mkdir "${OUTPUT}/${SOURCE}"
+
+# Copy src files to output
+echo -e "${G}Copying source files..."
+cd "${SOURCE}"
+find . -type f -not -path "*/node_modules/*" -exec cp --parents {} "../${OUTPUT}/${SOURCE}" \;
+cd ..
+sleep 2
+clear
+
+# Set debug to false in app.json
+echo -e "${G}Setting debug to false..."
+sed -i 's/"debug": true/"debug": false/' "./${OUTPUT}/${SOURCE}/config/app.json"
+sleep 2
+clear
+
+# Install dependencies
+echo -e "${G}Installing dependencies..."
+cd "./${OUTPUT}/${SOURCE}"
+npm install
+cd "../.."
 sleep 2
 clear
 
 # Building package
-npx webpack --production
 echo -e "${G}Building package..."
-electron-packager "${SOURCE}" --icon="./app/assets/icon.ico" --out="./${OUTPUT}" --app-copyright="${COPYRIGHT}" --app-version="${VERSION}" --win32metadata.CompanyName="${AUTHOR}" --win32metadata.FileDescription="${DESCRIPTION}" # --x64
+cd "./${OUTPUT}/${SOURCE}"
+webpack --mode production
+cd "../.."
+sleep 2
+clear
+
+echo -e "${G}Packaging application..."
+electron-packager "./${OUTPUT}/${SOURCE}" --icon="./assets/installer/icon.ico" --out="./${OUTPUT}" --app-copyright="${COPYRIGHT}" --app-version="${VERSION}" --win32metadata.CompanyName="${AUTHOR}" --win32metadata.FileDescription="${DESCRIPTION}" # --x64
 sleep 2
 clear
 
 echo -e "${G}Renaming path..."
 mv "./${OUTPUT}/${NAME}-win32-x64" "./${OUTPUT}/${NAME}"
+
+# Remove temporary src folder from output
+rm -rf "./${OUTPUT}/${SOURCE}"
 sleep 2
 clear
 
 # Adding pre-install files
 echo -e "${G}Adding pre-install files..."
-cp "./app/assets/protect.bat" "./${OUTPUT}/${NAME}/protect.bat"
-if [ ! -f "./app/assets/bin/7z.exe" ]; then
+cp "./assets/installer/protect.bat" "./${OUTPUT}/${NAME}/protect.bat"
+
+# Download 7z if not exists
+if [ ! -f "./inc/7z.exe" ]; then
     echo "Download 7z..."
-    git clone "https://github.com/Jakiboy/7z.git/" "./app/assets/bin/temp"
-    mv "./app/assets/bin/temp/bin/7z.exe" "./app/assets/bin/7z.exe"
-    mv "./app/assets/bin/temp/bin/7z.dll" "./app/assets/bin/7z.dll"
-    rm -rf "./app/assets/bin/temp"
+    mkdir -p "./inc"
+    git clone "https://github.com/Jakiboy/7z.git/" "./inc/temp"
+    mv "./inc/temp/bin/7z.exe" "./inc/7z.exe"
+    mv "./inc/temp/bin/7z.dll" "./inc/7z.dll"
+    rm -rf "./inc/temp"
     sleep 2
     clear
 fi
-cp -r "./app/assets/bin" "./${OUTPUT}/${NAME}/bin"
-cp -r "./changelog.txt" "./${OUTPUT}/${NAME}/changelog.txt"
-cp -r "./${NAME}.md" "./${OUTPUT}/${NAME}/${NAME}.md"
+
+# Copy included files
+cp -r "./inc" "./${OUTPUT}/${NAME}/${RESOURCES}/inc"
+cp -r "./assets/installer/changelog.txt" "./${OUTPUT}/${NAME}/changelog.txt"
+cp -r "./assets/installer/packages.txt" "./${OUTPUT}/${NAME}/packages.txt"
 sleep 2
 clear
 
 # Minify CSS files
 echo -e "${G}Minify CSS files..."
-uglifycss "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/css/style.css" --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/css/style.css"
-uglifycss "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/font/roboto.css" --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/font/roboto.css"
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/css/style.css" ]; then
+    uglifycss "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/css/style.css" --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/css/style.css"
+fi
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/font/roboto.css" ]; then
+    uglifycss "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/font/roboto.css" --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/font/roboto.css"
+fi
 sleep 2
 clear
 
 # Minify JS files
 echo -e "${G}Minify JS files..."
-uglifyjs "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.js" -c -m --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.js"
-uglifyjs "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/js/main.js" -c -m --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/js/main.js"
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.js" ]; then
+    uglifyjs "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.js" -c -m --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.js"
+fi
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/js/main.js" ]; then
+    uglifyjs "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/js/main.js" -c -m --output "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/js/main.js"
+fi
 sleep 2
 clear
 
@@ -74,17 +117,29 @@ HTML="${HTML} --remove-redundant-attributes"
 HTML="${HTML} --remove-script-type-attributes"
 HTML="${HTML} --remove-tag-whitespace"
 HTML="${HTML} --use-short-doctype"
-html-minifier ${HTML} "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.html" -o "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.html"
-html-minifier ${HTML} "./${OUTPUT}/${NAME}/${RESOURCES}/app/splash.html" -o "./${OUTPUT}/${NAME}/${RESOURCES}/app/splash.html"
-html-minifier ${HTML} "./${OUTPUT}/${NAME}/${RESOURCES}/app/doc.html" -o "./${OUTPUT}/${NAME}/${RESOURCES}/app/doc.html"
-html-minifier ${HTML} "./${OUTPUT}/${NAME}/${RESOURCES}/app/about.html" -o "./${OUTPUT}/${NAME}/${RESOURCES}/app/about.html"
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.html" ]; then
+    html-minifier ${HTML} "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.html" -o "./${OUTPUT}/${NAME}/${RESOURCES}/app/main.html"
+fi
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/splash.html" ]; then
+    html-minifier ${HTML} "./${OUTPUT}/${NAME}/${RESOURCES}/app/splash.html" -o "./${OUTPUT}/${NAME}/${RESOURCES}/app/splash.html"
+fi
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/doc.html" ]; then
+    html-minifier ${HTML} "./${OUTPUT}/${NAME}/${RESOURCES}/app/doc.html" -o "./${OUTPUT}/${NAME}/${RESOURCES}/app/doc.html"
+fi
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/about.html" ]; then
+    html-minifier ${HTML} "./${OUTPUT}/${NAME}/${RESOURCES}/app/about.html" -o "./${OUTPUT}/${NAME}/${RESOURCES}/app/about.html"
+fi
 sleep 2
 clear
 
 # Removing Dev files
 echo -e "${R}Removing Dev files..."
-rm "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/vendor/mdb/mdb.dark.min.css.map"
-rm "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/vendor/mdb/mdb.min.js.map"
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/vendor/mdb/mdb.dark.min.css.map" ]; then
+    rm "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/vendor/mdb/mdb.dark.min.css.map"
+fi
+if [ -f "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/vendor/mdb/mdb.min.js.map" ]; then
+    rm "./${OUTPUT}/${NAME}/${RESOURCES}/app/assets/vendor/mdb/mdb.min.js.map"
+fi
 sleep 2
 clear
 
@@ -118,7 +173,7 @@ fi
 echo -e "${G}Building archive..."
 cd "./${OUTPUT}"
 rm "./${NAME}/protect.bat"
-zip "./${NAME}-v${VERSION}-Windows-x64.zip" -r "./${NAME}"
+"$(pwd)/../inc/7z.exe" a -tzip "./${NAME}-v${VERSION}-Windows-x64.zip" "./${NAME}"
 rm -rf "./${NAME}"
 sleep 2
 clear

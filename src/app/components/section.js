@@ -1,19 +1,23 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.3.x
+ * Version : 1.4.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import { MDBBtn as Btn } from 'mdb-react-ui-kit';
 import { generateSlug } from '../helper';
 
-const Section = ({ section, items }) => {
+const Section = ({ section, items, disabledPaths = [] }) => {
 
   const _section = generateSlug(section.name);
   const _subs = section.sub;
+
+  // Convert array to Set for O(1) lookup performance
+  const disabledSet = useMemo(() => new Set(disabledPaths), [disabledPaths]);
+  const isDisabled = (path) => disabledSet.has(path);
 
   return (
     <div className="tab-content" id={`tab-content-${_section}`}>
@@ -56,6 +60,8 @@ const Section = ({ section, items }) => {
                           key={index}
                           onClick={() => window.electron.click(item.path)}
                           title={item.desc || ''}
+                          disabled={isDisabled(item.path)}
+                          data-path={item.path}
                         >
                           <i className={`icon-${icon}`}></i> {name}
                         </Btn>
@@ -101,6 +107,8 @@ const Section = ({ section, items }) => {
                                   key={index}
                                   onClick={() => window.electron.click(item.path)}
                                   title={item.desc || ''}
+                                  disabled={isDisabled(item.path)}
+                                  data-path={item.path}
                                 >
                                   <i className={`icon-${icon}`}></i> {name}
                                 </Btn>

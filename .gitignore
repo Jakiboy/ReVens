@@ -25,4 +25,6 @@ Thumbs.db
 Desktop.ini
 compiler
 src/inc/vendor
-assets/bin/7z.*
+/compiler
+/bin
+/inc

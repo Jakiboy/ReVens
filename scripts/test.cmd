@@ -3,10 +3,13 @@ REM Test script for validating items.json
 REM This script runs the Python test and displays the results
 REM
 REM Usage:
-REM   test.cmd          - Run validation with all checks
+REM   test.cmd          - Run validation ignoring warnings, skip new tools check
 REM   test.cmd --no-version - Run validation ignoring version warnings
 REM   test.cmd --no-url - Run validation ignoring url warnings
 REM   test.cmd --no-download - Run validation ignoring download warnings
+REM   test.cmd --no-path - Run validation ignoring path warnings
+REM   test.cmd --override - Override (overwrite) the log file
+REM   test.cmd --no-update - Skip checking for new tools
 
 echo.
 echo ================================================================================
@@ -24,7 +27,7 @@ if errorlevel 1 (
 )
 
 REM Run the test script with arguments
-python "%~dp0test_items.py" --no-version --no-url --no-download %*
+python "%~dp0test_items.py" --no-version --no-url --no-path -no-download %*
 
 REM Capture exit code
 set TEST_EXIT_CODE=%errorlevel%

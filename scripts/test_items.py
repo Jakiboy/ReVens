@@ -8,18 +8,22 @@ Checks for:
 - Invalid file paths
 
 Usage:
-    python test_items.py [--no-{property}]
+    python test_items.py [--no-{property}] [--override] [--no-update]
 
 Options:
     --no-version    Ignore warnings about version property
     --no-url        Ignore warnings about url property
     --no-download   Ignore warnings about download property
+    --no-path       Ignore warnings about invalid file paths
+    --override      Override (overwrite) the log file instead of appending
+    --no-update     Skip checking for new tools not in items.json
 """
 
 import json
 import os
 import sys
 import io
+import subprocess
 from datetime import datetime
 
 # Set UTF-8 encoding for stdout
@@ -42,6 +46,8 @@ REQUIRED_PROPERTIES = ["name", "desc", "type", "path", "section", "sub", "extra"
 IGNORE_VERSION_WARNINGS = False
 IGNORE_URL_WARNINGS = False
 IGNORE_DOWNLOAD_WARNINGS = False
+IGNORE_PATH_WARNINGS = False
+NO_UPDATE = False
 
 def log_message(message, file_handle=None):
     """Print message to console and optionally write to log file"""
@@ -191,14 +197,15 @@ def validate_items():
         
         # Check for invalid path
         if 'path' in item and item['path']:
-            item_path = item['path']
-            # Convert forward slashes to backslashes for Windows
-            item_path_normalized = item_path.replace('/', os.sep).lstrip(os.sep)
-            full_path = os.path.join(BASE_DIR, item_path_normalized)
-            
-            if not os.path.exists(full_path):
-                warning = f"⚠ Item #{item_num} ({item_name}): Invalid path: {item_path} (resolved to: {full_path})"
-                invalid_paths.append(warning)
+            if not IGNORE_PATH_WARNINGS:
+                item_path = item['path']
+                # Convert forward slashes to backslashes for Windows
+                item_path_normalized = item_path.replace('/', os.sep).lstrip(os.sep)
+                full_path = os.path.join(BASE_DIR, item_path_normalized)
+                
+                if not os.path.exists(full_path):
+                    warning = f"⚠ Item #{item_num} ({item_name}): Invalid path: {item_path} (resolved to: {full_path})"
+                    invalid_paths.append(warning)
         
         # Validate section and sub against sections.json
         if sections_lookup and 'section' in item and 'sub' in item:
@@ -239,15 +246,22 @@ def validate_items():
 
 def main():
     """Main test function"""
-    global BASE_DIR, IGNORE_VERSION_WARNINGS, IGNORE_URL_WARNINGS, IGNORE_DOWNLOAD_WARNINGS
+    global BASE_DIR, IGNORE_VERSION_WARNINGS, IGNORE_URL_WARNINGS, IGNORE_DOWNLOAD_WARNINGS, IGNORE_PATH_WARNINGS, NO_UPDATE
     
     # Parse command line arguments
+    if '--no-update' in sys.argv:
+        NO_UPDATE = True
+    
+    override_log = '--override' in sys.argv
+    
     if '--no-version' in sys.argv:
         IGNORE_VERSION_WARNINGS = True
     if '--no-url' in sys.argv:
         IGNORE_URL_WARNINGS = True
     if '--no-download' in sys.argv:
         IGNORE_DOWNLOAD_WARNINGS = True
+    if '--no-path' in sys.argv:
+        IGNORE_PATH_WARNINGS = True
     
     BASE_DIR = get_base_dir()
     
@@ -257,7 +271,7 @@ def main():
     print(f"Test started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Base directory: {BASE_DIR}")
     print(f"Items JSON path: {ITEMS_JSON_PATH}")
-    if IGNORE_VERSION_WARNINGS or IGNORE_URL_WARNINGS or IGNORE_DOWNLOAD_WARNINGS:
+    if IGNORE_VERSION_WARNINGS or IGNORE_URL_WARNINGS or IGNORE_DOWNLOAD_WARNINGS or IGNORE_PATH_WARNINGS:
         options = []
         if IGNORE_VERSION_WARNINGS:
             options.append("--no-version")
@@ -265,6 +279,8 @@ def main():
             options.append("--no-url")
         if IGNORE_DOWNLOAD_WARNINGS:
             options.append("--no-download")
+        if IGNORE_PATH_WARNINGS:
+            options.append("--no-path")
         print(f"Options: {' '.join(options)}")
     print()
     
@@ -279,7 +295,7 @@ def main():
     log_content.append(f"Test timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     log_content.append(f"Base directory: {BASE_DIR}")
     log_content.append(f"Items JSON path: {ITEMS_JSON_PATH}")
-    if IGNORE_VERSION_WARNINGS or IGNORE_URL_WARNINGS or IGNORE_DOWNLOAD_WARNINGS:
+    if IGNORE_VERSION_WARNINGS or IGNORE_URL_WARNINGS or IGNORE_DOWNLOAD_WARNINGS or IGNORE_PATH_WARNINGS:
         options = []
         if IGNORE_VERSION_WARNINGS:
             options.append("--no-version")
@@ -287,11 +303,14 @@ def main():
             options.append("--no-url")
         if IGNORE_DOWNLOAD_WARNINGS:
             options.append("--no-download")
+        if IGNORE_PATH_WARNINGS:
+            options.append("--no-path")
         log_content.append(f"Options: {' '.join(options)}")
     log_content.append("")
     
     # Write results to console and log
-    with open(LOG_FILE, 'w', encoding='utf-8') as log_file:
+    log_mode = 'w' if override_log else 'a'
+    with open(LOG_FILE, log_mode, encoding='utf-8') as log_file:
         if errors:
             print("\n" + "=" * 80)
             print("ERRORS:")
@@ -390,6 +409,29 @@ def main():
         log_file.write('\n'.join(log_content))
     
     print(f"\nLog file written to: {LOG_FILE}")
+    
+    # Check for new tools unless --no-update flag is set
+    if not NO_UPDATE:
+        print("\n" + "=" * 80)
+        print("CHECKING FOR NEW TOOLS")
+        print("=" * 80)
+        
+        lookup_script = os.path.join(os.path.dirname(__file__), 'lookup_items.py')
+        if os.path.exists(lookup_script):
+            try:
+                result = subprocess.run([sys.executable, lookup_script], 
+                                       capture_output=False, 
+                                       text=True)
+                if result.returncode != 0:
+                    print("\n⚠ Warning: New tools found that are not in items.json")
+            except Exception as e:
+                print(f"\n⚠ Warning: Could not run lookup_items.py: {e}")
+        else:
+            print("\n⚠ Warning: lookup_items.py not found, skipping new tools check")
+    else:
+        print("\n" + "=" * 80)
+        print("Skipping check for new tools (--no-update flag set)")
+        print("=" * 80)
     
     # Return exit code
     return 1 if (errors or total_warnings > 0) else 0

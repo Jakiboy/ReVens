@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.3.x
+ * Version : 1.4.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -17,5 +17,17 @@ contextBridge.exposeInMainWorld('electron', {
   },
   off: (channel, func) => {
     ipcRenderer.off(channel, func);
+  },
+  onPackageStatus: (callback) => {
+    ipcRenderer.on('package-status', (e, status) => callback(status));
+  },
+  onDownloadProgress: (callback) => {
+    ipcRenderer.on('download-progress', (e, data) => callback(data));
+  },
+  downloadPackages: () => {
+    ipcRenderer.send('start-download');
+  },
+  abortDownload: () => {
+    ipcRenderer.send('abort-download');
   }
 });
