@@ -66,20 +66,6 @@ app.once('ready', () => {
         const status = checkPackageStatus();
         setTimeout(() => {
             launcher.webContents.send('package-status', status);
-            if (status.status === 'empty') {
-                dialog.showMessageBox(launcher, {
-                    type: 'question',
-                    buttons: ['Download', 'Cancel'],
-                    defaultId: 0,
-                    title: 'No Packages Found',
-                    message: 'No packages found, do you want to start downloading?'
-                }).then(result => {
-                    if (result.response === 0) {
-                        launcher.webContents.send('open-download');
-                        startDownload(launcher);
-                    }
-                });
-            }
         }, STARTUP_CHECK_DELAY);
     });
 
@@ -87,6 +73,25 @@ app.once('ready', () => {
         setTimeout(() => {
             splash.destroy();
             launcher.show();
+
+            // Check package status after app is shown
+            const status = checkPackageStatus();
+            if (status.status === 'empty') {
+                setTimeout(() => {
+                    dialog.showMessageBox(launcher, {
+                        type: 'question',
+                        buttons: ['Download', 'Cancel'],
+                        defaultId: 0,
+                        title: 'No Packages Found',
+                        message: 'No packages found, do you want to start downloading?'
+                    }).then(result => {
+                        if (result.response === 0) {
+                            launcher.webContents.send('open-download');
+                            startDownload(launcher);
+                        }
+                    });
+                }, 500);
+            }
         }, SPLASH_DURATION);
     });
 

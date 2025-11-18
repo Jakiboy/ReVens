@@ -168,13 +168,16 @@ if [ ! -d "compiler" ]; then
     sleep 2
     clear
 fi
-"$(pwd)/compiler/ISCC.exe" "$(pwd)/assets/installer/${NAME}.iss" # Abs. path
+cp "$(pwd)/assets/installer/${NAME}.iss" "$(pwd)/${NAME}.tmp.iss"
+"$(pwd)/compiler/ISCC.exe" "$(pwd)/${NAME}.tmp.iss" # Abs. path
 
 echo -e "${G}Building archive..."
 cd "./${OUTPUT}"
 rm "./${NAME}/protect.bat"
 "$(pwd)/../inc/7z.exe" a -tzip "./${NAME}-v${VERSION}-Windows-x64.zip" "./${NAME}"
 rm -rf "./${NAME}"
+cd ..
+rm "./${NAME}.tmp.iss"
 sleep 2
 clear
 

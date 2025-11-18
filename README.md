@@ -6,17 +6,17 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 
 > [!Note]
 > I made ReVens AIO software to share personal experience in RE since **2008**.  
-> RE tools are priceless, especially the legacy ones. They deserve a nice place where they can live in peace.  
+> RE tools are priceless, especially the legacy ones. They deserve a nice place where they can live in peace, You can still find legacy items on [Wayback Machine](https://web.archive.org/).  
 > [Watch online preview](https://revens.jihadsinnaour.com).
 
 ## 🔧 Features
 
 * **Cross-platform & Modern UI** software launcher "Blackhat style"
-* **100% clean**: All detections are **false positives**, No malware injected
-* **90% portable** (Resolved/Included dependencies)
-* Original assets (e.g. **BRD - Teleport Pro.mx**, **CORE - Power ISO.xm**)
-* Packages  **Downloader** and **Auto-updater** (JSON based source file)
-* Boilerplate of **Electron.js** + **React.js**
+* **100% clean**: All detections are **false positives**, No malware injected (Tested)
+* **90% portable**: Using portable versions or resolved/included dependencies
+* **Original assets**: Themes, Sounds (e.g. BRD - Teleport Pro.mx, CORE - Power ISO.xm)
+* **Packages manager**: JSON based Downloader, Versioning, Updater
+* **Boilerplate**: For other projects (Electron.js + React.js)
 
 ## 🔧 Screenshot
 
@@ -31,26 +31,24 @@ This is how it looks, Made with {heart} using **Electron.js** + **React.js**.
 > [!Important]
 > Respecting the rights of software developers is paramount. Engaging in activities such as bypassing software protections or reverse engineering software without explicit permission is not only generally illegal, but also unethical. It's essential to utilize software in the manner intended by its creators and in compliance with the stipulated terms of service or license agreement.
 
-* Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging ...etc).
-* You should make an **Antivirus** exception to avoid detection, or use a **secured** virtual machine.
-* ReVens Packages **ARE NOT** automatically downloaded from GitHub.
+* Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging, packing ...etc).
+* You should use a **secured** virtual machine or a sandbox.
+* ReVens Packages are automatically downloaded from trusted sources.
+* Each item can be downloaded separetlally.
+* ReVens will focus only on the packages manager itself and not the items!
 * Many of the included tools are **outdated** and provided solely for legacy purposes!
-* **Packages** includes basic docs & tutorials about RE.
+* **Packages** includes basic docs & tutorials about RE for n00bs.
 * Packages primary architecture is x64, but other architectures (x86, ARM) can also be supported.
+* ReVens is Windows-based, but still crossplatform if you want to build it for linux.
 * *-Use it on your own responsibility, Better Call Saul!-*
 
 ## 🔧 Requirements
 
-To run ReVens, **Windows** 10/11 (x64) is required.
+* **Windows** 10/11 x64 (Runtime)
+* **Electron.js ^29.4.6 (Node 24.11.0)**
+* **MinGW-w64** or [**Git for Windows**](https://git-scm.com/downloads/win)
 
-## 🔧 Install, Run & Build
-
-To build ReVens:
-
-* **Electron.js ^29.4.6 (Node 24.11.0)** ^1.4.0
-* **MinGW-w64**
-
-ReVens command-line:
+## 🔧 Build
 
 ```bash
 bash init.sh
@@ -58,85 +56,25 @@ bash run.sh
 bash build.sh
 ```
 
+```cmd
+./scripts/fix.cmd
+./scripts/test.cmd
+./scripts/generate.cmd
+```
+
+## 🔧 Download
+
+* Download latest ReVens from: [Releases](https://github.com/Jakiboy/ReVens/releases).
+
 ## 🔧 TODO
 
 * AI-powered Reverse Engineering Agent.
 
-## 🔧 Download
-
-* Download ReVens GUI from: [Releases](https://github.com/Jakiboy/ReVens/releases).
-* Download packages manually (**~8Go**) from:
-
-<table>
-  <tr>
-    <th>Part 1</th>
-    <th>Part 2</th>
-    <th>Part 3</th>
-    <th>Part 4</th>
-    <th>Part 5</th>
-    <th>Part 6</th>
-    <th>Part 7</th>
-  </tr>
-  <tr>
-    <td><a href="https://revens.jihadsinnaour.com/download/Analysing.iso" target="_blank">Analysing</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Assembling.iso" target="_blank">Assembling</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Bypassing.iso" target="_blank">Bypassing</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Calculating.iso" target="_blank">Calculating</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Comparing.iso" target="_blank">Comparing</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Converting.iso" target="_blank">Converting</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Debugging.iso" target="_blank">Debugging</a></td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <th>Part 8</th>
-    <th>Part 9</th>
-    <th>Part 10</th>
-    <th>Part 11</th>
-    <th>Part 12</th>
-    <th>Part 13</th>
-  </tr>
-  <tr>
-    <td><a href="https://revens.jihadsinnaour.com/download/Decoding.iso" target="_blank">Decoding</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Decompiling.iso" target="_blank">Decompiling</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Dependencies.iso" target="_blank">Dependencies</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Disassembling.iso" target="_blank">Disassembling</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Documentation.iso" target="_blank">Documentation</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Unpacking.iso" target="_blank">Unpacking</a></td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <th>Part 14</th>
-    <th>Part 15</th>
-    <th>Part 16</th>
-    <th>Part 17</th>
-    <th>Part 18</th>
-    <th>Part 19</th>
-    <th>Part 20</th>
-    <th>Part 21</th>
-    <th>Part 22</th>
-  </tr>
-  <tr>
-    <td><a href="https://revens.jihadsinnaour.com/download/Editing.iso" target="_blank">Editing</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Encoding.iso" target="_blank">Encoding</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Extracting.iso" target="_blank">Extracting</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Hexing.iso" target="_blank">Hexing</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Mobile.iso" target="_blank">Mobile</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Packing.iso" target="_blank">Packing</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Patching.iso" target="_blank">Patching</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Programming.iso" target="_blank">Programming</a></td>
-    <td><a href="https://revens.jihadsinnaour.com/download/Testing.iso" target="_blank">Testing</a></td>
-  </tr>
-</table>
-
-Downloads should be extracted into ReVens */bin* folder.
-
 ## 🔧 Packages
 
 ReVens packages includes:
+
+<!-- ReVens Packages -->
 
 ### ⚡ Analyzing
 
@@ -640,6 +578,8 @@ Universal mobile toolkits.
 * **Sn0wbreeze** - *Custom IPSWs generator.*
 * **P0sixspwn** - *Yet another iOS jailbreaking tool.*
 * **iREB** - *iTunes custom IPSWs bypass tool.*
+
+<!-- ReVens Packages -->
 
 ### ⭐ Support:
 

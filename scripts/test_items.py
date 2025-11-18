@@ -40,7 +40,7 @@ LOG_FILE = os.path.join(os.path.dirname(__file__), 'test.log')
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'Bin'))
 
 # Required properties for each item
-REQUIRED_PROPERTIES = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download"]
+REQUIRED_PROPERTIES = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "script"]
 
 # Global flags for ignoring specific warnings
 IGNORE_VERSION_WARNINGS = False
@@ -180,6 +180,20 @@ def validate_items():
                         elif isinstance(value, list) and len(value) == 0:
                             warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is an empty array (should be false, valid URL, or non-empty array)"
                             empty_properties.append(warning)
+                # Special handling for 'script' - can be false, string, or non-empty array
+                elif prop == 'script':
+                    if value is False:
+                        # False is valid - no warning
+                        pass
+                    elif value == "":
+                        warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is empty string (should be false, valid command string, or non-empty array)"
+                        empty_properties.append(warning)
+                    elif value is None:
+                        warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is None (should be false, valid command string, or non-empty array)"
+                        empty_properties.append(warning)
+                    elif isinstance(value, list) and len(value) == 0:
+                        warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is an empty array (should be false, valid command string, or non-empty array)"
+                        empty_properties.append(warning)
                 # Special handling for 'version' - warn only if empty or undefined (False is acceptable)
                 elif prop == 'version':
                     if not IGNORE_VERSION_WARNINGS:

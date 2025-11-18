@@ -26,11 +26,12 @@ REQUIRED_PROPERTIES = {
     "version": False,
     "url": False,
     "download": False,
+    "script": False,
     "remove": False
 }
 
 # Property order for reordering items
-PROPERTY_ORDER = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "remove"]
+PROPERTY_ORDER = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "script", "remove"]
 
 # Type order for sorting
 TYPE_ORDER = ["exe", "cli", "sound", "zip"]

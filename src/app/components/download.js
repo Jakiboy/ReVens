@@ -26,8 +26,14 @@ const Download = () => {
     const [currentFile, setCurrentFile] = useState('');
     const [status, setStatus] = useState('');
     const [isDownloading, setIsDownloading] = useState(false);
+    const [downloadType, setDownloadType] = useState('packages'); // 'packages' or 'item'
+    const [title, setTitle] = useState('Download');
+    const [description, setDescription] = useState('');
 
-    const openModal = () => {
+    const openPackagesModal = () => {
+        setDownloadType('packages');
+        setTitle('Download Packages');
+        setDescription('');
         setModalStatus(true);
         setProgress(0);
         setCurrentFile('');
@@ -39,9 +45,24 @@ const Download = () => {
         }
     };
 
+    const openItemModal = (data) => {
+        setDownloadType('item');
+        setTitle('Download Item');
+        setDescription(data.name || '');
+        setModalStatus(true);
+        setProgress(0);
+        setCurrentFile('');
+        setStatus('Preparing download...');
+        setIsDownloading(true);
+    };
+
     const closeModal = () => {
-        if (isDownloading && window.electron?.abortDownload) {
-            window.electron.abortDownload();
+        if (isDownloading) {
+            if (downloadType === 'packages' && window.electron?.abortDownload) {
+                window.electron.abortDownload();
+            } else if (downloadType === 'item' && window.electron?.abortItemDownload) {
+                window.electron.abortItemDownload();
+            }
         }
         setModalStatus(false);
         setIsDownloading(false);
@@ -53,7 +74,7 @@ const Download = () => {
     };
 
     useEffect(() => {
-        const handleDownloadProgress = (data) => {
+        const handlePackagesProgress = (data) => {
             setProgress(data.progress);
             setCurrentFile(data.currentFile);
             setStatus(data.status);
@@ -62,11 +83,22 @@ const Download = () => {
             }
         };
 
-        window.electron.on('open-download', openModal);
-        window.electron.onDownloadProgress(handleDownloadProgress);
+        const handleItemProgress = (data) => {
+            setProgress(data.progress);
+            setStatus(data.status);
+            if (data.completed) {
+                setIsDownloading(false);
+            }
+        };
+
+        window.electron.on('open-download', openPackagesModal);
+        window.electron.on('open-item-download', openItemModal);
+        window.electron.onDownloadProgress(handlePackagesProgress);
+        window.electron.onItemDownloadProgress(handleItemProgress);
 
         return () => {
-            window.electron.off('open-download', openModal);
+            window.electron.off('open-download', openPackagesModal);
+            window.electron.off('open-item-download', openItemModal);
         };
     }, []);
 
@@ -75,16 +107,18 @@ const Download = () => {
             <Modal open={isOpened} setOpen={setModalStatus} className="download-modal" tabIndex="-1" staticBackdrop>
                 <Dialog centered>
                     <Content>
-                        <Header>Download Packages</Header>
+                        <Header>{title}</Header>
                         <Body>
                             <div className="mb-3">
+                                {description && (
+                                    <p className="mb-2">
+                                        <strong>Item:</strong> {description}
+                                    </p>
+                                )}
                                 <p className="mb-2">
                                     <strong>Status:</strong> {status}
-                                    {!isDownloading && status.toLowerCase().includes('completed') &&
-                                        ` Restart ${appConfig.productName || appConfig.name}`
-                                    }
                                 </p>
-                                {currentFile && (
+                                {currentFile && downloadType === 'packages' && (
                                     <p className="mb-2"><strong>Current file:</strong> {currentFile}</p>
                                 )}
                             </div>

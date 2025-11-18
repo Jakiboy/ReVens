@@ -12,6 +12,12 @@ contextBridge.exposeInMainWorld('electron', {
   click: (path) => {
     ipcRenderer.send('open-item', path);
   },
+  exploreItem: (path) => {
+    ipcRenderer.send('explore-item', path);
+  },
+  openUrl: (url) => {
+    ipcRenderer.send('open-url', url);
+  },
   on: (channel, func) => {
     ipcRenderer.on(channel, (e, ...args) => func(...args));
   },
@@ -29,5 +35,14 @@ contextBridge.exposeInMainWorld('electron', {
   },
   abortDownload: () => {
     ipcRenderer.send('abort-download');
+  },
+  downloadItem: (item) => {
+    ipcRenderer.send('download-item', item);
+  },
+  abortItemDownload: () => {
+    ipcRenderer.send('abort-item-download');
+  },
+  onItemDownloadProgress: (callback) => {
+    ipcRenderer.on('item-download-progress', (e, data) => callback(data));
   }
 });

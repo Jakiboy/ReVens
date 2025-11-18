@@ -16,6 +16,7 @@ const https = require('https');
 const http = require('http');
 
 let downloadAborted = false;
+let itemDownloadAborted = false;
 
 /**
  * Setup env.
@@ -114,6 +115,26 @@ async function openItem(item) {
 }
 
 /**
+ * Explore item folder.
+ */
+async function exploreItem(item) {
+	const baseDir = getBinDir();
+	const itemPath = formatPath(path.join(baseDir, item));
+	const itemDir = path.dirname(itemPath);
+
+	try {
+		// Check if directory exists
+		if (fs.existsSync(itemDir)) {
+			await shell.openPath(itemDir);
+		} else {
+			console.error('Directory does not exist:', itemDir);
+		}
+	} catch (error) {
+		console.error('Error exploring item:', error);
+	}
+}
+
+/**
  * Open bin folder.
  */
 function openBinFolder() {
@@ -198,7 +219,13 @@ async function startDownload(launcher) {
 	}
 
 	const parts = config.items.parts;
-	const host = config.items.host;
+	let host = config.items.host;
+
+	// Append /test to host URL in debug mode
+	if (config.debug) {
+		host = `${host}/test`;
+	}
+
 	const appRoot = config.baseDir || getRoot();
 	const sevenZipPath = path.join(appRoot, 'inc', '7z.exe');
 
@@ -281,6 +308,10 @@ async function startDownload(launcher) {
 		status: 'Download completed!',
 		completed: true
 	});
+
+	// Update package status to refresh button states
+	const status = checkPackageStatus();
+	launcher.webContents.send('package-status', status);
 }
 
 /**
@@ -342,6 +373,57 @@ function extractArchive(sevenZipPath, archivePath, outputDir) {
 			}
 		});
 	});
+}
+
+/**
+ * Create backup zip of directory using 7z.exe.
+ */
+function createBackupZip(sevenZipPath, sourceDir, outputZip) {
+	return new Promise((resolve, reject) => {
+		const args = ['a', '-tzip', outputZip, `${sourceDir}${path.sep}*`];
+
+		exec(sevenZipPath, args, (error, stdout, stderr) => {
+			if (error) {
+				reject(error);
+			} else {
+				resolve();
+			}
+		});
+	});
+}
+
+/**
+ * Flatten nested directory - move all contents from first subdirectory to parent.
+ */
+function flattenDirectory(targetDir) {
+	try {
+		const items = fs.readdirSync(targetDir);
+
+		// Filter out files, only look for directories
+		const dirs = items.filter(item => {
+			const fullPath = path.join(targetDir, item);
+			return fs.statSync(fullPath).isDirectory();
+		});
+
+		// If there's exactly one directory, move its contents up
+		if (dirs.length === 1) {
+			const nestedDir = path.join(targetDir, dirs[0]);
+			const nestedItems = fs.readdirSync(nestedDir);
+
+			// Move each item from nested dir to parent
+			for (const item of nestedItems) {
+				const oldPath = path.join(nestedDir, item);
+				const newPath = path.join(targetDir, item);
+				fs.renameSync(oldPath, newPath);
+			}
+
+			// Remove the now-empty nested directory
+			fs.rmdirSync(nestedDir);
+		}
+	} catch (error) {
+		console.error('Error flattening directory:', error);
+		throw error;
+	}
 }
 
 /**
@@ -459,6 +541,314 @@ function checkPackageStatus() {
 	}
 }
 
+/**
+ * Send item download progress.
+ */
+function sendItemDownloadProgress(launcher, data) {
+	launcher.webContents.send('item-download-progress', data);
+}
+
+/**
+ * Abort item download.
+ */
+function abortItemDownload() {
+	itemDownloadAborted = true;
+}
+
+/**
+ * Download a single item.
+ */
+async function downloadSingleItem(launcher, item) {
+	itemDownloadAborted = false;
+	const baseDir = getBinDir();
+
+	// Ensure bin directory exists
+	if (!fs.existsSync(baseDir)) {
+		try {
+			fs.mkdirSync(baseDir, { recursive: true });
+		} catch (error) {
+			sendItemDownloadProgress(launcher, {
+				progress: 0,
+				status: `Error creating directory: ${error.message}`,
+				completed: true
+			});
+			return;
+		}
+	}
+
+	// Open the download modal
+	launcher.webContents.send('open-item-download', { name: item.name });
+
+	// Replace {version} placeholder in download URL
+	let fileUrl = item.download;
+	if (item.version && fileUrl.includes('{version}')) {
+		fileUrl = fileUrl.replace(/{version}/g, item.version);
+	}
+
+	const fileName = path.basename(fileUrl.split('?')[0]); // Remove query params for filename
+	const itemDir = path.dirname(formatPath(path.join(baseDir, item.path)));
+	const filePath = path.join(itemDir, fileName);
+	const versionFilePath = path.join(itemDir, 'version.revens.txt');
+
+	// Check if version file exists and compare versions
+	if (item.version && fs.existsSync(versionFilePath)) {
+		try {
+			const installedVersion = fs.readFileSync(versionFilePath, 'utf-8').trim();
+			if (installedVersion === item.version) {
+				sendItemDownloadProgress(launcher, {
+					progress: 100,
+					status: `Already up to date! (v${item.version})`,
+					completed: true
+				});
+				return;
+			}
+		} catch (error) {
+			// Continue with download if version check fails
+		}
+	}
+
+	// Check if directory exists and create backup before downloading
+	if (fs.existsSync(itemDir)) {
+		const backupPath = `${itemDir}.backup.zip`;
+
+		// Only create backup if it doesn't already exist
+		if (!fs.existsSync(backupPath)) {
+			sendItemDownloadProgress(launcher, {
+				progress: 5,
+				status: 'Creating backup...'
+			});
+
+			try {
+				const appRoot = config.baseDir || getRoot();
+				const sevenZipPath = path.join(appRoot, 'inc', '7z.exe');
+
+				if (fs.existsSync(sevenZipPath)) {
+					await createBackupZip(sevenZipPath, itemDir, backupPath);
+				}
+			} catch (backupError) {
+				// Continue even if backup fails
+				sendItemDownloadProgress(launcher, {
+					progress: 10,
+					status: 'Backup failed, continuing with download...'
+				});
+			}
+		}
+	}
+
+	// Create item directory if it doesn't exist
+	if (!fs.existsSync(itemDir)) {
+		try {
+			fs.mkdirSync(itemDir, { recursive: true });
+		} catch (error) {
+			sendItemDownloadProgress(launcher, {
+				progress: 0,
+				status: `Error creating directory: ${error.message}`,
+				completed: true
+			});
+			return;
+		}
+	}
+
+	sendItemDownloadProgress(launcher, {
+		progress: 10,
+		status: 'Downloading...'
+	});
+
+	try {
+		await downloadFileWithProgress(fileUrl, filePath, (progress) => {
+			if (!itemDownloadAborted) {
+				sendItemDownloadProgress(launcher, {
+					progress: 10 + Math.round(progress * 0.8),
+					status: 'Downloading...'
+				});
+			}
+		});
+
+		if (itemDownloadAborted) {
+			if (fs.existsSync(filePath)) {
+				fs.unlinkSync(filePath);
+			}
+			sendItemDownloadProgress(launcher, {
+				progress: 0,
+				status: 'Download aborted',
+				completed: true
+			});
+			return;
+		}
+
+		// Check if file is an archive and item type is exe
+		const fileExt = path.extname(fileName).toLowerCase();
+		const isArchive = ['.zip', '.rar', '.7z', '.tar', '.gz', '.bz2'].includes(fileExt);
+		const shouldExtract = (item.type === 'exe' || item.type === 'cli') && isArchive;
+
+		if (shouldExtract) {
+			sendItemDownloadProgress(launcher, {
+				progress: 90,
+				status: 'Extracting archive...'
+			});
+
+			const appRoot = config.baseDir || getRoot();
+			const sevenZipPath = path.join(appRoot, 'inc', '7z.exe');
+
+			// Check if 7z.exe exists
+			if (!fs.existsSync(sevenZipPath)) {
+				sendItemDownloadProgress(launcher, {
+					progress: 100,
+					status: `Downloaded, but 7z.exe not found at ${sevenZipPath}`,
+					completed: true
+				});
+				return;
+			}
+
+			try {
+				await extractArchive(sevenZipPath, filePath, itemDir);
+
+				// Remove archive after successful extraction
+				if (fs.existsSync(filePath)) {
+					fs.unlinkSync(filePath);
+				}
+
+				// Post-extraction processing (script property)
+				if (item.script && item.script !== false) {
+					sendItemDownloadProgress(launcher, {
+						progress: 95,
+						status: 'Processing files...'
+					});
+
+					// Handle string or array of scripts
+					const scripts = Array.isArray(item.script) ? item.script : [item.script];
+
+					for (const script of scripts) {
+						if (script === 'flatten') {
+							try {
+								flattenDirectory(itemDir);
+							} catch (flattenError) {
+								// Continue even if flattening fails
+							}
+						}
+						// Add more script commands here in the future
+					}
+				}
+
+				// Save version file
+				if (item.version) {
+					try {
+						fs.writeFileSync(versionFilePath, item.version, 'utf-8');
+					} catch (versionError) {
+						// Continue even if version file creation fails
+					}
+				}
+
+				sendItemDownloadProgress(launcher, {
+					progress: 100,
+					status: 'Download and extraction completed!',
+					completed: true
+				});
+
+				// Update package status to refresh button state
+				const status = checkPackageStatus();
+				launcher.webContents.send('package-status', status);
+			} catch (extractError) {
+				// If extraction fails, keep the archive
+				sendItemDownloadProgress(launcher, {
+					progress: 100,
+					status: `Downloaded, but extraction failed: ${extractError.message}`,
+					completed: true
+				});
+			}
+		} else {
+			// Save version file
+			if (item.version) {
+				try {
+					fs.writeFileSync(versionFilePath, item.version, 'utf-8');
+				} catch (versionError) {
+					// Continue even if version file creation fails
+				}
+			}
+
+			sendItemDownloadProgress(launcher, {
+				progress: 100,
+				status: 'Download completed!',
+				completed: true
+			});
+
+			// Update package status to refresh button state
+			const status = checkPackageStatus();
+			launcher.webContents.send('package-status', status);
+		}
+
+	} catch (error) {
+		sendItemDownloadProgress(launcher, {
+			progress: 0,
+			status: `Error: ${error.message}`,
+			completed: true
+		});
+	}
+}
+
+/**
+ * Download file with progress tracking.
+ */
+function downloadFileWithProgress(fileUrl, filePath, onProgress) {
+	return new Promise((resolve, reject) => {
+		const protocol = fileUrl.startsWith('https') ? https : http;
+		const file = fs.createWriteStream(filePath);
+
+		const cleanup = () => {
+			file.close();
+			fs.unlink(filePath, () => { });
+		};
+
+		protocol.get(fileUrl, (response) => {
+			if (response.statusCode === 302 || response.statusCode === 301) {
+				// Handle redirects
+				cleanup();
+				downloadFileWithProgress(response.headers.location, filePath, onProgress)
+					.then(resolve)
+					.catch(reject);
+				return;
+			}
+
+			if (response.statusCode !== 200) {
+				cleanup();
+				reject(new Error(`Failed to download: ${response.statusCode}`));
+				return;
+			}
+
+			const totalSize = parseInt(response.headers['content-length'], 10);
+			let downloadedSize = 0;
+
+			response.on('data', (chunk) => {
+				downloadedSize += chunk.length;
+				if (totalSize && onProgress) {
+					onProgress(downloadedSize / totalSize);
+				}
+			});
+
+			response.pipe(file);
+
+			file.on('finish', () => {
+				file.close();
+				if (itemDownloadAborted) {
+					fs.unlink(filePath, () => { });
+					reject(new Error('Download aborted'));
+				} else {
+					resolve();
+				}
+			});
+
+			file.on('error', (error) => {
+				cleanup();
+				reject(error);
+			});
+
+		}).on('error', (error) => {
+			cleanup();
+			reject(error);
+		});
+	});
+}
+
 module.exports = {
 	setup,
 	isWindows,
@@ -468,11 +858,14 @@ module.exports = {
 	reload,
 	restart,
 	openItem,
+	exploreItem,
 	openInfo,
 	openChangelog,
 	openBinFolder,
 	downloadPackages,
 	startDownload,
 	abortDownload,
-	checkPackageStatus
+	checkPackageStatus,
+	downloadSingleItem,
+	abortItemDownload
 };

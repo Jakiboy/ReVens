@@ -6,7 +6,7 @@
  * license : MIT
  */
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { MDBBtn as Btn } from 'mdb-react-ui-kit';
 import { generateSlug } from '../helper';
 
@@ -40,32 +40,132 @@ const formatItemName = (name, type) => {
   return type === 'cli' ? `${truncatedName} (CLI)` : truncatedName;
 };
 
+// Context menu component
+const ContextMenu = ({ item, position, onClose }) => {
+  useEffect(() => {
+    const handleClick = () => onClose();
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+      onClose();
+    };
+
+    document.addEventListener('click', handleClick);
+    document.addEventListener('contextmenu', handleContextMenu);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('contextmenu', handleContextMenu);
+    };
+  }, [onClose]);
+
+  const handleExplore = (e) => {
+    e.stopPropagation();
+    window.electron.exploreItem(item.path);
+    onClose();
+  };
+
+  const handleDownload = (e) => {
+    e.stopPropagation();
+    window.electron.downloadItem(item);
+    onClose();
+  };
+
+  const handleHomepage = (e) => {
+    e.stopPropagation();
+    window.electron.openUrl(item.url);
+    onClose();
+  };
+
+  const showExplore = item.path && !item.remove;
+  const showDownload = item.download && item.download !== false;
+  const showHomepage = item.url && item.url !== false && (item.type === 'exe' || item.type === 'zip');
+  const showHeader = item.type !== 'doc' && item.type !== 'pdf' && item.type !== 'md';
+
+  if (!showExplore && !showDownload && !showHomepage) {
+    return null;
+  }
+
+  return (
+    <div
+      className="context-menu"
+      style={{ top: position.y, left: position.x }}
+      onClick={(e) => e.stopPropagation()}
+    >
+      {showHeader && (
+        <div className="context-menu-header">
+          {item.name}
+        </div>
+      )}
+      {showExplore && (
+        <div className="context-menu-item" onClick={handleExplore}>
+          <i className="icon-folder"></i> Explore Item
+        </div>
+      )}
+      {showHomepage && (
+        <div className="context-menu-item" onClick={handleHomepage}>
+          <i className="icon-link"></i> Homepage
+        </div>
+      )}
+      {showDownload && (
+        <div className="context-menu-item" onClick={handleDownload}>
+          <i className="icon-cloud-download"></i> Download Item
+        </div>
+      )}
+    </div>
+  );
+};
+
 // ItemButton component to reduce duplication
-const ItemButton = ({ item, isDisabled }) => {
+const ItemButton = ({ item, isDisabled, onContextMenu }) => {
   const icon = getItemIcon(item.type);
   const name = formatItemName(item.name, item.type);
 
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onContextMenu(item, {
+      x: e.clientX,
+      y: e.clientY
+    });
+  };
+
+  const handleClick = () => {
+    if (!isDisabled(item.path)) {
+      window.electron.click(item.path);
+    }
+  };
+
   return (
-    <Btn
-      className={`type-${item.type}`}
-      onClick={() => window.electron.click(item.path)}
-      title={item.desc || ''}
-      disabled={isDisabled(item.path)}
-      data-path={item.path}
+    <div
+      className="item-button-wrapper"
+      onContextMenu={handleContextMenu}
+      style={{ display: 'inline-block' }}
     >
-      <i className={`icon-${icon}`}></i> {name}
-    </Btn>
+      <Btn
+        className={`type-${item.type}`}
+        onClick={handleClick}
+        title={item.desc || ''}
+        disabled={isDisabled(item.path)}
+        data-path={item.path}
+      >
+        <i className={`icon-${icon}`}></i> {name}
+      </Btn>
+    </div>
   );
 };
 
 const Section = ({ section, items, disabledPaths = [] }) => {
-
+  const [contextMenu, setContextMenu] = useState(null);
   const _section = generateSlug(section.name);
   const _subs = section.sub;
 
   // Convert array to Set for O(1) lookup performance
   const disabledSet = useMemo(() => new Set(disabledPaths), [disabledPaths]);
   const isDisabled = (path) => disabledSet.has(path);
+
+  const handleContextMenu = (item, position) => {
+    setContextMenu({ item, position });
+  };
 
   return (
     <div className="tab-content" id={`tab-content-${_section}`}>
@@ -84,7 +184,7 @@ const Section = ({ section, items, disabledPaths = [] }) => {
                     const _isub = generateSlug(item.sub);
 
                     if ((_isection === _section) && (_isub === _sub) && !item.extra) {
-                      return <ItemButton key={itemIndex} item={item} isDisabled={isDisabled} />;
+                      return <ItemButton key={itemIndex} item={item} isDisabled={isDisabled} onContextMenu={handleContextMenu} />;
                     }
                     return null;
                   })}
@@ -103,7 +203,7 @@ const Section = ({ section, items, disabledPaths = [] }) => {
                           const _iextra = generateSlug(item.extra);
 
                           if ((_isection === _section) && (_isub === _sub) && (_iextra === _extra)) {
-                            return <ItemButton key={itemIndex} item={item} isDisabled={isDisabled} />;
+                            return <ItemButton key={itemIndex} item={item} isDisabled={isDisabled} onContextMenu={handleContextMenu} />;
                           }
                           return null;
                         })}
@@ -116,6 +216,13 @@ const Section = ({ section, items, disabledPaths = [] }) => {
           })}
         </div>
       </div>
+      {contextMenu && (
+        <ContextMenu
+          item={contextMenu.item}
+          position={contextMenu.position}
+          onClose={() => setContextMenu(null)}
+        />
+      )}
     </div>
   );
 };
