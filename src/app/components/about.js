@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.4.x
+ * Version : 1.5.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -47,7 +47,7 @@ const About = () => {
                     </div>
                     <h1>{config.name}</h1>
                     <p><strong>Version</strong> {config.version} (x64)</p>
-                    <p className="mb-2">{config.about.description || config.about.desctiption}.</p>
+                    <p className="mb-2">{config.about.desc || config.about.desc}.</p>
                     <p>
                       <a href={config.url} className="page-link">
                         <i className="icon-social-github"></i> Source

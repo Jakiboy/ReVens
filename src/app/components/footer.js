@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.4.x
+ * Version : 1.5.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -26,7 +26,7 @@ const Footer = () => {
         <a href={config.url}>
           <i className="icon-social-github"></i> {config.name}
         </a>
-        <span className="space"></span> | {config.notice}
+        <span className="space"></span> | {config.notice.replace('{version}', config.version)}
       </p>
       <p className="logger">
         <span

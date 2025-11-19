@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.4.x
+ * Version : 1.5.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -17,6 +17,8 @@ const http = require('http');
 
 let downloadAborted = false;
 let itemDownloadAborted = false;
+let aiDownloadAborted = false;
+let currentAIRequest = null;
 
 /**
  * Setup env.
@@ -150,7 +152,91 @@ function openBinFolder() {
 		}
 	}
 
-	shell.openPath(formatPath(baseDir));
+	shell.openPath(baseDir);
+}
+
+/**
+ * Download AI assistant.
+ */
+function downloadAIAssistant(launcher) {
+
+	const appRoot = config.baseDir || getRoot();
+	const installerName = config.ai?.name || 'AI';
+	const installerUrl = config.ai.download;
+	const installerPath = path.join(appRoot, 'inc', path.basename(installerUrl));
+
+	// Check if installer already exists and is valid
+	if (fs.existsSync(installerPath)) {
+		try {
+			// Verify file is readable and has size > 0
+			const stats = fs.statSync(installerPath);
+			if (stats.size > 0) {
+				if (!launcher.isDestroyed()) {
+					launcher.webContents.send('open-ai-download');
+					launcher.webContents.send('ai-download-progress', {
+						progress: 100,
+						status: 'Installer already downloaded!',
+						completed: true,
+						installerPath: installerPath
+					});
+				}
+				return;
+			} else {
+				// File is corrupted (0 bytes), delete it
+				fs.unlinkSync(installerPath);
+			}
+		} catch (error) {
+			// File is corrupted or unreadable, delete it
+			try {
+				fs.unlinkSync(installerPath);
+			} catch (unlinkError) {
+				// Ignore unlink errors
+			}
+		}
+	}
+
+	// Reset abort flag
+	aiDownloadAborted = false;
+
+	// Open download modal
+	if (!launcher.isDestroyed()) {
+		launcher.webContents.send('open-ai-download');
+	}
+
+	// Start downloading
+	downloadFileWithProgress(
+		installerUrl,
+		installerPath,
+		(progress) => {
+			if (!launcher.isDestroyed() && !aiDownloadAborted) {
+				launcher.webContents.send('ai-download-progress', {
+					progress: progress,
+					status: `Downloading ${installerName} installer...`
+				});
+			}
+		},
+		'ai'
+
+	).then(() => {
+		if (!launcher.isDestroyed() && !aiDownloadAborted) {
+			launcher.webContents.send('ai-download-progress', {
+				progress: 100,
+				status: 'Download completed!',
+				completed: true,
+				installerPath: installerPath
+			});
+		}
+
+	}).catch((error) => {
+		if (!launcher.isDestroyed()) {
+			launcher.webContents.send('ai-download-progress', {
+				progress: 0,
+				status: aiDownloadAborted ? 'Download aborted' : `Download failed: ${error.message}`,
+				completed: true,
+				error: !aiDownloadAborted
+			});
+		}
+	});
 }
 
 /**
@@ -181,6 +267,18 @@ function openChangelog() {
  * Download packages with confirmation.
  */
 async function downloadPackages(launcher) {
+	// Prevent download when baseDir is defined and debug mode is enabled
+	if (config.baseDir && config.debug) {
+		await dialog.showMessageBox({
+			type: 'warning',
+			buttons: ['OK'],
+			title: 'Download Disabled',
+			message: 'Package download is disabled',
+			detail: 'Download is not available when baseDir is set in debug mode.'
+		});
+		return;
+	}
+
 	const response = await dialog.showMessageBox({
 		type: 'question',
 		buttons: ['Download', 'Cancel'],
@@ -252,7 +350,8 @@ async function startDownload(launcher) {
 		}
 
 		const fileName = parts[i];
-		const fileUrl = `${host}/${fileName}`;
+		const token = config.items.token || '';
+		const fileUrl = `${host}/${fileName}${token ? '?token=' + token : ''}`;
 		const filePath = path.join(baseDir, fileName);
 
 		sendDownloadProgress(launcher, {
@@ -284,7 +383,9 @@ async function startDownload(launcher) {
 				status: `Extracting ${i + 1}/${parts.length}...`
 			});
 
-			await extractArchive(sevenZipPath, filePath, baseDir);
+			// Extract with password from config
+			const password = config.items.pswd || null;
+			await extractArchive(sevenZipPath, filePath, baseDir, password);
 
 			// Delete zip file after extraction
 			if (fs.existsSync(filePath)) {
@@ -361,9 +462,14 @@ function downloadFile(fileUrl, filePath) {
 /**
  * Extract archive (zip, 7z, rar, iso, etc.) using 7z.exe.
  */
-function extractArchive(sevenZipPath, archivePath, outputDir) {
+function extractArchive(sevenZipPath, archivePath, outputDir, password = null) {
 	return new Promise((resolve, reject) => {
 		const args = ['x', archivePath, `-o${outputDir}`, '-y'];
+
+		// Add password if provided
+		if (password) {
+			args.push(`-p${password}`);
+		}
 
 		exec(sevenZipPath, args, (error, stdout, stderr) => {
 			if (error) {
@@ -701,14 +807,14 @@ async function downloadSingleItem(launcher, item) {
 			}
 
 			try {
-				await extractArchive(sevenZipPath, filePath, itemDir);
+				// Use item password if defined
+				const itemPassword = (item.pswd && item.pswd !== false) ? item.pswd : null;
+				await extractArchive(sevenZipPath, filePath, itemDir, itemPassword);
 
 				// Remove archive after successful extraction
 				if (fs.existsSync(filePath)) {
 					fs.unlinkSync(filePath);
-				}
-
-				// Post-extraction processing (script property)
+				}				// Post-extraction processing (script property)
 				if (item.script && item.script !== false) {
 					sendItemDownloadProgress(launcher, {
 						progress: 95,
@@ -748,6 +854,7 @@ async function downloadSingleItem(launcher, item) {
 				// Update package status to refresh button state
 				const status = checkPackageStatus();
 				launcher.webContents.send('package-status', status);
+
 			} catch (extractError) {
 				// If extraction fails, keep the archive
 				sendItemDownloadProgress(launcher, {
@@ -756,6 +863,7 @@ async function downloadSingleItem(launcher, item) {
 					completed: true
 				});
 			}
+
 		} else {
 			// Save version file
 			if (item.version) {
@@ -789,7 +897,7 @@ async function downloadSingleItem(launcher, item) {
 /**
  * Download file with progress tracking.
  */
-function downloadFileWithProgress(fileUrl, filePath, onProgress) {
+function downloadFileWithProgress(fileUrl, filePath, onProgress, downloadType = 'item') {
 	return new Promise((resolve, reject) => {
 		const protocol = fileUrl.startsWith('https') ? https : http;
 		const file = fs.createWriteStream(filePath);
@@ -799,11 +907,16 @@ function downloadFileWithProgress(fileUrl, filePath, onProgress) {
 			fs.unlink(filePath, () => { });
 		};
 
-		protocol.get(fileUrl, (response) => {
-			if (response.statusCode === 302 || response.statusCode === 301) {
+		const isAborted = () => {
+			if (downloadType === 'ai') return aiDownloadAborted;
+			return itemDownloadAborted;
+		};
+
+		const request = protocol.get(fileUrl, (response) => {
+			if (response.statusCode === 302 || response.statusCode === 301 || response.statusCode === 307 || response.statusCode === 308) {
 				// Handle redirects
 				cleanup();
-				downloadFileWithProgress(response.headers.location, filePath, onProgress)
+				downloadFileWithProgress(response.headers.location, filePath, onProgress, downloadType)
 					.then(resolve)
 					.catch(reject);
 				return;
@@ -819,6 +932,12 @@ function downloadFileWithProgress(fileUrl, filePath, onProgress) {
 			let downloadedSize = 0;
 
 			response.on('data', (chunk) => {
+				if (isAborted()) {
+					response.destroy();
+					cleanup();
+					reject(new Error('Download aborted'));
+					return;
+				}
 				downloadedSize += chunk.length;
 				if (totalSize && onProgress) {
 					onProgress(downloadedSize / totalSize);
@@ -829,7 +948,7 @@ function downloadFileWithProgress(fileUrl, filePath, onProgress) {
 
 			file.on('finish', () => {
 				file.close();
-				if (itemDownloadAborted) {
+				if (isAborted()) {
 					fs.unlink(filePath, () => { });
 					reject(new Error('Download aborted'));
 				} else {
@@ -846,7 +965,22 @@ function downloadFileWithProgress(fileUrl, filePath, onProgress) {
 			cleanup();
 			reject(error);
 		});
+
+		if (downloadType === 'ai') {
+			currentAIRequest = request;
+		}
 	});
+}
+
+/**
+ * Abort AI download.
+ */
+function abortAIDownload() {
+	aiDownloadAborted = true;
+	if (currentAIRequest) {
+		currentAIRequest.destroy();
+		currentAIRequest = null;
+	}
 }
 
 module.exports = {
@@ -862,10 +996,12 @@ module.exports = {
 	openInfo,
 	openChangelog,
 	openBinFolder,
+	downloadAIAssistant,
 	downloadPackages,
 	startDownload,
 	abortDownload,
 	checkPackageStatus,
 	downloadSingleItem,
-	abortItemDownload
+	abortItemDownload,
+	abortAIDownload
 };

@@ -2,7 +2,7 @@
 
 [![ReVens](assets/preview/banner.png)](#)
 
-ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u>Security (Malware analysis, Penetration testing)</u> & <u>Educational purposes only</u>.
+ReVens is a Windows-based and AI-powered Reverse Engineering Toolkit "All-In-One", built for security purposes (malware analysis, penetration testing) and educational use only. It serves as a comprehensive package manager for reverse engineering tools.
 
 > [!Note]
 > I made ReVens AIO software to share personal experience in RE since **2008**.  
@@ -16,50 +16,64 @@ ReVens is a Windows-based Reverse Engineering Toolkit "All-In-One", Built for <u
 * **90% portable**: Using portable versions or resolved/included dependencies
 * **Original assets**: Themes, Sounds (e.g. BRD - Teleport Pro.mx, CORE - Power ISO.xm)
 * **Packages manager**: JSON based Downloader, Versioning, Updater
-* **Boilerplate**: For other projects (Electron.js + React.js)
+* **AI-powered**: Basic AI assistant using Ollama (llama3.2:1b)
+* **Boilerplate**: For other projects (Electron.js X React.js)
 
 ## 🔧 Screenshot
 
-This is how it looks, Made with {heart} using **Electron.js** + **React.js**.
-
-[![Windows-based Reverse Engineering](assets/preview/screenshot.png)](#)
-
+This is how it looks, Made with {heart} using **Electron.js** X **React.js**.  
 *The App background is the WebView DevTools itself*.
+
+[![ReVens main GUI](assets/preview/screenshot.png)](#)
+
+Each item can be downloaded **separately** from trusted sources.
+
+[![ReVens item downloader](assets/preview/screenshot-1.png)](#)
+
+Packages are **automatically downloaded**.
+
+[![ReVens packages downloader](assets/preview/screenshot-2.png)](#)
+
+Local AI assistant integrated using **Ollama**.
+
+[![ReVens packages downloader](assets/preview/screenshot-3.png)](#)
 
 ## 💡 Notices
 
 > [!Important]
 > Respecting the rights of software developers is paramount. Engaging in activities such as bypassing software protections or reverse engineering software without explicit permission is not only generally illegal, but also unethical. It's essential to utilize software in the manner intended by its creators and in compliance with the stipulated terms of service or license agreement.
 
-* Reverse Engineering tools are denied by **Antivirus** (Due to binary patching algorithms, debugging, packing ...etc).
-* You should use a **secured** virtual machine or a sandbox.
-* ReVens Packages are automatically downloaded from trusted sources.
-* Each item can be downloaded separetlally.
-* ReVens will focus only on the packages manager itself and not the items!
+* ReVens will focus only on the **package manager** itself and not the packages!
+* Reverse engineering tools are flagged by **Antivirus** (due to binary patching algorithms, debugging, packing, etc.).
+* You should use a **secure** virtual machine or a sandbox.
 * Many of the included tools are **outdated** and provided solely for legacy purposes!
-* **Packages** includes basic docs & tutorials about RE for n00bs.
-* Packages primary architecture is x64, but other architectures (x86, ARM) can also be supported.
-* ReVens is Windows-based, but still crossplatform if you want to build it for linux.
-* *-Use it on your own responsibility, Better Call Saul!-*
+* The primary architecture of the packages is **x64**, but other architectures (x86, ARM) can also be supported.
+* ReVens is Windows-based, but still **cross-platform** if you want to build it for Linux.
+* *— Use it at your own risk. Better Call Saul! —*
 
 ## 🔧 Requirements
 
 * **Windows** 10/11 x64 (Runtime)
 * **Electron.js ^29.4.6 (Node 24.11.0)**
 * **MinGW-w64** or [**Git for Windows**](https://git-scm.com/downloads/win)
+* **Ollama** for AI Assistant [**ReVens AI Assistant Setup**](AI.md)
 
 ## 🔧 Build
 
-```bash
+```sh
+git clone https://github.com/Jakiboy/ReVens .
 bash init.sh
 bash run.sh
 bash build.sh
 ```
 
+## 🔧 Test
+
 ```cmd
-./scripts/fix.cmd
 ./scripts/test.cmd
+./scripts/fix.cmd
 ./scripts/generate.cmd
+./scripts/serve-ollama.cmd
 ```
 
 ## 🔧 Download
@@ -68,13 +82,13 @@ bash build.sh
 
 ## 🔧 TODO
 
-* AI-powered Reverse Engineering Agent.
+* We need contributors for: Advanced AI, Settings, and the Package Downloader.
 
 ## 🔧 Packages
 
 ReVens packages includes:
 
-<!-- ReVens Packages -->
+<!-- Auto-generated: ReVens Packages -->
 
 ### ⚡ Analyzing
 
@@ -579,7 +593,7 @@ Universal mobile toolkits.
 * **P0sixspwn** - *Yet another iOS jailbreaking tool.*
 * **iREB** - *iTunes custom IPSWs bypass tool.*
 
-<!-- ReVens Packages -->
+<!-- Auto-generated: ReVens Packages -->
 
 ### ⭐ Support:
 

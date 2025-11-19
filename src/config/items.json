@@ -12,6 +12,7 @@
             "url": "https://www.alternate-tools.com/pages/c_mathsolver.php",
             "download": "http://www.alternate-tools.com/files/MathSolver.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -26,6 +27,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -40,6 +42,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -57,6 +60,7 @@
                 "https://github.com/horsicq/XOpcodeCalc/releases/download/{version}/xopcodecalc_win32_portable_{version}.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -71,6 +75,7 @@
             "url": "https://github.com/rhash/RHash",
             "download": "https://deac-ams.dl.sourceforge.net/project/rhash/rhash/{version}/rhash-{version}-english-win64.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -85,6 +90,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -99,6 +105,7 @@
             "url": "http://sanity-free.org/5252/viewtopic.php?id=20",
             "download": "http://sanity-free.org/binary/Hash_Calculator.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -113,6 +120,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -127,6 +135,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -141,6 +150,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -155,6 +165,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -172,6 +183,7 @@
                 "https://altushost-swe.dl.sourceforge.net/project/winmerge/stable/{version}/winmerge-{version}-exe.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -186,6 +198,7 @@
             "url": "https://www.nirsoft.net/utils/csv_file_comparison.html",
             "download": "https://www.nirsoft.net/utils/tabletextcompare.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -200,6 +213,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -214,6 +228,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -228,6 +243,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -242,6 +258,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -259,6 +276,7 @@
                 "https://github.com/horsicq/DIE-engine/releases/download/{version}/die_win32_portable_{version}_x86.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -276,6 +294,7 @@
                 "https://github.com/horsicq/Nauz-File-Detector/releases/download/{version}/nfd_win32_portable_{version}.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -290,6 +309,7 @@
             "url": false,
             "download": "https://file1.softsea.com/download/dac8ed49/2d79242e78202a04a0ac8d32175970f1/File_Management/PE_Detective.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -304,6 +324,7 @@
             "url": false,
             "download": "https://farrokhi.net/language/language.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -318,6 +339,7 @@
             "url": false,
             "download": "https://github.com/ExeinfoASL/ASL/releases/download/exeinfo/exeinfope.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -332,6 +354,7 @@
             "url": false,
             "download": "https://github.com/bdunlap9/UPX-Unpackers/raw/master/UPX-Analyser%20{version}/UPX-Analyser.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -346,6 +369,7 @@
             "url": "https://www.aldeid.com/wiki/PEiD",
             "download": "https://github.com/wolfram77web/app-peid/archive/refs/heads/master.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -360,6 +384,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -374,6 +399,7 @@
             "url": "https://github.com/rdgsoft/rdg-packer-detector",
             "download": "https://github.com/rdgsoft/rdg-packer-detector/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -388,6 +414,7 @@
             "url": false,
             "download": "https://download.eset.com/com/eset/tools/diagnosis/sysinspector/latest/sysinspector_nt64.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -405,6 +432,7 @@
                 "https://github.com/AxtMueller/Windows-Kernel-Explorer/blob/master/binaries/WKE64.exe"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -419,6 +447,7 @@
             "url": false,
             "download": "https://github.com/lostindark/DriverStoreExplorer/releases/download/v{version}/DriverStoreExplorer.v{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -433,6 +462,7 @@
             "url": "https://www.techpowerup.com/realtemp/",
             "download": "https://www.techpowerup.com/download/techpowerup-realtemp/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -447,6 +477,7 @@
             "url": false,
             "download": "https://download.spybot.info/RunAlyzer/runalyz-{version}.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -461,6 +492,7 @@
             "url": false,
             "download": "https://download.spybot.info/RootAlyzer/rootalyz-{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -475,6 +507,7 @@
             "url": false,
             "download": "https://openhardwaremonitor.org/files/openhardwaremonitor-v{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -489,6 +522,7 @@
             "url": false,
             "download": "http://www.rohitab.com/download/api-monitor-v{version}-x86-x64.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -506,6 +540,7 @@
                 "https://www.nirsoft.net/utils/regdllview.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/API/RegDLLView/x64/RegDllView.cfg"
             ]
@@ -522,6 +557,7 @@
             "url": false,
             "download": "https://github.com/Seabreg/Regshot/archive/refs/heads/master.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/API/Regshot/regshot.ini"
             ]
@@ -538,6 +574,7 @@
             "url": false,
             "download": "https://download.sysinternals.com/files/WinObj.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -552,6 +589,7 @@
             "url": false,
             "download": "https://dennisbabkin.com/php/downloads/WinID.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/API/DxWnd/dxwnd.ini"
             ]
@@ -568,6 +606,7 @@
             "url": false,
             "download": "https://github.com/LRN/ntldd/releases/download/{version}/i686-ntldd-{version}.tar.xz",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -582,6 +621,7 @@
             "url": false,
             "download": "https://dennisbabkin.com/php/downloads/WinID.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -596,6 +636,7 @@
             "url": false,
             "download": "https://download.spybot.info/RegAlyzer/regalyz-{version}.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -610,6 +651,7 @@
             "url": false,
             "download": "https://ro.softpedia-secure-download.com/dl/d8b0652049c57b187faaf1e3189f56c0/6610925d/100017208/software/PROGRAMMING/zDump0.1.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -624,6 +666,7 @@
             "url": "https://www.nirsoft.net/utils/dll_function_viewer.html",
             "download": "https://www.nirsoft.net/utils/dllfunctionviewer-x64.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -641,6 +684,7 @@
                 "https://www.dependencywalker.com/depends{version}_x64.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -658,6 +702,7 @@
                 "https://www.nirsoft.net/utils/searchmyfiles.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/File/SearchMyFiles/x64/SearchMyFiles.cfg"
             ]
@@ -674,6 +719,7 @@
             "url": false,
             "download": "https://www.nirsoft.net/utils/exifdataview.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/File/Exif Data View/ExifDataView.cfg"
             ]
@@ -690,6 +736,7 @@
             "url": false,
             "download": "https://www.nirsoft.net/utils/CSVFileView.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/File/CSV File View/CSVFileView.cfg"
             ]
@@ -706,6 +753,7 @@
             "url": false,
             "download": "https://download.spybot.info/BrowsAlyzer/pre-release/BrowsAlyzer-{version}-setup.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -724,6 +772,7 @@
                 "https://www.sqlite.org/{year}/sqlite-dll-win-x86-{version}.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -741,6 +790,7 @@
                 "https://download.sqlitebrowser.org/DB.Browser.for.SQLite-{version}-win32.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -758,6 +808,7 @@
                 "https://github.com/horsicq/XMachOViewer/releases/download/{version}/xmachoviewer_win32_portable_{version}.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -775,6 +826,7 @@
                 "https://github.com/pawelsalawa/sqlitestudio/releases/download/{version}/sqlitestudio_i386-{version}.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -789,6 +841,7 @@
             "url": "https://github.com/pvanek/sqliteman",
             "download": "https://github.com/pvanek/sqliteman/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -806,6 +859,7 @@
                 "https://github.com/stefankueng/grepWin/releases/download/{version}/grepWin-{version}_portable.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -820,6 +874,7 @@
             "url": false,
             "download": "https://download.sysinternals.com/files/VMMap.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -837,6 +892,7 @@
                 "https://www.nirsoft.net/utils/heapmemview.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/Memory/HeapMemView/x64/HeapMemView.cfg"
             ]
@@ -853,6 +909,7 @@
             "url": false,
             "download": "https://download.spybot.info/ProcAlyzer/procalyz-{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/Memory/ProcAlyzer/bugreport.txt"
             ]
@@ -869,6 +926,7 @@
             "url": false,
             "download": "https://github.com/volatilityfoundation/volatility/releases/download/{version}/volatility_2.6_win64_standalone.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -883,6 +941,7 @@
             "url": false,
             "download": "https://2.na.dl.wireshark.org/win64/WiresharkPortable64_{version}.paf.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -897,6 +956,7 @@
             "url": false,
             "download": "https://download.sysinternals.com/files/TCPView.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -911,6 +971,7 @@
             "url": "https://github.com/httptoolkit/httptoolkit-desktop",
             "download": "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v{version}/HttpToolkit-{version}-win-x64.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -925,6 +986,7 @@
             "url": "https://www.zaproxy.org",
             "download": "https://github.com/zaproxy/zaproxy/releases/download/v{version}/ZAP_{version}_Crossplatform.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -939,6 +1001,7 @@
             "url": "https://github.com/dannagle/PacketSender",
             "download": "https://github.com/dannagle/PacketSender/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -953,6 +1016,7 @@
             "url": "https://www.telerik.com/fiddler/fiddler-classic",
             "download": "https://downloads.getfiddler.com/fiddler-classic/FiddlerSetup.{version}.{year}2.10753-latest.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -970,6 +1034,7 @@
                 "https://download.aircrack-ng.org/aircrack-ng-0.9.3-win.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -987,6 +1052,7 @@
                 "https://www.penetworkmanager.de/scripts/PENetwork.7z"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1004,6 +1070,7 @@
                 "https://www.nirsoft.net/utils/smsniff-x64.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/Network/SmartSniff/x64/smsniff.cfg"
             ]
@@ -1020,6 +1087,7 @@
             "url": "https://www.nirsoft.net/utils/whois_this_domain.html",
             "download": "https://www.nirsoft.net/utils/whoistd.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/Network/WhoisThisDomain/whoistd.cfg"
             ]
@@ -1036,6 +1104,7 @@
             "url": "https://github.com/ChangemakerStudios/Papercut",
             "download": "https://github.com/ChangemakerStudios/Papercut/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1050,6 +1119,7 @@
             "url": false,
             "download": "https://www.nirsoft.net/utils/dnslookupview.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/Network/DNSLookupView/DNSLookupView.cfg"
             ]
@@ -1066,6 +1136,7 @@
             "url": false,
             "download": "https://www.nirsoft.net/utils/whoistd.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1080,6 +1151,7 @@
             "url": false,
             "download": "https://github.com/Malzilla/Malzilla/releases/download/1.2.0/malzilla.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1097,6 +1169,7 @@
                 "https://www.nirsoft.net/toolsdownload/sniffpass-x64.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1114,6 +1187,7 @@
                 "https://www.nirsoft.net/utils/whoisconnectedsniffer.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1128,6 +1202,7 @@
             "url": false,
             "download": "https://www.netresec.com/?download=NetworkMiner",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1142,6 +1217,7 @@
             "url": false,
             "download": "https://www.netresec.com/?download=PacketCache",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1156,6 +1232,7 @@
             "url": false,
             "download": "https://www.netresec.com/?download=PolarProxy_win-x64",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1170,6 +1247,7 @@
             "url": false,
             "download": "https://www.netresec.com/?download=RawCap",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1184,6 +1262,7 @@
             "url": false,
             "download": "https://www.netresec.com/?download=SplitCap",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1198,6 +1277,7 @@
             "url": false,
             "download": "https://download.sysinternals.com/files/ProcessMonitor.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1212,6 +1292,7 @@
             "url": false,
             "download": "https://download.sysinternals.com/files/CPUSTRES.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1229,6 +1310,7 @@
                 "https://www.nirsoft.net/utils/deviceioview.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Analyzing/System/Process/DeviceIOView/x64/DeviceIOView.cfg"
             ]
@@ -1245,6 +1327,7 @@
             "url": false,
             "download": "https://altushost-swe.dl.sourceforge.net/project/hjt/{version}%20beta/HijackThis.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1259,6 +1342,7 @@
             "url": false,
             "download": "https://download.sysinternals.com/files/Autoruns.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1273,6 +1357,7 @@
             "url": "https://renderdoc.org",
             "download": "https://renderdoc.org/builds",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1294,6 +1379,7 @@
                 "https://github.com/hasherezade/pe-sieve/releases/download/v{version}/pe-sieve32.dll"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1308,6 +1394,7 @@
             "url": false,
             "download": "https://download.sysinternals.com/files/ProcessExplorer.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1322,6 +1409,7 @@
             "url": false,
             "download": "https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-{version}-bin.zip/download",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1343,6 +1431,7 @@
                 "https://github.com/hasherezade/hollows_hunter/releases/download/v{version}/hollows_hunter32_dll.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1360,6 +1449,7 @@
                 "https://www.nirsoft.net/utils/gdiview.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1374,6 +1464,7 @@
             "url": false,
             "download": "https://download.spybot.info/FileAlyzer/filealyz-{version}.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1391,6 +1482,7 @@
                 "https://github.com/hasherezade/pe-bear/releases/download/v{version}/PE-bear_{version}_x86_win_vs19.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1405,6 +1497,7 @@
             "url": false,
             "download": "http://www.alternate-tools.com/pages/c_dllanalyzer.php&progvers={version}",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1419,6 +1512,7 @@
             "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools",
             "download": "https://apps.microsoft.com/store/detail/windbg-preview/9PGJGD53TN86",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1438,6 +1532,7 @@
                 "https://github.com/zer0condition/ReverseKit/releases/download/{version}/ReverseKitLoader.exe"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1452,6 +1547,7 @@
             "url": false,
             "download": "https://github.com/spyre-project/spyre/releases/download/v{version}/spyre-{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1466,6 +1562,7 @@
             "url": false,
             "download": "https://github.com/mandiant/capa/releases/download/v{version}/capa-v{version}-windows.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1483,6 +1580,7 @@
                 "https://www.clamav.net/downloads/production/clamav-{version}.win.win32.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1500,6 +1598,7 @@
                 "https://github.com/VirusTotal/yara/releases/download/v{version}/yara-master-2251-win32.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1514,6 +1613,7 @@
             "url": false,
             "download": "https://www.nirsoft.net/utils/exeinfo.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1528,6 +1628,7 @@
             "url": false,
             "download": "https://manalyzer.org/static/manalyze_x64.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1542,6 +1643,7 @@
             "url": false,
             "download": "https://www.winitor.com/tools/pestudio/current/pestudio.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1556,6 +1658,7 @@
             "url": "https://github.com/goretk",
             "download": "https://github.com/goretk/redress",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1570,6 +1673,7 @@
             "url": false,
             "download": "https://sourceforge.net/projects/ophcrack/files/ophcrack/{version}/ophcrack-{version}-bin.zip/download",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1587,6 +1691,7 @@
                 "https://github.com/mrexodia/akt/releases/download/v{version}/armastuff.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1601,6 +1706,7 @@
             "url": false,
             "download": "https://github.com/gchq/CyberChef/releases/download/v{version}/CyberChef_v{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1615,6 +1721,7 @@
             "url": false,
             "download": "https://hashcat.net/files/hashcat-{version}.7z",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1629,6 +1736,7 @@
             "url": false,
             "download": "2.1.2",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1643,6 +1751,7 @@
             "url": "https://github.com/sceners/snd-reverser-tool",
             "download": "https://github.com/sceners/snd-reverser-tool",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1657,6 +1766,7 @@
             "url": "https://github.com/blackploit/hash-identifier",
             "download": "https://github.com/blackploit/hash-identifier",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1671,6 +1781,7 @@
             "url": "https://github.com/ius/rsatool",
             "download": "https://github.com/ius/rsatool",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1685,6 +1796,7 @@
             "url": "https://github.com/ius/rsatool",
             "download": "https://github.com/ius/rsatool/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1699,6 +1811,7 @@
             "url": "https://github.com/ohEmily/RSA_accelerator",
             "download": "https://github.com/ohEmily/RSA_accelerator",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1713,6 +1826,7 @@
             "url": "https://github.com/Smithsonian/MD5_tool",
             "download": "https://github.com/Smithsonian/MD5_tool",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1727,6 +1841,7 @@
             "url": "https://github.com/horsicq/PDBRipper/",
             "download": "https://github.com/horsicq/PDBRipper/releases/download/{version}/pdbripper_win32_portable_{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1741,6 +1856,7 @@
             "url": "https://www.nirsoft.net/utils/dll_export_viewer.html",
             "download": "https://www.nirsoft.net/utils/dllexp-x64.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Extracting/DLL/DLL Export Viewer/x64/dllexp.cfg"
             ]
@@ -1757,6 +1873,7 @@
             "url": "https://github.com/LongSoft/UEFITool",
             "download": "https://github.com/LongSoft/UEFITool/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1771,6 +1888,7 @@
             "url": "https://www.nirsoft.net/utils/firmware_tables_view.html",
             "download": "https://www.nirsoft.net/utils/firmware_tables_view.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Extracting/Universal/Firmware Tables View/x64/FirmwareTablesView.cfg"
             ]
@@ -1787,6 +1905,7 @@
             "url": false,
             "download": "https://github.com/Jakiboy/Ratr/releases/download/{version}/Ratr.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1801,6 +1920,7 @@
             "url": "https://www.nirsoft.net/utils/resources_extract.html",
             "download": "https://www.nirsoft.net/utils/resourcesextract.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Extracting/Resource/ResourcesExtract/x64/ResourcesExtract.cfg"
             ]
@@ -1817,6 +1937,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1831,6 +1952,7 @@
             "url": "https://www.aldeid.com/wiki/BinText",
             "download": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/bintext/BinText33.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1845,6 +1967,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1859,6 +1982,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1873,6 +1997,7 @@
             "url": "https://github.com/blackninja23/NinjaRipper",
             "download": "https://github.com/blackninja23/NinjaRipper/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1887,6 +2012,7 @@
             "url": "https://github.com/DerPopo/UABE",
             "download": "https://github.com/DerPopo/UABE/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1901,6 +2027,7 @@
             "url": "https://github.com/elbereth/DragonUnPACKer",
             "download": "https://github.com/elbereth/DragonUnPACKer/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1915,6 +2042,7 @@
             "url": "http://www.deep-shadows.com/hax/3DRipperDX.htm",
             "download": "http://www.deep-shadows.com/hax/3DRipperDX.htm",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1929,6 +2057,7 @@
             "url": "https://github.com/aluigi/quickbms",
             "download": "https://github.com/aluigi/quickbms/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1943,6 +2072,7 @@
             "url": "https://github.com/Perfare/UnityAssetEditor",
             "download": "https://github.com/Perfare/UnityAssetEditor/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1957,6 +2087,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1971,6 +2102,7 @@
             "url": "https://github.com/Perfare/UnityStudio",
             "download": "https://github.com/Perfare/UnityStudio/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1985,6 +2117,7 @@
             "url": "https://github.com/IIIIIIIIIIII/UnityEx",
             "download": "https://github.com/IIIIIIIIIIII/UnityEx/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -1999,6 +2132,7 @@
             "url": "https://github.com/mafaca/UtinyRipper",
             "download": "https://github.com/mafaca/UtinyRipper/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2013,6 +2147,7 @@
             "url": "https://www.nirsoft.net/utils/browser_password_recovery.html",
             "download": "https://www.nirsoft.net/utils/browserview.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Extracting/Password/Browser Pass View/WebBrowserPassView.cfg"
             ]
@@ -2029,6 +2164,7 @@
             "url": "https://www.sordum.org/10411/router-default-password-v1-1/",
             "download": "https://www.sordum.org/files/download/router-default-passwords/RouterDP.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2046,6 +2182,7 @@
                 "https://www.nirsoft.net/toolsdownload/wirelesskeyview-x64.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2060,6 +2197,7 @@
             "url": false,
             "download": "https://www.nirsoft.net/toolsdownload/chromepass.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2077,6 +2215,7 @@
                 "https://www.nirsoft.net/utils/passwordscan-x64.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2091,6 +2230,7 @@
             "url": "https://www.nirsoft.net/utils/passwordfox.html",
             "download": "https://www.nirsoft.net/utils/passwordfox.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2105,6 +2245,7 @@
             "url": "https://github.com/keshon/mskeys",
             "download": "https://github.com/keshon/mskeys",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2119,6 +2260,7 @@
             "url": "https://www.nirsoft.net/utils/product_cd_key_viewer.html",
             "download": "https://www.nirsoft.net/utils/produkey.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2133,6 +2275,7 @@
             "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/regjump",
             "download": "https://download.sysinternals.com/files/RegJump.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2147,6 +2290,7 @@
             "url": "https://www.nirsoft.net/utils/regscanner.html",
             "download": "https://www.nirsoft.net/utils/regscanner.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Extracting/Registry/RegScanner/regscanner.cfg"
             ]
@@ -2163,6 +2307,7 @@
             "url": "https://www.nirsoft.net/utils/reg_file_export.html",
             "download": "https://www.nirsoft.net/utils/regfileexport.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2177,6 +2322,7 @@
             "url": "https://www.nirsoft.net/utils/reg_file_from_application.html",
             "download": "https://www.nirsoft.net/utils/regfromapp.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2191,6 +2337,7 @@
             "url": "https://github.com/keydet89/RegRipper3.0",
             "download": "https://github.com/keydet89/RegRipper3.0/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2205,6 +2352,7 @@
             "url": "https://github.com/Bioruebe/UniExtract2",
             "download": "https://github.com/Bioruebe/UniExtract2/releases/download/v{version}-rc.3/UniExtractRC3.zip",
             "script": "flatten",
+            "pswd": false,
             "remove": [
                 "/Extracting/Setup/Universal/UniExtract/exe/UniExtract.ini"
             ]
@@ -2221,6 +2369,7 @@
             "url": "https://www.havysoft.cl/innoextractor.html",
             "download": "https://www.havysoft.cl/download/IE_Install.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2235,6 +2384,7 @@
             "url": false,
             "download": "https://github.com/Malzilla/InnoBF/releases/download/1.0.0/innobf.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2249,6 +2399,7 @@
             "url": "https://constexpr.org/innoextract/",
             "download": "https://constexpr.org/innoextract/files/innoextract-1.9-windows.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2263,6 +2414,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2277,6 +2429,7 @@
             "url": "https://github.com/WhatTheBlock/innounp/",
             "download": "https://github.com/WhatTheBlock/innounp/releases/download/v0.50/innounp.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2291,6 +2444,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2305,6 +2459,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2319,6 +2474,7 @@
             "url": "https://github.com/activescott/lessmsi",
             "download": "https://github.com/activescott/lessmsi/releases/download/v2.10.4/lessmsi-v2.10.4.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2333,6 +2489,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2349,6 +2506,7 @@
             "script": [
                 "flatten"
             ],
+            "pswd": false,
             "remove": [
                 "/Unpacking/XVolkolak/base/xvlk.ini"
             ]
@@ -2365,6 +2523,7 @@
             "url": false,
             "download": "https://github.com/SychicBoy/NETReactorSlayer/releases/download/v{version}/NETReactorSlayer-windows.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2382,6 +2541,7 @@
                 "https://github.com/hasherezade/mal_unpack/releases/download/{version}/mal_unpack32.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2396,6 +2556,7 @@
             "url": "https://github.com/ElektroKill/ILPUnpack",
             "download": "https://github.com/ElektroKill/ILPUnpack",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2410,6 +2571,7 @@
             "url": "https://github.com/XenocodeRCE/ConfuserEx-Unpacker",
             "download": "https://github.com/XenocodeRCE/ConfuserEx-Unpacker",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2424,6 +2586,7 @@
             "url": false,
             "download": "https://github.com/RexProg/ILProtectorUnpacker/releases/download/{version}/ILProtectorUnpacker.V{version}.rar",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2438,6 +2601,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2452,6 +2616,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2466,6 +2631,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2480,6 +2646,7 @@
             "url": "https://github.com/unipacker/unipacker",
             "download": "https://github.com/unipacker/unipacker",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2494,6 +2661,7 @@
             "url": false,
             "download": "https://github.com/ViRb3/de4dot-cex/releases/download/v{version}/de4dot-cex.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2508,6 +2676,7 @@
             "url": "https://github.com/orcastor/unpack",
             "download": "https://github.com/orcastor/unpack",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2522,6 +2691,7 @@
             "url": "https://github.com/lifenjoiner/ISx",
             "download": "https://github.com/lifenjoiner/ISx",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2536,6 +2706,7 @@
             "url": false,
             "download": "https://github.com/lifenjoiner/ISx/releases/download/v{version}/ISx-v{version}-win32.7z",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2550,6 +2721,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2564,6 +2736,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2578,6 +2751,7 @@
             "url": "https://github.com/fatrolls/Quick-Unpack",
             "download": "https://github.com/fatrolls/Quick-Unpack",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2592,6 +2766,7 @@
             "url": false,
             "download": "https://github.com/Hendi48/Magicmida/releases/download/{version}/Magicmida.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2606,6 +2781,7 @@
             "url": "https://binary.ninja/",
             "download": "https://binary.ninja/demo/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2620,6 +2796,7 @@
             "url": "https://www.jetbrains.com/decompiler/",
             "download": "https://www.jetbrains.com/decompiler/download/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2634,6 +2811,7 @@
             "url": "https://github.com/java-decompiler/jd-gui",
             "download": "https://github.com/java-decompiler/jd-gui/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2648,6 +2826,7 @@
             "url": "https://github.com/skylot/jadx",
             "download": "https://github.com/skylot/jadx/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2662,6 +2841,7 @@
             "url": false,
             "download": "https://github.com/Konloch/bytecode-viewer/releases/download/v{version}/Bytecode-Viewer-{version}.jar",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2676,6 +2856,7 @@
             "url": "https://github.com/icsharpcode/ILSpy",
             "download": "https://github.com/icsharpcode/ILSpy/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2690,6 +2871,7 @@
             "url": "https://www.red-gate.com/products/dotnet-development/reflector/",
             "download": "https://www.red-gate.com/products/dotnet-development/reflector/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2704,6 +2886,7 @@
             "url": "https://github.com/java-decompiler/jd-gui",
             "download": "https://github.com/java-decompiler/jd-gui/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2718,6 +2901,7 @@
             "url": "https://github.com/GraxCode/JByteMod-Beta",
             "download": "https://github.com/GraxCode/JByteMod-Beta/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2732,6 +2916,7 @@
             "url": "https://www.vb-decompiler.org/",
             "download": "https://www.vb-decompiler.org/download.htm",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2746,6 +2931,7 @@
             "url": "https://www.neshkov.com/dj.html",
             "download": "https://www.neshkov.com/dj/download.html",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2760,6 +2946,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2774,6 +2961,7 @@
             "url": "https://github.com/jindrapetrik/jpexs-decompiler",
             "download": "https://github.com/jindrapetrik/jpexs-decompiler/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2788,6 +2976,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2802,6 +2991,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2816,6 +3006,7 @@
             "url": "https://github.com/NationalSecurityAgency/ghidra",
             "download": "https://github.com/NationalSecurityAgency/ghidra/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2833,6 +3024,7 @@
                 "https://github.com/hasherezade/ViDi/releases/download/{version}/vidi_{version}_x86_win.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2847,6 +3039,7 @@
             "url": "https://github.com/WebAssembly/wabt",
             "download": "https://github.com/WebAssembly/wabt/releases/download/{version}/wabt-{version}-windows-x64.tar.gz",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2861,6 +3054,7 @@
             "url": "https://hex-rays.com/ida-free/",
             "download": "https://hex-rays.com/ida-free/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2875,6 +3069,7 @@
             "url": "https://github.com/capstone-engine/capstone",
             "download": "https://github.com/capstone-engine/capstone/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2889,6 +3084,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2903,6 +3099,7 @@
             "url": "https://github.com/bitdefender/bddisasm",
             "download": "https://github.com/bitdefender/bddisasm/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2917,6 +3114,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2931,6 +3129,7 @@
             "url": "https://github.com/Rustemsoft/Refractor-.NET-assembly-browser-and-decompiler",
             "download": "https://github.com/Rustemsoft/Refractor-.NET-assembly-browser-and-decompiler/archive/refs/tags/v1.0.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2945,6 +3144,7 @@
             "url": "https://www.exetools.com/",
             "download": "https://www.exetools.com/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2959,6 +3159,7 @@
             "url": "https://github.com/WerWolv/ImHex",
             "download": "https://github.com/WerWolv/ImHex/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2973,6 +3174,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -2987,6 +3189,7 @@
             "url": "https://mh-nexus.de/en/hxd/",
             "download": "https://mh-nexus.de/en/downloads.php?product=HxD",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3001,6 +3204,7 @@
             "url": "https://www.hiew.ru/",
             "download": "https://www.hiew.ru/download/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3015,6 +3219,7 @@
             "url": "https://github.com/x64dbg/x64dbg",
             "download": "https://github.com/x64dbg/x64dbg/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3029,6 +3234,7 @@
             "url": "https://www.immunityinc.com/products/debugger/",
             "download": "https://www.immunityinc.com/products/debugger/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3043,6 +3249,7 @@
             "url": "https://github.com/rizinorg/cutter",
             "download": "https://github.com/rizinorg/cutter/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3057,6 +3264,7 @@
             "url": "https://github.com/dnSpy/dnSpy",
             "download": "https://github.com/dnSpy/dnSpy/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3071,6 +3279,7 @@
             "url": "http://www.ollydbg.de/",
             "download": "http://www.ollydbg.de/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3085,6 +3294,7 @@
             "url": "https://github.com/radareorg/radare2",
             "download": "https://github.com/radareorg/radare2/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3099,6 +3309,7 @@
             "url": "https://www.f2ko.de/en/b2e.php",
             "download": "https://www.f2ko.de/en/programme/b2e/Bat_To_Exe_Converter.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3113,6 +3324,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3127,6 +3339,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3141,6 +3354,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3155,6 +3369,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3169,6 +3384,7 @@
             "url": "https://github.com/AndresMorelos/PNG-to-ICO",
             "download": "https://github.com/AndresMorelos/PNG-to-ICO/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3183,6 +3399,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3197,6 +3414,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3211,6 +3429,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3225,6 +3444,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3239,6 +3459,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3253,6 +3474,7 @@
             "url": "http://www.angusj.com/resourcehacker/",
             "download": "http://www.angusj.com/resourcehacker/resource_hacker.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3267,6 +3489,7 @@
             "url": "https://www.mzrst.com/",
             "download": "https://www.mzrst.com/ppee.html",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3281,6 +3504,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3295,6 +3519,7 @@
             "url": "https://github.com/petoolse/petools",
             "download": "https://github.com/petoolse/petools/releases/download/v{version}/PE.Tools.v{version}.2018.7z",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3312,6 +3537,7 @@
                 "https://github.com/horsicq/XPEViewer/releases/download/{version}/xpeviewer_win64_portable_{version}_x64.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3326,6 +3552,7 @@
             "url": "https://github.com/namazso/ReClassEx",
             "download": "https://github.com/namazso/ReClassEx/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3340,6 +3567,7 @@
             "url": "https://github.com/ReClassNET/ReClass.NET",
             "download": "https://github.com/ReClassNET/ReClass.NET/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3354,6 +3582,7 @@
             "url": "https://github.com/resedit/resedit",
             "download": "https://github.com/resedit/resedit/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3368,6 +3597,7 @@
             "url": "https://ntcore.com/?page_id=388",
             "download": "https://ntcore.com/files/ExplorerSuite.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3382,6 +3612,7 @@
             "url": "https://www.resource-builder.com/download-resource-builder/",
             "download": "https://www.sicomponents.com/soft/ResourceBuilder4.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3396,6 +3627,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3410,6 +3642,7 @@
             "url": "https://github.com/KDE/kdiff3",
             "download": "https://github.com/KDE/kdiff3/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3427,6 +3660,7 @@
                 "https://github.com/horsicq/XELFViewer/releases/download/{version}/xelfviewer_win64_portable_{version}.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3441,6 +3675,7 @@
             "url": "https://github.com/cheat-engine/cheat-engine",
             "download": "https://github.com/cheat-engine/cheat-engine/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3455,6 +3690,7 @@
             "url": "https://github.com/NtQuery/Scylla",
             "download": "https://github.com/NtQuery/Scylla/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3469,6 +3705,7 @@
             "url": "http://www.woodmann.com/collaborative/tools/index.php/LordPE",
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3483,6 +3720,7 @@
             "url": "https://github.com/crypto2011/ImpREC",
             "download": "https://github.com/crypto2011/ImpREC/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3497,6 +3735,7 @@
             "url": "https://github.com/frida/frida",
             "download": "https://github.com/frida/frida/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3511,6 +3750,7 @@
             "url": "https://codejock.com/products/toolkitpro/",
             "download": "https://codejock.com/products/toolkitpro/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3525,6 +3765,7 @@
             "url": "https://github.com/DarthTon/Xenos",
             "download": "https://github.com/DarthTon/Xenos/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3539,6 +3780,7 @@
             "url": "https://github.com/MojtabaTajik/Robber",
             "download": "https://github.com/MojtabaTajik/Robber/releases/download/{version}/Robber_{version}.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3553,6 +3795,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3567,6 +3810,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3581,6 +3825,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3595,6 +3840,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3609,6 +3855,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3623,6 +3870,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3637,6 +3885,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3651,6 +3900,7 @@
             "url": "https://github.com/EasyHook/EasyHook",
             "download": "https://github.com/EasyHook/EasyHook/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3665,6 +3915,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3679,6 +3930,7 @@
             "url": "https://www.alternate-tools.com/pages/c_splitter.php",
             "download": "https://www.alternate-tools.com/files/Splitter.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3693,6 +3945,7 @@
             "url": "https://notepad-plus-plus.org/",
             "download": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v{version}/npp.{version}.portable.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3710,6 +3963,7 @@
                 "https://github.com/FarGroup/FarManager/releases/download/ci%2Fv3.0.6598.4659/Far.x86.3.0.6598.4659.1042fd3deb6a74bc44dd224be44e9dac99cd93d0.7z"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3724,6 +3978,7 @@
             "url": "https://hosts.codeplex.com/",
             "download": "https://hosts.codeplex.com/downloads/get/clickonce/HostsEditor.application",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3738,6 +3993,7 @@
             "url": "https://github.com/darhmedia/DMcsvEditor",
             "download": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/dmcsveditor/dmcsveditor_{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Editing/File/DMcsvEditor/settings.cfg"
             ]
@@ -3754,6 +4010,7 @@
             "url": "https://www.donkeydevelopment.com/xmltreeedit/",
             "download": "https://www.donkeydevelopment.com/xmltreeedit/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3768,6 +4025,7 @@
             "url": "https://sourceforge.net/projects/iniedit/",
             "download": "https://sourceforge.net/projects/iniedit/files/ini_edit_setup.exe/download",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3782,6 +4040,7 @@
             "url": "https://github.com/zaro/pdf-metadata-editor",
             "download": "https://github.com/zaro/pdf-metadata-editor/releases/download/v{version}/pdf-metadata-editor-{version}-windows-portable.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3796,6 +4055,7 @@
             "url": "https://github.com/exiftool/exiftool",
             "download": "https://github.com/exiftool/exiftool/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3810,6 +4070,7 @@
             "url": "https://github.com/StefanoDeVuono/steghide",
             "download": "https://github.com/StefanoDeVuono/steghide/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3824,6 +4085,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3838,6 +4100,7 @@
             "url": "https://jrsoftware.org/isinfo.php",
             "download": "https://jrsoftware.org/download.php/is.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3852,6 +4115,7 @@
             "url": "https://www.kymoto.org/products/inno-script-studio",
             "download": "https://www.kymoto.org/products/inno-script-studio",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3866,6 +4130,7 @@
             "url": "https://www.sordum.org/14327/network-profile-name-changer-v1-4/",
             "download": "https://www.sordum.org/files/download/network-profile-name-changer/NetPnc.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3880,6 +4145,7 @@
             "url": "https://www.sordum.org/9660/netdisabler-v1-0/",
             "download": "https://www.sordum.org/files/download/netdisabler/NetDisabler.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3894,6 +4160,7 @@
             "url": "https://www.sordum.org/10636/url-disabler-v1-0/",
             "download": "https://www.sordum.org/files/download/urldisabler/UrlDisabler.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3908,6 +4175,7 @@
             "url": "https://www.sordum.org/8125/firewall-app-blocker-fab-v1-9/",
             "download": "https://www.sordum.org/files/download/firewall-app-blocker-fab/Fab.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3922,6 +4190,7 @@
             "url": "https://www.sordum.org/9181/dns-lock-v1-0/",
             "download": "https://www.sordum.org/files/download/dnslock/DNS-Lock.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3936,6 +4205,7 @@
             "url": "https://github.com/winscp/winscp",
             "download": "https://winscp.net/eng/downloads.php",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Editing/System/Network/WinSCP/WinSCP.ini"
             ]
@@ -3952,6 +4222,7 @@
             "url": "https://www.sordum.org/10636/defender-exclusion-tool-v1-4",
             "download": "https://www.sordum.org/files/download/defender-exclusion-tool/ExcTool.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3966,6 +4237,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3980,6 +4252,7 @@
             "url": "https://www.sordum.org/8098/run-block-v1-0/",
             "download": "https://www.sordum.org/files/download/runblock/RunBlock.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -3994,6 +4267,7 @@
             "url": "https://www.sordum.org/9197/reduce-memory-v1-6/",
             "download": "https://www.sordum.org/files/download/reducememory/ReduceMemory.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4008,6 +4282,7 @@
             "url": "https://www.sordum.org/8104/drive-protect-v1-0/",
             "download": "https://www.sordum.org/files/download/driveprotect/DriveProtect.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4022,6 +4297,7 @@
             "url": "https://www.sordum.org/7952/ratool-v1-3/",
             "download": "https://www.sordum.org/files/download/ratool/Ratool.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4036,6 +4312,7 @@
             "url": "https://ascgendotnet.jmsoftware.co.uk/",
             "download": "https://ascgendotnet.jmsoftware.co.uk/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4050,6 +4327,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4064,6 +4342,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4078,6 +4357,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4092,6 +4372,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4106,6 +4387,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4120,6 +4402,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4134,6 +4417,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4148,6 +4432,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4162,6 +4447,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4176,6 +4462,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4190,6 +4477,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4204,6 +4492,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4218,6 +4507,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4232,6 +4522,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4246,6 +4537,7 @@
             "url": "https://github.com/jmacd/xdelta",
             "download": "https://github.com/jmacd/xdelta/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4260,6 +4552,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4274,6 +4567,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4288,6 +4582,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4302,6 +4597,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4316,6 +4612,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4330,6 +4627,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4344,6 +4642,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4358,6 +4657,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4372,6 +4672,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4386,6 +4687,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4400,6 +4702,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4414,6 +4717,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4428,6 +4732,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4442,6 +4747,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4456,6 +4762,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4470,6 +4777,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4484,6 +4792,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4498,6 +4807,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4512,6 +4822,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4526,6 +4837,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4540,6 +4852,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4554,6 +4867,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4568,6 +4882,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4582,6 +4897,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4596,6 +4912,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4610,6 +4927,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4624,6 +4942,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4638,6 +4957,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4652,6 +4972,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4666,6 +4987,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4680,6 +5002,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4694,6 +5017,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4708,6 +5032,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4725,6 +5050,7 @@
                 "https://16-bits.org/ft2-clone-v{version}-win32.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4739,6 +5065,7 @@
             "url": "https://github.com/milkytracker/MilkyTracker",
             "download": "https://github.com/milkytracker/MilkyTracker/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4753,6 +5080,7 @@
             "url": "https://github.com/OpenMPT/openmpt",
             "download": "https://github.com/OpenMPT/openmpt/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4767,6 +5095,7 @@
             "url": "https://github.com/8bitbubsy/pt2-clone",
             "download": "https://github.com/8bitbubsy/pt2-clone/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4781,6 +5110,7 @@
             "url": "https://sourceforge.net/projects/modplugplayer/",
             "download": "https://sourceforge.net/projects/modplugplayer/files/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4795,6 +5125,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4809,6 +5140,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4823,6 +5155,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4837,6 +5170,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4851,6 +5185,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4865,6 +5200,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4879,6 +5215,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4893,6 +5230,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4907,6 +5245,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4921,6 +5260,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4935,6 +5275,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4949,6 +5290,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4963,6 +5305,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4977,6 +5320,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -4991,6 +5335,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5005,6 +5350,7 @@
             "url": "http://www.radasm.com/",
             "download": "http://www.radasm.com/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5019,6 +5365,7 @@
             "url": "https://flatassembler.net/",
             "download": "https://flatassembler.net/fasm-1.73.30.tgz",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5033,6 +5380,7 @@
             "url": "http://www.goasm.com/",
             "download": "http://www.goasm.com/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5047,6 +5395,7 @@
             "url": "https://github.com/netwide-assembler/nasm",
             "download": "https://github.com/netwide-assembler/nasm/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5061,6 +5410,7 @@
             "url": "https://www.autoitscript.com/site/autoit/",
             "download": "https://www.autoitscript.com/site/autoit/downloads/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5075,6 +5425,7 @@
             "url": "https://sourceforge.net/projects/orphamielautoclicker/",
             "download": "https://sf-eu-introserv-1.dl.sourceforge.net/project/orphamielautoclicker/{version}/AutoClicker.exe?viasf=1",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5089,6 +5440,7 @@
             "url": "https://www.mouserecorder.com/index.html",
             "download": "https://www.macrorecorder.com/MacroRecorderSetup.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5103,6 +5455,7 @@
             "url": "1.1",
             "download": "https://www.sordum.org/files/download/send-windows-key/SendWKey.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5117,6 +5470,7 @@
             "url": "https://www.nirsoft.net/utils/run_as_date.html",
             "download": "https://www.nirsoft.net/utils/runasdate.zip",
             "script": false,
+            "pswd": false,
             "remove": [
                 "/Bypassing/RunAsDate/x64/RunAsDate.cfg"
             ]
@@ -5133,6 +5487,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5147,6 +5502,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5161,6 +5517,7 @@
             "url": "https://www.nirsoft.net/utils/run_from_process.html",
             "download": "https://www.nirsoft.net/utils/runfromprocess.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5175,6 +5532,7 @@
             "url": "https://www.sordum.org/16219/skip-uac-prompt-v1-2/",
             "download": "https://www.sordum.org/files/download/skip-uac-prompt/SkipUAC.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5189,6 +5547,7 @@
             "url": "https://github.com/x64dbg/ScyllaHide",
             "download": "https://github.com/x64dbg/ScyllaHide/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5208,6 +5567,7 @@
                 "https://github.com/sandboxie-plus/Sandboxie/releases/download/v{version}/Sandboxie-Classic-x86-v5.68.3.exe"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5222,6 +5582,7 @@
             "url": "https://www.microsoft.com/net",
             "download": "https://dotnet.microsoft.com/en-us/download/dotnet-framework",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5236,6 +5597,7 @@
             "url": "https://learn.microsoft.com/en-us/windows/win32/directx",
             "download": "https://www.microsoft.com/en-us/download/details.aspx?id=35",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5250,6 +5612,7 @@
             "url": "https://www.oracle.com/java/technologies/downloads/",
             "download": "https://www.oracle.com/java/technologies/downloads/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5264,6 +5627,7 @@
             "url": "https://www.oracle.com/java/technologies/javase-downloads.html",
             "download": "https://www.oracle.com/java/technologies/javase-downloads.html",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5278,6 +5642,7 @@
             "url": "https://github.com/Kitware/CMake",
             "download": "https://github.com/Kitware/CMake/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5292,6 +5657,7 @@
             "url": "https://learn.microsoft.com/en-us/dotnet/visual-basic/",
             "download": "https://visualstudio.microsoft.com/vb/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5309,6 +5675,7 @@
                 "https://www.python.org/ftp/python/{version}/python-{version}.exe"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5323,6 +5690,7 @@
             "url": "https://learn.microsoft.com/en-us/cpp/",
             "download": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5337,6 +5705,7 @@
             "url": "https://github.com/nmap/npcap",
             "download": "https://npcap.com/dist/npcap-{version}.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5351,6 +5720,7 @@
             "url": "https://github.com/nmap/npcap",
             "download": "https://npcap.com/dist/npcap-{version}.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5365,6 +5735,7 @@
             "url": "https://gnuwin32.sourceforge.net/packages/zip.htm",
             "download": "https://sf-eu-introserv-1.dl.sourceforge.net/project/gnuwin32/zip/{version}/zip-{version}-setup.exe?viasf=1",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5379,6 +5750,7 @@
             "url": "https://github.com/JetBrains/hasher",
             "download": "https://github.com/JetBrains/hasher/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5393,6 +5765,7 @@
             "url": "https://github.com/ashutosh1206/Crypto-Hash-Generator",
             "download": "https://github.com/ashutosh1206/Crypto-Hash-Generator",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5407,6 +5780,7 @@
             "url": "https://hohnstaedt.de/xca/",
             "download": "https://github.com/chris2511/xca/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5421,6 +5795,7 @@
             "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
             "download": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5435,6 +5810,7 @@
             "url": "https://www.sordum.org/10946/sordum-random-password-generator/",
             "download": "https://www.sordum.org/files/download/random-password-generator/RandomPW.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5449,6 +5825,7 @@
             "url": "https://sourceforge.net/projects/winhasher/",
             "download": "https://sourceforge.net/projects/winhasher/files/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5463,6 +5840,7 @@
             "url": "https://www.nirsoft.net/utils/hash_my_files.html",
             "download": "https://www.nirsoft.net/utils/hashmyfiles.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5477,6 +5855,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5491,6 +5870,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5505,6 +5885,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5519,6 +5900,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5533,6 +5915,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5547,6 +5930,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5561,6 +5945,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5575,6 +5960,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5589,6 +5975,7 @@
             "url": "https://github.com/balena-io/etcher",
             "download": "https://github.com/balena-io/etcher/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5603,6 +5990,7 @@
             "url": "https://github.com/andreas-marschke/whatsapp-viewer",
             "download": "https://github.com/andreas-marschke/whatsapp-viewer/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5617,6 +6005,7 @@
             "url": "https://github.com/scito/extract_otp_secrets",
             "download": "https://github.com/scito/extract_otp_secrets/releases/download/v2.12.0/extract_otp_secrets_2.12.0_win_x86_64.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5631,6 +6020,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5645,6 +6035,7 @@
             "url": "https://github.com/kefir500/apk-editor-studio",
             "download": "https://github.com/kefir500/apk-editor-studio/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5659,6 +6050,7 @@
             "url": "https://forum.xda-developers.com/t/tool-windows-apk-easy-tool-v1-60-2023-02-23.3333960/",
             "download": "https://forum.xda-developers.com/attachments/apk-easy-tool-v2-4-1-7z.5981335/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5673,6 +6065,7 @@
             "url": "https://github.com/koush/adb-install",
             "download": "https://github.com/koush/adb-install",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5687,6 +6080,7 @@
             "url": "https://adbdriver.com/",
             "download": "https://adbdriver.com/downloads/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5701,6 +6095,7 @@
             "url": "https://github.com/pepakriz/apk-installer",
             "download": "https://github.com/pepakriz/apk-installer/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5715,6 +6110,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5729,6 +6125,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5743,6 +6140,7 @@
             "url": "https://github.com/APK-Multi-Tool/APK-Multi-Tool",
             "download": "https://github.com/APK-Multi-Tool/APK-Multi-Tool/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5757,6 +6155,7 @@
             "url": "https://github.com/iBotPeaches/Apktool",
             "download": "https://github.com/iBotPeaches/Apktool/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5771,6 +6170,7 @@
             "url": "https://odindownload.com/",
             "download": "https://odindownload.com/download/Odin3_v3.14.4.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5785,6 +6185,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5799,6 +6200,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5813,6 +6215,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5827,6 +6230,7 @@
             "url": "http://en.pangu.io/",
             "download": "http://en.pangu.io/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5841,6 +6245,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5855,6 +6260,7 @@
             "url": "https://ih8sn0w.com/",
             "download": "https://ih8sn0w.com/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5869,6 +6275,7 @@
             "url": "https://ih8sn0w.com/p0sixspwn.html",
             "download": "https://ih8sn0w.com/p0sixspwn.html",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5883,6 +6290,7 @@
             "url": "https://ih8sn0w.com/ireb.html",
             "download": "https://ih8sn0w.com/ireb.html",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5897,6 +6305,7 @@
             "url": "https://www.3u.com/",
             "download": "https://www.3u.com/download",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5911,6 +6320,7 @@
             "url": "https://checkra.in/",
             "download": "https://assets.checkra.in/downloads/linux/cli/x86_64/dac9968939ea6e6bfddedb41a8a403dd0fd6b1b3daf3c1989bda4391f5b7e97f/checkra1n",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5925,6 +6335,7 @@
             "url": "https://github.com/asineth0/checkn1x",
             "download": "https://github.com/asineth0/checkn1x/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5939,6 +6350,7 @@
             "url": "https://github.com/foxlet/bootra1n",
             "download": "https://github.com/foxlet/bootra1n/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5953,6 +6365,7 @@
             "url": "https://www.alternate-tools.com/pages/c_exepacker.php",
             "download": "https://www.alternate-tools.com/files/EXEPacker.exe",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5967,6 +6380,7 @@
             "url": false,
             "download": "https://github.com/mkaring/ConfuserEx/releases/download/v{version}/ConfuserEx.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5981,6 +6395,7 @@
             "url": "https://www.pelock.com/products/netshrink",
             "download": "https://www.pelock.com/download/netshrink.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -5995,6 +6410,7 @@
             "url": "https://www.pelock.com/products/obfuscator",
             "download": "https://www.pelock.com/download/obfuscator.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6009,6 +6425,7 @@
             "url": "https://www.pelock.com/jobfuscator/",
             "download": "https://www.pelock.com/download/jobfuscator.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6023,6 +6440,7 @@
             "url": "https://www.pelock.com/products/pelockK",
             "download": "https://www.pelock.com/download/pelock.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6037,6 +6455,7 @@
             "url": "https://github.com/bytecode77/pe-union",
             "download": "https://downloads.bytecode77.com/PEunion%20{version}.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6051,6 +6470,7 @@
             "url": "https://github.com/upx/upx",
             "download": "https://github.com/upx/upx/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6065,6 +6485,7 @@
             "url": "https://www.pelock.com/autoit-obfuscator/",
             "download": "https://www.pelock.com/download/autoit-obfuscator.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6079,6 +6500,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6093,6 +6515,7 @@
             "url": "https://github.com/pyscripter/pyscripter",
             "download": "https://github.com/pyscripter/pyscripter/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6107,6 +6530,7 @@
             "url": "https://github.com/Embarcadero/Dev-Cpp",
             "download": "https://github.com/Embarcadero/Dev-Cpp/releases/download/v6.3/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Portable.7z",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6121,6 +6545,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6135,6 +6560,7 @@
             "url": "https://github.com/cmderdev/cmder",
             "download": "https://github.com/cmderdev/cmder/releases/download/v{version}/cmder.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6152,6 +6578,7 @@
                 "https://github.com/DevToys-app/DevToys/releases/download/v{version}/devtoys_win_x86_portable.zip"
             ],
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6166,6 +6593,7 @@
             "url": "https://www.godevtool.com/GolinkHelp/GoLink.htm",
             "download": "https://www.godevtool.com/Golink.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6180,6 +6608,7 @@
             "url": "https://www.godevtool.com/GorcFrame.htm",
             "download": "https://www.godevtool.com/Gorc.zip",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6194,6 +6623,7 @@
             "url": "https://smallbasic-publicwebsite.azurewebsites.net/",
             "download": "https://smallbasic-publicwebsite.azurewebsites.net/assets/SmallBasic_v{version}.msi",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6208,6 +6638,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6222,6 +6653,7 @@
             "url": "https://github.com/fritzing/fritzing-app",
             "download": "https://github.com/fritzing/fritzing-app/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6236,6 +6668,7 @@
             "url": "https://github.com/simulide/simulide",
             "download": "https://github.com/simulide/simulide/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6250,6 +6683,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6264,6 +6698,7 @@
             "url": "https://github.com/lcgamboa/picsimlab",
             "download": "https://github.com/lcgamboa/picsimlab/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6278,6 +6713,7 @@
             "url": "http://www.unoardusim.com/",
             "download": "http://www.unoardusim.com/",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6292,6 +6728,7 @@
             "url": "https://github.com/pfalcon/awesome-circuit-simulator",
             "download": "https://github.com/pfalcon/awesome-circuit-simulator",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6306,6 +6743,7 @@
             "url": "https://github.com/logisim-evolution/logisim-evolution",
             "download": "https://github.com/logisim-evolution/logisim-evolution/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6320,6 +6758,7 @@
             "url": "https://github.com/arduino/arduino-cli",
             "download": "https://github.com/arduino/arduino-cli/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6334,6 +6773,7 @@
             "url": "https://gitlab.gnome.org/GNOME/dia",
             "download": "https://gitlab.gnome.org/GNOME/dia/-/releases",
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6348,6 +6788,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6362,6 +6803,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6376,6 +6818,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6390,6 +6833,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6404,6 +6848,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6418,6 +6863,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6432,6 +6878,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6446,6 +6893,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6460,6 +6908,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6474,6 +6923,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6488,6 +6938,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6502,6 +6953,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6516,6 +6968,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6530,6 +6983,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6544,6 +6998,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6558,6 +7013,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6572,6 +7028,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6586,6 +7043,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6600,6 +7058,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6614,6 +7073,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6628,6 +7088,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6642,6 +7103,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6656,6 +7118,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6670,6 +7133,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6684,6 +7148,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6698,6 +7163,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6712,6 +7178,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6726,6 +7193,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6740,6 +7208,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6754,6 +7223,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6768,6 +7238,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6782,6 +7253,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6796,6 +7268,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6810,6 +7283,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6824,6 +7298,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6838,6 +7313,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6852,6 +7328,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         },
         {
@@ -6866,6 +7343,7 @@
             "url": false,
             "download": false,
             "script": false,
+            "pswd": false,
             "remove": false
         }
     ]

@@ -2,5 +2,13 @@
     "error": {
         "title": "Error",
         "section": "Section content no found"
+    },
+    "ai": {
+        "assistant": "Hello! I'm your ReVens AI assistant. I can help you analyze files and answer questions about reverse engineering.\nTry using menu `Open File` or ask me anything!",
+        "error": {
+            "system": "AI Assistant is not available.\nUse menu `File` > `Download AI assistant` to install it.",
+            "no-assistant": "AI Assistant is not installed",
+            "no-model": "AI Model is not downloaded"
+        }
     }
 }

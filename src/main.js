@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.4.x
+ * Version : 1.5.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -78,6 +78,19 @@ app.once('ready', () => {
             const status = checkPackageStatus();
             if (status.status === 'empty') {
                 setTimeout(() => {
+                    // Check if download should be disabled
+                    const config = require('./config/app.json');
+                    if (config.baseDir && config.debug) {
+                        dialog.showMessageBox(launcher, {
+                            type: 'warning',
+                            buttons: ['OK'],
+                            title: 'Download Disabled',
+                            message: 'Package download is disabled',
+                            detail: 'Download is not available when baseDir is set in debug mode.'
+                        });
+                        return;
+                    }
+
                     dialog.showMessageBox(launcher, {
                         type: 'question',
                         buttons: ['Download', 'Cancel'],

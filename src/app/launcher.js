@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.4.x
+ * Version : 1.5.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -13,7 +13,7 @@ import Tabs from './components/tabs';
 import Content from './components/content';
 import Footer from './components/footer';
 import About from './components/about';
-import Doc from './components/doc';
+import Notice from './components/notice';
 import Settings from './components/settings';
 import Search from './components/search';
 import Download from './components/download';
@@ -45,7 +45,12 @@ const Launcher = () => {
       }
     };
 
+    const handleSwitchToAI = () => {
+      setActiveTab('ai');
+    };
+
     window.electron.onPackageStatus(handlePackageStatus);
+    window.electron.on('switch-to-ai', handleSwitchToAI);
   }, [allPaths]);
 
   return (
@@ -60,7 +65,7 @@ const Launcher = () => {
         <hr className="separator my-3" />
         <Footer />
         <About />
-        <Doc />
+        <Notice />
         <Settings />
         <Search setActiveTab={setActiveTab} />
         <Download />

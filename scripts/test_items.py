@@ -40,7 +40,7 @@ LOG_FILE = os.path.join(os.path.dirname(__file__), 'test.log')
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'Bin'))
 
 # Required properties for each item
-REQUIRED_PROPERTIES = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "script"]
+REQUIRED_PROPERTIES = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "script", "pswd"]
 
 # Global flags for ignoring specific warnings
 IGNORE_VERSION_WARNINGS = False

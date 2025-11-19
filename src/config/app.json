@@ -1,9 +1,9 @@
 {
 	"name": "ReVens",
-	"desctiption": "Reverse Engineering Toolkit AIO",
-	"notice": "Legacy v{version}",
+	"desc": "Reverse Engineering Toolkit AIO",
+	"notice": "Pentesting v{version}",
 	"url": "https://github.com/Jakiboy/ReVens",
-	"version": "1.4.1",
+	"version": "1.5.0",
 	"year": "2026",
 	"author": {
 		"name": "Jihad Sinnaour",
@@ -11,15 +11,16 @@
 		"url": "https://github.com/Jakiboy"
 	},
 	"about": {
-		"desctiption": "The Ultimate Reverse Engineering Toolkit AIO"
+		"desc": "The Ultimate Reverse Engineering Toolkit AIO"
 	},
 	"doc": {
-		"desctiption": "Windows-based Reverse Engineering Toolkit 'All-In-One', Built for <strong>Security (Penetration testing)</strong> & <strong>Educational purposes only</strong>."
+		"desc": "Windows-based Reverse Engineering Toolkit 'All-In-One', Built for <strong>Security (Penetration testing)</strong> & <strong>Educational purposes only</strong>."
 	},
 	"baseDir": false,
 	"items": {
 		"host": "https://revens.jihadsinnaour.com/download",
-		"password": "j0LfzCIvJy",
+		"token": "e4U8fXWuFeOvEA5hOnd6JHkK7doWfZiQ",
+		"pswd": "j0LfzCIvJy",
 		"parts": [
 			"Analyzing.zip",
 			"Assembling.zip",
@@ -45,6 +46,21 @@
 			"Simulating.zip",
 			"Unpacking.zip"
 		]
+	},
+	"ai": {
+		"name": "Ollama",
+		"handler": "ollama",
+		"model": "tinyllama",
+		"tag": "latest",
+		"url": "https://ollama.com",
+		"download": "https://ollama.com/download/OllamaSetup.exe",
+		"config": {
+			"hostname": "127.0.0.1",
+			"port": 11434,
+			"path": "/api/generate",
+			"method": "POST",
+			"timeout": 60000
+		}
 	},
 	"player": "/Patching/Sound/FastTracker/x64/ft2.exe",
 	"resizable": false,

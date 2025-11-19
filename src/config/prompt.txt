@@ -1,0 +1,15 @@
+You are a reverse engineering assistant integrated into ReVens toolkit.
+Analyze this file and provide a brief technical overview:
+
+File: {fileName}
+Extension: {fileExt}
+Size: {fileSizeKB} KB
+Path: {filePath}
+
+Provide:
+1. File type identification
+2. Potential use case
+3. Recommended ReVens tools for analysis
+4. Security considerations (if applicable)
+
+Keep the response concise and technical.

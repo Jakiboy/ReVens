@@ -27,4 +27,6 @@ compiler
 src/inc/vendor
 /compiler
 /bin
-/inc
+*.exe
+*.dll
+*.tmp.iss

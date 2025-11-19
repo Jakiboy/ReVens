@@ -1,13 +1,13 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.4.x
+ * Version : 1.5.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
 
-const { Menu, app } = require('electron');
-const { reload, restart, openBinFolder, openInfo, openChangelog, openUrl, downloadPackages } = require('./helper');
+const { Menu, app, dialog } = require('electron');
+const { reload, restart, openBinFolder, openInfo, openChangelog, openUrl, downloadPackages, downloadAIAssistant } = require('./helper');
 const config = require('../config/app.json');
 
 function createMenu(launcher) {
@@ -20,9 +20,27 @@ function createMenu(launcher) {
 function getTemplate(launcher) {
     const toolsSubmenu = [
         {
-            "label": 'Add file',
-            "enabled": false,
-            click() { }
+            "label": 'Open File',
+            click() {
+                dialog.showOpenDialog({
+                    properties: ['openFile'],
+                    filters: [
+                        { name: 'All Files', extensions: ['*'] },
+                        { name: 'Executables', extensions: ['exe', 'dll', 'sys'] },
+                        { name: 'Archives', extensions: ['zip', 'rar', '7z'] }
+                    ]
+                }).then(result => {
+                    if (!result.canceled && result.filePaths.length > 0) {
+                        const filePath = result.filePaths[0];
+                        // Switch to AI tab
+                        launcher.webContents.send('switch-to-ai');
+                        // Send file for analysis
+                        setTimeout(() => {
+                            launcher.webContents.send('ai-analyze-file', filePath);
+                        }, 300);
+                    }
+                });
+            }
         },
         {
             "label": 'Search packages',
@@ -35,6 +53,11 @@ function getTemplate(launcher) {
             "label": 'Download packages',
             "accelerator": 'Ctrl+Shift+D',
             click() { downloadPackages(launcher); }
+        },
+        { "type": 'separator' },
+        {
+            "label": 'Download AI assistant (beta)',
+            click() { downloadAIAssistant(launcher); }
         },
         { "type": 'separator' },
         {
@@ -83,10 +106,10 @@ function getTemplate(launcher) {
             "label": 'Help',
             "submenu": [
                 {
-                    "label": 'Documentation',
+                    "label": 'Notice',
                     "accelerator": 'Ctrl+D',
                     click() {
-                        launcher.webContents.send('open-doc');
+                        launcher.webContents.send('open-notice');
                     }
                 },
                 {

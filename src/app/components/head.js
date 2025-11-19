@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.4.x
+ * Version : 1.5.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -17,7 +17,7 @@ const Head = () => (
   <Helmet>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>{config.name} - {config.description || config.desctiption}</title>
+    <title>{config.name} - {config.desc || config.desc}</title>
   </Helmet>
 );
 

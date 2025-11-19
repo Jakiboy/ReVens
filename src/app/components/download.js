@@ -1,7 +1,7 @@
 /**
  * Author  : Jakiboy
  * Package : ReVens | Reverse Engineering Toolkit AIO
- * Version : 1.4.x
+ * Version : 1.5.x
  * Link    : https://github.com/Jakiboy/ReVens
  * license : MIT
  */
@@ -18,7 +18,7 @@ import {
     MDBProgress as Progress,
     MDBProgressBar as ProgressBar
 } from 'mdb-react-ui-kit';
-import appConfig from '../../config/app.json';
+import config from '../../config/app.json';
 
 const Download = () => {
     const [isOpened, setModalStatus] = useState(false);
@@ -26,9 +26,10 @@ const Download = () => {
     const [currentFile, setCurrentFile] = useState('');
     const [status, setStatus] = useState('');
     const [isDownloading, setIsDownloading] = useState(false);
-    const [downloadType, setDownloadType] = useState('packages'); // 'packages' or 'item'
+    const [downloadType, setDownloadType] = useState('packages'); // 'packages', 'item', or 'ai'
     const [title, setTitle] = useState('Download');
     const [description, setDescription] = useState('');
+    const [aiInstallerPath, setAiInstallerPath] = useState('');
 
     const openPackagesModal = () => {
         setDownloadType('packages');
@@ -56,12 +57,27 @@ const Download = () => {
         setIsDownloading(true);
     };
 
+    const openAIModal = () => {
+        const name = config.ai?.name || 'AI';
+        setDownloadType('ai');
+        setTitle(`Download ${name} Assistant`);
+        setDescription('');
+        setModalStatus(true);
+        setProgress(0);
+        setCurrentFile('');
+        setStatus('Preparing download...');
+        setIsDownloading(true);
+        setAiInstallerPath('');
+    };
+
     const closeModal = () => {
         if (isDownloading) {
             if (downloadType === 'packages' && window.electron?.abortDownload) {
                 window.electron.abortDownload();
             } else if (downloadType === 'item' && window.electron?.abortItemDownload) {
                 window.electron.abortItemDownload();
+            } else if (downloadType === 'ai' && window.electron?.abortAIDownload) {
+                window.electron.abortAIDownload();
             }
         }
         setModalStatus(false);
@@ -91,14 +107,28 @@ const Download = () => {
             }
         };
 
+        const handleAIProgress = (data) => {
+            setProgress(data.progress);
+            setStatus(data.status);
+            if (data.completed) {
+                setIsDownloading(false);
+                if (data.installerPath && !data.error) {
+                    setAiInstallerPath(data.installerPath);
+                }
+            }
+        };
+
         window.electron.on('open-download', openPackagesModal);
         window.electron.on('open-item-download', openItemModal);
+        window.electron.on('open-ai-download', openAIModal);
         window.electron.onDownloadProgress(handlePackagesProgress);
         window.electron.onItemDownloadProgress(handleItemProgress);
+        window.electron.onAIDownloadProgress(handleAIProgress);
 
         return () => {
             window.electron.off('open-download', openPackagesModal);
             window.electron.off('open-item-download', openItemModal);
+            window.electron.off('open-ai-download', openAIModal);
         };
     }, []);
 
@@ -132,13 +162,26 @@ const Download = () => {
                             </Progress>
                         </Body>
                         <Footer>
-                            <Btn
-                                color='danger'
-                                onClick={closeModal}
-                                disabled={!isDownloading}
-                            >
-                                Abort
-                            </Btn>
+                            {!status.includes('already downloaded') && (
+                                <Btn
+                                    color='danger'
+                                    onClick={closeModal}
+                                    disabled={!isDownloading}
+                                >
+                                    Abort
+                                </Btn>
+                            )}
+                            {!isDownloading && downloadType === 'ai' && aiInstallerPath && (
+                                <Btn
+                                    color={status.includes('already downloaded') ? 'danger' : 'success'}
+                                    onClick={() => {
+                                        window.electron.runInstaller(aiInstallerPath);
+                                        handleClose();
+                                    }}
+                                >
+                                    Run Installer
+                                </Btn>
+                            )}
                             {!isDownloading && (
                                 <Btn color='secondary' onClick={handleClose}>
                                     Close

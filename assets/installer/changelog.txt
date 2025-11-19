@@ -3,7 +3,22 @@ All notable changes to ReVens.
 
 --------------------------
 
-## [1.4.1] (Pre-release) - 17-11-2025
+## [1.5.0] - 18-11-2025
+
+### Updated
+
+- Updated AI section
+- Updated single items downloader
+
+### Added
+
+- AI model installer: Ollama
+- Added post-scripts
+- Added items context menu
+
+--------------------------
+
+## [1.4.1] (Unreleased) - 17-11-2025
 
 ### Updated
 
@@ -19,7 +34,7 @@ All notable changes to ReVens.
 
 --------------------------
 
-## [1.3.0] (Pre-release) - 16-11-2025
+## [1.3.0] (Unreleased) - 16-11-2025
 
 ### Fixed
 
@@ -40,7 +55,7 @@ All notable changes to ReVens.
 
 --------------------------
 
-## [1.2.1] (Pre-release) - 10-02-2025
+## [1.2.1] (Unreleased) - 10-02-2025
 
 ### Updated
 

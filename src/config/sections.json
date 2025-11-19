@@ -7,7 +7,7 @@
             "sub": [
                 {
                     "title": "Universal",
-                    "desc": "Analyze PE globally"
+                    "desc": "Analyze PE and other binary files"
                 },
                 {
                     "title": "Compilation",
@@ -210,7 +210,7 @@
         {
             "name": "AI",
             "icon": "bulb",
-            "desc": "In progress...",
+            "desc": "Local AI assistant (beta)",
             "sub": []
         },
         {

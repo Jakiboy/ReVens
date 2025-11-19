@@ -1,7 +1,7 @@
 ; ======================================================================================================================
 ; Author  : Jakiboy
 ; Package : ReVens | Reverse Engineering Toolkit AIO
-; Version : 1.4.x
+; Version : 1.5.x
 ; Link    : https://github.com/Jakiboy/ReVens
 ; license : MIT
 ;
@@ -12,7 +12,7 @@
 
 #define InstallerRoot "."
 #define InstallerAppName "ReVens"
-#define InstallerAppVersion "1.4.1"
+#define InstallerAppVersion "1.5.0"
 #define InstallerAppPublisher "Jakiboy"
 #define InstallerAppURL "https://github.com/Jakiboy/ReVens"
 #define InstallerAppExeName "ReVens.exe"
@@ -32,7 +32,7 @@ AppUpdatesURL={#InstallerAppURL}
 DisableProgramGroupPage=yes
 DefaultDirName={commonpf64}\{#InstallerAppName}
 LicenseFile={#InstallerRoot}\LICENSE
-InfoBeforeFile={#InstallerRoot}\readme.txt
+InfoBeforeFile={#InstallerRoot}\assets\installer\notice.txt
 OutputDir={#InstallerRoot}\build
 OutputBaseFilename="{#InstallerAppName}-v{#InstallerAppVersion}-Windows-Installer-x64"
 SetupIconFile={#InstallerRoot}\assets\installer\icon.ico
@@ -75,7 +75,8 @@ Source: "{#InstallerRoot}\build\{#InstallerAppName}\vk_swiftshader.dll"; DestDir
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vk_swiftshader_icd.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vulkan-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#InstallerRoot}\build\{#InstallerAppName}\README.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#InstallerRoot}\build\{#InstallerAppName}\notice.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#InstallerRoot}\build\{#InstallerAppName}\packages.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\inc\*"; DestDir: "{app}\resources\inc"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\locales\*"; DestDir: "{app}\locales"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs
