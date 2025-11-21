@@ -7,7 +7,7 @@
  */
 
 const { Menu, app, dialog } = require('electron');
-const { reload, restart, openBinFolder, openInfo, openChangelog, openUrl, downloadPackages, downloadAIAssistant } = require('./helper');
+const { reload, restart, openBinFolder, openChangelog, openUrl, downloadPackages, downloadAIAssistant } = require('./helper');
 const config = require('../config/app.json');
 
 function createMenu(launcher) {
@@ -111,11 +111,6 @@ function getTemplate(launcher) {
                     click() {
                         launcher.webContents.send('open-notice');
                     }
-                },
-                {
-                    "label": 'Packages',
-                    "accelerator": 'Ctrl+P',
-                    click() { openInfo(); }
                 },
                 {
                     "label": 'Changelog',

@@ -14,6 +14,7 @@ const exec = require('child_process').execFile;
 const url = require('url');
 const https = require('https');
 const http = require('http');
+const crypto = require('crypto');
 
 let downloadAborted = false;
 let itemDownloadAborted = false;
@@ -250,13 +251,6 @@ function getAssetPath(fileName) {
 }
 
 /**
- * Open info.
- */
-function openInfo() {
-	shell.openPath(getAssetPath('packages.txt'));
-}
-
-/**
  * Open changelog.
  */
 function openChangelog() {
@@ -349,9 +343,14 @@ async function startDownload(launcher) {
 			return;
 		}
 
-		const fileName = parts[i];
+		const part = parts[i];
+		const fileName = typeof part === 'string' ? part : part.name;
+		const expectedHash = typeof part === 'object' ? part.hash : null;
 		const token = config.items.token || '';
-		const fileUrl = `${host}/${fileName}${token ? '?token=' + token : ''}`;
+		// Add cache buster to bypass CDN/Cloudflare cache
+		const cacheBuster = `v=${config.version || Date.now()}`;
+		const separator = token ? '&' : '?';
+		const fileUrl = `${host}/${fileName}${token ? '?token=' + token : ''}${separator}${cacheBuster}`;
 		const filePath = path.join(baseDir, fileName);
 
 		sendDownloadProgress(launcher, {
@@ -361,7 +360,8 @@ async function startDownload(launcher) {
 		});
 
 		try {
-			await downloadFile(fileUrl, filePath);
+			// Download with hash calculation if hash is expected
+			const actualHash = await downloadFile(fileUrl, filePath, !!expectedHash);
 
 			if (downloadAborted) {
 				// Clean up partial download
@@ -375,6 +375,29 @@ async function startDownload(launcher) {
 					completed: true
 				});
 				return;
+			}
+
+			// Verify MD5 hash if available
+			if (expectedHash && actualHash) {
+				sendDownloadProgress(launcher, {
+					progress: Math.round(((i + 0.3) / parts.length) * 100),
+					currentFile: fileName,
+					status: `Verifying ${i + 1}/${parts.length}...`
+				});
+
+				if (actualHash !== expectedHash) {
+					// Hash mismatch - delete corrupted file
+					if (fs.existsSync(filePath)) {
+						fs.unlinkSync(filePath);
+					}
+					sendDownloadProgress(launcher, {
+						progress: Math.round((i / parts.length) * 100),
+						currentFile: fileName,
+						status: `Error: File integrity check failed for ${fileName}`,
+						completed: true
+					});
+					return;
+				}
 			}
 
 			sendDownloadProgress(launcher, {
@@ -416,12 +439,13 @@ async function startDownload(launcher) {
 }
 
 /**
- * Download a file from URL.
+ * Download a file from URL, optionally calculating MD5 hash during download.
  */
-function downloadFile(fileUrl, filePath) {
+function downloadFile(fileUrl, filePath, calculateHash = false) {
 	return new Promise((resolve, reject) => {
 		const protocol = fileUrl.startsWith('https') ? https : http;
 		const file = fs.createWriteStream(filePath);
+		const hash = calculateHash ? crypto.createHash('md5') : null;
 
 		const cleanup = () => {
 			file.close();
@@ -437,13 +461,21 @@ function downloadFile(fileUrl, filePath) {
 
 			response.pipe(file);
 
+			// If calculating hash, also pipe data to hash
+			if (hash) {
+				response.on('data', (chunk) => {
+					hash.update(chunk);
+				});
+			}
+
 			file.on('finish', () => {
 				file.close();
 				if (downloadAborted) {
 					fs.unlink(filePath, () => { });
 					reject(new Error('Download aborted'));
 				} else {
-					resolve();
+					const md5Hash = hash ? hash.digest('hex') : null;
+					resolve(md5Hash);
 				}
 			});
 
@@ -582,7 +614,7 @@ function checkPackageStatus() {
 				color: 'red',
 				existing: 0,
 				total: items.length,
-				disabledPaths: items.map(item => item.path).filter(Boolean)
+				disabledPaths: items.map(item => item.slug).filter(Boolean)
 			};
 		}
 
@@ -600,7 +632,7 @@ function checkPackageStatus() {
 			if (fs.existsSync(itemPath)) {
 				existingCount++;
 			} else {
-				disabledPaths.push(item.path);
+				disabledPaths.push(item.slug);
 			}
 		}
 
@@ -993,7 +1025,6 @@ module.exports = {
 	restart,
 	openItem,
 	exploreItem,
-	openInfo,
 	openChangelog,
 	openBinFolder,
 	downloadAIAssistant,

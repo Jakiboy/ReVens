@@ -38,8 +38,20 @@ a {
 /* heading */
 /* ----------------------------- */
 .heading-wrapper img {
-    margin-top: 15px;
     opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.heading-wrapper img.logo-animatable {
+    cursor: default;
+}
+
+.heading-wrapper img.logo-animatable:hover {
+    opacity: 1;
+}
+
+.heading-wrapper .image-wrapper {
+    margin: 15px 0;
 }
 
 .heading-wrapper {
@@ -267,7 +279,7 @@ a {
 }
 
 .context-menu-item:first-child {
-    border-radius: 6px 6px 0 0;
+    border-radius: 0;
 }
 
 .context-menu-header+.context-menu-item:first-of-type {
@@ -275,7 +287,7 @@ a {
 }
 
 .context-menu-item:last-child {
-    border-radius: 0 0 6px 6px;
+    border-radius: 0;
 }
 
 .nav-tabs .nav-link i {

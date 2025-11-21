@@ -41,7 +41,7 @@ const formatItemName = (name, type) => {
 };
 
 // Context menu component
-const ContextMenu = ({ item, position, onClose }) => {
+const ContextMenu = ({ item, position, onClose, isDisabled }) => {
   useEffect(() => {
     const handleClick = () => onClose();
     const handleContextMenu = (e) => {
@@ -76,12 +76,14 @@ const ContextMenu = ({ item, position, onClose }) => {
     onClose();
   };
 
-  const showExplore = item.path && !item.remove;
+  const showExplore = item.path && !item.remove && !isDisabled;
   const showDownload = item.download && item.download !== false;
   const showHomepage = item.url && item.url !== false && (item.type === 'exe' || item.type === 'zip');
   const showHeader = item.type !== 'doc' && item.type !== 'pdf' && item.type !== 'md';
+  const hasMenuItems = showExplore || showDownload || showHomepage;
 
-  if (!showExplore && !showDownload && !showHomepage) {
+  // Always show context menu with at least the header
+  if (!showHeader && !hasMenuItems) {
     return null;
   }
 
@@ -130,7 +132,7 @@ const ItemButton = ({ item, isDisabled, onContextMenu }) => {
   };
 
   const handleClick = () => {
-    if (!isDisabled(item.path)) {
+    if (!isDisabled(item)) {
       window.electron.click(item.path);
     }
   };
@@ -145,8 +147,8 @@ const ItemButton = ({ item, isDisabled, onContextMenu }) => {
         className={`type-${item.type}`}
         onClick={handleClick}
         title={item.desc || ''}
-        disabled={isDisabled(item.path)}
-        data-path={item.path}
+        disabled={isDisabled(item)}
+        data-id={item.slug}
       >
         <i className={`icon-${icon}`}></i> {name}
       </Btn>
@@ -154,14 +156,14 @@ const ItemButton = ({ item, isDisabled, onContextMenu }) => {
   );
 };
 
-const Section = ({ section, items, disabledPaths = [] }) => {
+const Section = ({ section, items, disabledSlugs = [] }) => {
   const [contextMenu, setContextMenu] = useState(null);
   const _section = generateSlug(section.name);
   const _subs = section.sub;
 
   // Convert array to Set for O(1) lookup performance
-  const disabledSet = useMemo(() => new Set(disabledPaths), [disabledPaths]);
-  const isDisabled = (path) => disabledSet.has(path);
+  const disabledSet = useMemo(() => new Set(disabledSlugs), [disabledSlugs]);
+  const isDisabled = (item) => disabledSet.has(item.slug);
 
   const handleContextMenu = (item, position) => {
     setContextMenu({ item, position });
@@ -173,13 +175,15 @@ const Section = ({ section, items, disabledPaths = [] }) => {
         <p dangerouslySetInnerHTML={{ __html: section.desc }}></p>
         <div className="section-container app-scroller">
           {_subs.map((sub, index) => {
-            const _sub = generateSlug(sub.title);
+            const _sub = generateSlug(sub.name);
             return (
               <div className="section-wrapper" key={index}>
                 <h3 className="section-title">{sub.title}</h3>
                 <p className="section-description" dangerouslySetInnerHTML={{ __html: sub.desc }}></p>
                 <div className="button-wrapper">
                   {items.map((item, itemIndex) => {
+                    if (typeof item.sub !== 'string') return null;
+
                     const _isection = generateSlug(item.section);
                     const _isub = generateSlug(item.sub);
 
@@ -190,13 +194,15 @@ const Section = ({ section, items, disabledPaths = [] }) => {
                   })}
                 </div>
                 {sub.extra && sub.extra.map((extra, extraIndex) => {
-                  const _extra = generateSlug(extra);
+                  const _extra = generateSlug(extra.name || extra);
+                  const extraTitle = extra.title || extra;
                   return (
                     <div className="extra-wrapper" key={extraIndex}>
-                      <p className="section-description">{extra}</p>
+                      <p className="section-description">{extraTitle}</p>
                       <div className="button-wrapper">
                         {items.map((item, itemIndex) => {
-                          if (!item.extra) return null;
+                          if (typeof item.extra !== 'string') return null;
+                          if (typeof item.sub !== 'string') return null;
 
                           const _isection = generateSlug(item.section);
                           const _isub = generateSlug(item.sub);
@@ -221,6 +227,7 @@ const Section = ({ section, items, disabledPaths = [] }) => {
           item={contextMenu.item}
           position={contextMenu.position}
           onClose={() => setContextMenu(null)}
+          isDisabled={isDisabled(contextMenu.item)}
         />
       )}
     </div>

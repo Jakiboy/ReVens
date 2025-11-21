@@ -22,11 +22,11 @@ import iConfig from '../config/items.json';
 const Launcher = () => {
   const initialTab = localStorage.getItem('activeTab') || 'analyzing';
   const [activeTab, setActiveTab] = useState(initialTab);
-  const [disabledPaths, setDisabledPaths] = useState([]);
+  const [disabledSlugs, setDisabledSlugs] = useState([]);
 
-  // Memoize all paths for empty status fallback
-  const allPaths = useMemo(
-    () => iConfig.items.map(item => item.path).filter(Boolean),
+  // Memoize all slugs for empty status fallback
+  const allSlugs = useMemo(
+    () => iConfig.items.map(item => item.slug).filter(Boolean),
     []
   );
 
@@ -37,11 +37,11 @@ const Launcher = () => {
   useEffect(() => {
     const handlePackageStatus = (status) => {
       if (status.disabledPaths && Array.isArray(status.disabledPaths)) {
-        setDisabledPaths(status.disabledPaths);
+        setDisabledSlugs(status.disabledPaths);
       } else if (status.status === 'empty') {
-        setDisabledPaths(allPaths);
+        setDisabledSlugs(allSlugs);
       } else {
-        setDisabledPaths([]);
+        setDisabledSlugs([]);
       }
     };
 
@@ -51,7 +51,7 @@ const Launcher = () => {
 
     window.electron.onPackageStatus(handlePackageStatus);
     window.electron.on('switch-to-ai', handleSwitchToAI);
-  }, [allPaths]);
+  }, [allSlugs]);
 
   return (
     <>
@@ -60,7 +60,7 @@ const Launcher = () => {
         <Header />
         <div className="content-wrapper">
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
-          <Content activeTab={activeTab} disabledPaths={disabledPaths} />
+          <Content activeTab={activeTab} disabledSlugs={disabledSlugs} />
         </div>
         <hr className="separator my-3" />
         <Footer />

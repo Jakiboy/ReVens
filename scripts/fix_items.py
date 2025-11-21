@@ -6,6 +6,7 @@ Script to fix items.json
 import json
 import os
 import sys
+import re
 from datetime import datetime
 
 # Paths
@@ -17,6 +18,7 @@ BACKUP_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'it
 # Required properties with empty values
 REQUIRED_PROPERTIES = {
     "name": "",
+    "slug": "",
     "desc": "",
     "type": "",
     "path": "",
@@ -32,10 +34,24 @@ REQUIRED_PROPERTIES = {
 }
 
 # Property order for reordering items
-PROPERTY_ORDER = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "script", "pswd", "remove"]
+PROPERTY_ORDER = ["name", "slug", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "script", "pswd", "remove"]
 
 # Type order for sorting
 TYPE_ORDER = ["exe", "cli", "sound", "zip"]
+
+def generate_slug(name):
+    """Generate slug from name"""
+    if not name or not isinstance(name, str):
+        return ""
+    
+    slug = name.strip().lower()
+    # Remove special characters and replace spaces/underscores with hyphens
+    slug = re.sub(r'[^a-z0-9\s-]', '', slug)
+    slug = re.sub(r'[\s_]+', '-', slug)
+    slug = re.sub(r'-+', '-', slug)
+    slug = slug.strip('-')
+    
+    return slug
 
 def load_section_order():
     """Load section order from sections.json (excluding AI)"""
@@ -195,10 +211,16 @@ def fix_items():
                     removed_files_count += 1
                     print(f"  🗑 {item_name}: {message}")
         
-        # Reorder properties
+        # Reorder properties and auto-generate slug if missing
         reordered_item = {}
         for prop in PROPERTY_ORDER:
-            if prop in item:
+            if prop == 'slug':
+                # Auto-generate slug from name if missing
+                if 'slug' not in item or not item['slug']:
+                    reordered_item['slug'] = generate_slug(item.get('name', ''))
+                else:
+                    reordered_item['slug'] = item['slug']
+            elif prop in item:
                 reordered_item[prop] = item[prop]
         
         # Replace the item with reordered version

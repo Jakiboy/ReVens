@@ -3,6 +3,21 @@ All notable changes to ReVens.
 
 --------------------------
 
+## [1.5.2] - 20-11-2025
+
+### Updated
+
+- Updated items
+- Updated scripts
+- Updated README.md
+
+### Added
+
+- Added slug (items, sections, subs, extras)
+- File integrity check (MD5)
+
+--------------------------
+
 ## [1.5.0] - 18-11-2025
 
 ### Updated

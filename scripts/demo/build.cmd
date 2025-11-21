@@ -1,0 +1,1 @@
+gcc revensdemo.c -o revensdemo.exe -mwindows

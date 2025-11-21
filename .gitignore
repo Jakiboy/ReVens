@@ -1,4 +1,5 @@
 node_modules
+__pycache__
 build
 *.log
 /.vscode/
@@ -30,3 +31,5 @@ src/inc/vendor
 *.exe
 *.dll
 *.tmp.iss
+*.temp.py
+scripts/.download

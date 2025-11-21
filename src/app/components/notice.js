@@ -92,6 +92,9 @@ const Notice = () => {
                         <p><strong>⚠ PACKAGE SAFETY:</strong> Not all packages included in ReVens are guaranteed to be safe. Some tools may contain experimental features,
                           aggressive behavior, or potentially unwanted modifications. Always use packages with caution, preferably in an isolated environment, and understand
                           what each tool does before executing it.</p>
+
+                        <p className="muted"><strong>Note:</strong> File integrity check using token &amp; MD5 hashes is implemented primarily for antivirus detection avoidance
+                          and does not ensure self-protection against malicious modifications. Always verify packages before using..</p>
                       </div>
 
                       <div className="separator" aria-hidden="true"></div>
@@ -117,10 +120,10 @@ const Notice = () => {
 
                       <h2>History</h2>
                       <p>
-                        The name <strong>ReVens</strong> originates from <strong>"(R)(e)(v)(e)r(s)e E(n)gineering"</strong>, reflecting its core purpose as a toolkit centered around software reverse-engineering. The project traces its roots back to an unpublished project from around <strong>2010</strong> known as <strong>FutureComp</strong>, by <strong>FCG-Team</strong>. That early version was built with <strong>AutoPlay Media Studio 6.0 (AMS 6.0)</strong>, but the original project source files were completely lost, leaving only fragments of its design and concept behind.
+                        The name <strong>ReVens</strong> originates from <strong>"(R)(e)(v)(e)r(s)e E(n)gineering"</strong>, reflecting its core purpose as a toolkit centered around software reverse-engineering. The project traces its roots back to an unpublished project from around 2010 known as "FutureComp", by "FCG-Team". That early version was built with <strong>AutoPlay Media Studio 6.0 (AMS 6.0)</strong>, but the original project source files were completely lost, leaving only fragments of its design and concept behind.
                       </p>
                       <p>
-                        Between <strong>2006 and 2010</strong>, the creator, <strong>Jakiboy</strong>, was heavily involved in using several all-in-one reverse-engineering tool distributions of the era. Notable influences included <strong>"CRACKL@B DVD" (2006)</strong> published by <strong>eXelab</strong>, as well as <strong>"Cracking Kit 2010"</strong> (released in 2008), which utilized the <strong>PStart</strong> launcher menu.
+                        Between 2006 and 2010, the creator, Jakiboy, was heavily involved in using several all-in-one reverse-engineering tool distributions of the era. Notable influences included "CRACKL@B DVD" (2006) published by "eXelab", as well as "Cracking Kit" (2008), which utilized the <strong>PStart</strong> launcher menu.
                       </p>
                       <p>
                         These early tool collections shaped the vision for what would eventually evolve into ReVens—aiming to modernize, streamline, and rebuild the kind of organized RE environment those classic kits provided, but with a cleaner, more up-to-date launcher and packages manager.
@@ -144,7 +147,7 @@ const Notice = () => {
             </Footer>
           </Content>
         </Dialog>
-      </Modal>
+      </Modal >
     </>
   );
 };

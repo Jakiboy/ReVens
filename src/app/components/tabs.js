@@ -26,7 +26,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
               aria-selected={activeTab === slug}
               onClick={() => setActiveTab(slug)}
             >
-              <i className={`icon-${section.icon}`}></i> <span className="tab-title">{section.name}</span>
+              <i className={`icon-${section.icon}`}></i> <span className="tab-title">{section.title || section.name}</span>
             </button>
           </li>
         );

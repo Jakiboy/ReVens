@@ -4,7 +4,7 @@ G='\033[0;32m'
 B='\033[0;96m'
 
 NAME='ReVens'
-VERSION='1.5.0'
+VERSION='1.5.2'
 DESCRIPTION='ReVens - Reverse Engineering Toolkit AIO 2026'
 AUTHOR='Jakiboy'
 COPYRIGHT="Copyright (c) 2026 ${AUTHOR}"
@@ -82,7 +82,6 @@ fi
 # Copy included files
 cp -r "./inc" "./${OUTPUT}/${NAME}/${RESOURCES}/inc"
 cp -r "./assets/installer/changelog.txt" "./${OUTPUT}/${NAME}/changelog.txt"
-cp -r "./assets/installer/packages.txt" "./${OUTPUT}/${NAME}/packages.txt"
 cp -r "./assets/installer/notice.txt" "./${OUTPUT}/${NAME}/notice.txt"
 sleep 2
 clear

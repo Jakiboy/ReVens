@@ -1,234 +1,330 @@
 {
     "sections": [
         {
-            "name": "Analyzing",
+            "name": "analyzing",
+            "title": "Analyzing",
             "icon": "magnifier",
             "desc": "Analyze portable-executables and related files (<strong>EXE, DLL, OCX, SYS</strong>)",
             "sub": [
                 {
-                    "title": "Universal",
+                    "name": "universal",
+                    "title": "Binary",
                     "desc": "Analyze PE and other binary files"
                 },
                 {
+                    "name": "compilation",
                     "title": "Compilation",
                     "desc": "Analyze PE compilation, signature and more"
                 },
                 {
+                    "name": "packaging",
                     "title": "Packaging",
                     "desc": "Analyze PE packaging and protection"
                 },
                 {
+                    "name": "system",
                     "title": "System",
                     "desc": "Dynamic system analysis (<strong>Runtime</strong>)",
                     "extra": [
-                        "API",
-                        "Process",
-                        "Memory",
-                        "Network",
-                        "File"
+                        {
+                            "name": "api",
+                            "title": "API"
+                        },
+                        {
+                            "name": "process",
+                            "title": "Process"
+                        },
+                        {
+                            "name": "memory",
+                            "title": "Memory"
+                        },
+                        {
+                            "name": "network",
+                            "title": "Network"
+                        },
+                        {
+                            "name": "file",
+                            "title": "File"
+                        }
                     ]
                 },
                 {
+                    "name": "comparing",
                     "title": "Comparing",
                     "desc": "Compare binary files (<strong>Binary diffing</strong>)"
                 },
                 {
+                    "name": "calculating",
                     "title": "Calculating",
                     "desc": "Mathematical and reverse calculating"
                 }
             ]
         },
         {
-            "name": "Unpacking",
+            "name": "unpacking",
+            "title": "Unpacking",
             "icon": "puzzle",
             "desc": "Unpack and remove binary protection (<strong>UPX, ASPack, VMProtect</strong>)",
             "sub": [
                 {
+                    "name": "unprotect",
                     "title": "Unprotect",
                     "desc": "Remove PE protection and obfuscation"
                 },
                 {
+                    "name": "decoding",
                     "title": "Decoding",
                     "desc": "Decode hashed values (<strong>Crypto</strong>)"
                 },
                 {
+                    "name": "extracting",
                     "title": "Extracting",
                     "desc": "Extract PE and other binary files",
                     "extra": [
-                        "Setup",
-                        "Game",
-                        "Registry",
-                        "Password"
+                        {
+                            "name": "setup",
+                            "title": "Setup"
+                        },
+                        {
+                            "name": "game",
+                            "title": "Game"
+                        },
+                        {
+                            "name": "registry",
+                            "title": "Registry"
+                        },
+                        {
+                            "name": "password",
+                            "title": "Password"
+                        }
                     ]
                 }
             ]
         },
         {
-            "name": "Debugging",
+            "name": "debugging",
+            "title": "Debugging",
             "icon": "chemistry",
             "desc": "View and change the running state of a program (<strong>Disassembling, Decompiling, Hexing</strong>)",
             "sub": [
                 {
+                    "name": "manipulating",
                     "title": "Manipulating",
                     "desc": "Interactive disassembly and runtime manipulation"
                 },
                 {
+                    "name": "disassembling",
                     "title": "Disassembling",
                     "desc": "Transforme machine code into <strong>Assembly language</strong>"
                 },
                 {
+                    "name": "decompiling",
                     "title": "Decompiling",
                     "desc": "Revert the process of compilation"
                 },
                 {
+                    "name": "hexing",
                     "title": "Hexing",
                     "desc": "Edit PE hexadecimal representation"
                 }
             ]
         },
         {
-            "name": "Editing",
+            "name": "editing",
+            "title": "Editing",
             "icon": "equalizer",
             "desc": "Edit executable files",
             "sub": [
                 {
+                    "name": "manipulating",
                     "title": "Manipulating",
                     "desc": "Compile, build and reconstruct PE (<strong>PE, DLL, Import tables, Setup, Res</strong>)",
                     "extra": [
-                        "DLL",
-                        "Setup",
-                        "File"
+                        {
+                            "name": "dll",
+                            "title": "DLL"
+                        },
+                        {
+                            "name": "setup",
+                            "title": "Setup"
+                        },
+                        {
+                            "name": "file",
+                            "title": "File"
+                        }
                     ]
                 },
                 {
+                    "name": "system",
                     "title": "System",
                     "desc": "Tweak system",
                     "extra": [
-                        "Network",
-                        "Process",
-                        "Universal"
+                        {
+                            "name": "network",
+                            "title": "Network"
+                        },
+                        {
+                            "name": "process",
+                            "title": "Process"
+                        },
+                        {
+                            "name": "universal",
+                            "title": "Universal"
+                        }
                     ]
                 },
                 {
+                    "name": "converting",
                     "title": "Converting",
                     "desc": "Convert scripts and binary files"
                 }
             ]
         },
         {
-            "name": "Patching",
+            "name": "patching",
+            "title": "Patching",
             "icon": "fire",
             "desc": "Generate patching program using <strong>binary compare</strong>",
             "sub": [
                 {
+                    "name": "patcher",
                     "title": "Patcher",
                     "desc": "Build binary patcher"
                 },
                 {
+                    "name": "loader",
                     "title": "Loader",
                     "desc": "Build binary patch loader"
                 },
                 {
+                    "name": "keygen",
                     "title": "Keygen",
                     "desc": "Build Keygen"
                 },
                 {
+                    "name": "release",
                     "title": "Release",
                     "desc": "Build patcher release and <strong>NFO</strong> file"
                 },
                 {
+                    "name": "ascii",
                     "title": "ASCII",
                     "desc": "Build patcher release <strong>ASCII</strong>"
                 },
                 {
+                    "name": "skin",
                     "title": "Skin",
                     "desc": "Build patcher skins",
                     "extra": [
-                        "Patcher skins"
+                        {
+                            "name": "patcher-skins",
+                            "title": "Patcher skins"
+                        }
                     ]
                 },
                 {
+                    "name": "sound",
                     "title": "Sound",
                     "desc": "Build patcher sounds (<strong>MX</strong>)",
                     "extra": [
-                        "Patcher sounds"
+                        {
+                            "name": "patcher-sounds",
+                            "title": "Patcher sounds"
+                        }
                     ]
                 }
             ]
         },
         {
-            "name": "Misc",
+            "name": "misc",
+            "title": "Misc",
             "icon": "plus",
             "desc": "Helper tools and miscellaneous content",
             "sub": [
                 {
+                    "name": "assembling",
                     "title": "Assembling",
                     "desc": "Assembling <strong>Machine code</strong>"
                 },
                 {
+                    "name": "bypassing",
                     "title": "Bypassing",
                     "desc": "Bypass runtime protections and anti-debugging"
                 },
                 {
+                    "name": "encoding",
                     "title": "Encoding",
                     "desc": "Data encoding"
                 },
                 {
+                    "name": "packing",
                     "title": "Packing",
                     "desc": "Compress and protect executable files"
                 },
                 {
+                    "name": "mobile",
                     "title": "Mobile",
                     "desc": "Mbile RE toolkits",
                     "extra": [
-                        "Android",
-                        "IOS"
+                        {
+                            "name": "android",
+                            "title": "Android"
+                        },
+                        {
+                            "name": "ios",
+                            "title": "IOS"
+                        }
                     ]
                 },
                 {
+                    "name": "simulating",
                     "title": "Simulating",
                     "desc": "Circuit and logical simulation"
                 },
                 {
-                    "title": "Editing",
-                    "desc": "Editing files (Text)"
-                },
-                {
+                    "name": "programming",
                     "title": "Programming",
                     "desc": "Programming tools (<strong>+ Compilators</strong>)"
                 },
                 {
+                    "name": "automating",
                     "title": "Automating",
                     "desc": "Automation and macro tools"
                 },
                 {
+                    "name": "dependencies",
                     "title": "Dependencies",
                     "desc": "Toolkit's standalone and offline dependencies installers"
                 }
             ]
         },
         {
-            "name": "AI",
+            "name": "ai",
+            "title": "AI",
             "icon": "bulb",
             "desc": "Local AI assistant (beta)",
             "sub": []
         },
         {
-            "name": "Docs",
+            "name": "docs",
+            "title": "Docs",
             "icon": "notebook",
-            "desc": "Reverse Engineering Docs (Beginners)",
+            "desc": "Software Reverse Engineering Docs",
             "sub": [
                 {
+                    "name": "introduction",
                     "title": "Introduction",
-                    "desc": "Introducing to Reverse Engineering"
+                    "desc": "Introduction to Reverse Engineering"
                 },
                 {
+                    "name": "book",
                     "title": "Book",
                     "desc": "Reverse Engineering Books"
                 },
                 {
+                    "name": "tutorial",
                     "title": "Tutorial",
-                    "desc": "Basic Software Reverse Engineering Tutorials"
+                    "desc": "Basic Reverse Engineering Tutorials"
                 }
             ]
         }

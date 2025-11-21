@@ -12,7 +12,7 @@
 
 #define InstallerRoot "."
 #define InstallerAppName "ReVens"
-#define InstallerAppVersion "1.5.0"
+#define InstallerAppVersion "1.5.2"
 #define InstallerAppPublisher "Jakiboy"
 #define InstallerAppURL "https://github.com/Jakiboy/ReVens"
 #define InstallerAppExeName "ReVens.exe"
@@ -76,7 +76,6 @@ Source: "{#InstallerRoot}\build\{#InstallerAppName}\vk_swiftshader_icd.json"; De
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\vulkan-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\notice.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#InstallerRoot}\build\{#InstallerAppName}\packages.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\inc\*"; DestDir: "{app}\resources\inc"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\locales\*"; DestDir: "{app}\locales"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#InstallerRoot}\build\{#InstallerAppName}\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion recursesubdirs createallsubdirs

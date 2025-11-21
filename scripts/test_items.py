@@ -8,7 +8,7 @@ Checks for:
 - Invalid file paths
 
 Usage:
-    python test_items.py [--no-{property}] [--override] [--no-update]
+    python test_items.py [--no-{property}] [--override] [--no-lookup]
 
 Options:
     --no-version    Ignore warnings about version property
@@ -16,14 +16,13 @@ Options:
     --no-download   Ignore warnings about download property
     --no-path       Ignore warnings about invalid file paths
     --override      Override (overwrite) the log file instead of appending
-    --no-update     Skip checking for new tools not in items.json
+    --no-lookup     Skip checking for missing tools not in items.json
 """
 
 import json
 import os
 import sys
 import io
-import subprocess
 from datetime import datetime
 
 # Set UTF-8 encoding for stdout
@@ -34,20 +33,22 @@ if sys.stdout.encoding != 'utf-8':
 ITEMS_JSON_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'items.json')
 SECTIONS_JSON_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'sections.json')
 APP_JSON_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'app.json')
+PATHS_JSON_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'config', 'paths.json')
+IGNORE_FILE_PATH = os.path.join(os.path.dirname(__file__), '.ignore')
 LOG_FILE = os.path.join(os.path.dirname(__file__), 'test.log')
 
 # Base directory for path validation (default to Bin folder)
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'Bin'))
 
 # Required properties for each item
-REQUIRED_PROPERTIES = ["name", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "script", "pswd"]
+REQUIRED_PROPERTIES = ["name", "slug", "desc", "type", "path", "section", "sub", "extra", "version", "url", "download", "script", "pswd"]
 
 # Global flags for ignoring specific warnings
 IGNORE_VERSION_WARNINGS = False
 IGNORE_URL_WARNINGS = False
 IGNORE_DOWNLOAD_WARNINGS = False
 IGNORE_PATH_WARNINGS = False
-NO_UPDATE = False
+NO_LOOKUP = False
 
 def log_message(message, file_handle=None):
     """Print message to console and optionally write to log file"""
@@ -83,7 +84,7 @@ def load_sections():
         print(f"⚠ Warning: Invalid JSON in sections.json: {e}")
         return {}
     
-    # Build lookup: section_name -> { subs: {sub_title -> [extra_values]} }
+    # Build lookup: section_name -> { subs: {sub_name -> [extra_values]} }
     sections_lookup = {}
     for section in sections_data.get('sections', []):
         section_name = section.get('name')
@@ -92,16 +93,173 @@ def load_sections():
         
         subs_lookup = {}
         for sub in section.get('sub', []):
-            sub_title = sub.get('title')
-            if sub_title:
-                # Store extra values if they exist, otherwise empty list
-                subs_lookup[sub_title] = sub.get('extra', [])
+            sub_name = sub.get('name')  # Use 'name' (slug) instead of 'title'
+            if sub_name:
+                # Extract extra names (slugs) from objects or strings
+                extra_values_raw = sub.get('extra', [])
+                extra_values = []
+                for extra in extra_values_raw:
+                    if isinstance(extra, dict):
+                        extra_values.append(extra.get('name'))
+                    else:
+                        # Fallback for old string format
+                        extra_values.append(extra)
+                
+                subs_lookup[sub_name] = extra_values
         
         sections_lookup[section_name] = {
             'subs': subs_lookup
         }
     
     return sections_lookup
+
+def load_paths():
+    """Load paths from paths.json"""
+    try:
+        with open(PATHS_JSON_PATH, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"⚠ Warning: Could not read paths.json: {e}")
+        return []
+    
+    return data.get('paths', [])
+
+def load_ignore_patterns():
+    """Load ignore patterns from .ignore file"""
+    if not os.path.exists(IGNORE_FILE_PATH):
+        return set()
+    
+    try:
+        with open(IGNORE_FILE_PATH, 'r', encoding='utf-8') as f:
+            patterns = set()
+            for line in f:
+                line = line.strip()
+                # Skip empty lines and comments
+                if line and not line.startswith('#'):
+                    patterns.add(line.lower())
+            return patterns
+    except Exception as e:
+        print(f"⚠ Warning: Could not read .ignore file: {e}")
+        return set()
+
+def load_local_ignore_patterns(directory_path):
+    """Load ignore patterns from .ignore file in a specific directory"""
+    ignore_file = os.path.join(directory_path, '.ignore')
+    
+    if not os.path.exists(ignore_file):
+        return set()
+    
+    try:
+        with open(ignore_file, 'r', encoding='utf-8') as f:
+            patterns = set()
+            for line in f:
+                line = line.strip()
+                # Skip empty lines and comments
+                if line and not line.startswith('#'):
+                    patterns.add(line.lower())
+            return patterns
+    except Exception as e:
+        print(f"⚠ Warning: Could not read .ignore file in {directory_path}: {e}")
+        return set()
+
+def load_registered_items(items):
+    """Extract folder/archive names from items paths"""
+    registered_items = set()
+    
+    # Load paths and sort by length (longest first) to match most specific paths first
+    paths = sorted(load_paths(), key=len, reverse=True)
+    
+    for item in items:
+        path = item.get('path', '')
+        if not path:
+            continue
+        
+        # Find which category path this item belongs to
+        matching_path = None
+        for category_path in paths:
+            if path.startswith(category_path + '/'):
+                matching_path = category_path
+                break
+        
+        if matching_path:
+            # Remove the category path to get the tool-specific part
+            relative_path = path[len(matching_path):].strip('/')
+            parts = relative_path.split('/')
+            
+            if len(parts) > 0:
+                # The first part after the category is the tool folder/archive
+                tool_name = parts[0]
+                # Remove .zip extension if present for comparison
+                tool_name_clean = tool_name.replace('.zip', '').lower()
+                registered_items.add(tool_name_clean)
+    
+    return registered_items
+
+def scan_directory(base_dir, rel_path, global_ignored_patterns):
+    """Scan a directory and return list of folders/files found"""
+    full_path = os.path.join(base_dir, rel_path.lstrip('/'))
+    
+    if not os.path.exists(full_path):
+        return []
+    
+    # Load local .ignore patterns from this directory
+    local_ignored_patterns = load_local_ignore_patterns(full_path)
+    
+    # Combine global and local ignore patterns
+    all_ignored_patterns = global_ignored_patterns | local_ignored_patterns
+    
+    try:
+        entries = os.listdir(full_path)
+        items = []
+        
+        for entry in entries:
+            # Skip .ignore file itself
+            if entry == '.ignore':
+                continue
+            
+            # Check if entry should be ignored
+            if entry.lower() in all_ignored_patterns:
+                continue
+            
+            entry_path = os.path.join(full_path, entry)
+            # Include both folders and zip files
+            if os.path.isdir(entry_path) or entry.endswith('.zip'):
+                items.append(entry)
+        
+        return items
+    except PermissionError:
+        print(f"⚠ Warning: Permission denied accessing {full_path}")
+        return []
+
+def find_missing_tools(items):
+    """Find tools in Bin directory that are not in items.json"""
+    # Load registered items
+    registered_folders = load_registered_items(items)
+    
+    # Load paths to scan
+    paths = load_paths()
+    
+    # Load ignore patterns
+    ignored_patterns = load_ignore_patterns()
+    
+    # Scan each path
+    missing_tools = []
+    
+    for path in paths:
+        items_in_dir = scan_directory(BASE_DIR, path, ignored_patterns)
+        
+        if items_in_dir:
+            for item in items_in_dir:
+                item_name_clean = item.replace('.zip', '').lower()
+                
+                if item_name_clean not in registered_folders:
+                    missing_tools.append({
+                        'path': path,
+                        'name': item,
+                        'full_path': os.path.join(BASE_DIR, path.lstrip('/'), item)
+                    })
+    
+    return missing_tools
 
 def validate_items():
     """Validate all items in items.json"""
@@ -148,8 +306,13 @@ def validate_items():
             if prop in item:
                 value = item[prop]
                 
+                # Special handling for 'slug' - must be non-empty string
+                if prop == 'slug':
+                    if not isinstance(value, str) or value == "":
+                        warning = f"⚠ Item #{item_num} ({item_name}): Property 'slug' must be a non-empty string"
+                        empty_properties.append(warning)
                 # Special handling for 'extra' - can be false or string
-                if prop == 'extra':
+                elif prop == 'extra':
                     if value is not False and (value == "" or value is None):
                         warning = f"⚠ Item #{item_num} ({item_name}): Property '{prop}' is empty (expected false or non-empty string)"
                         empty_properties.append(warning)
@@ -257,11 +420,11 @@ def validate_items():
 
 def main():
     """Main test function"""
-    global BASE_DIR, IGNORE_VERSION_WARNINGS, IGNORE_URL_WARNINGS, IGNORE_DOWNLOAD_WARNINGS, IGNORE_PATH_WARNINGS, NO_UPDATE
+    global BASE_DIR, IGNORE_VERSION_WARNINGS, IGNORE_URL_WARNINGS, IGNORE_DOWNLOAD_WARNINGS, IGNORE_PATH_WARNINGS, NO_LOOKUP
     
     # Parse command line arguments
-    if '--no-update' in sys.argv:
-        NO_UPDATE = True
+    if '--no-lookup' in sys.argv:
+        NO_LOOKUP = True
     
     override_log = '--override' in sys.argv
     
@@ -416,33 +579,88 @@ def main():
             print("=" * 80)
             log_content.append(summary)
         
+        log_content.append("")
+        log_content.append("=" * 80)
+        
         # Write to log file
         log_file.write('\n'.join(log_content))
     
     print(f"\nLog file written to: {LOG_FILE}")
     
-    # Check for new tools unless --no-update flag is set
-    if not NO_UPDATE:
+    # Check for missing tools unless --no-lookup flag is set
+    if not NO_LOOKUP:
         print("\n" + "=" * 80)
-        print("CHECKING FOR NEW TOOLS")
+        print("CHECKING FOR MISSING TOOLS")
         print("=" * 80)
         
-        lookup_script = os.path.join(os.path.dirname(__file__), 'lookup_items.py')
-        if os.path.exists(lookup_script):
-            try:
-                result = subprocess.run([sys.executable, lookup_script], 
-                                       capture_output=False, 
-                                       text=True)
-                if result.returncode != 0:
-                    print("\n⚠ Warning: New tools found that are not in items.json")
-            except Exception as e:
-                print(f"\n⚠ Warning: Could not run lookup_items.py: {e}")
-        else:
-            print("\n⚠ Warning: lookup_items.py not found, skipping new tools check")
+        try:
+            # Load items.json to pass to find_missing_tools
+            with open(ITEMS_JSON_PATH, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            items = data.get('items', [])
+            
+            print(f"Base directory: {BASE_DIR}")
+            print(f"Scanning for missing tools...")
+            print()
+            
+            missing_tools = find_missing_tools(items)
+            
+            if missing_tools:
+                print(f"⚠ Found {len(missing_tools)} missing tools not in items.json:\n")
+                
+                # Group by path
+                by_path = {}
+                for tool in missing_tools:
+                    if tool['path'] not in by_path:
+                        by_path[tool['path']] = []
+                    by_path[tool['path']].append(tool['name'])
+                
+                for path in sorted(by_path.keys()):
+                    print(f"{path}:")
+                    for name in sorted(by_path[path]):
+                        print(f"  - {name}")
+                    print()
+                
+                print(f"💡 Tip: Run 'update_items.py' to add these missing tools to items.json")
+                
+                # Add to log file
+                with open(LOG_FILE, 'a', encoding='utf-8') as log_file:
+                    log_file.write("\nMISSING TOOLS:\n")
+                    log_file.write("-" * 80 + "\n")
+                    log_file.write(f"Found {len(missing_tools)} missing tools not in items.json:\n\n")
+                    for path in sorted(by_path.keys()):
+                        log_file.write(f"{path}:\n")
+                        for name in sorted(by_path[path]):
+                            log_file.write(f"  - {name}\n")
+                        log_file.write("\n")
+                    log_file.write("Tip: Run 'update_items.py' to add these missing tools to items.json\n")
+            else:
+                print("✓ All tools in the Bin directory are registered in items.json!")
+                
+                # Add to log file
+                with open(LOG_FILE, 'a', encoding='utf-8') as log_file:
+                    log_file.write("\nMISSING TOOLS:\n")
+                    log_file.write("-" * 80 + "\n")
+                    log_file.write("✓ All tools in the Bin directory are registered in items.json!\n")
+        
+        except Exception as e:
+            print(f"\n⚠ Warning: Could not check for missing tools: {e}")
+            
+            # Add error to log file
+            with open(LOG_FILE, 'a', encoding='utf-8') as log_file:
+                log_file.write("\nMISSING TOOLS:\n")
+                log_file.write("-" * 80 + "\n")
+                log_file.write(f"⚠ Warning: Could not check for missing tools: {e}\n")
     else:
         print("\n" + "=" * 80)
-        print("Skipping check for new tools (--no-update flag set)")
+        print("Skipping check for missing tools (--no-lookup flag set)")
         print("=" * 80)
+        
+        # Add to log file
+        with open(LOG_FILE, 'a', encoding='utf-8') as log_file:
+            log_file.write("\nMISSING TOOLS:\n")
+            log_file.write("-" * 80 + "\n")
+            log_file.write("Skipped (--no-lookup flag set)\n")
     
     # Return exit code
     return 1 if (errors or total_warnings > 0) else 0

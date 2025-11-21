@@ -3,13 +3,13 @@ REM Test script for validating items.json
 REM This script runs the Python test and displays the results
 REM
 REM Usage:
-REM   test.cmd          - Run validation ignoring warnings, skip new tools check
+REM   test.cmd Run validation ignoring warnings, skip new tools check
 REM   test.cmd --no-version - Run validation ignoring version warnings
 REM   test.cmd --no-url - Run validation ignoring url warnings
 REM   test.cmd --no-download - Run validation ignoring download warnings
 REM   test.cmd --no-path - Run validation ignoring path warnings
 REM   test.cmd --override - Override (overwrite) the log file
-REM   test.cmd --no-update - Skip checking for new tools
+REM   test.cmd --no-lookup - Skip checking for missing tools in Bin directory
 
 echo.
 echo ================================================================================

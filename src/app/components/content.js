@@ -14,7 +14,7 @@ import Section from './section';
 import AI from './ai';
 import { generateSlug } from '../helper';
 
-const Content = ({ activeTab, disabledPaths }) => {
+const Content = ({ activeTab, disabledSlugs }) => {
 
   const activeSection = sConfig.sections.find(
     section => generateSlug(section.name) === activeTab
@@ -35,7 +35,7 @@ const Content = ({ activeTab, disabledPaths }) => {
     return <AI />;
   }
 
-  return <Section section={activeSection} items={iConfig.items} disabledPaths={disabledPaths} />;
+  return <Section section={activeSection} items={iConfig.items} disabledSlugs={disabledSlugs} />;
 };
 
 export default Content;
