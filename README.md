@@ -13,7 +13,7 @@ ReVens is a Windows-based and AI-powered Reverse Engineering Toolkit "All-In-One
 ## 🔧 Features
 
 * **Cross-platform & Modern UI** software launcher "Blackhat style"
-* **90% clean**: All detections are **false positives**, No malware injected (Tested)
+* **90% clean**: All detections are **false positives**, No malware injected
 * **90% portable**: Using portable versions or resolved/included dependencies
 * **Original assets**: Themes, Sounds (e.g. BRD - Teleport Pro.mx, CORE - Power ISO.xm)
 * **Packages manager**: JSON based Downloader, Versioning, Updater
