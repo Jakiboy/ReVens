@@ -138,7 +138,7 @@
                 {
                     "name": "manipulating",
                     "title": "Manipulating",
-                    "desc": "Compile, build and reconstruct PE (<strong>PE, DLL, Import tables, Setup, Res</strong>)",
+                    "desc": "Compile, Inject, Patch, Build and Reconstruct PE (<strong>DLL, Import tables, Setup, Res</strong>)",
                     "extra": [
                         {
                             "name": "dll",
@@ -249,7 +249,7 @@
                 {
                     "name": "bypassing",
                     "title": "Bypassing",
-                    "desc": "Bypass runtime protections and anti-debugging"
+                    "desc": "Bypass runtime protections, anti-debugging techniques, hardware dongles, and licensing management"
                 },
                 {
                     "name": "encoding",
