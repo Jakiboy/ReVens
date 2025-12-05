@@ -4,7 +4,7 @@ G='\033[0;32m'
 B='\033[0;96m'
 
 NAME='ReVens'
-VERSION='1.5.2'
+VERSION='1.5.3'
 DESCRIPTION='ReVens - Reverse Engineering Toolkit AIO 2026'
 AUTHOR='Jakiboy'
 COPYRIGHT="Copyright (c) 2026 ${AUTHOR}"

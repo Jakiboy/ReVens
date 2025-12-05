@@ -95,14 +95,21 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 
 ##### Binary
 *Analyze PE and other binary files.*
+* **[Exe Spy](https://github.com/andyjsmith/Exe-Spy)** - *Exe Spy.*
 * **FileAlyzer** - *Understand files by analyzing their structure.*
 * **[PE-bear](https://github.com/hasherezade/pe-bear)** - *PE reversing tool.*
 * **DLL Analyzer** - *Display function names in DLLs.*
 * **[ReverseKit](https://github.com/zer0condition/ReverseKit)** - *Comprehensive reverse engineering toolkit.*
 * **[Spyre](https://github.com/spyre-project/spyre)** - *Simple YARA-based scanner.*
+* **[Com Check](https://www.bullzip.com/products/chk/info.php)** - *Check COM objects registration.*
 * **[Capa](https://github.com/mandiant/capa)** - *Identify capabilities in executables.*
 * **ClamAV** - *Open-source antivirus engine.*
 * **[Yara](https://github.com/VirusTotal/yara)** - *Malware pattern matching tool.*
+* **BDLLScan** - *Broken DLL scanner.*
+* **Import Searcher** - *DLL import searcher.*
+* **PE-Sniffer** - *PE file identifier.*
+* **PEview** - *PE file viewer.*
+* **View As Image** - *Hex/image file viewer.*
 * **ExeInfo** - *Universal binary analyzer.*
 * **Manalyze** - *Static analyzer for PE executables.*
 * **PEstudio** - *Malware Analysis in a private context.*
@@ -110,6 +117,58 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 * **A-Ray Scanner** - *CD/DVD Scanner.*
 * **CD Identifier** - *CD/DVD Device Capabilities Viewer.*
 * **CPSV** - *Protected Storage Viewer.*
+* **AsViewer** - *ActiveScript viewer.*
+* **CompatAlyzer** - *Compatibility analyzer.*
+* **Count Characters** - *Text length counter.*
+* **Cowspy** - *Window spy tool.*
+* **DarkSpy** - *Rootkit detector.*
+* **DebugView** - *System debug output viewer.*
+* **deChk** - *Dependency checker.*
+* **DeDe PAS View** - *Delphi executable analyzer.*
+* **Diskmon** - *Disk activity monitor.*
+* **DiskView** - *Disk cluster viewer.*
+* **Dongle Spy** - *Hardware dongle detector.*
+* **DotNet Id** - *.NET assembly identifier.*
+* **DriverspyNT** - *Windows driver spy.*
+* **DupFinder** - *Duplicate file finder.*
+* **EnumCSP** - *Cryptographic provider enumerator.*
+* **ESfV Checker** - *Embedded string/font viewer.*
+* **FastScanner** - *Fast file scanner.*
+* **FFI** - *File format identifier.*
+* **File Dependency** - *File dependency mapper.*
+* **File insPEctor** - *PE file inspector.*
+* **Filemon EE** - *File system activity monitor.*
+* **FireLog** - *Firewall log viewer.*
+* **Flashback** - *System restore point manager.*
+* **Form Spy** - *GUI form inspector.*
+* **Gmer** - *Rootkit/malware detector.*
+* **Handle** - *Open file/process handle viewer.*
+* **IceSword** - *Anti-rootkit tool.*
+* **InCtrl** - *System change tracker.*
+* **KaKeeware** - *Keystroke logger detector.*
+* **Kerberos** - *Kerberos ticket viewer.*
+* **Kernel Detective** - *Kernel mode inspector.*
+* **KeyLogger** - *Keystroke activity monitor.*
+* **Microsoft Spy** - *Windows message spy.*
+* **MultiMon** - *Multi-monitor utility.*
+* **OEP Finder** - *Original Entry Point locator.*
+* **OEP Scan** - *OEP scanner for packed files.*
+* **OTP Helper** - *One-time password assistant.*
+* **PX Binary Viewer** - *Advanced binary viewer.*
+* **Regcmd** - *Command-line registry tool.*
+* **Seem** - *Hidden window revealer.*
+* **ShowString** - *String extractor.*
+* **Snoopy** - *Network sniffer.*
+* **SysExporter** - *System data exporter.*
+* **ToTheStars** - *Screen ruler/measurement tool.*
+* **USBDeview** - *USB device history viewer.*
+* **VB Spy** - *Visual Basic app inspector.*
+* **VeoVeo** - *Video surveillance detector.*
+* **VideoCacheView** - *Video cache extractor.*
+* **WinService Manager** - *Windows service manager.*
+* **Code Visualizer** - *Code structure visualization tool.*
+* **SmartCheck** - *Runtime error detection for VB.*
+* **WinHelp** - *Windows help file compiler.*
 
 ##### Compilation
 *Analyze PE compilation, signature and more.*
@@ -138,9 +197,10 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 * **Protection ID** - *CD/DVD protection detector.*
 * **SCANiT** - *PE scanner.*
 * **Sleuth Kit** - *Sleuth Kit.*
-* **SpectroByte** - *PE byte inspector.*
 * **TrID** - *File Identifier (CLI).*
 * **TrIDNet** - *Binary Signature Identifier.*
+* **Enigma Info** - *Enigma binary analysis tool.*
+* **Corso Scanner** - *Vulnerability/code scanner.*
 
 ##### System
 *Dynamic system analysis (Runtime).*
@@ -161,10 +221,26 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 * **[NTLDD](https://github.com/LRN/ntldd)** - *List DLL dependencies for Windows executables.*
 * **WinID** - *Window information tool.*
 * **Regalyz** - *Registry analyzer and editor.*
-* **Zero Dump** - *Create memory dumps.*
+* **Zero Dump** - *Create memory dumps (zDump).*
 * **[DLL Function Viewer](https://www.nirsoft.net/utils/dll_function_viewer.html)** - *View DLL functions.*
 * **Dependency Walker** - *32-bit/64-bit Windows module scanner.*
 * **APIx** - *WinAPI Visualizator.*
+* **API Address** - *API locator utility.*
+* **API Addresses Finder** - *API endpoint scanner.*
+* **APISpy32** - *Windows API monitor.*
+* **HookShark** - *API hook detector.*
+* **ListDLLs** - *DLL listing utility.*
+* **Reg LWT Scan** - *Registry last-write time scanner.*
+* **Regmon EE** - *Registry activity monitor.*
+* **RegScan** - *Registry snapshot comparator.*
+* **Regshot XP** - *Registry change tracker.*
+* **Regsnap** - *Registry/system snapshot tool.*
+* **TrashReg** - *Registry cleaner.*
+* **WinAPI Help** - *Windows API reference.*
+* **WinAPI Override** - *API function interceptor.*
+* **Window Scanner** - *Window hierarchy inspector.*
+* **WinDowse** - *Window property viewer.*
+* **WinErr** - *Windows error code lookup.*
 
 ##### System (Process)
 * **Process Monitor** - *Advansed monitoring tool for Windows.*
@@ -179,6 +255,9 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 * **Process Hacker** - *Advanced process manager.*
 * **[Hollows Hunter](https://github.com/hasherezade/hollows_hunter)** - *Scans running processes for code injection artifacts.*
 * **GDI View** - *Inspect GDI handles.*
+* **PrcView** - *Process viewer.*
+* **ProcessWatch** - *Process activity monitor.*
+* **TaskMngr** - *Enhanced task manager.*
 
 ##### System (Memory)
 * **VMMap** - *Virtual and physical memory analyzer.*
@@ -188,7 +267,7 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 
 ##### System (Network)
 * **Wireshark** - *Network packet analyzer.*
-* **TCP View** - *TCP/UDP viewer.*
+* **TCPView** - *TCP/UDP viewer.*
 * **[HTTP Toolkit](https://github.com/httptoolkit/httptoolkit-desktop)** - *Intercept, view & edit any HTTP traffic.*
 * **[ZAP](https://www.zaproxy.org)** - *Open source web app scanner.*
 * **[PacketSender](https://github.com/dannagle/PacketSender)** - *Send & receive TCP, UDP, SSL, DTLS. HTTP Requests.*
@@ -209,6 +288,9 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 * **RawCap** - *Raw socket packet capture tool.*
 * **SplitCap** - *PCAP file splitter tool.*
 * **PCResView** - *Remote PC Res View.*
+* **CurrPorts** - *Current ports monitor.*
+* **PortMon** - *Serial/parallel port monitor.*
+* **TCP Logger** - *TCP connection logger.*
 
 ##### System (File)
 * **Search My Files** - *Advansed files finder.*
@@ -231,6 +313,9 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 * **ReloX** - *Win32 relocations rebuilder.*
 * **SideBySide** - *Utility for side-by-side file comparison.*
 * **Signature Manager** - *Utility for managing digital signatures.*
+* **ITCompare** - *Binary file comparison tool.*
+* **XC** - *Cross-compiler toolchain.*
+* **CmpDisasm** - *Binary comparison in disassembler text form.*
 
 ##### Calculating
 *Mathematical and reverse calculating.*
@@ -238,12 +323,32 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 * **Reversers Calculator** - *Calculator for reverse engineering.*
 * **Jump Calculator** - *Calculates JMP instructions.*
 * **[XOpcodeCalc](https://github.com/horsicq/XOpcodeCalc)** - *Opcode calculator tool.*
+* **[MD5 Calculator](https://www.bullzip.com/products/md5/info.php)** - *MD5 Calculator (BullZip).*
 * **[RHash](https://github.com/rhash/RHash)** - *Utility for computing hash sums.*
 * **Hex-Dec** - *Hexadecimal to Decimal converter.*
-* **[Hash Calculator](http://sanity-free.org/5252/viewtopic.php?id=20)** - *Calculates cryptographic hashes.*
+* **[DAMN Hash Calc](http://sanity-free.org/5252/viewtopic.php?id=20)** - *Distributed hash calculator.*
 * **Base Calculator** - *Calculates in different bases.*
 * **Base Converter** - *Converts between bases.*
 * **Jump to Hex** - *Jump instruction to hexadecimal.*
+* **BigInt Calculator Pro** - *Arbitrary-precision integer calculator.*
+* **BitSet** - *Bit manipulation and visualization tool.*
+* **CheckSum** - *Checksum verification utility.*
+* **CRC Calculator** - *Cyclic Redundancy Check calculator.*
+* **CRC32** - *CRC-32 hash generator.*
+* **DLP Tool** - *Data Loss Prevention analysis tool.*
+* **ECB** - *Error Correction Byte calculator.*
+* **FlexLM Calculator** - *FlexLM license key calculator.*
+* **FPU Calculator** - *Floating Point Unit emulator/calculator.*
+* **Gtchksum** - *GT checksum generator.*
+* **Hash** - *Multi-algorithm hash generator.*
+* **HashCalc** - *Hash calculation utility.*
+* **HexDecChar** - *Hex/Decimal/Character converter.*
+* **Hexprobe Calculator** - *Advanced hexadecimal calculator.*
+* **MD5 Summer** - *MD5 checksum generator.*
+* **Octipus** - *Octal/hexadecimal converter and calculator.*
+* **Offset Calculator** - *Memory/file offset calculator.*
+* **Regfield** - *Registry field value calculator.*
+* **XorIt** - *XOR encryption/calculation tool.*
 
 ### ⚡ Unpacking
 Unpack and remove binary protection (UPX, ASPack, VMProtect).
@@ -253,28 +358,305 @@ Unpack and remove binary protection (UPX, ASPack, VMProtect).
 * **[XVolkolak](https://n10info.blogspot.com/2018/07/xvolkolak-021.html)** - *Unpacker emulator for malware analysis.*
 * **[.NET Reactor Slayer](https://github.com/SychicBoy/NETReactorSlayer)** - *Deobfuscator and unpacker for .NET Reactor.*
 * **[MalUnpack](https://github.com/hasherezade/mal_unpack)** - *Dynamic unpacker for malware analysis.*
-* **[ILPUnpack](https://github.com/ElektroKill/ILPUnpack)** - *ILProtector unpacker tool.*
+* **deARMPro** - *ARM Protector unpacker.*
+* **AuBeurre** - *Butter unpacker.*
+* **CexeKiller** - *CEXE unpacker.*
+* **deCEXE** - *CEXE decompressor.*
+* **CoVei Unpacker** - *CoVei unpacker.*
+* **DDeM** - *DDeM unpacker.*
+* **AEL Unwrapper** - *AEL protection unwrapper.*
+* **Anti-Pace** - *PACE anti-copy unpacker.*
+* **AoRE Unpacker** - *AoRE generic unpacker.*
+* **ap0x Unpack Engine SDK** - *ap0x Unpack Engine SDK.*
+* **CDCops** - *CD-Cops unpacker.*
+* **Cool Dumper** - *Memory dumping utility.*
+* **CopyLok Remover** - *CopyLok protection remover.*
+* **De-Crunch** - *Executable decruncher.*
+* **DeCrunchit** - *Executable decruncher.*
+* **dePACK** - *Generic packer unpacker.*
+* **DeX** - *Executable decompressor.*
+* **DeX2** - *Advanced executable decompressor.*
+* **disARM** - *ARM protector disassembler.*
+* **DNGuard Fixer** - *DNGuard protector fixer (.NET).*
+* **DotFuckScator** - *Dotfuscator obfuscation remover (.NET).*
+* **DotNET Tracer** - *.NET assembly tracer.*
+* **Dpcgd** - *DPCGD unpacker.*
+* **Easy import finder** - *Import table reconstruction tool.*
+* **EPE Stripper** - *EPE protector stripper.*
+* **ExeShield2 decryptor** - *ExeShield2 decryption tool.*
+* **FredUnYP** - *Yoda's Protector unpacker.*
+* **GPcH UnHidePE** - *Hidden PE revealer.*
+* **Guardant Killer** - *Guardant dongle protection remover.*
+* **GUW32** - *Generic unpacker for Win32.*
+* **HackUPX** - *UPX hacking/unpacking tool.*
+* **HWUN** - *Hardware-based unpacker.*
+* **ICRYPT Unwrapper** - *ICRYPT protection unwrapper.*
+* **iTwister** - *Twister protector unpacker.*
+* **K-die** - *Krypton protector killer.*
+* **Konxise Unpacker** - *Konxise protector unpacker.*
+* **N-Rec** - *Native code reconstructor.*
+* **Ned** - *Generic unpacker.*
+* **Net Domain Dumper** - *.NET domain dumper.*
+* **Net Dumper Loader** - *.NET dump loader.*
+* **NETUnpack** - *.NET assembly unpacker.*
+* **Ni2Untelock** - *tElock unpacker.*
+* **NoodleKiller** - *Noodle protector killer.*
+* **Obsidium Explorer** - *Obsidium unpacker/explorer.*
+* **PCGuard DotNet Fixer** - *PCGuard .NET fixer.*
+* **PEunCompact** - *PECompact decompressor.*
+* **PEUnlck** - *PELock unpacker.*
+* **PeUNlock** - *PE lock/unlock tool.*
+* **Pmak** - *PMak unpacker.*
+* **PopCap Stripper** - *PopCap game stripper.*
+* **PtClient** - *PtClient unpacker.*
+* **QuickUnpack** - *Rapid unpacking tool.*
+* **QUnpack DLL** - *DLL unpacking tool.*
+* **rAD** - *Armadillo unpacker.*
+* **Reflexive Unwrapper** - *Reflexive protector unwrapper.*
+* **RegWare4 Eliminator** - *RegWare4 protection remover.*
+* **REZiriz** - *Reziriz unpacker.*
+* **RL!deBeRoEXEPacker** - *BeRo EXE packer unpacker.*
+* **RL!deCryptoPeProtector** - *CryptoPe protector unpacker.*
+* **RL!deExeFog** - *ExeFog unpacker.*
+* **RL!deGoatPeMutilator** - *GoatPe mutilator unpacker.*
+* **RL!deHmimysPacker** - *Hmimys packer unpacker.*
+* **RL!deMarioPack** - *MarioPack unpacker.*
+* **RL!deMEW** - *MEW unpacker.*
+* **RL!deNPack** - *NPack unpacker.*
+* **RL!deNsPack** - *NsPack unpacker.*
+* **RL!dePackMan** - *PackMan unpacker.*
+* **RL!dePeCompact** - *PECompact unpacker.*
+* **RL!dePeX** - *PeX unpacker.*
+* **ROMRA** - *ROMRA unpacker.*
+* **RunPe Killer** - *RunPE unpacker.*
+* **SC Deobfuscator** - *Source code deobfuscator.*
+* **SCP Killer** - *SCP protector killer.*
+* **SDProtector stripper** - *SDProtector stripper.*
+* **SecuROM Cleaner** - *SecuROM protection cleaner.*
+* **Smartassassin** - *Smart protection assassin.*
+* **Stealth Remover** - *Stealth protection remover.*
+* **StripperX** - *Advanced protection stripper.*
+* **SVKP Explorer** - *SVKP protector explorer.*
+* **TBS** - *Themida bypass script.*
+* **Themnet Unpacker** - *Themida .NET unpacker.*
+* **TinyProtect Unpacker** - *TinyProtect unpacker.*
+* **tNO-Peunc** - *PE uncrypter.*
+* **ubDBPE** - *DBPE unpacker.*
+* **UCFwwpack** - *WWPack unpacker.*
+* **Un-Kassandra** - *Kassandra protector unpacker.*
+* **Un-lame** - *LameCrypt unpacker.*
+* **un-pepp** - *PEP protector unpacker.*
+* **UnBinder** - *Executable binder unpacker.*
+* **UnBJFNT** - *BJFNT unpacker.*
+* **UncodeCrypt** - *CodeCrypt unpacker.*
+* **undbpe** - *DBPE unpacker.*
+* **UnDEF** - *DEF protector unpacker.*
+* **UnDeploy.NET** - *.NET deployment unpacker.*
+* **UnDFS** - *DFS protector unpacker.*
+* **UnEPProt** - *EPProt unpacker.*
+* **unGHF** - *GHF protector unpacker.*
+* **UnHidePE** - *Hidden PE revealer.*
+* **UnKK** - *KK protector unpacker.*
+* **unKryton** - *Krypton protector unpacker.*
+* **UnLAME** - *LameCrypt unpacker.*
+* **UnLCCrypt** - *LCCrypt unpacker.*
+* **UnMEW** - *MEW unpacker.*
+* **unNFO** - *NFO protector unpacker.*
+* **unOrien** - *ORiEN protector unpacker.*
+* **UnPECompact** - *PECompact unpacker.*
+* **UnPeCrypt** - *PeCrypt unpacker.*
+* **Unpedim** - *PE Diminisher unpacker.*
+* **unPEncrypt** - *PEncrypt unpacker.*
+* **UnPEPack** - *PE-PACK unpacker.*
+* **unPeprot** - *PE-PROTECT unpacker.*
+* **unPes** - *PES protector unpacker.*
+* **UnPeShield** - *PeShield unpacker.*
+* **unPETiTE** - *Petite decompressor.*
+* **Unpgui** - *PGUI unpacker.*
+* **uNPUNiSHER** - *Punisher protector unpacker.*
+* **unSafecast** - *SafeCast protector unpacker.*
+* **UnSafeDisc** - *SafeDisc protector unpacker.*
+* **UnShellP** - *Shell protection unpacker.*
+* **UnSmoke** - *Smoke protector unpacker.*
+* **UnStealth Unpacker** - *Stealth protector unpacker.*
+* **UnStealthPE** - *StealthPE unpacker.*
+* **UnVGCrypt** - *VGCrypt unpacker.*
+* **VMUnpacker** - *Virtual machine unpacker.*
+* **WinKript Unpacker** - *WinKript unpacker.*
+* **WinPack** - *WinPack unpacker.*
+* **WiseUNpacker** - *Wise installer unpacker.*
+* **X-Prot** - *XProtector unpacker.*
+* **XPecrypt** - *XPecrypt unpacker.*
+* **XprotStripper** - *XProtector stripper.*
 * **[ConfuserEx Unpacker](https://github.com/XenocodeRCE/ConfuserEx-Unpacker)** - *Confuserex unpacker.*
-* **[ILProtector Unpacker](https://github.com/RexProg/ILProtectorUnpacker)** - *ILProtector unpacker.*
-* **RL!deUPX** - *UPX unpacker.*
-* **RL!deASPack** - *ASPack unpacker.*
 * **RL!dePacker** - *Generic unpacker.*
-* **[GUnPacker](https://github.com/unipacker/unipacker)** - *Universal unpacker.*
+* **[GUnPacker](https://github.com/unipacker/unipacker)** - *Generic unpacker.*
 * **[de4dot](https://github.com/ViRb3/de4dot-cex)** - *.NET deobfuscator and unpacker.*
-* **[ASPack Unpacker](https://github.com/orcastor/unpack)** - *Another ASPack unpacker.*
 * **[IsXunpack](https://github.com/lifenjoiner/ISx)** - *InstallShield installer extractor.*
 * **[ISx](https://github.com/lifenjoiner/ISx)** - *InstallShield installer extractor and unpacker.*
-* **Unpacker ExeCryptor** - *ExeCryptor unpacker.*
+* **Unpacker ExeCryptor** - *EXECryptor unpacker.*
 * **Universal Unprotector** - *Another universal unpacker.*
 * **[Quick Unpack](https://github.com/fatrolls/Quick-Unpack)** - *Quick and automated unpacker tool.*
 * **[Magicmida](https://github.com/Hendi48/Magicmida)** - *Themida/WinLicense unpacker.*
+* **deGIX** - *GIX unpacker.*
+* **DePE-PACK** - *PE-PACK decompressor.*
+* **dePE-PROTECT** - *PE-PROTECT unpacker.*
+* **Corso** - *Corso V6 unpacker.*
+
+##### Unprotect (ACProtect)
+* **ACKiller** - *Anti-CrypKey unpacking tool.*
+* **ACP CRC Fix** - *ACProtect CRC checksum fixer.*
+* **ACP Stripper Rebuilder** - *ACProtect stripper/rebuilder.*
+
+##### Unprotect (ART)
+* **ART Generic Unpacker** - *ART generic unpacking engine.*
+* **ART UnPacker** - *ART unpacker.*
+
+##### Unprotect (ASPack)
+* **Anti-Aspack** - *ASPack unpacker.*
+* **ASPackDie** - *ASPack unpacker/killer.*
+* **DeASPack** - *ASPack decompressor.*
+* **QcASPack** - *Quick ASProtect unpacker.*
+* **Un-ASPACK** - *ASPack decompressor.*
+* **RL!deASPack** - *ASPack unpacker & decompressor.*
+* **[ASPack Unpacker](https://github.com/orcastor/unpack)** - *Another ASPack unpacker.*
+* **UnASPack** - *ASPack decompressor.*
+* **WasPack** - *ASPack unpacker.*
+
+##### Unprotect (ASProtect)
+* **Anti-Aspr** - *ASProtect unpacker.*
+* **AS-AntiProtect** - *Anti-ASProtect unpacker.*
+* **ASPatch** - *ASProtect patcher.*
+* **ASPatcher** - *ASProtect patch applier.*
+* **ASPR CRC Locator** - *ASProtect CRC locator.*
+* **ASPR Dumper** - *ASProtect memory dumper.*
+* **Aspr Loader** - *ASProtect loader.*
+* **AsprDbgr** - *ASProtect debugger.*
+* **ASPrIP** - *ASProtect import reconstructor.*
+* **AsprStripperXP** - *ASProtect XP stripper.*
+* **Caspr** - *Comprehensive ASProtect unpacker.*
+* **UnVbAspr** - *VB ASProtect unpacker.*
+
+##### Unprotect (Armadillo)
+* **AMDump** - *Armadillo memory dumper.*
+* **AMLoad** - *Armadillo V6 loader.*
+* **AMRegsnd** - *Armadillo registration key sender.*
+* **Arma CRC Finder** - *Armadillo CRC location finder.*
+* **Arma DeAttcher** - *Armadillo attachment remover.*
+* **Arma DLL Stripper** - *Armadillo DLL stripper.*
+* **Arma FP Changer** - *Armadillo fingerprint changer.*
+* **Arma JD Decryptor** - *Armadillo JD decryption tool.*
+* **Arma Nanomite Fixer** - *Armadillo nanomite fixer.*
+* **Arma SecStrip** - *Armadillo section stripper.*
+* **Arma Unpack** - *Armadillo unpacker.*
+* **ArmaDetach** - *Armadillo detachment tool.*
+* **ArmaDetachMe** - *Interactive Armadillo detacher.*
+* **Armadillo Cleaner** - *Armadillo protection cleaner.*
+* **Armadillo CRC Finder** - *Armadillo CRC finder.*
+* **Armadillo Goblin** - *Armadillo unpacking assistant.*
+* **Armadillo Nanomites Fixer** - *Armadillo nanomites fixer.*
+* **ArmaDump** - *Armadillo memory dumper.*
+* **ArmaEV** - *Armadillo emulator/virtualizer.*
+* **ArmaGeddon** - *Armadillo comprehensive unpacker.*
+* **ArmaGUI** - *Armadillo GUI unpacker.*
+* **ArmaKG** - *Armadillo key generator.*
+* **ArmaReducer** - *Armadillo protection reducer.*
+* **Armdep** - *Armadillo dependency extractor.*
+* **ArmInline** - *Armadillo inline fixer.*
+* **ArmKiller** - *Armadillo killer/unpacker.*
+* **ArmTools** - *Armadillo utility toolkit.*
+* **DeaM** - *DeArmadillo unpacker.*
+* **Demaradillo** - *Armadillo unpacker.*
+* **dilloDIE** - *Armadillo killer.*
+* **DilloDump** - *Armadillo memory dumper.*
+* **Un-Armadillo** - *Armadillo unpacker.*
+* **UnArm** - *Armadillo unpacker.*
+
+##### Unprotect (CliSecure)
+* **CliSecure Fixer** - *CliSecure protection fixer.*
+* **FPE CliSecure Unpacker** - *CliSecure FPE unpacker.*
+
+##### Unprotect (FSG)
+* **DeFSG Mutator** - *FSG mutation unpacker.*
+* **UnFSG HERiTAGE** - *FSG HERiTAGE unpacker.*
+* **UnFSG Smola** - *FSG Smola unpacker.*
+* **UnFSG** - *FSG unpacker.*
+* **UnFSG2** - *FSG2 unpacker.*
+* **RL!deFSG** - *FSG unpacker.*
+* **RL!deFSG2** - *FSG2 unpacker.*
+* **suFSG2** - *FSG2 unpacker.*
+* **FSG Dumper** - *FSG memory dumper.*
+* **FSG Unpacker** - *FSG decompressor.*
+* **FSG2 Dumper** - *FSG2 memory dumper.*
+
+##### Unprotect (ILProtector)
+* **[ILProtector Unpacker](https://github.com/RexProg/ILProtectorUnpacker)** - *ILProtector unpacker (.NET).*
+* **[ILPUnpack](https://github.com/ElektroKill/ILPUnpack)** - *ILProtector unpacker tool (.NET).*
+
+##### Unprotect (Morphine)
+* **Morphine Killer** - *Morphine protector killer.*
+* **Morphine MustDie** - *Morphine protector remover.*
+* **Anti-Morfina** - *Morphine unpacker.*
+
+##### Unprotect (PESpin)
+* **PESpin Unpacker** - *PESpin unpacker.*
+* **unPESPIN** - *PESpin unpacker.*
+* **DeSpinner** - *PESpin unpacker.*
+
+##### Unprotect (Shrinker)
+* **RL!deShrinkWrap** - *ShrinkWrap unpacker.*
+* **UnShrinker** - *Shrinker decompressor.*
+* **DeShrink** - *Shrinker decompressor.*
+
+##### Unprotect (Themida)
+* **Themida Unpacker** - *Themida unpacker.*
+* **UnThemida** - *Themida unpacker.*
+* **Antimida** - *Themida unpacker.*
+
+##### Unprotect (UPX)
+* **RL!deUPX** - *UPX unpacker & decompressor.*
+* **UnUPXShit** - *UPX variant unpacker.*
+* **UPX-Ripper** - *UPX ripper/unpacker.*
+* **UPXUnpack** - *UPX unpacker.*
+* **Anti-UPX-Srambler** - *UPX scrambler unpacker.*
+* **BabyUPX** - *UPX unpacker for beginners.*
+* **De-UPX Mutator** - *UPX mutation unpacker.*
+* **deSimpleUPXCryptor** - *SimpleUPXCryptor unpacker.*
+* **deUPXCrypt** - *UPXCrypt unpacker.*
+* **deUPXRedir** - *UPX redirection fixer.*
+* **deUPXScrambler** - *UPX scrambler unpacker.*
+
+##### Unprotect (Yoda)
+* **RL!deYC** - *Yoda crypt unpacker.*
+* **DeYoda** - *Yoda protector unpacker.*
+
+##### Unprotect (tElock)
+* **RL!detELock** - *tELock unpacker (RL!).*
+* **tElock Dumper** - *tElock memory dumper.*
+* **Telock Stripper** - *tElock protection stripper.*
+* **tEunlock** - *tElock unlocker.*
+* **unTELock** - *tELock unpacker.*
+* **DetectTE** - *tElock detector.*
+
+##### Unprotect (WinUpack)
+* **RL!deWinUPack** - *WinUpack decompressor.*
+* **UPack Fixer** - *UPack fixer (WinUpack).*
+
+##### Unprotect (Xenocode)
+* **The Xenocode Solution** - *Xenocode unpacker.*
+* **Xenocode Fox** - *Xenocode unpacker.*
+
+##### Unprotect (ZProtect)
+* **ZP Fixer** - *ZProtect fixer.*
+* **ZP GPK** - *ZProtect generic patch kit.*
+* **ZPDump** - *ZProtect memory dumper.*
 
 ##### Decoding
 *Decode hashed values (Crypto).*
 * **Ophcrack** - *Windows password cracker based on rainbow tables.*
-* **[Armadillo Key Tool](https://github.com/mrexodia/akt)** - *Tool for working with Armadillo software protection.*
 * **[CyberChef](https://github.com/gchq/CyberChef)** - *Analyzing and decoding data.*
 * **Hashcat** - *Advanced password recovery.*
+* **[Armadillo Key Tool](https://github.com/mrexodia/akt)** - *Tool for working with Armadillo software protection.*
 * **Keygener Assistant** - *Assists in generating keys for software.*
 * **[SND Reverse Tool](https://github.com/sceners/snd-reverser-tool)** - *Reverse engineering tool for Windows binaries.*
 * **[Hash Identifier](https://github.com/blackploit/hash-identifier)** - *Identifies the type of hash used in a string.*
@@ -284,6 +666,23 @@ Unpack and remove binary protection (UPX, ASPack, VMProtect).
 * **[MD5 Toolbox](https://github.com/Smithsonian/MD5_tool)** - *Toolbox for working with MD5 hashes.*
 * **BarsWF SSE2** - *World Fastest MD5 cracker.*
 * **Wordlist** - *Cracking Wordlist Dictionary of 3163421 Words.*
+* **BruteHash** - *Hash brute-forcing tool.*
+* **Crypto Searcher** - *Cryptographic algorithm identifier.*
+* **CryptoFrame** - *Cryptanalysis framework.*
+* **CrypTool** - *Cryptography learning suite.*
+* **CryptTool** - *Encryption/decryption utility.*
+* **CSA** - *Common cryptographic suite analyzer.*
+* **DSATool** - *DSA key generation/analysis tool.*
+* **ElGamal KG** - *ElGamal key generator.*
+* **MD5Inside** - *MD5 hash analyzer.*
+* **Msieve** - *Integer factorization tool.*
+* **PasswordsPro** - *Password recovery suite.*
+* **Rainbow MD5 Crack** - *Rainbow table MD5 cracker.*
+* **RainbowCrack** - *Rainbow table generator/cracker.*
+* **RSA Attacking Toolkit** - *RSA vulnerability testing suite.*
+* **RSA-Tool2** - *RSA key manipulation tool.*
+* **SND Reverser Tool** - *Sound file crypto reverser.*
+* **UltraCM** - *Ultra password hash cracker.*
 
 ##### Extracting
 *Extract PE and other binary files.*
@@ -294,12 +693,27 @@ Unpack and remove binary protection (UPX, ASPack, VMProtect).
 * **[Ratr](https://github.com/Jakiboy/Ratr)** - *Router Config Extractor.*
 * **[ResourcesExtract](https://www.nirsoft.net/utils/resources_extract.html)** - *Extract resources from executable files.*
 * **DotNetResExtract** - *Extract .NET assembly resources.*
+* **[UniExtract](https://github.com/Bioruebe/UniExtract2)** - *Universal archive extractor.*
+* **[Extract Text](https://www.bullzip.com/products/ext/info.php)** - *Extract the text content of different types of documents.*
 * **[BinText](https://www.aldeid.com/wiki/BinText)** - *Fast and powerful text extractor.*
 * **ExeDumper** - *Utility to dump executable files.*
 * **Table Extractor** - *Extract tables from executables or libraries.*
+* **ExtWise** - *File extension information tool.*
+* **Exwise** - *Executable file extractor.*
+* **IconEX** - *Icon extractor and editor.*
+* **ISSD** - *Installer self-extraction dumper.*
+* **Kurapica DotNET Dumper** - *.NET assembly metadata dumper.*
+* **MetaPuck** - *Metadata extraction and analysis tool.*
+* **Password Stripper** - *Password protection removal tool.*
+* **PEDumper** - *Portable executable memory dumper.*
+* **RE-Dump** - *Reverse engineering memory dumper.*
+* **Serials Treasury** - *Serial number/key database.*
+* **TMG Ripper Studio** - *Multimedia file ripper suite.*
+* **UnMakeSIS** - *Symbian SIS package unpacker.*
+* **XM Export** - *eXeMate export data extractor.*
 
 ##### Extracting (Setup)
-* **[UniExtract](https://github.com/Bioruebe/UniExtract2)** - *Universal archive extractor.*
+* **[DeepResolver](https://github.com/Jakiboy/DeepResolver)** - *Setup Dependency Resolver and Portable Application Creator.*
 * **[Inno Extractor](https://www.havysoft.cl/innoextractor.html)** - *Tool for extracting Inno Setup installers.*
 * **[InnoBF](https://github.com/Malzilla/InnoBF)** - *Inno Setup brute force password finder.*
 * **[Innoextract](https://constexpr.org/innoextract/)** - *Command-line Inno Setup unpacker.*
@@ -357,10 +771,18 @@ View and change the running state of a program (Disassembling, Decompiling, Hexi
 ##### Manipulating
 *Interactive disassembly and runtime manipulation.*
 * **[x64dbg](https://github.com/x64dbg/x64dbg)** - *Graphical debugger for x86 and x86-64 executables.*
+* **JDebug Tool** - *Java debugger interface.*
+* **NWDebug** - *NetWare debugging tool.*
+* **Olly Script Editor** - *OllyDbg script editor.*
+* **OllyDbg DeFixed Edition** - *Enhanced OllyDbg version.*
+* **PEBrowse** - *Interactive PE file debugger.*
+* **Rock Debugger** - *Rocky debugger/disassembler.*
+* **SoftICE IceExt** - *SoftICE extension plugin.*
+* **SoftSnoop** - *SoftICE API snooping tool.*
 * **[Immunity Debugger](https://www.immunityinc.com/products/debugger/)** - *Powerful and flexible debugger for Windows.*
 * **[Cutter](https://github.com/rizinorg/cutter)** - *Free and open-source reverse engineering platform.*
 * **[dnSpy](https://github.com/dnSpy/dnSpy)** - *.NET assembly editor, decompiler, and debugger.*
-* **[OllyDbg](http://www.ollydbg.de/)** - *Dynamic, 32-bit assembler level debugger for Windows.*
+* **[OllyDbg](http://www.ollydbg.de/)** - *Dynamic, 32-bit assembler level debugger for Windows (Plugins, Scripts).*
 * **[Radare2](https://github.com/radareorg/radare2)** - *A portable and multi-architecture reverse engineering framework.*
 
 ##### Disassembling
@@ -375,6 +797,15 @@ View and change the running state of a program (Disassembling, Decompiling, Hexi
 * **Disasm** - *Generic disassembler for various architectures.*
 * **[Refractor](https://github.com/Rustemsoft/Refractor-.NET-assembly-browser-and-decompiler)** - *.NET decompiler and assembly browser.*
 * **[Win32Dasm](https://www.exetools.com/)** - *Windows 32-bit disassembler.*
+* **C32Asm** - *32-bit assembler/disassembler.*
+* **ChARMeD** - *ARM/Thumb disassembler.*
+* **ETU Disassembler** - *Easy-to-use disassembler.*
+* **EXDEC** - *Executable decompiler/disassembler.*
+* **GetLoader** - *Loader disassembler.*
+* **Hacker Disassembler** - *Advanced interactive disassembler.*
+* **PE Disassembler** - *Portable executable disassembler.*
+* **PVDasm** - *Portable executable viewer/disassembler.*
+* **RecStudio** - *Interactive decompilation studio.*
 
 ##### Decompiling
 *Revert the process of compilation.*
@@ -385,7 +816,6 @@ View and change the running state of a program (Disassembling, Decompiling, Hexi
 * **[Bytecode Viewer](https://github.com/Konloch/bytecode-viewer)** - *Decompile Java/Android bytecode & more.*
 * **[ILSpy](https://github.com/icsharpcode/ILSpy)** - *Open-source .NET assembly browser.*
 * **[.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/)** - *.NET assembly browser and decompiler.*
-* **[Java Decompiler](https://github.com/java-decompiler/jd-gui)** - *Decompile Java class files.*
 * **[JByteMod](https://github.com/GraxCode/JByteMod-Beta)** - *Java bytecode editor and decompiler.*
 * **[VB Decompiler](https://www.vb-decompiler.org/)** - *Decompile Visual Basic executables.*
 * **[DJ Java Decompiler](https://www.neshkov.com/dj.html)** - *Java decompiler and disassembler.*
@@ -393,6 +823,18 @@ View and change the running state of a program (Disassembling, Decompiling, Hexi
 * **[FFDec](https://github.com/jindrapetrik/jpexs-decompiler)** - *Flash Decompiler.*
 * **Exe2Aut** - *AutoIt3 based EXE decompiler.*
 * **Py2Exe Dumper** - *Py based EXE decompiler.*
+* **DeDe** - *Delphi executable decompiler.*
+* **EMS Source Rescuer** - *EMS memory source code recovery tool.*
+* **IDR** - *Interactive Delphi Reconstructor.*
+* **Java Decompiler** - *Java bytecode decompiler.*
+* **Kurapica DotNET DeObfuscator** - *.NET obfuscation remover / decompiler.*
+* **NET Resourcer** - *.NET resource editor/viewer.*
+* **RaceEx** - *Race condition exploit generator.*
+* **Revende Pro** - *Professional binary decompiler.*
+* **.NET Decompiler** - *.NET assembly decompiler (Salamander).*
+* **VBDE** - *Visual Basic decompilation environment.*
+* **VBExplorer** - *Visual Basic form/resource explorer.*
+* **Boomerang** - *Retargetable decompiler of machine code programs.*
 
 ##### Hexing
 *Edit PE hexadecimal representation.*
@@ -400,13 +842,21 @@ View and change the running state of a program (Disassembling, Decompiling, Hexi
 * **[010Editor](https://www.sweetscape.com/010editor/)** - *Hex editor with binary templates.*
 * **HEX Editor** - *A tool for viewing and editing hexadecimal files.*
 * **[HxD](https://mh-nexus.de/en/hxd/)** - *A fast, basic hex editor.*
-* **[Hiew](https://www.hiew.ru/)** - *A hex viewer and editor for Windows.*
+* **[Hiew](https://www.hiew.ru/)** - *A hex viewer and editor for Windows (Hacker's View).*
+* **AXE** - *Advanced hex editor.*
+* **BIEW** - *Binary/hex editor and viewer.*
+* **CoolHex** - *Cool visual hex editor.*
+* **Hex Editor Neo** - *Professional hex editor.*
+* **HexAssistant** - *Hex editing assistant tool.*
+* **Tiny Hexer** - *Compact hex editor.*
+* **UltraEdit** - *Powerful text/hex editor.*
+* **WinHex** - *Forensic hex editor and disk editor.*
 
 ### ⚡ Editing
-Edit executable files.
+Edit executable files (PE, DLL, Import tables, Setup, Res).
 
 ##### Manipulating
-*Compile, build and reconstruct PE (PE, DLL, Import tables, Setup, Res).*
+*Compile, Inject, Patch, Build and Reconstruct PE.*
 * **[Resource Hacker](http://www.angusj.com/resourcehacker/)** - *Resource Hacker.*
 * **[PPEE](https://www.mzrst.com/)** - *Powerful PE file viewer and editor.*
 * **PE Lab** - *Interactive PE file (executable) analysis tool.*
@@ -437,16 +887,15 @@ Edit executable files.
 * **PESnoop** - *OBJ, LIB dumper PE32/PE32+/COFF (CLI).*
 * **PETool32** - *x32 PE Tool.*
 * **PResFix** - *Resource Fixer for Dump Files (CLI).*
-* **ProcDump** - *PE unpacker/decryptor.*
+* **ProcDump** - *Process memory dumper.*
 * **ResCrypt** - *Protection of PE program resources.*
-* **Resfixer** - *Resource Fixer.*
+* **Resfixer** - *Resource section fixer.*
 * **Resource Grabber** - *Grab resources from other programs.*
 * **Resource Tuner** - *Advanced visual resource editor for 32 bit.*
 * **Resrebld** - *Resource Rebuilder (CLI).*
 * **StudPE** - *Portable Executable Editor.*
 * **TLS Analiser** - *Northfox's TLS table analiser.*
 * **XN ResEdit** - *XN Resource Editor.*
-* **[Codejock Toolkit](https://codejock.com/products/toolkitpro/)** - *UI toolkit for Windows applications.*
 
 ##### Manipulating (DLL)
 * **[Xenos](https://github.com/DarthTon/Xenos)** - *DLL injector.*
@@ -455,9 +904,9 @@ Edit executable files.
 * **DLL Packager** - *A tool for bundling DLLs with executables.*
 * **Addr&Func Converter** - *Converts DLL addresses to function names.*
 * **DLL Injector** - *Tool for injecting DLLs into processes.*
-* **DLL Rebaser** - *DLL Rebaser.*
+* **DLL Rebaser** - *DLL base address relocator.*
 * **DLL Loader** - *Utility for loading DLL files into processes.*
-* **IID King** - *Interface identifier lookup tool.*
+* **IIDKing** - *Add PE imports.*
 * **[EasyHook](https://github.com/EasyHook/EasyHook)** - *Windows API Hooking framework.*
 * **RemoteDLL** - *Remote DLL.*
 
@@ -498,6 +947,74 @@ Edit executable files.
 * **[RunBlock](https://www.sordum.org/8098/run-block-v1-0/)** - *Tool for blocking process execution.*
 * **[ReduceMemory](https://www.sordum.org/9197/reduce-memory-v1-6/)** - *Tool for reducing process memory usage.*
 * **MHS** - *Memory Hacking Software.*
+* **FileASSASSIN** - *File unlocking/deleting tool.*
+
+##### System (Generic)
+* **AddSect** - *PE section adder.*
+* **AheadLib** - *DLL forwarder generator.*
+* **AsProtect ImpRec** - *AsProtect import reconstructor.*
+* **Avenger** - *Executable hex editor.*
+* **bcMaster** - *Byte code manipulator.*
+* **BIATCH** - *Binary patching toolkit.*
+* **Bred** - *Breakpoint editor.*
+* **CallMapper** - *API call tracer/mapper.*
+* **CLR Injection** - *.NET runtime injection tool.*
+* **CompoundFK** - *Compound file kit.*
+* **Delphi Distiller** - *Delphi executable optimizer.*
+* **DIY Tools** - *Custom binary toolkit.*
+* **DT Fix Resource** - *Date/Time resource fixer.*
+* **E0x20** - *PE header editor.*
+* **Easy Index Generator** - *Index table generator.*
+* **ExeDumper** - *Executable memory dumper.*
+* **FirstThunk** - *Import address table editor.*
+* **Function Replacer** - *API function hooking tool.*
+* **HidePE** - *PE header hider.*
+* **HTE** - *Hex table editor.*
+* **Import REConstructor** - *Import table rebuild tool.*
+* **Injecta** - *Process injection utility.*
+* **Inliner** - *Code inlining tool.*
+* **Limit Edit** - *Limit/size editor.*
+* **Menu Enabler** - *Disabled menu enabler.*
+* **Mitec EXE Explore** - *Executable file explorer.*
+* **mkCrc** - *CRC generator/editor.*
+* **NagStudio** - *Nag screen remover.*
+* **OgreGUI** - *GUI patching interface.*
+* **Overlay Wizard** - *File overlay editor.*
+* **PBTracer** - *PowerBuilder app tracer.*
+* **PE Resource Explorer** - *PE resource viewer/editor.*
+* **Peeping Tom** - *Memory/process spy.*
+* **PELG** - *PE file legalizer.*
+* **PESam** - *PE file sampler/analyzer.*
+* **PEUtils** - *Portable executable utilities.*
+* **pResFix** - *Resource fixer patch.*
+* **Process Hunter** - *Process monitoring utility.*
+* **Process Inject** - *Process injection toolkit.*
+* **Process Patcher** - *Runtime process patcher.*
+* **Quick Memory Editor** - *Memory editing utility.*
+* **RE-Sign** - *Executable re-signer.*
+* **Registry Workshop** - *Advanced registry editor.*
+* **Relocate** - *PE reloc section editor.*
+* **RelocEdit** - *Relocation table editor.*
+* **Remotesoft .NET Explorer** - *.NET assembly explorer.*
+* **ResEd** - *Resource editor.*
+* **Resource Binder** - *Resource binder/merger.*
+* **Resx Editor** - *.NET ResX file editor.*
+* **Revirgin** - *Executable virginizer.*
+* **Sandy** - *Sandbox analysis tool.*
+* **SAS** - *Static analysis suite.*
+* **SecTion Adder** - *PE section creation tool.*
+* **SnD Bar** - *Search and destroy toolbar.*
+* **StringEditor** - *Binary string editor.*
+* **The Customiser** - *Binary customizer.*
+* **UNDOReg** - *Registry change undo tool.*
+* **Universal Import Fixer** - *Import table universal fixer.*
+* **Wark** - *Binary patching workbench.*
+* **WindowHack** - *Window property hacker.*
+* **Windows Enabler** - *Disabled control activator.*
+* **Winmanage** - *Windows management toolkit.*
+* **xPELister** - *Extended PE file lister.*
+* **Yoda Process Patcher** - *Yoda's process patcher.*
+* **NutEdit** - *Hexadecimal file editor.*
 
 ##### Converting
 *Convert scripts and binary files.*
@@ -512,6 +1029,24 @@ Edit executable files.
 * **DLL to EXE** - *Convert Dynamic Link Library files to executable format.*
 * **EXE to DLL** - *Convert executable files to Dynamic Link Library format.*
 * **PE to SHC** - *Convert PE executables to shellcode format.*
+* **ASM2HTML** - *Assembly code to HTML converter.*
+* **BMP2RGN** - *Bitmap to region file converter.*
+* **D2INC** - *Data to include file converter.*
+* **DMP2REG** - *Registry dump to .REG converter.*
+* **DPK2BPK** - *Delphi package to Borland package converter.*
+* **DecHex** - *Decimal/hexadecimal converter.*
+* **HEX2ASCII** - *Hexadecimal to ASCII/text converter.*
+* **INI2REG** - *INI file to registry script converter.*
+* **Morse converter** - *Morse code encoder/decoder.*
+* **N2T** - *Number to text converter.*
+* **PE2HTML** - *PE file to HTML report converter.*
+* **REG File Converter** - *Registry file format converter.*
+* **RVA Converter** - *Relative Virtual Address converter.*
+* **VBto Converter** - *Visual Basic code converter.*
+* **XM2INC** - *XML to include file converter.*
+* **[Access to MSSQL](https://www.bullzip.com/products/a2s/info.php)** - *MS Access to MSSQL converter.*
+* **[Access to MySQL](https://www.bullzip.com/products/a2m/info.php)** - *MS Access to MySQL converter.*
+* **[Access To PostgreSQL](https://www.bullzip.com/products/a2p/info.php)** - *MS Access to PostgreSQL converter.*
 
 ### ⚡ Patching
 Generate patching program using binary compare.
@@ -526,36 +1061,93 @@ Generate patching program using binary compare.
 * **[XDELTA Patch Maker](https://github.com/jmacd/xdelta)** - *Patch creator for Inno Setup installers.*
 * **uPPP** - *Patch creation tool for software modification.*
 * **PEiD Patch Maker** - *Patch creator for PEiD signatures.*
+* **ap0x Patch Creator** - *Binary patch creation tool.*
+* **aPE** - *Advanced patch engine.*
+* **Bkinline Patcher** - *Inline bytecode patcher.*
+* **ByteHacker** - *Byte-level patching utility.*
+* **ByteKiller** - *Byte manipulation patcher.*
+* **Code Fusion** - *Code injection/merging patcher.*
+* **CrackGen** - *Patch/crack generator.*
+* **Dogbert** - *Multi-format patch generator.*
+* **DZA Patcher** - *DZA patch application system.*
+* **Easy PatchMaker** - *Simplified patch creation tool.*
+* **Generic patcher** - *Universal binary patcher.*
+* **Graphical PatchMaker** - *Visual patch creation tool.*
+* **Hi Patcher** - *High-level patching interface.*
+* **Hpatch** - *Hexadecimal patch applier.*
+* **HzorInline** - *Hzor inline patching engine.*
+* **Liquid** - *Fluid patch application system.*
+* **PastilleMaker** - *Small patch/patchlet creator.*
+* **Patch Creation Wizard** - *Guided patch creation wizard.*
+* **Patch Maker** - *Standard patch generation tool.*
+* **Patch Source Maker** - *Patch source code generator.*
+* **PatchEngine** - *Patch execution engine.*
+* **PatchFactory** - *Industrial patch production tool.*
+* **PatchMaker** - *General-purpose patch creator.*
+* **Sol Patcher** - *Standalone patch application tool.*
+* **Tolapatch engine** - *Tola's patch engine.*
+* **Universal Patcher** - *Cross-format patching utility.*
+* **WCRPatcher** - *Win32 code replacement patcher.*
+* **RLzer** - *Patch engine for DBC.*
 
 ##### Loader
 *Build binary patch loader.*
-* **Advanced Loader Generator** - *Tool for generating loaders.*
-* **Abel Loader Generator** - *Another tool for generating loaders.*
+* **Advanced Loader Generator** - *Sophisticated loader/stub generator.*
+* **Abel Loader Generator** - *Custom executable loader creator.*
+* **DllLoader** - *Dynamic link library loading utility.*
+* **LAG Loader** - *Lightweight application loader.*
+* **Universal Loader** - *Cross-format executable loader.*
 
 ##### Keygen
 *Build Keygen.*
 * **REPT Keygen Maker** - *Tool for generating keygens.*
+* **Keygen Maker** - *Key generator creation tool.*
+* **SS Creator** - *Serial Sniffer Creator.*
 
 ##### Release
 *Build patcher release and NFO file.*
-* **Release Builder** - *Tool for building software releases.*
-* **DizView** - *View and edit file descriptions (DIZ files).*
+* **Release Builder** - *Software release info file builder.*
+* **DizView** - *DIZ/NFO file viewer.*
 * **Fast Cracktro Maker** - *Create fast crack intros for software.*
 * **mRelease Builder** - *Tool for building software releases.*
 * **NFO Maker** - *Create NFO files for software releases.*
-* **NFO Scroller** - *Scroll NFO files in a marquee style.*
+* **NFO Scroller** - *Scrolling NFO text viewer.*
 * **NFO View** - *View NFO files with syntax highlighting.*
 * **NFO Viewer 2** - *View NFO files with enhanced features.*
+* **AT4RE NFO Editor** - *NFO file editor for AT4RE.*
+* **Compact NFO** - *Compact NFO file viewer/editor.*
+* **Cool Beans NFO Creator** - *Stylized NFO creation tool.*
+* **Coolcolor** - *Color NFO text editor.*
+* **DAMN NFO Viewer** - *NFO file viewer with encoding detection.*
+* **Dizzy** - *DIZ/NFO file editor.*
+* **Email Effects** - *Email-style text effect generator.*
+* **Extalia NFO** - *NFO editor by Extalia.*
+* **GetDiz** - *DIZ/NFO file manager.*
+* **iNF0 Master** - *NFO editing master tool.*
+* **INFO** - *Basic NFO file editor.*
+* **Inserter** - *NFO text inserter tool.*
+* **NFO & DIZ Maker** - *NFO/DIZ file creator.*
+* **NFO Builder** - *Structured NFO building tool.*
+* **NFO Creator** - *NFO file authoring tool.*
+* **NFOgen** - *NFO file generator.*
+* **Nfomaker** - *NFO file maker utility.*
+* **NFOpad** - *Notepad-like NFO editor.*
+* **NFOrm** - *NFO file reformatter.*
+* **Nfoview** - *NFO file viewer.*
+* **PabloDraw** - *ANSI/NFO art editor.*
+* **PabloView** - *ANSI/NFO file viewer.*
+* **QuickNFO** - *Quick NFO file editor/viewer.*
 
 ##### ASCII
 *Build patcher release ASCII.*
-* **[Ascgen](https://ascgendotnet.jmsoftware.co.uk/)** - *Generate ASCII art from images.*
+* **[ASCII Generator](https://ascgendotnet.jmsoftware.co.uk/)** - *Generate ASCII art from images.*
 * **1337 Converter** - *Convert text to leet speak (1337).*
-* **ASCII Art studio** - *Create ASCII art and export images.*
+* **ASCII Art studio** - *ASCII art creation studio.*
 * **ASCII Converter** - *Convert text to ASCII characters.*
-* **ASCII Generator** - *Generate ASCII art from text.*
-* **ASCII Table** - *Display an ASCII character table.*
-* **Magic ASCII Pic** - *Create ASCII art from images.*
+* **ASCII Table** - *ASCII character code reference.*
+* **Magic ASCII Pic** - *Advanced image to ASCII converter.*
+* **ACiD View** - *ANSI/ASCII art viewer.*
+* **ASCII Pic** - *Image to ASCII art converter.*
 
 ##### Skin
 *Build patcher skins.*
@@ -593,6 +1185,7 @@ Generate patching program using binary compare.
 * **[ProTracker](https://github.com/8bitbubsy/pt2-clone)** - *Classic Amiga music tracker software.*
 * **[ModPlug Player](https://sourceforge.net/projects/modplugplayer/)** - *Player for module files including MOD, S3M, and XM.*
 * **ChipRip** - *Tool for extracting audio from chiptune files.*
+* **PunchIt** - *Bundle music file with existing host executable.*
 
 ##### Sound (Patcher sounds)
 * **BRD - Teleport Pro** - *Original BRD Teleport Pro patcher music.*
@@ -615,8 +1208,8 @@ Helper tools and miscellaneous content.
 
 ##### Assembling
 *Assembling Machine code.*
-* **[RadASM](http://www.radasm.com/)** - *Rapid Application Development IDE.*
 * **[Flat assembler (FASM)](https://flatassembler.net/)** - *A fast, self-hosting assembly language compiler for x86 architecture.*
+* **[RadASM](http://www.radasm.com/)** - *Rapid Application Development IDE.*
 * **[GoAsm](http://www.goasm.com/)** - *Free x86/x64 assembler for Windows.*
 * **[Nasm](https://github.com/netwide-assembler/nasm)** - *Netwide Assembler for x86 architecture.*
 * **AsmEdit** - *ASM Editor.*
@@ -629,19 +1222,82 @@ Helper tools and miscellaneous content.
 * **MASM32** - *ASM 32 Assembler.*
 * **Objdump** - *OBJ OMF Dumper.*
 * **WinAsm** - *Windows Assembler Studio.*
+* **Asmex** - *x86 assembly explorer.*
+* **asmIRC** - *IRC client with assembly focus.*
 
 ##### Bypassing
-*Bypass runtime protections and anti-debugging.*
+*Bypass runtime protections, anti-debugging techniques, hardware dongles, and licensing management.*
 * **[RunAsDate](https://www.nirsoft.net/utils/run_as_date.html)** - *Utility for running programs with a specified date.*
 * **DateHack** - *Tool for modifying system dates for software trials.*
 * **Trial-Reset** - *Tool for extending trial periods of software.*
 * **[RunFromProcess](https://www.nirsoft.net/utils/run_from_process.html)** - *Tool for running processes from a different process.*
 * **[SkipUAC](https://www.sordum.org/16219/skip-uac-prompt-v1-2/)** - *Tool for bypassing Windows User Account Control.*
 * **[ScyllaHide](https://github.com/x64dbg/ScyllaHide)** - *Anti-(anti-debugger).*
+* **SpectroByte** - *SpectroByte.*
+* **AIPbeGone** - *Anti-debug plugin remover.*
+* **Anti Cracking** - *Crack protection tool.*
+* **Anti OllyDbg** - *OllyDbg detection blocker.*
+* **Anti-AHBP** - *Anti-hardware-breakpoint utility.*
+* **Anti-RDTSC** - *RDTSC anti-debug bypass.*
+* **Anti0lly Tester** - *OllyDbg detection tester.*
+* **AntiDetectOlly** - *OllyDbg stealth enhancer.*
+* **Arma Trial Finder** - *Trial period locator for Armadillo.*
+* **ASClean** - *Anti-sandbox cleaner.*
+* **DataFuck** - *Data obfuscation tool.*
+* **DateFaker** - *System date spoofer.*
+* **DMA Dumper** - *Dongle Memory API Dumper.*
+* **Enable Button** - *Disabled button enabler.*
+* **Enabler Plus** - *Enhanced control enabler.*
+* **EVACleaner** - *EVA anti-debug remover.*
+* **Evapp** - *Environment variable patcher.*
+* **Extreme Debugger Detector** - *Advanced debugger detector.*
+* **FlexGen** - *FlexLM key generator.*
+* **FlexLM VKG** - *FlexLM vendor key generator.*
+* **FlexLM10 VKG** - *FlexLM v10 keygen.*
+* **FlexLM7 VKG** - *FlexLM v7 keygen.*
+* **GD DRX** - *GameGuard DRM bypass.*
+* **Genkey5** - *License key generator.*
+* **GIA Emulator** - *GlobalSCAPE IA emulator.*
+* **GIA Logger** - *GlobalSCAPE IA logger.*
+* **HardLock Monitor** - *HardLock dongle monitor.*
+* **Hardlock Reader** - *HardLock dongle reader.*
+* **HASP Dumper** - *HASP dongle memory dumper.*
+* **HASP Hinstall** - *HASP driver installer.*
+* **HaspHardlock Emulator** - *HASP/HardLock emulator.*
+* **HaspHardlock Monitor** - *HASP/HardLock monitor.*
+* **Hide Ollydbg** - *OllyDbg window hider.*
+* **HideToolz** - *Process/tool hider.*
+* **InnoLoader** - *Inno Setup trial bypass.*
+* **Invisible Ollydbg** - *Stealth OllyDbg mode.*
+* **Iproeval** - *IPRO evaluation bypass.*
+* **NewBdbg** - *Newbie debugger.*
+* **Olly2table** - *OllyDbg conversion tool.*
+* **OllyDbg Anti-Anti Test** - *Anti-anti-debug tester.*
+* **OllyDbg AntiAttach** - *Anti-attach protection.*
+* **OllyDbg Fix** - *OllyDbg patcher.*
+* **OllyGhost** - *OllyDbg stealth tool.*
+* **PE Bruter** - *PE brute-force tool.*
+* **RE-Pair** - *Reverse engineering assistant.*
+* **Resolve DLP** - *Data loss prevention bypass.*
+* **Rockey Smart IDE** - *Rockey dongle IDE.*
+* **Sentinel Emulator** - *Sentinel dongle emulator.*
+* **SentinelLM Bruteforcer** - *SentinelLM brute-force tool.*
+* **SentinelLM UnDongle** - *SentinelLM dongle remover.*
+* **Shareware Cheater** - *Shareware restriction bypass.*
+* **Softice EXtension** - *SoftICE extension tool.*
+* **SoftICE interrupter** - *SoftICE interrupt generator.*
+* **SoftICE Patcher** - *SoftICE system patcher.*
+* **SoftIce SL Patch** - *SoftICE service layer patch.*
+* **SoftICE UnProtector** - *SoftICE protection remover.*
+* **Trial Doctor** - *Trial period modifier.*
+* **UFD Pswd Revealer** - *UFD password revealer.*
+* **Winlicense Reset** - *WinLicense trial reset.*
+* **xADT** - *Advanced debugger toolkit.*
+* **IDA Dongle Sign** - *Dongle Signatures for IDA.*
 
 ##### Encoding
 *Data encoding.*
-* **[hasher](https://github.com/JetBrains/hasher)** - *Generate hash values for files using various algorithms.*
+* **[Hasher](https://github.com/JetBrains/hasher)** - *Generate hash values for files using various algorithms.*
 * **[Hash Generator](https://github.com/ashutosh1206/Crypto-Hash-Generator)** - *Hashing tool for file verification.*
 * **[XCA](https://hohnstaedt.de/xca/)** - *A certificate generation tool.*
 * **[PuTTY keygen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)** - *PuTTY SSH key generator.*
@@ -657,19 +1313,153 @@ Helper tools and miscellaneous content.
 * **MD5 (CLI)** - *Command-line tool for MD5 hashing.*
 * **SHA1 (CLI)** - *Command-line tool for SHA1 hashing.*
 * **Dissecting RC4 Algo.** - *Analyzes the RC4 encryption algorithm.*
+* **Blowfish Encrypt Tool** - *Blowfish encryption utility.*
+* **Byte Encrypter** - *Byte-level encryption tool.*
+* **ECCTool** - *Elliptic curve cryptography tool.*
+* **Encryption Xpert** - *Expert encryption toolkit.*
+* **HashLibrary** - *Cryptographic hash library.*
+* **Primegen** - *Prime number generator.*
+* **Smartkill** - *Process termination utility.*
+* **XCRYPTO** - *Extended cryptography toolkit.*
+* **Zombie Hasher** - *Hash collision generator.*
 
 ##### Packing
 *Compress and protect executable files.*
-* **[EXE Packer](https://www.alternate-tools.com/pages/c_exepacker.php)** - *Alternate EXE Packer: A program to pack executable files.*
 * **[ConfuserEx](https://github.com/mkaring/ConfuserEx)** - *Open-source protector for .NET applications.*
+* **[Obfuscator](https://www.pelock.com/products/obfuscator)** - *x86 assembler obfuscator (Network API).*
+* **Amber** - *Reflective PE packer for bypassing security.*
+* **AC Protect** - *Advanced executable protector.*
+* **ARM Protector** - *ARM binary protection packer.*
+* **Armadillo** - *Software protection and licensing system.*
+* **ASProtect** - *Advanced software protection tool.*
+* **AZProtect** - *AZOR protection/packing tool.*
+* **BJFnt** - *Font obfuscation/protection tool.*
+* **BoxedApp** - *Application virtualization packer.*
+* **CodeCrypt** - *Code encryption protector.*
+* **CryptKey** - *Cryptographic key protection.*
+* **DBPE** - *Delphi/Borland executable protector.*
+* **DcuProtector Pro** - *Delphi compiled unit protector.*
+* **EncryptPE** - *PE file encryption protector.*
+* **Enigma** - *Virtualization-based protector.*
+* **EP Protector** - *Executable file protector.*
+* **EProtect** - *Entry point protector.*
+* **EXE Password Protector** - *Executable password protector.*
+* **EXECryptor** - *Strong encryption-based protector.*
+* **ExeStealth** - *Stealth mode executable protector.*
+* **Fake Ninja** - *Anti-debugging protector.*
+* **fileEncrypt** - *File encryption wrapper.*
+* **FilePacker** - *Generic file packer.*
+* **FishPacker** - *FISH compression packer.*
+* **Flashback Protector** - *Flashback malware protector.*
+* **GHF Protector** - *GHF packing/protection tool.*
+* **HidePX** - *PE header hiding protector.*
+* **Krypton** - *Code encryption protector.*
+* **LameCrypt** - *Basic cryptographic protector.*
+* **Marcrypt** - *Markus' cryptographic protector.*
+* **MoleBox Pro** - *Application virtualization packer.*
+* **Morphine Shell** - *Polymorphic shell protector.*
+* **MSLRH** - *Microsoft runtime library hacker.*
+* **NFO** - *NFO-based protection packer.*
+* **NoobyProtect** - *Beginner-friendly protector.*
+* **Obsidium** - *Software protection and licensing.*
+* **ORiEN** - *ORiEN executable protector.*
+* **OSProtector** - *Operating system-specific protector.*
+* **Packerfuck** - *Anti-unpacking protection tool.*
+* **PC Guard** - *PC software protection system.*
+* **PCPEC** - *PC-based PE compressor.*
+* **PE Diminisher** - *PE size reduction tool.*
+* **PE Ninja** - *Stealth PE protector.*
+* **PE Password Encryptor** - *PE file password encryptor.*
+* **PE-Armor** - *PE file armor protector.*
+* **PE-CRYPT** - *PE file cryptor.*
+* **PE-PROTECT** - *PE protection system.*
+* **PEBundle** - *PE file bundler.*
+* **PESpin** - *PE file spinning protector.*
+* **PeStub OEP** - *Original Entry Point stubbing tool.*
+* **PeX** - *PE file extension protector.*
+* **Phantom** - *Phantom-based obfuscation protector.*
+* **Private Exe Protector** - *Private executable protector.*
+* **SDProtector Pro** - *Software Defender protector.*
+* **SecretEXE** - *Secret EXE encryption tool.*
+* **SecureCode** - *Secure code protection system.*
+* **SEH Protector** - *Structured Exception Handler protector.*
+* **ShareGuard** - *Shareware protection system.*
+* **ST Protector** - *Software protection tool.*
+* **SVK Protector** - *SVK software protector.*
+* **TTproctect** - *TTProtect software protector.*
+* **VGCrypt PE Encryptor** - *VGCrypt PE encryption tool.*
+* **WinKrypt** - *Windows executable encryptor.*
+* **XCR** - *eXe Cryption protector.*
+* **XProtector** - *XProtector software guard.*
+* **ZProtect** - *ZProtect software protector.*
+
+##### Packing (Compressor)
+* **ASPack** - *Executable compression and protection.*
+* **Crinkler** - *Extreme size-optimizing linker.*
+* **eXPressor** - *Executable compressor/protector.*
+* **EZip** - *Executable ZIP compression tool.*
+* **FSG** - *Fast, Small, Good executable packer.*
+* **HMI Packer** - *Human Machine Interface packer.*
+* **massPECer3** - *Batch PE file protector.*
+* **Mew** - *Executable packer/compressor.*
+* **Mpress** - *Microsoft compress-compatible packer.*
+* **MultiPacker** - *Multi-engine packing tool.*
+* **NeoLite** - *NeoLite executable compressor.*
+* **nPack** - *Executable compression packer.*
+* **NsPack** - *NSPack compression protector.*
+* **Packman** - *Universal executable packer.*
+* **PE Packer** - *General PE file packer.*
+* **PE-PACK** - *PE file packing engine.*
+* **PECompact** - *PE file compressor.*
+* **Petite** - *Petite executable compressor.*
+* **PKLITE32** - *32-bit PKLITE compressor.*
+* **QuickPack** - *Quick packing tool.*
+* **RLPack** - *RLPack executable packer.*
+* **SimplePack** - *Simple executable packer.*
+* **Software Compress** - *Software compression tool.*
+* **StnPee** - *Stone PE protector.*
+* **tElock** - *TElock executable protector.*
+* **UPack Optimizer** - *UPack optimization tool.*
+* **WinUpack** - *Windows UPack compression tool.*
+* **WWPack32** - *WWPack32 executable packer.*
+* **XComp** - *Executable compression tool.*
+* **yC** - *yC packer/compressor (yP).*
+
+##### Packing (Virtualizer)
+* **Code Virtualizer** - *Code virtualization obfuscator.*
+* **Themida** - *Software protection using SecureEngine®.*
+* **VMProtect** - *Virtual machine-based protector.*
+* **VMware ThinApp** - *Application virtualization tool.*
+* **VProtector** - *Virtualization protector.*
+* **WinLicense** - *Advanced licensing/protection system.*
+
+##### Packing (Obfuscator)
 * **[Netshrink](https://www.pelock.com/products/netshrink)** - *.NET executable compressor and DLL binder.*
-* **[Obfuscator](https://www.pelock.com/products/obfuscator)** - *x86 assembler obfuscator (⚠ Network API).*
-* **[JObfuscator](https://www.pelock.com/jobfuscator/)** - *Java obfuscator (⚠ Network API).*
+* **[JObfuscator](https://www.pelock.com/jobfuscator/)** - *Java obfuscator (Network API).*
 * **[PELock](https://www.pelock.com/products/pelockK)** - *32 bit Windows application security solution.*
 * **[PEunion](https://github.com/bytecode77/pe-union)** - *Crypter with native & .NET stub.*
+* **[ProGuard](https://github.com/Guardsquare/proguard)** - *Java optimizer and obfuscator.*
+* **[AutoIt Obfuscator](https://www.pelock.com/autoit-obfuscator/)** - *AutoIt obfuscator (Network API).*
+* **[Zend Guard](https://www.zend.com/products/zend-guard)** - *PHP App Protection.*
+* **Remotesoft .NET Obfuscator** - *.NET code obfuscator.*
+* **SC Obfuscator** - *Source code obfuscator.*
+* **Smartassembly** - *.NET obfuscation and protection.*
+* **XHEO Codeveil** - *Codeveil .NET protector.*
+* **XHEO DeployLX** - *Deployment and licensing system.*
+* **XHEO Licensing** - *Software licensing system.*
+
+##### Packing (Wrapper)
+* **[EXE Packer](https://www.alternate-tools.com/pages/c_exepacker.php)** - *Alternate EXE Packer: A program to pack executable files.*
 * **[UPX](https://github.com/upx/upx)** - *Free, portable, and extendable executable packer.*
-* **[AutoIt Obfuscator](https://www.pelock.com/autoit-obfuscator/)** - *AutoIt obfuscator (⚠ Network API).*
-* **Amber** - *Reflective PE packer for bypassing security.*
+* **FreeUPX** - *Free UPX-based packer.*
+* **UPX Compressor** - *UPX compression frontend.*
+* **UPX Front-End** - *UPX graphical interface.*
+* **UPX Scrambler** - *UPX scrambling protector.*
+* **UPX-Protector** - *UPX-based protection tool.*
+* **UPXFreak** - *Advanced UPX modification tool.*
+* **UPXGUI** - *UPX graphical user interface.*
+* **UPXShell** - *UPX shell integration tool.*
+* **VisualUpx** - *Visual UPX interface.*
 
 ##### Mobile
 *Mbile RE toolkits.*
@@ -727,6 +1517,7 @@ Helper tools and miscellaneous content.
 * **[GoRC](https://www.godevtool.com/GorcFrame.htm)** - *Resource Compiler.*
 * **[Small Basic](https://smallbasic-publicwebsite.azurewebsites.net/)** - *A simple, beginner-friendly programming language and IDE.*
 * **CLI Tools** - *Archive of .exe CLI Tools to play with.*
+* **[Codejock Xtreme Toolkit](https://codejock.com/products/toolkitpro/)** - *Codejock Xtreme Toolkit Pro.*
 
 ##### Automating
 *Automation and macro tools.*
@@ -734,6 +1525,8 @@ Helper tools and miscellaneous content.
 * **[AutoClicker](https://sourceforge.net/projects/orphamielautoclicker/)** - *Automate mouse clicks.*
 * **[Mouse Recorder](https://www.mouserecorder.com/index.html)** - *Record mouse actions for infinite replay.*
 * **[SendWKey](1.1)** - *Send Windows Key.*
+* **NeoSign** - *Automated code signing utility.*
+* **VisBuildPro** - *Visual build automation tool.*
 
 ##### Dependencies
 *Toolkit's standalone and offline dependencies installers.*

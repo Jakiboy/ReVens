@@ -3,7 +3,7 @@
 	"desc": "Reverse Engineering Toolkit AIO",
 	"notice": "Pentesting v{version}",
 	"url": "https://github.com/Jakiboy/ReVens",
-	"version": "1.5.2",
+	"version": "1.5.3",
 	"year": "2026",
 	"author": {
 		"name": "Jihad Sinnaour",
@@ -24,95 +24,95 @@
 		"parts": [
 			{
 				"name": "Analyzing.zip",
-				"hash": "aa895880e3b6256a6f6811e150f7eb43"
+				"hash": "0b02423747e86a2e240660f65403b70a"
 			},
 			{
 				"name": "Assembling.zip",
-				"hash": "03de3f7d8e5b6032b4f08676753aa272"
+				"hash": "4e1843affb6cd5625750025d4c63d4fc"
 			},
 			{
 				"name": "Automating.zip",
-				"hash": "4fc68aab51eb428a2e8ee0e84a17e24b"
+				"hash": "07bd6438f34daa17dacca01e6f0a17bc"
 			},
 			{
 				"name": "Bypassing.zip",
-				"hash": "ecf9379a6ecd73f1b4ab9ac675f87a75"
+				"hash": "b5c6cbfbb57673371b53a52209626fea"
 			},
 			{
 				"name": "Calculating.zip",
-				"hash": "dd77b24539a4f10a2f4684af57393318"
+				"hash": "7538b6fbb126658e05a034449b680ebb"
 			},
 			{
 				"name": "Comparing.zip",
-				"hash": "8fca962b97789dee6e6ebace6477c950"
+				"hash": "0745df7f19f156319bfefad282bafa0b"
 			},
 			{
 				"name": "Converting.zip",
-				"hash": "246526ccee634f15b31c945fce39ca5e"
+				"hash": "9692eb342c4927e7b838026ed34b0adb"
 			},
 			{
 				"name": "Debugging.zip",
-				"hash": "5cb7dd5fdcd66160053a81a40386735d"
+				"hash": "714bd3c24b045ec8af0231af6d491fc0"
 			},
 			{
 				"name": "Decoding.zip",
-				"hash": "20e8bae27f4807e2561c36a243ce6134"
+				"hash": "8ab2472dbfcd128efa9e9435be1c797d"
 			},
 			{
 				"name": "Decompiling.zip",
-				"hash": "53fb27d2b12ab22de462bfbb74c38383"
+				"hash": "b96e412d9b06e3af7a84e9b0b9186c4a"
 			},
 			{
 				"name": "Dependencies.zip",
-				"hash": "a649354aa76a4d8e2b519729bdb5c83e"
+				"hash": "464012e2f2af3605b843eaf724a5a3bc"
 			},
 			{
 				"name": "Disassembling.zip",
-				"hash": "62b059722fe6c20c47acced3be0265e6"
+				"hash": "201eb7b802271d64830521ec011721fc"
 			},
 			{
 				"name": "Documentation.zip",
-				"hash": "72accf33ab222cc7bdc307832d00d0eb"
+				"hash": "272c33e95c9b1ad91ea484023b597a92"
 			},
 			{
 				"name": "Editing.zip",
-				"hash": "5b59acf5a6e199499381e0a936e92128"
+				"hash": "1dcf0d2dd8b689bc4fc6e325a3da030d"
 			},
 			{
 				"name": "Encoding.zip",
-				"hash": "f9bccfaf6ba2fd5ea1b5995e689a9989"
+				"hash": "65599ec6055170afefcee7e4cc964350"
 			},
 			{
 				"name": "Extracting.zip",
-				"hash": "3a595521c12a0991fb1d84aa066da95e"
+				"hash": "2a9b96bb755f98b492c0c4df60f170a7"
 			},
 			{
 				"name": "Hexing.zip",
-				"hash": "200fa2c882c78d3473cb7185410361ec"
+				"hash": "d7cbe35a8c4335484e9791844c631d2a"
 			},
 			{
 				"name": "Mobile.zip",
-				"hash": "8dde0d5c2e7c1a289521728ef04d5bf0"
+				"hash": "eff3084504e35477b2150dd02b2a01f6"
 			},
 			{
 				"name": "Packing.zip",
-				"hash": "fe810f3cf90a2c5fb4a1701d78ca4ff2"
+				"hash": "c204121d47800ec68c151338660984e2"
 			},
 			{
 				"name": "Patching.zip",
-				"hash": "a4fe36287c3d32e89642fd8fc02886ea"
+				"hash": "1c1ee44b2974a5af02e4b00b3d88c51a"
 			},
 			{
 				"name": "Programming.zip",
-				"hash": "3e5f046a8a7d3e77d46e2bcb6cf9d12a"
+				"hash": "ad2fc230b6415d336760805af1eddad7"
 			},
 			{
 				"name": "Simulating.zip",
-				"hash": "4ff5751988262a4e8bf7fc6162b37a31"
+				"hash": "e98c0a7076e505bda9e198eb42c55609"
 			},
 			{
 				"name": "Unpacking.zip",
-				"hash": "608271037ddce8791348daa3e95319ce"
+				"hash": "8c61c1bb0317e085083dea66604c212e"
 			}
 		]
 	},
@@ -131,7 +131,7 @@
 			"timeout": 60000
 		}
 	},
-	"player": "/Patching/Sound/FastTracker/x64/ft2.exe",
+	"player": "/Patching/Sound/FastTracker/bin/x64/ft2.exe",
 	"resizable": false,
 	"width": 1000,
 	"height": 750,

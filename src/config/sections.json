@@ -7,7 +7,7 @@
             "desc": "Analyze portable-executables and related files (<strong>EXE, DLL, OCX, SYS</strong>)",
             "sub": [
                 {
-                    "name": "universal",
+                    "name": "generic",
                     "title": "Binary",
                     "desc": "Analyze PE and other binary files"
                 },
@@ -69,7 +69,81 @@
                 {
                     "name": "unprotect",
                     "title": "Unprotect",
-                    "desc": "Remove PE protection and obfuscation"
+                    "desc": "Remove PE protection and obfuscation",
+                    "extra": [
+                        {
+                            "name": "acprotect",
+                            "title": "ACProtect"
+                        },
+                        {
+                            "name": "art",
+                            "title": "ART"
+                        },
+                        {
+                            "name": "aspack",
+                            "title": "ASPack"
+                        },
+                        {
+                            "name": "asprotect",
+                            "title": "ASProtect"
+                        },
+                        {
+                            "name": "armadillo",
+                            "title": "Armadillo"
+                        },
+                        {
+                            "name": "clisecure",
+                            "title": "CliSecure"
+                        },
+                        {
+                            "name": "fsg",
+                            "title": "FSG"
+                        },
+                        {
+                            "name": "ilprotector",
+                            "title": "ILProtector"
+                        },
+                        {
+                            "name": "morphine",
+                            "title": "Morphine"
+                        },
+                        {
+                            "name": "pespin",
+                            "title": "PESpin"
+                        },
+                        {
+                            "name": "shrinker",
+                            "title": "Shrinker"
+                        },
+                        {
+                            "name": "themida",
+                            "title": "Themida"
+                        },
+                        {
+                            "name": "upx",
+                            "title": "UPX"
+                        },
+                        {
+                            "name": "yoda",
+                            "title": "Yoda"
+                        },
+                        {
+                            "name": "telock",
+                            "title": "tElock"
+                        },
+                        {
+                            "name": "winupack",
+                            "title": "WinUpack"
+                        },
+                        {
+                            "name": "xenocode",
+                            "title": "Xenocode"
+                        },
+                        {
+                            "name": "zprotect",
+                            "title": "ZProtect"
+                        }
+                    ]
                 },
                 {
                     "name": "decoding",
@@ -133,12 +207,12 @@
             "name": "editing",
             "title": "Editing",
             "icon": "equalizer",
-            "desc": "Edit executable files",
+            "desc": "Edit executable files (<strong>PE, DLL, Import tables, Setup, Res</strong>)",
             "sub": [
                 {
                     "name": "manipulating",
                     "title": "Manipulating",
-                    "desc": "Compile, Inject, Patch, Build and Reconstruct PE (<strong>DLL, Import tables, Setup, Res</strong>)",
+                    "desc": "Compile, Inject, Patch, Build and Reconstruct PE",
                     "extra": [
                         {
                             "name": "dll",
@@ -168,8 +242,8 @@
                             "title": "Process"
                         },
                         {
-                            "name": "universal",
-                            "title": "Universal"
+                            "name": "generic",
+                            "title": "Generic"
                         }
                     ]
                 },
@@ -259,7 +333,25 @@
                 {
                     "name": "packing",
                     "title": "Packing",
-                    "desc": "Compress and protect executable files"
+                    "desc": "Compress and protect executable files",
+                    "extra": [
+                        {
+                            "name": "compressor",
+                            "title": "Compressor"
+                        },
+                        {
+                            "name": "virtualizer",
+                            "title": "Virtualizer"
+                        },
+                        {
+                            "name": "obfuscator",
+                            "title": "Obfuscator"
+                        },
+                        {
+                            "name": "wrapper",
+                            "title": "Wrapper"
+                        }
+                    ]
                 },
                 {
                     "name": "mobile",
