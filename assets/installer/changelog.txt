@@ -35,7 +35,7 @@ All notable changes to ReVens.
 ### Updated
 
 - Packages items
-- Updated scripts
+- Improved Post-scripts
 - README.md
 
 ### Added
@@ -49,8 +49,8 @@ All notable changes to ReVens.
 
 ### Updated
 
-- Updated AI section
-- Updated single items downloader
+- AI section
+- Single items downloader
 
 ### Added
 
