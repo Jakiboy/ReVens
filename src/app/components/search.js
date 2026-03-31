@@ -29,8 +29,13 @@ const Search = ({ setActiveTab }) => {
     const [filteredItems, setFilteredItems] = useState([]);
     const searchInputRef = useRef(null);
 
-    const openModal = () => setModalStatus(true);
+    const openModal = () => {
+        if (window.__activeModal) return;
+        window.__activeModal = true;
+        setModalStatus(true);
+    };
     const closeModal = () => {
+        window.__activeModal = false;
         setModalStatus(false);
         setSearchQuery('');
         setFilteredItems([]);

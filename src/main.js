@@ -9,7 +9,7 @@
 'use strict';
 
 const { app, dialog } = require('electron');
-const { setup, isWindows, getPath, formatUrl, openUrl, checkPackageStatus, startDownload } = require('./main/helper');
+const { setup, isWindows, isAdmin, relaunchAsAdmin, getPath, formatUrl, openUrl, checkPackageStatus, startDownload } = require('./main/helper');
 const createLauncher = require('./main/launcher');
 const createSplash = require('./main/splash');
 const createMenu = require('./main/menu');
@@ -43,6 +43,12 @@ if (!locked) {
 app.once('ready', () => {
 
     setup();
+
+    // Require administrator privileges on Windows
+    if (isWindows() && !isAdmin()) {
+        relaunchAsAdmin(app);
+        return;
+    }
 
     if (isWindows()) {
         app.setAppUserModelId('ReVens');

@@ -30,8 +30,15 @@ const Settings = () => {
   const [packages, setPackages] = useState({});
   const [saved, setSaved] = useState(false);
 
-  const openModal = () => setModalStatus(true);
-  const closeModal = () => setModalStatus(false);
+  const openModal = () => {
+    if (window.__activeModal) return;
+    window.__activeModal = true;
+    setModalStatus(true);
+  };
+  const closeModal = () => {
+    window.__activeModal = false;
+    setModalStatus(false);
+  };
 
   const buildDefaultPackages = (saved) => {
     const defaults = {};

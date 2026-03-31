@@ -3,6 +3,23 @@ All notable changes to ReVens.
 
 --------------------------
 
+## [1.5.5] - 31-03-2026
+
+### Updated
+
+- Administrator level (auto-relaunch as admin on Windows)
+- Download pipeline
+- Progress reporting accuracy
+- HTTP redirect handling in all downloaders
+
+### Fixed
+
+- Archive extraction bug on production
+- File lock errors during extraction
+- Modal stacking
+
+--------------------------
+
 ## [1.5.4] - 30-03-2026
 
 ### Added

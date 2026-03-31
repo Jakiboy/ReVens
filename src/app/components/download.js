@@ -32,6 +32,8 @@ const Download = () => {
     const [aiInstallerPath, setAiInstallerPath] = useState('');
 
     const openPackagesModal = () => {
+        if (window.__activeModal) return;
+        window.__activeModal = true;
         setDownloadType('packages');
         setTitle('Download Packages');
         setDescription('');
@@ -47,6 +49,8 @@ const Download = () => {
     };
 
     const openItemModal = (data) => {
+        if (window.__activeModal) return;
+        window.__activeModal = true;
         setDownloadType('item');
         setTitle('Download Item');
         setDescription(data.name || '');
@@ -58,6 +62,8 @@ const Download = () => {
     };
 
     const openAIModal = () => {
+        if (window.__activeModal) return;
+        window.__activeModal = true;
         const name = config.ai?.name || 'AI';
         setDownloadType('ai');
         setTitle(`Download ${name} Assistant`);
@@ -71,6 +77,7 @@ const Download = () => {
     };
 
     const closeModal = () => {
+        window.__activeModal = false;
         if (isDownloading) {
             if (downloadType === 'packages' && window.electron?.abortDownload) {
                 window.electron.abortDownload();
@@ -85,6 +92,7 @@ const Download = () => {
     };
 
     const handleClose = () => {
+        window.__activeModal = false;
         setModalStatus(false);
         setIsDownloading(false);
     };
@@ -162,18 +170,16 @@ const Download = () => {
                             </Progress>
                         </Body>
                         <Footer>
-                            {!status.includes('already downloaded') && (
+                            {isDownloading && (
                                 <Btn
                                     color='danger'
                                     onClick={closeModal}
-                                    disabled={!isDownloading}
                                 >
                                     Abort
                                 </Btn>
                             )}
                             {!isDownloading && downloadType === 'ai' && aiInstallerPath && (
                                 <Btn
-                                    color={status.includes('already downloaded') ? 'danger' : 'success'}
                                     onClick={() => {
                                         window.electron.runInstaller(aiInstallerPath);
                                         handleClose();

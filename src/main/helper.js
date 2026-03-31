@@ -57,6 +57,33 @@ function setup() {
 }
 
 /**
+ * Check if running as administrator (Windows only).
+ */
+function isAdmin() {
+	if (process.platform !== 'win32') return true;
+	try {
+		require('child_process').execSync('net session', { stdio: 'ignore' });
+		return true;
+	} catch (e) {
+		return false;
+	}
+}
+
+/**
+ * Relaunch app with administrator privileges.
+ */
+function relaunchAsAdmin(app) {
+	const execPath = process.execPath;
+	const args = process.argv.slice(1).map(a => a.replace(/'/g, "''"));
+	const argsStr = args.length ? `-ArgumentList ${args.map(a => `'${a}'`).join(',')}` : '';
+	require('child_process').exec(
+		`powershell -Command "Start-Process '${execPath}' ${argsStr} -Verb RunAs"`,
+		() => { }
+	);
+	app.quit();
+}
+
+/**
  * Check Windows OS.
  */
 function isWindows() {
@@ -192,7 +219,7 @@ function downloadAIAssistant(launcher) {
 	const appRoot = config.baseDir || getRoot();
 	const installerName = config.ai?.name || 'AI';
 	const installerUrl = config.ai.download;
-	const installerPath = path.join(appRoot, 'inc', path.basename(installerUrl));
+	const installerPath = path.join(appRoot, 'inc', path.basename(installerUrl.split('?')[0]));
 
 	// Check if installer already exists and is valid
 	if (fs.existsSync(installerPath)) {
@@ -239,7 +266,7 @@ function downloadAIAssistant(launcher) {
 		(progress) => {
 			if (!launcher.isDestroyed() && !aiDownloadAborted) {
 				launcher.webContents.send('ai-download-progress', {
-					progress: progress,
+					progress: Math.round(progress * 100),
 					status: `Downloading ${installerName} installer...`
 				});
 			}
@@ -319,6 +346,9 @@ async function downloadPackages(launcher) {
 
 /**
  * Start downloading packages.
+ * - Pipeline: next file downloads while current file is being extracted.
+ * - Keep-alive agent: reuses TCP connections across all files.
+ * - Skip already-extracted: resumes an interrupted session automatically.
  */
 async function startDownload(launcher) {
 	const baseDir = getBinDir();
@@ -365,10 +395,80 @@ async function startDownload(launcher) {
 		return;
 	}
 
+	if (parts.length === 0) {
+		sendDownloadProgress(launcher, { progress: 100, currentFile: '', status: 'No packages to download', completed: true });
+		return;
+	}
+
+	// Reuse TCP connections across all files from the same host
+	const AgentClass = host.startsWith('https') ? https.Agent : http.Agent;
+	const agent = new AgentClass({ keepAlive: true, maxSockets: 2 });
+	const password = config.items.pswd || null;
+
+	// Build URL for a given filename
+	const buildUrl = (fileName) => {
+		const token = config.items.token || '';
+		const cacheBuster = `v=${config.version || Date.now()}`;
+		const separator = token ? '&' : '?';
+		return `${host}/${fileName}${token ? '?token=' + token : ''}${separator}${cacheBuster}`;
+	};
+
+	// Determine extract destination for a given archive path
+	const getExtractDir = (filePath) => {
+		const archiveName = path.basename(filePath, path.extname(filePath));
+		// In debug mode, test archives already have a named top-level folder.
+		// In production, archives have loose files — create named subdir.
+		return config.debug ? baseDir : path.join(baseDir, archiveName);
+	};
+
+	// Download one part and return its result
+	const fetchPart = async (i) => {
+		const part = parts[i];
+		const fileName = typeof part === 'string' ? part : part.name;
+		const expectedHash = typeof part === 'object' ? part.hash : null;
+		const filePath = path.join(baseDir, fileName);
+		const actualHash = await downloadFile(buildUrl(fileName), filePath, !!expectedHash, agent);
+		if (downloadAborted) throw new Error('Download aborted');
+		return { filePath, fileName, expectedHash, actualHash };
+	};
+
+	// Find first part that hasn't been extracted yet (resume support)
+	let firstPending = -1;
 	for (let i = 0; i < parts.length; i++) {
-		if (downloadAborted) {
+		const fileName = typeof parts[i] === 'string' ? parts[i] : parts[i].name;
+		const extractDir = getExtractDir(path.join(baseDir, fileName));
+		if (!config.debug && fs.existsSync(extractDir)) {
 			sendDownloadProgress(launcher, {
-				progress: Math.round(((i) / parts.length) * 100),
+				progress: Math.round(((i + 1) / parts.length) * 100),
+				currentFile: fileName,
+				status: `Skipping ${i + 1}/${parts.length} (already installed)...`
+			});
+		} else {
+			firstPending = i;
+			break;
+		}
+	}
+
+	if (firstPending === -1) {
+		agent.destroy();
+		sendDownloadProgress(launcher, { progress: 100, currentFile: '', status: 'All packages already installed!', completed: true });
+		launcher.webContents.send('package-status', checkPackageStatus());
+		return;
+	}
+
+	// Kick off the first non-skipped download immediately
+	sendDownloadProgress(launcher, {
+		progress: Math.round((firstPending / parts.length) * 100),
+		currentFile: typeof parts[firstPending] === 'string' ? parts[firstPending] : parts[firstPending].name,
+		status: `Downloading ${firstPending + 1}/${parts.length}...`
+	});
+	let pending = fetchPart(firstPending);
+
+	for (let i = firstPending; i < parts.length; i++) {
+		if (downloadAborted) {
+			agent.destroy();
+			sendDownloadProgress(launcher, {
+				progress: Math.round((i / parts.length) * 100),
 				currentFile: '',
 				status: 'Download aborted',
 				completed: true
@@ -376,79 +476,80 @@ async function startDownload(launcher) {
 			return;
 		}
 
-		const part = parts[i];
-		const fileName = typeof part === 'string' ? part : part.name;
-		const expectedHash = typeof part === 'object' ? part.hash : null;
-		const token = config.items.token || '';
-		// Add cache buster to bypass CDN/Cloudflare cache
-		const cacheBuster = `v=${config.version || Date.now()}`;
-		const separator = token ? '&' : '?';
-		const fileUrl = `${host}/${fileName}${token ? '?token=' + token : ''}${separator}${cacheBuster}`;
-		const filePath = path.join(baseDir, fileName);
-
-		sendDownloadProgress(launcher, {
-			progress: Math.round((i / parts.length) * 100),
-			currentFile: fileName,
-			status: `Downloading ${i + 1}/${parts.length}...`
-		});
-
+		// Await the current download
+		let result;
 		try {
-			// Download with hash calculation if hash is expected
-			const actualHash = await downloadFile(fileUrl, filePath, !!expectedHash);
+			result = await pending;
+		} catch (error) {
+			agent.destroy();
+			sendDownloadProgress(launcher, {
+				progress: Math.round((i / parts.length) * 100),
+				currentFile: '',
+				status: downloadAborted ? 'Download aborted' : `Error: ${error.message}`,
+				completed: true
+			});
+			return;
+		}
 
-			if (downloadAborted) {
-				// Clean up partial download
-				if (fs.existsSync(filePath)) {
-					fs.unlinkSync(filePath);
-				}
+		const { filePath, fileName, expectedHash, actualHash } = result;
+
+		// Verify MD5 hash (skipped in debug mode)
+		if (expectedHash && actualHash && !config.debug) {
+			sendDownloadProgress(launcher, {
+				progress: Math.round(((i + 0.3) / parts.length) * 100),
+				currentFile: fileName,
+				status: `Verifying ${i + 1}/${parts.length}...`
+			});
+			if (actualHash !== expectedHash) {
+				if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+				agent.destroy();
 				sendDownloadProgress(launcher, {
-					progress: Math.round(((i) / parts.length) * 100),
-					currentFile: '',
-					status: 'Download aborted',
+					progress: Math.round((i / parts.length) * 100),
+					currentFile: fileName,
+					status: `Error: File integrity check failed for ${fileName}`,
 					completed: true
 				});
 				return;
 			}
+		}
 
-			// Verify MD5 hash if available (skipped in debug mode)
-			if (expectedHash && actualHash && !config.debug) {
+		// Pipeline: start fetching the next pending part NOW, before extraction begins
+		let nextLabel = '';
+		if (i + 1 < parts.length && !downloadAborted) {
+			let j = i + 1;
+			// Skip parts that are already extracted
+			while (j < parts.length) {
+				const fn = typeof parts[j] === 'string' ? parts[j] : parts[j].name;
+				const ed = getExtractDir(path.join(baseDir, fn));
+				if (config.debug || !fs.existsSync(ed)) break;
 				sendDownloadProgress(launcher, {
-					progress: Math.round(((i + 0.3) / parts.length) * 100),
-					currentFile: fileName,
-					status: `Verifying ${i + 1}/${parts.length}...`
+					progress: Math.round(((j + 1) / parts.length) * 100),
+					currentFile: fn,
+					status: `Skipping ${j + 1}/${parts.length} (already installed)...`
 				});
-
-				if (actualHash !== expectedHash) {
-					// Hash mismatch - delete corrupted file
-					if (fs.existsSync(filePath)) {
-						fs.unlinkSync(filePath);
-					}
-					sendDownloadProgress(launcher, {
-						progress: Math.round((i / parts.length) * 100),
-						currentFile: fileName,
-						status: `Error: File integrity check failed for ${fileName}`,
-						completed: true
-					});
-					return;
-				}
+				j++;
 			}
-
-			sendDownloadProgress(launcher, {
-				progress: Math.round(((i + 0.5) / parts.length) * 100),
-				currentFile: fileName,
-				status: `Extracting ${i + 1}/${parts.length}...`
-			});
-
-			// Extract with password from config
-			const password = config.items.pswd || null;
-			await extractArchive(sevenZipPath, filePath, baseDir, password);
-
-			// Delete zip file after extraction
-			if (fs.existsSync(filePath)) {
-				fs.unlinkSync(filePath);
+			if (j < parts.length) {
+				nextLabel = typeof parts[j] === 'string' ? parts[j] : parts[j].name;
+				pending = fetchPart(j);
+				i = j - 1; // loop will i++ to j
+			} else {
+				pending = Promise.resolve(null);
 			}
+		}
 
+		const suffix = nextLabel ? ` (Downloading ${nextLabel} in background)` : '';
+		sendDownloadProgress(launcher, {
+			progress: Math.round(((i + 0.5) / parts.length) * 100),
+			currentFile: fileName,
+			status: `Extracting ${i + 1}/${parts.length}...${suffix}`
+		});
+
+		// Extract current archive
+		try {
+			await extractArchive(sevenZipPath, filePath, getExtractDir(filePath), password);
 		} catch (error) {
+			agent.destroy();
 			sendDownloadProgress(launcher, {
 				progress: Math.round((i / parts.length) * 100),
 				currentFile: fileName,
@@ -457,8 +558,11 @@ async function startDownload(launcher) {
 			});
 			return;
 		}
+
+		if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
 	}
 
+	agent.destroy();
 	sendDownloadProgress(launcher, {
 		progress: 100,
 		currentFile: '',
@@ -466,60 +570,79 @@ async function startDownload(launcher) {
 		completed: true
 	});
 
-	// Update package status to refresh button states
 	const status = checkPackageStatus();
 	launcher.webContents.send('package-status', status);
 }
 
 /**
  * Download a file from URL, optionally calculating MD5 hash during download.
+ * Handles redirects and abort signals.
  */
-function downloadFile(fileUrl, filePath, calculateHash = false) {
+function downloadFile(fileUrl, filePath, calculateHash = false, agent = null) {
 	return new Promise((resolve, reject) => {
 		const protocol = fileUrl.startsWith('https') ? https : http;
-		const file = fs.createWriteStream(filePath);
+		const file = fs.createWriteStream(filePath, { highWaterMark: 4 * 1024 * 1024 });
 		const hash = calculateHash ? crypto.createHash('md5') : null;
+		let settled = false;
+		let abortedMid = false;
 
 		const cleanup = () => {
-			file.close();
+			try { file.destroy(); } catch (_) { }
 			fs.unlink(filePath, () => { });
 		};
 
-		protocol.get(fileUrl, (response) => {
-			if (response.statusCode !== 200) {
-				cleanup();
-				reject(new Error(`Failed to download: ${response.statusCode}`));
+		const settle = (fn) => {
+			if (!settled) { settled = true; fn(); }
+		};
+
+		const reqOptions = agent ? { agent } : {};
+		const request = protocol.get(fileUrl, reqOptions, (response) => {
+			response.setTimeout(30000, () => request.destroy(new Error('Connection timed out')));
+			// Follow redirects
+			if ([301, 302, 307, 308].includes(response.statusCode)) {
+				file.destroy();
+				fs.unlink(filePath, () => { });
+				downloadFile(response.headers.location, filePath, calculateHash, agent)
+					.then(h => settle(() => resolve(h)))
+					.catch(e => settle(() => reject(e)));
 				return;
 			}
 
-			response.pipe(file);
-
-			// If calculating hash, also pipe data to hash
-			if (hash) {
-				response.on('data', (chunk) => {
-					hash.update(chunk);
-				});
+			if (response.statusCode !== 200) {
+				cleanup();
+				settle(() => reject(new Error(`Failed to download: ${response.statusCode}`)));
+				return;
 			}
 
-			file.on('finish', () => {
-				file.close();
+			response.on('data', (chunk) => {
 				if (downloadAborted) {
-					fs.unlink(filePath, () => { });
-					reject(new Error('Download aborted'));
+					abortedMid = true;
+					request.destroy();
+					return;
+				}
+				if (hash) hash.update(chunk);
+			});
+
+			response.pipe(file);
+
+			file.on('finish', () => {
+				if (abortedMid || downloadAborted) {
+					cleanup();
+					settle(() => reject(new Error('Download aborted')));
 				} else {
 					const md5Hash = hash ? hash.digest('hex') : null;
-					resolve(md5Hash);
+					settle(() => resolve(md5Hash));
 				}
 			});
 
 			file.on('error', (error) => {
 				cleanup();
-				reject(error);
+				settle(() => reject(error));
 			});
 
 		}).on('error', (error) => {
 			cleanup();
-			reject(error);
+			settle(() => reject(error));
 		});
 	});
 }
@@ -527,8 +650,18 @@ function downloadFile(fileUrl, filePath, calculateHash = false) {
 /**
  * Extract archive (zip, 7z, rar, iso, etc.) using 7z.exe.
  */
-function extractArchive(sevenZipPath, archivePath, outputDir, password = null) {
+function extractArchive(sevenZipPath, archivePath, outputDir, password = null, retries = 3, retryDelay = 2000) {
 	return new Promise((resolve, reject) => {
+		// Ensure output directory exists before extracting
+		try {
+			if (!fs.existsSync(outputDir)) {
+				fs.mkdirSync(outputDir, { recursive: true });
+			}
+		} catch (mkdirError) {
+			reject(new Error(`Failed to create output directory: ${mkdirError.message}`));
+			return;
+		}
+
 		const args = ['x', archivePath, `-o${outputDir}`, '-y'];
 
 		// Add password if provided
@@ -536,13 +669,29 @@ function extractArchive(sevenZipPath, archivePath, outputDir, password = null) {
 			args.push(`-p${password}`);
 		}
 
-		exec(sevenZipPath, args, (error, stdout, stderr) => {
-			if (error) {
-				reject(error);
-			} else {
-				resolve();
-			}
-		});
+		const attempt = (attemptsLeft) => {
+			exec(sevenZipPath, args, (error, stdout, stderr) => {
+				if (!error) {
+					resolve();
+					return;
+				}
+
+				const detail = (stderr && stderr.trim()) ? stderr.trim() : error.message;
+				const isLocked = detail.includes('being used by another process') ||
+					detail.includes('utilise par un autre processus') ||
+					detail.includes('Cannot open output file') ||
+					detail.includes('Cannot delete output file');
+
+				if (isLocked && attemptsLeft > 1) {
+					// File locked by another process — wait and retry
+					setTimeout(() => attempt(attemptsLeft - 1), retryDelay);
+				} else {
+					reject(new Error(`Extraction failed: ${detail}`));
+				}
+			});
+		};
+
+		attempt(retries);
 	});
 }
 
@@ -829,7 +978,7 @@ async function downloadSingleItem(launcher, item) {
 		await downloadFileWithProgress(fileUrl, filePath, (progress) => {
 			if (!itemDownloadAborted) {
 				sendItemDownloadProgress(launcher, {
-					progress: 10 + Math.round(progress * 0.8),
+					progress: 10 + Math.round(progress * 80),
 					status: 'Downloading...'
 				});
 			}
@@ -961,15 +1110,22 @@ async function downloadSingleItem(launcher, item) {
 
 /**
  * Download file with progress tracking.
+ * Handles redirects and abort signals without pipe/data-listener race conditions.
  */
 function downloadFileWithProgress(fileUrl, filePath, onProgress, downloadType = 'item') {
 	return new Promise((resolve, reject) => {
 		const protocol = fileUrl.startsWith('https') ? https : http;
-		const file = fs.createWriteStream(filePath);
+		const file = fs.createWriteStream(filePath, { highWaterMark: 4 * 1024 * 1024 });
+		let settled = false;
+		let abortedMid = false;
 
 		const cleanup = () => {
-			file.close();
+			try { file.destroy(); } catch (_) { }
 			fs.unlink(filePath, () => { });
+		};
+
+		const settle = (fn) => {
+			if (!settled) { settled = true; fn(); }
 		};
 
 		const isAborted = () => {
@@ -978,29 +1134,31 @@ function downloadFileWithProgress(fileUrl, filePath, onProgress, downloadType = 
 		};
 
 		const request = protocol.get(fileUrl, (response) => {
-			if (response.statusCode === 302 || response.statusCode === 301 || response.statusCode === 307 || response.statusCode === 308) {
-				// Handle redirects
-				cleanup();
+			response.setTimeout(30000, () => request.destroy(new Error('Connection timed out')));
+			// Follow redirects
+			if ([301, 302, 307, 308].includes(response.statusCode)) {
+				file.destroy();
+				fs.unlink(filePath, () => { });
 				downloadFileWithProgress(response.headers.location, filePath, onProgress, downloadType)
-					.then(resolve)
-					.catch(reject);
+					.then(() => settle(resolve))
+					.catch(e => settle(() => reject(e)));
 				return;
 			}
 
 			if (response.statusCode !== 200) {
 				cleanup();
-				reject(new Error(`Failed to download: ${response.statusCode}`));
+				settle(() => reject(new Error(`Failed to download: ${response.statusCode}`)));
 				return;
 			}
 
 			const totalSize = parseInt(response.headers['content-length'], 10);
 			let downloadedSize = 0;
 
+			// Track progress and abort via data events; writing handled by pipe
 			response.on('data', (chunk) => {
 				if (isAborted()) {
-					response.destroy();
-					cleanup();
-					reject(new Error('Download aborted'));
+					abortedMid = true;
+					request.destroy();
 					return;
 				}
 				downloadedSize += chunk.length;
@@ -1012,23 +1170,22 @@ function downloadFileWithProgress(fileUrl, filePath, onProgress, downloadType = 
 			response.pipe(file);
 
 			file.on('finish', () => {
-				file.close();
-				if (isAborted()) {
-					fs.unlink(filePath, () => { });
-					reject(new Error('Download aborted'));
+				if (abortedMid || isAborted()) {
+					cleanup();
+					settle(() => reject(new Error('Download aborted')));
 				} else {
-					resolve();
+					settle(resolve);
 				}
 			});
 
 			file.on('error', (error) => {
 				cleanup();
-				reject(error);
+				settle(() => reject(error));
 			});
 
 		}).on('error', (error) => {
 			cleanup();
-			reject(error);
+			settle(() => reject(error));
 		});
 
 		if (downloadType === 'ai') {
@@ -1051,6 +1208,8 @@ function abortAIDownload() {
 module.exports = {
 	setup,
 	isWindows,
+	isAdmin,
+	relaunchAsAdmin,
 	openUrl,
 	formatUrl,
 	getPath,

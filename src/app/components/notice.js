@@ -23,8 +23,15 @@ import {
 const Notice = () => {
 
   const [isOpened, setModalStatus] = useState(false);
-  const openModal = () => setModalStatus(true);
-  const closeModal = () => setModalStatus(false);
+  const openModal = () => {
+    if (window.__activeModal) return;
+    window.__activeModal = true;
+    setModalStatus(true);
+  };
+  const closeModal = () => {
+    window.__activeModal = false;
+    setModalStatus(false);
+  };
 
   useEffect(() => {
     window.electron.on('open-notice', openModal);
