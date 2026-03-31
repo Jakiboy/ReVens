@@ -17,7 +17,7 @@ ReVens is a Windows-based and AI-powered Reverse Engineering Toolkit "All-In-One
 * **90% portable**: Using portable versions or resolved/included dependencies
 * **Original assets**: Themes, Sounds (e.g. BRD - Teleport Pro.mx, CORE - Power ISO.xm)
 * **Packages manager**: JSON based Downloader, Versioning, Updater
-* **AI-powered**: Basic AI assistant using Ollama (llama3.2:1b)
+* **AI-powered**: Basic AI assistant using Ollama (llama3.2)
 * **Boilerplate**: For other projects (Electron.js X React.js)
 
 ## 🔧 Screenshot
