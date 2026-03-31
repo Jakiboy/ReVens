@@ -62,5 +62,11 @@ contextBridge.exposeInMainWorld('electron', {
   },
   runInstaller: (installerPath) => {
     ipcRenderer.send('run-installer', installerPath);
+  },
+  getSettings: () => {
+    return ipcRenderer.invoke('get-settings');
+  },
+  saveSettings: (settings) => {
+    return ipcRenderer.invoke('save-settings', settings);
   }
 });

@@ -3,6 +3,15 @@ All notable changes to ReVens.
 
 --------------------------
 
+## [1.5.4] - 30-03-2026
+
+### Added
+
+- Added Settings modal with per-package download switches
+- Added debug mode bypass for file integrity check
+
+--------------------------
+
 ## [1.5.3] - 30-11-2025
 
 ### Updated

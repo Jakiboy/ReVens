@@ -7,7 +7,7 @@
  */
 
 const { ipcMain } = require('electron');
-const { openItem, exploreItem, openUrl, abortDownload, startDownload, downloadSingleItem, abortItemDownload, abortAIDownload } = require('./helper');
+const { openItem, exploreItem, openUrl, abortDownload, startDownload, downloadSingleItem, abortItemDownload, abortAIDownload, loadSettings, saveSettings } = require('./helper');
 const ai = require('./ai');
 
 let launcherInstance = null;
@@ -49,6 +49,14 @@ function setupIpcListeners(launcher) {
 
   ipcMain.on('abort-ai-download', () => {
     abortAIDownload();
+  });
+
+  ipcMain.handle('get-settings', () => {
+    return loadSettings();
+  });
+
+  ipcMain.handle('save-settings', (e, settings) => {
+    return saveSettings(settings);
   });
 
   ipcMain.handle('check-ai', async () => {

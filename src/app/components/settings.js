@@ -11,32 +11,44 @@ import {
   MDBModal as Modal,
   MDBModalDialog as Dialog,
   MDBModalContent as Content,
+  MDBModalHeader as Header,
+  MDBModalTitle as Title,
   MDBModalBody as Body,
   MDBModalFooter as Footer,
   MDBBtn as Btn,
-  MDBContainer as Container,
+  MDBSwitch as Switch,
   MDBRow as Row,
   MDBCol as Col,
-  MDBInput as Input
 } from 'mdb-react-ui-kit';
+import config from '../../config/app.json';
+
+const parts = config.items.parts;
 
 const Settings = () => {
 
   const [isOpened, setModalStatus] = useState(false);
-  const [setting1, setSetting1] = useState('');
-  const [setting2, setSetting2] = useState('');
+  const [packages, setPackages] = useState({});
+  const [saved, setSaved] = useState(false);
 
   const openModal = () => setModalStatus(true);
   const closeModal = () => setModalStatus(false);
 
-  const handleSetting1Change = (event) => setSetting1(event.target.value);
-  const handleSetting2Change = (event) => setSetting2(event.target.value);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Save settings here
-    closeModal();
+  const buildDefaultPackages = (saved) => {
+    const defaults = {};
+    parts.forEach(part => {
+      const name = typeof part === 'string' ? part : part.name;
+      defaults[name] = saved[name] !== undefined ? saved[name] : true;
+    });
+    return defaults;
   };
+
+  useEffect(() => {
+    if (isOpened && window.electron?.getSettings) {
+      window.electron.getSettings().then(settings => {
+        setPackages(buildDefaultPackages(settings.packages || {}));
+      });
+    }
+  }, [isOpened]);
 
   useEffect(() => {
     window.electron.on('open-settings', openModal);
@@ -45,26 +57,80 @@ const Settings = () => {
     };
   }, []);
 
+  const handleToggle = (name) => {
+    setPackages(prev => ({ ...prev, [name]: !prev[name] }));
+    setSaved(false);
+  };
+
+  const handleSelectAll = () => {
+    const all = {};
+    parts.forEach(part => {
+      const name = typeof part === 'string' ? part : part.name;
+      all[name] = true;
+    });
+    setPackages(all);
+    setSaved(false);
+  };
+
+  const handleDeselectAll = () => {
+    const none = {};
+    parts.forEach(part => {
+      const name = typeof part === 'string' ? part : part.name;
+      none[name] = false;
+    });
+    setPackages(none);
+    setSaved(false);
+  };
+
+  const handleSave = async () => {
+    if (window.electron?.saveSettings) {
+      await window.electron.saveSettings({ packages });
+    }
+    setSaved(true);
+    setTimeout(() => {
+      setSaved(false);
+      closeModal();
+    }, 800);
+  };
+
   return (
     <>
-      <Modal open={isOpened} setOpen={setModalStatus} className="settings-modal" tabIndex="-1" staticBackdrop >
-        <Dialog centered>
+      <Modal open={isOpened} setOpen={setModalStatus} className="settings-modal" tabIndex="-1" staticBackdrop>
+        <Dialog centered scrollable>
           <Content>
-            <Body>
-              <Container className="d-flex align-items-center justify-content-center text-center">
+            <Header>
+              <Title>Settings</Title>
+            </Header>
+            <Body className="p-3">
+              <h6 className="settings-subtitle">Packages</h6>
+              <p className="text-muted small mb-2">Select the packages to include when downloading:</p>
+              <div className="d-flex gap-2 mb-3">
+                <Btn size="sm" color="primary" outline onClick={handleSelectAll}>Select All</Btn>
+                <Btn size="sm" color="secondary" outline onClick={handleDeselectAll}>Deselect All</Btn>
+              </div>
+              <div className="settings-scroll-area">
                 <Row>
-                  <Col>
-                    <h1>Settings</h1>
-                    <form onSubmit={handleSubmit}>
-                      <Input label="Setting 1" id="setting1" type="text" value={setting1} onChange={handleSetting1Change} />
-                      <Input label="Setting 2" id="setting2" type="text" value={setting2} onChange={handleSetting2Change} />
-                      <Btn color="primary" type="submit">Save</Btn>
-                    </form>
-                  </Col>
+                  {parts.map(part => {
+                    const name = typeof part === 'string' ? part : part.name;
+                    const label = name.replace('.zip', '');
+                    return (
+                      <Col key={name} size={6} className="mb-2">
+                        <Switch
+                          id={`pkg-${name}`}
+                          label={label}
+                          checked={packages[name] !== false}
+                          onChange={() => handleToggle(name)}
+                        />
+                      </Col>
+                    );
+                  })}
                 </Row>
-              </Container>
+              </div>
             </Body>
             <Footer>
+              <Btn color="primary" onClick={handleSave} disabled={saved}>
+                {saved ? 'Saved!' : 'Save'}
+              </Btn>
               <Btn color="secondary" onClick={closeModal}>Close</Btn>
             </Footer>
           </Content>

@@ -70,7 +70,6 @@ function getTemplate(launcher) {
     const advancedSubmenu = [
         {
             "label": 'Settings',
-            "enabled": false,
             "accelerator": 'Ctrl+S',
             click() {
                 launcher.webContents.send('open-settings');

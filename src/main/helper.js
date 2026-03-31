@@ -6,7 +6,7 @@
  * license : MIT
  */
 
-const { shell, dialog } = require('electron');
+const { shell, dialog, app } = require('electron');
 const config = require('../config/app.json');
 const path = require('path');
 const fs = require('fs');
@@ -20,6 +20,34 @@ let downloadAborted = false;
 let itemDownloadAborted = false;
 let aiDownloadAborted = false;
 let currentAIRequest = null;
+
+/**
+ * Load settings from userData.
+ */
+function loadSettings() {
+	try {
+		const settingsPath = path.join(app.getPath('userData'), 'settings.json');
+		if (fs.existsSync(settingsPath)) {
+			return JSON.parse(fs.readFileSync(settingsPath, 'utf8'));
+		}
+	} catch (error) {
+		console.error('Error loading settings:', error);
+	}
+	return {};
+}
+
+/**
+ * Save settings to userData.
+ */
+function saveSettings(settings) {
+	try {
+		fs.writeFileSync(path.join(app.getPath('userData'), 'settings.json'), JSON.stringify(settings, null, 2), 'utf8');
+		return true;
+	} catch (error) {
+		console.error('Error saving settings:', error);
+		return false;
+	}
+}
 
 /**
  * Setup env.
@@ -310,7 +338,12 @@ async function startDownload(launcher) {
 		}
 	}
 
-	const parts = config.items.parts;
+	const settings = loadSettings();
+	const enabledPackages = settings.packages || {};
+	const parts = config.items.parts.filter(part => {
+		const name = typeof part === 'string' ? part : part.name;
+		return enabledPackages[name] !== false;
+	});
 	let host = config.items.host;
 
 	// Append /test to host URL in debug mode
@@ -377,8 +410,8 @@ async function startDownload(launcher) {
 				return;
 			}
 
-			// Verify MD5 hash if available
-			if (expectedHash && actualHash) {
+			// Verify MD5 hash if available (skipped in debug mode)
+			if (expectedHash && actualHash && !config.debug) {
 				sendDownloadProgress(launcher, {
 					progress: Math.round(((i + 0.3) / parts.length) * 100),
 					currentFile: fileName,
@@ -1034,5 +1067,7 @@ module.exports = {
 	checkPackageStatus,
 	downloadSingleItem,
 	abortItemDownload,
-	abortAIDownload
+	abortAIDownload,
+	loadSettings,
+	saveSettings
 };

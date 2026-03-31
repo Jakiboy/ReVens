@@ -35,9 +35,13 @@ Packages are **automatically downloaded**.
 
 [![ReVens packages downloader](assets/preview/screenshot-2.png)](#)
 
-Local AI assistant integrated using **Ollama**.
+Packages to download can be **customized** via Settings.
 
 [![ReVens packages downloader](assets/preview/screenshot-3.png)](#)
+
+Local AI assistant integrated using **Ollama**.
+
+[![ReVens packages downloader](assets/preview/screenshot-4.png)](#)
 
 ## 💡 Notices
 
