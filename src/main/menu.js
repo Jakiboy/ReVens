@@ -56,7 +56,7 @@ function getTemplate(launcher) {
         },
         { "type": 'separator' },
         {
-            "label": 'Download AI assistant (beta)',
+            "label": 'Download AI assistant',
             click() { downloadAIAssistant(launcher); }
         },
         { "type": 'separator' },

@@ -119,7 +119,7 @@
 	"ai": {
 		"name": "Ollama",
 		"handler": "ollama",
-		"model": "tinyllama",
+		"model": "llama3.2",
 		"tag": "latest",
 		"url": "https://ollama.com",
 		"download": "https://ollama.com/download/OllamaSetup.exe",

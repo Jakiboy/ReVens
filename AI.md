@@ -2,7 +2,7 @@
 
 ## Requirements
 
-The AI assistant requires **Ollama** to be installed on your system.
+The AI assistant requires **Ollama** to be installed and running on your system.
 
 ## Installation Steps
 
@@ -14,21 +14,21 @@ The AI assistant requires **Ollama** to be installed on your system.
 winget install Ollama.Ollama
 ```
 
-Or download from: https://ollama.ai
+Or download from: [https://ollama.ai ](https://ollama.com/download/windows)  
 
 ### 2. Pull the AI Model
 
 After installing Ollama, open a terminal and run:
 
 ```bash
-ollama pull llama3.2:1b
+ollama pull llama3.2
 ```
 
 This downloads the lightweight 1.3GB model optimized for local analysis.
 
 ### 3. Restart ReVens
 
-Close and reopen ReVens. The AI assistant will now be available in the **AI** tab.
+Restart ReVens. The AI assistant will now be available in the **AI** tab.
 
 ## Usage
 
@@ -44,13 +44,9 @@ Close and reopen ReVens. The AI assistant will now be available in the **AI** ta
 
 ## Models
 
-| Model         | Size  | Best For                 |
-| ------------- | ----- | ------------------------ |
-| `llama3.2:1b` | 1.3GB | Fast responses (default) |
-| `phi3:mini`   | 2.3GB | Better reasoning         |
-| `mistral:7b`  | 4.1GB | Advanced analysis        |
+See available models at: https://ollama.com/search
 
-To change model, edit `src/main/ai.js` and update `this.modelName`.
+To change model, edit `src/main.js`.
 
 ## Troubleshooting
 

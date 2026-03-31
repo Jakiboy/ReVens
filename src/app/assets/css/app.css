@@ -724,6 +724,24 @@ a {
     font-size: 14px;
 }
 
+.ai-copy-btn {
+    display: block;
+    margin-top: 8px;
+    background: none;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #888;
+    font-size: 13px;
+    padding: 2px 8px;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.ai-copy-btn:hover {
+    color: #e0e0e0;
+    border-color: #888;
+}
+
 .ai-typing {
     display: inline-block;
     animation: pulse 1.5s ease-in-out infinite;

@@ -57,33 +57,6 @@ function setup() {
 }
 
 /**
- * Check if running as administrator (Windows only).
- */
-function isAdmin() {
-	if (process.platform !== 'win32') return true;
-	try {
-		require('child_process').execSync('net session', { stdio: 'ignore' });
-		return true;
-	} catch (e) {
-		return false;
-	}
-}
-
-/**
- * Relaunch app with administrator privileges.
- */
-function relaunchAsAdmin(app) {
-	const execPath = process.execPath;
-	const args = process.argv.slice(1).map(a => a.replace(/'/g, "''"));
-	const argsStr = args.length ? `-ArgumentList ${args.map(a => `'${a}'`).join(',')}` : '';
-	require('child_process').exec(
-		`powershell -Command "Start-Process '${execPath}' ${argsStr} -Verb RunAs"`,
-		() => { }
-	);
-	app.quit();
-}
-
-/**
  * Check Windows OS.
  */
 function isWindows() {
@@ -1208,8 +1181,6 @@ function abortAIDownload() {
 module.exports = {
 	setup,
 	isWindows,
-	isAdmin,
-	relaunchAsAdmin,
 	openUrl,
 	formatUrl,
 	getPath,

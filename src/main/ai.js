@@ -16,7 +16,9 @@ const execAsync = promisify(exec);
 
 class ReVensAI {
     constructor() {
-        this.modelName = config?.ai?.model || 'tinyrevens';
+        const modelBase = config?.ai?.model || 'tinyrevens';
+        const modelTag = config?.ai?.tag;
+        this.modelName = modelTag ? `${modelBase}:${modelTag}` : modelBase;
         this.handler = config?.ai?.handler || 'revensai'
         this.isAvailable = false;
         this.modelDownloaded = false;

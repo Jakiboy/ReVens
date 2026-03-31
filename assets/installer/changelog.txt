@@ -7,10 +7,11 @@ All notable changes to ReVens.
 
 ### Updated
 
-- Administrator level (auto-relaunch as admin on Windows)
+- Administrator elevated level
 - Download pipeline
 - Progress reporting accuracy
 - HTTP redirect handling in all downloaders
+- AI Model (llama3.2)
 
 ### Fixed
 
@@ -24,8 +25,8 @@ All notable changes to ReVens.
 
 ### Added
 
-- Added Settings modal with per-package download switches
-- Added debug mode bypass for file integrity check
+- Settings modal with per-package download switches
+- Debug mode bypass for file integrity check
 
 --------------------------
 
@@ -33,22 +34,13 @@ All notable changes to ReVens.
 
 ### Updated
 
-- Updated items
-- Updated README.md
-
---------------------------
-
-## [1.5.2] - 20-11-2025
-
-### Updated
-
-- Updated items
+- Packages items
 - Updated scripts
-- Updated README.md
+- README.md
 
 ### Added
 
-- Added slug (items, sections, subs, extras)
+- Slug Parameter (items, sections, subs, extras)
 - File integrity check (MD5)
 
 --------------------------
@@ -63,8 +55,8 @@ All notable changes to ReVens.
 ### Added
 
 - AI model installer: Ollama
-- Added post-scripts
-- Added items context menu
+- Post-scripts
+- Items context menu
 
 --------------------------
 
@@ -73,8 +65,8 @@ All notable changes to ReVens.
 ### Updated
 
 - Improved main UI
-- Updated Packages downloader
-- Updated Builder & Installer
+- Packages downloader
+- Builder & Installer
 - Refactoring Backend (Electron.js)
 - Refactoring Frontend (React.js)
 
@@ -88,20 +80,20 @@ All notable changes to ReVens.
 
 ### Fixed
 
-- Fixed JSON-based packages manager
-- Fixed Modals UI (CSS)
+- JSON-based packages manager
+- Modals UI (CSS)
 
 ### Removed
 
-- Removed default-initialized INI files
+- Default-initialized INI files
 
 ### Added
 
-- Added test & fix /scripts
-- Added ReverseKit
-- Added Search feature
-- Added WebAssembly Binary Toolkit
-- Added direct download URLs for packages (GitHub & Trusted sources)
+- Test & fix scripts
+- ReverseKit
+- Search feature
+- WebAssembly Binary Toolkit
+- Direct download URLs for packages (GitHub & Trusted sources)
 
 --------------------------
 
@@ -109,7 +101,7 @@ All notable changes to ReVens.
 
 ### Updated
 
-- Updated Electron.js (v29.4.6)
+- Electron.js (v29.4.6)
 
 --------------------------
 
@@ -117,7 +109,7 @@ All notable changes to ReVens.
 
 ### Updated
 
-- Updated Electron.js (v29.1.6)
+- Electron.js (v29.1.6)
 
 --------------------------
 

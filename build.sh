@@ -51,12 +51,14 @@ sleep 2
 clear
 
 echo -e "${G}Packaging application..."
-electron-packager "./${OUTPUT}/${SOURCE}" --icon="./assets/installer/icon.ico" --out="./${OUTPUT}" --app-copyright="${COPYRIGHT}" --app-version="${VERSION}" --win32metadata.CompanyName="${AUTHOR}" --win32metadata.FileDescription="${DESCRIPTION}" # --x64
+electron-packager "./${OUTPUT}/${SOURCE}" --icon="./assets/installer/icon.ico" --out="./${OUTPUT}" --app-copyright="${COPYRIGHT}" --app-version="${VERSION}" --win32metadata.CompanyName="${AUTHOR}" --win32metadata.FileDescription="${DESCRIPTION}" --win32metadata.requested-execution-level=requireAdministrator # --x64
 sleep 2
 clear
 
 echo -e "${G}Renaming path..."
 mv "./${OUTPUT}/${NAME}-win32-x64" "./${OUTPUT}/${NAME}"
+sleep 2
+clear
 
 # Remove temporary src folder from output
 rm -rf "./${OUTPUT}/${SOURCE}"

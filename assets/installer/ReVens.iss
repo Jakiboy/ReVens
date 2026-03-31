@@ -42,6 +42,7 @@ Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
 ArchitecturesAllowed=x64
+PrivilegesRequired=admin
 
 ; Languages:
 
@@ -96,4 +97,4 @@ Filename: "{app}\protect.bat"; Parameters: "install"; Flags: runhidden waituntil
 Filename: "{cmd}"; Parameters: "/c del ""{app}\protect.bat"""; Flags: runhidden waituntilterminated
 
 ; Start ReVens
-Filename: "{app}\{#InstallerAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(InstallerAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#InstallerAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(InstallerAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent shellexec
