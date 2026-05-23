@@ -86,7 +86,24 @@ bash build.sh
 
 ## 🔧 TODO
 
-* We need contributors for: Advanced AI, Settings, and the Package Downloader.
+For anyone who wants to contribute!
+
+* **AI assistant**: Setup advanced AI agent (Models, Docs, Skills, Prompts).
+* **Launcher**: Add updater / update checker.
+* **Launcher**: Add setup configuration.
+* **Package manager**: Remove legacy packages download by default.
+* **Package manager**: Add packages direct download by default (Verified GitHub sources only).
+* **Package manager**: Build low-level secured downloader (Supports source config).
+* **Package manager**: Add packages backup after update.
+* **Package manager**: Add portable generator (RE) for packages installers.
+* **Package manager**: Generate db.sqlite for items on production (items.json).
+* **Package manager**: Add local database manager.
+* **Settings**: Add option for local database backup (db.sqlite).
+* **Settings**: Add option for packages auto-update.
+* **UI**: Improve menu (Edit, Packages, Update).
+* **UI**: Add option to download legacy packages.
+* **UI**: Add 'Favorites' tab.
+* **UI**: Remove 'docs' tab.
 
 ## 🔧 Packages
 
@@ -728,18 +745,6 @@ Unpack and remove binary protection (UPX, ASPack, VMProtect).
 * **[LessMSI](https://github.com/activescott/lessmsi)** - *Command-line tool to extract data from MSI files.*
 * **Mextract** - *Command-line MSI and CAB extractor.*
 
-##### Extracting (Game)
-* **[Ninja Ripper](https://github.com/blackninja23/NinjaRipper)** - *Tool for extracting 3D models from games.*
-* **[Asset Bundle Extractor](https://github.com/DerPopo/UABE)** - *Utility for extracting Unity assets.*
-* **[Dragon UnPACKer](https://github.com/elbereth/DragonUnPACKer)** - *Tool for opening and extracting game resource files.*
-* **[3D Ripper DX](http://www.deep-shadows.com/hax/3DRipperDX.htm)** - *Capture 3D models from DirectX 9 games.*
-* **[QuickBMS](https://github.com/aluigi/quickbms)** - *File extraction and reimporting script engine.*
-* **[Unity Asset Editor](https://github.com/Perfare/UnityAssetEditor)** - *Tool for modifying Unity game assets.*
-* **DevX Unity Unpacker** - *Utility for unpacking Unity game files.*
-* **[Unity Studio](https://github.com/Perfare/UnityStudio)** - *Viewer and editor for Unity assets and bundles.*
-* **[UnityEx](https://github.com/IIIIIIIIIIII/UnityEx)** - *Utility for extracting assets from Unity games.*
-* **[uTinyRipper](https://github.com/mafaca/UtinyRipper)** - *Unity asset extractor and exporter.*
-
 ##### Extracting (Registry)
 * **[RegJump](https://learn.microsoft.com/en-us/sysinternals/downloads/regjump)** - *Registry Key Jumper.*
 * **[RegScanner](https://www.nirsoft.net/utils/regscanner.html)** - *Registry scanner.*
@@ -748,6 +753,7 @@ Unpack and remove binary protection (UPX, ASPack, VMProtect).
 * **[RegRipper](https://github.com/keydet89/RegRipper3.0)** - *Another registry extractor.*
 
 ##### Extracting (Password)
+* **[Passware Kit Forensic](https://www.passware.com/kit-forensic/)** - *Encrypted electronic evidence discovery and decryption.*
 * **[Browser Pass View](https://www.nirsoft.net/utils/browser_password_recovery.html)** - *Web password recovery tool.*
 * **[RouterDP](https://www.sordum.org/10411/router-default-password-v1-1/)** - *Router password view tool.*
 * **[Wireless Key View](https://www.nirsoft.net/utils/wireless_key.html)** - *Router password view tool (WirelessKeyView).*
@@ -1316,7 +1322,7 @@ Helper tools and miscellaneous content.
 * **Base64 (CLI)** - *Command-line tool for Base64 encoding and decoding.*
 * **MD5 (CLI)** - *Command-line tool for MD5 hashing.*
 * **SHA1 (CLI)** - *Command-line tool for SHA1 hashing.*
-* **Dissecting RC4 Algo.** - *Analyzes the RC4 encryption algorithm.*
+* **Dissecting RC4 Algo** - *Analyzes the RC4 encryption algorithm.*
 * **Blowfish Encrypt Tool** - *Blowfish encryption utility.*
 * **Byte Encrypter** - *Byte-level encryption tool.*
 * **ECCTool** - *Elliptic curve cryptography tool.*
@@ -1475,14 +1481,19 @@ Helper tools and miscellaneous content.
 ##### Mobile (Android)
 * **[APK Editor Studio](https://github.com/kefir500/apk-editor-studio)** - *Powerful APK editing tool.*
 * **[APK Easy Tool](https://forum.xda-developers.com/t/tool-windows-apk-easy-tool-v1-60-2023-02-23.3333960/)** - *APK management utility for Windows.*
-* **[ADB Installer](https://github.com/koush/adb-install)** - *Android Debug Bridge installer for Windows.*
-* **[ADB Driver Installer](https://adbdriver.com/)** - *Universal ADB driver installer for Android devices.*
+* **[Bifrost](https://github.com/zacharee/Bifrost)** - *Tool for downloading Samsung mobile device firmware.*
+* **[XAPK Detector](https://github.com/horsicq/XAPKDetector)** - *Detects and handles XAPK files.*
+* **[APK Multi-Tool](https://github.com/APK-Multi-Tool/APK-Multi-Tool)** - *Tool for managing and modifying Android APK files.*
+* **[Odin3](https://odindownload.com/)** - *Samsung Android ROM flashing tool.*
+* **[Apktool](https://github.com/iBotPeaches/Apktool)** - *Tool for decompiling and recompiling Android APK files.*
+* **ADB Installer** - *ADB, Fastboot and Drivers installer.*
+* **[ADB Driver Installer](http://adbdriver.com/)** - *ADB driver installer.*
+* **[Universal ADB Drivers](https://adb.clockworkmod.com/)** - *Universal ADB driver installer.*
+* **[Samsung USB Driver](https://developer.samsung.com/android-usb-driver)** - *Samsung USB driver installer.*
 * **[APK Installer](https://github.com/pepakriz/apk-installer)** - *Tool for installing APK files on Android devices.*
 * **APK Protect** - *Tool for protecting Android applications.*
-* **XAPK Detector** - *Detects and handles XAPK files.*
-* **[APK Multi-Tool](https://github.com/APK-Multi-Tool/APK-Multi-Tool)** - *Tool for managing and modifying Android APK files.*
-* **[Apktool](https://github.com/iBotPeaches/Apktool)** - *Tool for decompiling and recompiling Android APK files.*
-* **[Odin3](https://odindownload.com/)** - *Samsung Android ROM flashing tool.*
+* **[SamFw Tool](https://samfw.com/)** - *Tool for removing FRP.*
+* **[Frija](https://github.com/SlackingVeteran/frija)** - *Tool for downloading Samsung firmware.*
 
 ##### Mobile (IOS)
 * **SSH Ramdisk** - *iPhone ramdisk control.*
@@ -1490,13 +1501,55 @@ Helper tools and miscellaneous content.
 * **iDetector** - *Check iOS bootrom.*
 * **[Pangu](http://en.pangu.io/)** - *iOS jailbreak tool.*
 * **jailsn0w** - *iCloud activation bypass.*
-* **[Sn0wbreeze](https://ih8sn0w.com/)** - *Custom IPSWs generator.*
 * **[P0sixspwn](https://ih8sn0w.com/p0sixspwn.html)** - *iOS jailbreaking tool.*
 * **[iREB](https://ih8sn0w.com/ireb.html)** - *iTunes custom IPSWs bypass tool.*
+* **[Sn0wbreeze](https://ih8sn0w.com/)** - *Custom IPSWs generator.*
+* **[iTunes](https://www.apple.com/itunes/)** - *Apple device management software.*
 * **[3uTools](https://www.3u.com/)** - *Tool for flashing and jailbreaking iOS.*
 * **[Checkra1n (CLI)](https://checkra.in/)** - *Command-line jailbreak tool for iOS devices.*
 * **[Checkn1x (ISO)](https://github.com/asineth0/checkn1x)** - *Jailbreaking iOS devices bootable ISO.*
 * **[Bootra1n (ISO)](https://github.com/foxlet/bootra1n)** - *Enough Linux for checkra1n jailbreak.*
+
+##### Gaming
+*Games & Devices RE toolkits.*
+* **[Ninja Ripper](https://github.com/blackninja23/NinjaRipper)** - *Tool for extracting 3D models from games.*
+* **[Asset Bundle Extractor](https://github.com/DerPopo/UABE)** - *Utility for extracting Unity assets.*
+* **[Dragon UnPACKer](https://github.com/elbereth/DragonUnPACKer)** - *Tool for opening and extracting game resource files.*
+* **[3D Ripper DX](http://www.deep-shadows.com/hax/3DRipperDX.htm)** - *Capture 3D models from DirectX 9 games.*
+* **[QuickBMS](https://github.com/aluigi/quickbms)** - *File extraction and reimporting script engine.*
+* **[Unity Asset Editor](https://github.com/Perfare/UnityAssetEditor)** - *Tool for modifying Unity game assets.*
+* **DevX Unity Unpacker** - *Utility for unpacking Unity game files.*
+* **[Unity Studio](https://github.com/Perfare/UnityStudio)** - *Viewer and editor for Unity assets and bundles.*
+* **[UnityEx](https://github.com/IIIIIIIIIIII/UnityEx)** - *Utility for extracting assets from Unity games.*
+* **[uTinyRipper](https://github.com/mafaca/UtinyRipper)** - *Unity asset extractor and exporter.*
+
+##### Gaming (Nintendo Switch)
+* **[EX BootLogo](https://github.com/KranKRival/EX-BootLogo-Nintendo-Switch-Bootlogo-Converter)** - *Nintendo Switch boot logo converter (Hekate/Atmosphere).*
+* **[Joy-Con Toolkit](https://github.com/CTCaer/jc_toolkit)** - *Nintendo Switch Joy-Con toolkit.*
+* **[LayoutKit](https://github.com/ThemezerNX/LayoutKit)** - *Layouts creator for Nintendo Switch.*
+* **[NX Editor](https://github.com/NX-Editor/NxEditor)** - *General editor for Nintendo Switch.*
+* **[Switch Layout Editor](https://github.com/FuryBaguette/SwitchLayoutEditor)** - *Layout editor for Nintendo Switch.*
+* **[Switch Theme Injector](https://github.com/exelix11/SwitchThemeInjector)** - *Custom themes creator for Nintendo Switch.*
+* **[Nand Fix Pro](https://github.com/sthetix/NANDFixPro)** - *Nintendo Switch NAND repair tool.*
+* **[NX Nand Manager](https://github.com/eliboa/NxNandManager)** - *Nintendo Switch NAND manager.*
+* **[NXDT Host](https://github.com/DarkMatterCore/nxdumptool)** - *Nintendo Switch dump tool server.*
+* **[TegraRcmGUI](https://github.com/eliboa/TegraRcmGUI)** - *Nintendo Switch payload injector (RCM Mode).*
+* **[DBI Backend](https://github.com/rashevskyv/dbi)** - *Nintendo Switch games installer (NSP, NSZ, XCI, XCZ) using DBI (MTP, USB, HTTP).*
+* **[Fluffy](https://github.com/fourminute/Fluffy)** - *Nintendo Switch games server installer using TinFoil or Goldleaf.*
+* **[Yuzu](https://github.com/pedrodg28/yuzu-emu)** - *Nintendo Switch emulator.*
+* **[Switch LAN Play](https://github.com/spacemeowx2/switch-lan-play)** - *Nintendo Switch LAN client.*
+* **[SysDVR](https://github.com/exelix11/SysDVR)** - *Nintendo Switch streaming client.*
+* **[Devkit](https://devkitpro.org/)** - *Nintendo Switch homebrew development toolchain.*
+* **[EmuTool](https://github.com/TheyKilledKenny/Emutool)** - *EmuNAND/EmuMMC manager.*
+* **IPS Patch Creator** - *IPS signature patches generator (Sigpatches).*
+* **[Partial AES Key Crack](https://switchtools.sshnuke.net/)** - *Partial AES key cracker (Mariko).*
+* **[Appstore](https://github.com/fortheusers/hb-appstore)** - *GUI Homebrew app store for CFW.*
+* **[NS-USBloader](https://github.com/developersu/ns-usbloader)** - *Nintendo Switch games installer using Awoo-Installer.*
+* **[NUT](https://github.com/blawar/nut)** - *Nintendo Switch games installer using Tinfoil.*
+* **[Quark](https://github.com/XorTroll/Goldleaf)** - *Nintendo Switch games installer using Goldleaf.*
+* **Homebrew** - *Collection of homebrew apps for Nintendo Switch CFW.*
+* **Payloads** - *Collection of payloads for Nintendo Switch CFW.*
+* **Themes** - *Collection of custom themes for Nintendo Switch CFW.*
 
 ##### Simulating
 *Circuit and logical simulation.*

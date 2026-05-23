@@ -16,7 +16,7 @@
 	"doc": {
 		"desc": "Windows-based Reverse Engineering Toolkit 'All-In-One', Built for <strong>Security (Penetration testing)</strong> & <strong>Educational purposes only</strong>."
 	},
-	"baseDir": false,
+	"baseDir": "D:\\Toolkit\\Security\\Reverse Engineering",
 	"items": {
 		"host": "https://revens.jihadsinnaour.com/download",
 		"token": "e4U8fXWuFeOvEA5hOnd6JHkK7doWfZiQ",
@@ -85,6 +85,10 @@
 			{
 				"name": "Extracting.zip",
 				"hash": "7e18c98c8bb7fae63a143cf62f844080"
+			},
+			{
+				"name": "Gaming.zip",
+				"hash": ""
 			},
 			{
 				"name": "Hexing.zip",

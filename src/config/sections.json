@@ -369,6 +369,17 @@
                     ]
                 },
                 {
+                    "name": "gaming",
+                    "title": "Gaming",
+                    "desc": "Games & Devices RE toolkits",
+                    "extra": [
+                        {
+                            "name": "nintendo-switch",
+                            "title": "Nintendo Switch"
+                        }
+                    ]
+                },
+                {
                     "name": "simulating",
                     "title": "Simulating",
                     "desc": "Circuit and logical simulation"
