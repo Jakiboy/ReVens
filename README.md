@@ -86,22 +86,22 @@ bash build.sh
 
 ## 🔧 TODO
 
-For anyone who wants to contribute!
+For anyone who wants to contribute:
 
-* **AI assistant**: Setup advanced AI agent (Models, Docs, Skills, Prompts).
-* **Launcher**: Add updater / update checker.
+* **AI assistant**: Set up an advanced AI agent (models, docs, skills, prompts).
+* **Launcher**: Add an updater / update checker.
 * **Launcher**: Add setup configuration.
-* **Package manager**: Remove legacy packages download by default.
-* **Package manager**: Add packages direct download by default (Verified GitHub sources only).
-* **Package manager**: Build low-level secured downloader (Supports source config).
-* **Package manager**: Add packages backup after update.
-* **Package manager**: Add portable generator (RE) for packages installers.
-* **Package manager**: Generate db.sqlite for items on production (items.json).
+* **Package manager**: Remove legacy package downloads by default.
+* **Package manager**: Add direct package downloads by default (verified GitHub sources only).
+* **Package manager**: Build a low-level secure downloader (supports source config).
+* **Package manager**: Add package backup after updates.
+* **Package manager**: Add a portable generator (RE) for package installers.
+* **Package manager**: Generate db.sqlite for production items (items.json).
 * **Package manager**: Add local database manager.
 * **Settings**: Add option for local database backup (db.sqlite).
-* **Settings**: Add option for packages auto-update.
-* **UI**: Improve menu (Edit, Packages, Update).
-* **UI**: Add option to download legacy packages.
+* **Settings**: Add option for package auto-updates.
+* **UI**: Improve menus (Edit, Packages, Update).
+* **UI**: Add an option to download legacy packages.
 * **UI**: Add 'Favorites' tab.
 * **UI**: Remove 'docs' tab.
 
