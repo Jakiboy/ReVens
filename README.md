@@ -828,6 +828,7 @@ View and change the running state of a program (Disassembling, Decompiling, Hexi
 * **[.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/)** - *.NET assembly browser and decompiler.*
 * **[JByteMod](https://github.com/GraxCode/JByteMod-Beta)** - *Java bytecode editor and decompiler.*
 * **[VB Decompiler](https://www.vb-decompiler.org/)** - *Decompile Visual Basic executables.*
+* **[VBReFormer](https://decompiler-vb.net/)** - *Visual Basic 5/6 decompiler (P-Code and native), disassembler and compiled-UI editor; free edition available.*
 * **[DJ Java Decompiler](https://www.neshkov.com/dj.html)** - *Java decompiler and disassembler.*
 * **Dis# Net decompiler** - *.NET decompiler for C#.*
 * **[FFDec](https://github.com/jindrapetrik/jpexs-decompiler)** - *Flash Decompiler.*
