@@ -12,7 +12,7 @@
 
 #define InstallerRoot "."
 #define InstallerAppName "ReVens"
-#define InstallerAppVersion "1.5.5"
+#define InstallerAppVersion "1.5.6"
 #define InstallerAppPublisher "Jakiboy"
 #define InstallerAppURL "https://github.com/Jakiboy/ReVens"
 #define InstallerAppExeName "ReVens.exe"

@@ -376,6 +376,10 @@
                         {
                             "name": "nintendo-switch",
                             "title": "Nintendo Switch"
+                        },
+                        {
+                            "name": "playstation",
+                            "title": "PlayStation (PS4, PS5)"
                         }
                     ]
                 },

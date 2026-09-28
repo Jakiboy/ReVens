@@ -781,6 +781,7 @@ View and change the running state of a program (Disassembling, Decompiling, Hexi
 ##### Manipulating
 *Interactive disassembly and runtime manipulation.*
 * **[x64dbg](https://github.com/x64dbg/x64dbg)** - *Graphical debugger for x86 and x86-64 executables.*
+* **[GDB](https://www.sourceware.org/gdb/)** - *The GNU Project Debugger.*
 * **JDebug Tool** - *Java debugger interface.*
 * **NWDebug** - *NetWare debugging tool.*
 * **Olly Script Editor** - *OllyDbg script editor.*
@@ -823,12 +824,12 @@ View and change the running state of a program (Disassembling, Decompiling, Hexi
 * **[dotPeek](https://www.jetbrains.com/decompiler/)** - *.NET decompiler and assembly browser.*
 * **[JD-GUI](https://github.com/java-decompiler/jd-gui)** - *Decompile Java class files.*
 * **[JADX](https://github.com/skylot/jadx)** - *Dex to Java decompiler.*
+* **[VBReFormer](https://decompiler-vb.net/)** - *Visual Basic 5/6 decompiler (P-Code and native).*
 * **[Bytecode Viewer](https://github.com/Konloch/bytecode-viewer)** - *Decompile Java/Android bytecode & more.*
 * **[ILSpy](https://github.com/icsharpcode/ILSpy)** - *Open-source .NET assembly browser.*
 * **[.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/)** - *.NET assembly browser and decompiler.*
 * **[JByteMod](https://github.com/GraxCode/JByteMod-Beta)** - *Java bytecode editor and decompiler.*
 * **[VB Decompiler](https://www.vb-decompiler.org/)** - *Decompile Visual Basic executables.*
-* **[VBReFormer](https://decompiler-vb.net/)** - *Visual Basic 5/6 decompiler (P-Code and native), disassembler and compiled-UI editor; free edition available.*
 * **[DJ Java Decompiler](https://www.neshkov.com/dj.html)** - *Java decompiler and disassembler.*
 * **Dis# Net decompiler** - *.NET decompiler for C#.*
 * **[FFDec](https://github.com/jindrapetrik/jpexs-decompiler)** - *Flash Decompiler.*
@@ -870,6 +871,7 @@ Edit executable files (PE, DLL, Import tables, Setup, Res).
 *Compile, Inject, Patch, Build and Reconstruct PE.*
 * **[Resource Hacker](http://www.angusj.com/resourcehacker/)** - *Resource Hacker.*
 * **[PPEE](https://www.mzrst.com/)** - *Powerful PE file viewer and editor.*
+* **[Xrunner](https://github.com/Jakiboy/Xrunner)** - *EXE launcher builder.*
 * **PE Lab** - *Interactive PE file (executable) analysis tool.*
 * **[PE Tools](https://github.com/petoolse/petools)** - *PE manipulation toolkit.*
 * **[XPEViewer](https://github.com/horsicq/XPEViewer)** - *Executable file viewer and editor.*
@@ -1531,6 +1533,7 @@ Helper tools and miscellaneous content.
 * **[NX Editor](https://github.com/NX-Editor/NxEditor)** - *General editor for Nintendo Switch.*
 * **[Switch Layout Editor](https://github.com/FuryBaguette/SwitchLayoutEditor)** - *Layout editor for Nintendo Switch.*
 * **[Switch Theme Injector](https://github.com/exelix11/SwitchThemeInjector)** - *Custom themes creator for Nintendo Switch.*
+* **[Switch Army Knife](https://github.com/dezem/SAK)** - *Switch Army Knife for Nintendo Switch.*
 * **[Nand Fix Pro](https://github.com/sthetix/NANDFixPro)** - *Nintendo Switch NAND repair tool.*
 * **[NX Nand Manager](https://github.com/eliboa/NxNandManager)** - *Nintendo Switch NAND manager.*
 * **[NXDT Host](https://github.com/DarkMatterCore/nxdumptool)** - *Nintendo Switch dump tool server.*
@@ -1540,6 +1543,7 @@ Helper tools and miscellaneous content.
 * **[Yuzu](https://github.com/pedrodg28/yuzu-emu)** - *Nintendo Switch emulator.*
 * **[Switch LAN Play](https://github.com/spacemeowx2/switch-lan-play)** - *Nintendo Switch LAN client.*
 * **[SysDVR](https://github.com/exelix11/SysDVR)** - *Nintendo Switch streaming client.*
+* **Splash Editor** - *Splash Editor for Nintendo Switch.*
 * **[Devkit](https://devkitpro.org/)** - *Nintendo Switch homebrew development toolchain.*
 * **[EmuTool](https://github.com/TheyKilledKenny/Emutool)** - *EmuNAND/EmuMMC manager.*
 * **IPS Patch Creator** - *IPS signature patches generator (Sigpatches).*
@@ -1548,9 +1552,23 @@ Helper tools and miscellaneous content.
 * **[NS-USBloader](https://github.com/developersu/ns-usbloader)** - *Nintendo Switch games installer using Awoo-Installer.*
 * **[NUT](https://github.com/blawar/nut)** - *Nintendo Switch games installer using Tinfoil.*
 * **[Quark](https://github.com/XorTroll/Goldleaf)** - *Nintendo Switch games installer using Goldleaf.*
+* **Firmwares** - *Firmwares for Nintendo Switch.*
 * **Homebrew** - *Collection of homebrew apps for Nintendo Switch CFW.*
 * **Payloads** - *Collection of payloads for Nintendo Switch CFW.*
 * **Themes** - *Collection of custom themes for Nintendo Switch CFW.*
+
+##### Gaming (PlayStation (PS4, PS5))
+* **PKG Editor** - *PS4 file editor (PKG, SFO, PFS).*
+* **[4Server](https://github.com/Jakiboy/4Server)** - *PS4 WebKit payload server.*
+* **Remote PKG Installer** - *PS4 PKG files installer using remote server.*
+* **ShadPS4** - *PlayStation 4 emulator.*
+* **PKG Merge** - *PS4 PKG files merger.*
+* **PS4 Webkit** - *PS4 generic WebKit payload injector (GoldHen).*
+* **[4Exploit](https://github.com/Jakiboy/4Exploit)** - *PS4 AIO WebKit payload injector (Micro-Hen).*
+* **DevKit** - *PlayStation DevKit dependencies.*
+* **Firmwares** - *Firmwares for PlayStation (PS4|PS5).*
+* **Homebrew** - *Collection of homebrew apps for PlayStation Jailbreak (PS4|PS5).*
+* **Payloads** - *Collection of payloads for PlayStation Jailbreak (PS4|PS5).*
 
 ##### Simulating
 *Circuit and logical simulation.*
