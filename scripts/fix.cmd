@@ -18,7 +18,7 @@ if errorlevel 1 (
 )
 
 REM Run the fix script
-python "%~dp0fix_items.py"
+python "%~dp0fix.py"
 
 REM Capture exit code
 set FIX_EXIT_CODE=%errorlevel%

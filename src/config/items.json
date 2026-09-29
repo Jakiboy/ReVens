@@ -647,15 +647,15 @@
             "remove": false
         },
         {
-            "name": "Detect It Easy (DiE)",
+            "name": "Detect It Easy (DIE)",
             "slug": "detect-it-easy-die",
             "desc": "File type identifier",
             "type": "exe",
-            "path": "/Analyzing/Compilation/Detect It Easy/x64/die.exe",
+            "path": "/Analyzing/Compilation/Detect It Easy/DIE.exe",
             "section": "analyzing",
             "sub": "compilation",
             "extra": false,
-            "version": "3.09",
+            "version": "3.21",
             "url": "https://github.com/horsicq/DIE-engine",
             "download": [
                 "https://github.com/horsicq/DIE-engine/releases/download/{version}/die_win64_portable_{version}_x64.zip",
@@ -670,7 +670,7 @@
             "slug": "nauz-file-detector",
             "desc": "Detects compiler tools",
             "type": "exe",
-            "path": "/Analyzing/Compilation/Nauz File Detector/x64/nfd.exe",
+            "path": "/Analyzing/Compilation/Nauz File Detector/NFD.exe",
             "section": "analyzing",
             "sub": "compilation",
             "extra": false,
@@ -733,9 +733,9 @@
             "remove": false
         },
         {
-            "name": "GT2",
+            "name": "GT2 (CLI)",
             "slug": "gt2",
-            "desc": "GetType2 (CLI)",
+            "desc": "GT2 (GetType2)",
             "type": "zip",
             "path": "/Analyzing/Compilation/GT2.zip",
             "section": "analyzing",
@@ -769,7 +769,7 @@
             "slug": "exe-spy",
             "desc": "Exe Spy",
             "type": "exe",
-            "path": "/Analyzing/PE/Exe Spy",
+            "path": "/Analyzing/PE/Exe Spy/Exe Spy.exe",
             "section": "analyzing",
             "sub": "generic",
             "extra": false,
@@ -785,12 +785,12 @@
             "slug": "filealyzer",
             "desc": "Understand files by analyzing their structure",
             "type": "exe",
-            "path": "/Analyzing/Generic/FileAlyzer/FileAlyzer2.exe",
+            "path": "/Analyzing/Generic/FileAlyzer/FileAlyzer.exe",
             "section": "analyzing",
             "sub": "generic",
             "extra": false,
             "version": "2.0.5.57",
-            "url": false,
+            "url": "https://www.safer-networking.org/products/filealyzer/",
             "download": "https://download.spybot.info/FileAlyzer/filealyz-{version}.exe",
             "script": false,
             "pswd": false,
@@ -834,7 +834,7 @@
         {
             "name": "ReverseKit",
             "slug": "reversekit",
-            "desc": "Comprehensive reverse engineering toolkit",
+            "desc": "Dynamic Reverse Engineering Toolkit (x64)",
             "type": "exe",
             "path": "/Analyzing/Generic/ReverseKit/ReverseKitLoader.exe",
             "section": "analyzing",
@@ -855,9 +855,9 @@
         {
             "name": "Spyre",
             "slug": "spyre",
-            "desc": "Simple YARA-based scanner",
-            "type": "exe",
-            "path": "/Analyzing/Generic/Spyre/x64/spyre.exe",
+            "desc": "Simple YARA-based IOC scanner",
+            "type": "cli",
+            "path": "/Analyzing/Generic/Spyre/Spyre.exe",
             "section": "analyzing",
             "sub": "generic",
             "extra": false,
@@ -866,14 +866,16 @@
             "download": "https://github.com/spyre-project/spyre/releases/download/v{version}/spyre-{version}.zip",
             "script": false,
             "pswd": false,
-            "remove": false
+            "remove": [
+                "/Analyzing/Generic/Spyre/bin/*.log"
+            ]
         },
         {
             "name": "Com Check",
             "slug": "com-check",
             "desc": "Check COM objects registration",
-            "type": "exe",
-            "path": "/Analyzing/Generic/Com Check",
+            "type": "cli",
+            "path": "/Analyzing/Generic/Com Check/run.cmd",
             "section": "analyzing",
             "sub": "generic",
             "extra": false,
@@ -911,11 +913,11 @@
             "section": "analyzing",
             "sub": "generic",
             "extra": false,
-            "version": "1.5.1",
-            "url": false,
+            "version": "1.5.4",
+            "url": "https://www.clamav.net/",
             "download": [
-                "https://www.clamav.net/downloads/production/clamav-{version}.win.x64.zip",
-                "https://www.clamav.net/downloads/production/clamav-{version}.win.win32.zip"
+                "https://github.com/Cisco-Talos/clamav/releases/download/clamav-{version}/clamav-{version}.win.x64.zip",
+                "https://github.com/Cisco-Talos/clamav/releases/download/clamav-{version}/clamav-{version}.win.win32.zip"
             ],
             "script": false,
             "pswd": false,
@@ -1965,11 +1967,11 @@
             "remove": false
         },
         {
-            "name": "Exeinfo PE (ASL)",
-            "slug": "exeinfo-pe-asl",
+            "name": "Exeinfo PE",
+            "slug": "exeinfo-pe",
             "desc": "Detects packers and compressors",
             "type": "exe",
-            "path": "/Analyzing/Packaging/Exeinfo PE/exe/exeinfope.exe",
+            "path": "/Analyzing/Packaging/Exeinfo PE/Exeinfo PE.exe",
             "section": "analyzing",
             "sub": "packaging",
             "extra": false,
@@ -2304,20 +2306,22 @@
             "remove": false
         },
         {
-            "name": "Driver Store Explorer",
-            "slug": "driver-store-explorer",
-            "desc": "Driver Store Explorer",
+            "name": "DriverStore Explorer",
+            "slug": "driverstore-explorer",
+            "desc": "DriverStore Explorer",
             "type": "exe",
-            "path": "/Analyzing/Generic/Driver Store Explorer/Rapr.exe",
+            "path": "/Analyzing/Generic/DriverStore Explorer/DriverStore Explorer.exe",
             "section": "analyzing",
             "sub": "system",
             "extra": false,
-            "version": "0.12.127",
+            "version": "1.0.26",
             "url": "https://github.com/lostindark/DriverStoreExplorer",
             "download": "https://github.com/lostindark/DriverStoreExplorer/releases/download/v{version}/DriverStoreExplorer.v{version}.zip",
             "script": false,
             "pswd": false,
-            "remove": false
+            "remove": [
+                "/Analyzing/Generic/DriverStore Explorer/Rapr.log"
+            ]
         },
         {
             "name": "RealTemp",
@@ -4386,9 +4390,9 @@
         {
             "name": "UniExtract",
             "slug": "uniextract",
-            "desc": "Universal archive extractor",
+            "desc": "Universal Extractor",
             "type": "exe",
-            "path": "/Extracting/Generic/UniExtract/exe/UniExtract.exe",
+            "path": "/Extracting/Generic/UniExtract/UniExtract.exe",
             "section": "unpacking",
             "sub": "extracting",
             "extra": false,
@@ -10382,7 +10386,7 @@
             "name": "GDB",
             "slug": "gdb",
             "desc": "The GNU Project Debugger",
-            "type": "exe",
+            "type": "cli",
             "path": "/Debugging/GDB/GDB.exe",
             "section": "debugging",
             "sub": "manipulating",
@@ -18143,6 +18147,24 @@
             "remove": false
         },
         {
+            "name": "4Save",
+            "slug": "4save",
+            "desc": "PS4 & PS5 Games ID Lookup Tool",
+            "type": "exe",
+            "path": "/Gaming/PlayStation/Others/4Save/4Save.exe",
+            "section": "misc",
+            "sub": "gaming",
+            "extra": "playstation",
+            "version": "0.1.1",
+            "url": "https://github.com/Jakiboy/4Save",
+            "download": "https://github.com/Jakiboy/4Save/releases/download/{version}/4Save.zip",
+            "script": false,
+            "pswd": false,
+            "remove": [
+                "/Gaming/PlayStation/Others/4Save/db.sqlite"
+            ]
+        },
+        {
             "name": "PKG Merge",
             "slug": "pkg-merge",
             "desc": "PS4 PKG files merger",
@@ -21079,7 +21101,7 @@
             "remove": false
         },
         {
-            "name": "Arduino CLI",
+            "name": "Arduino",
             "slug": "arduino-cli",
             "desc": "Command-line interface for Arduino",
             "type": "cli",

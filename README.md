@@ -117,14 +117,14 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 ##### Binary
 *Analyze PE and other binary files.*
 * **[Exe Spy](https://github.com/andyjsmith/Exe-Spy)** - *Exe Spy.*
-* **FileAlyzer** - *Understand files by analyzing their structure.*
+* **[FileAlyzer](https://www.safer-networking.org/products/filealyzer/)** - *Understand files by analyzing their structure.*
 * **[PE-bear](https://github.com/hasherezade/pe-bear)** - *PE reversing tool.*
 * **DLL Analyzer** - *Display function names in DLLs.*
-* **[ReverseKit](https://github.com/zer0condition/ReverseKit)** - *Comprehensive reverse engineering toolkit.*
-* **[Spyre](https://github.com/spyre-project/spyre)** - *Simple YARA-based scanner.*
+* **[ReverseKit](https://github.com/zer0condition/ReverseKit)** - *Dynamic Reverse Engineering Toolkit (x64).*
+* **[Spyre](https://github.com/spyre-project/spyre)** - *Simple YARA-based IOC scanner.*
 * **[Com Check](https://www.bullzip.com/products/chk/info.php)** - *Check COM objects registration.*
 * **[Capa](https://github.com/mandiant/capa)** - *Identify capabilities in executables.*
-* **ClamAV** - *Open-source antivirus engine.*
+* **[ClamAV](https://www.clamav.net/)** - *Open-source antivirus engine.*
 * **[Yara](https://github.com/VirusTotal/yara)** - *Malware pattern matching tool.*
 * **BDLLScan** - *Broken DLL scanner.*
 * **Import Searcher** - *DLL import searcher.*
@@ -193,17 +193,17 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 
 ##### Compilation
 *Analyze PE compilation, signature and more.*
-* **[Detect It Easy (DiE)](https://github.com/horsicq/DIE-engine)** - *File type identifier.*
+* **[Detect It Easy (DIE)](https://github.com/horsicq/DIE-engine)** - *File type identifier.*
 * **[Nauz File Detector](https://github.com/horsicq/Nauz-File-Detector)** - *Detects compiler tools.*
 * **PE Detective** - *Identifies PE files.*
 * **Language 2000** - *Comprehensive compiler detector.*
 * **gAPE** - *PE Viewer/Editor.*
-* **GT2** - *GetType2 (CLI).*
+* **GT2 (CLI)** - *GT2 (GetType2).*
 * **PE Verify** - *PE Verify (CLI).*
 
 ##### Packaging
 *Analyze PE packaging and protection.*
-* **[Exeinfo PE (ASL)](https://github.com/ExeinfoASL/ASL)** - *Detects packers and compressors.*
+* **[Exeinfo PE](https://github.com/ExeinfoASL/ASL)** - *Detects packers and compressors.*
 * **[UPX-Analyser](https://github.com/bdunlap9/UPX-Unpackers)** - *Analyzes UPX-packed files.*
 * **[PEiD](https://www.aldeid.com/wiki/PEiD)** - *Identifies packed executables.*
 * **ARiD** - *Identifies archive formats.*
@@ -227,7 +227,7 @@ Analyze portable-executables and related files (EXE, DLL, OCX, SYS).
 *Dynamic system analysis (Runtime).*
 * **SysInspector** - *Rootkits scanner.*
 * **[Windows Kernel Explorer](https://github.com/AxtMueller/Windows-Kernel-Explorer)** - *Another rootkits scanner.*
-* **[Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer)** - *Driver Store Explorer.*
+* **[DriverStore Explorer](https://github.com/lostindark/DriverStoreExplorer)** - *DriverStore Explorer.*
 * **[RealTemp](https://www.techpowerup.com/realtemp/)** - *CPU temperature monitoring tool.*
 * **RunAlyzer** - *Startup program analyzer.*
 * **RootAlyzer** - *Rootkit detection and analysis tool.*
@@ -714,7 +714,7 @@ Unpack and remove binary protection (UPX, ASPack, VMProtect).
 * **[Ratr](https://github.com/Jakiboy/Ratr)** - *Router Config Extractor.*
 * **[ResourcesExtract](https://www.nirsoft.net/utils/resources_extract.html)** - *Extract resources from executable files.*
 * **DotNetResExtract** - *Extract .NET assembly resources.*
-* **[UniExtract](https://github.com/Bioruebe/UniExtract2)** - *Universal archive extractor.*
+* **[UniExtract](https://github.com/Bioruebe/UniExtract2)** - *Universal Extractor.*
 * **[Extract Text](https://www.bullzip.com/products/ext/info.php)** - *Extract the text content of different types of documents.*
 * **[BinText](https://www.aldeid.com/wiki/BinText)** - *Fast and powerful text extractor.*
 * **ExeDumper** - *Utility to dump executable files.*
@@ -1118,7 +1118,7 @@ Generate patching program using binary compare.
 * **SS Creator** - *Serial Sniffer Creator.*
 
 ##### Release
-*Build patcher release and NFO file.*
+*Build patcher release and NFO & Cracktro file.*
 * **Release Builder** - *Software release info file builder.*
 * **DizView** - *DIZ/NFO file viewer.*
 * **Fast Cracktro Maker** - *Create fast crack intros for software.*
@@ -1562,6 +1562,7 @@ Helper tools and miscellaneous content.
 * **[4Server](https://github.com/Jakiboy/4Server)** - *PS4 WebKit payload server.*
 * **Remote PKG Installer** - *PS4 PKG files installer using remote server.*
 * **ShadPS4** - *PlayStation 4 emulator.*
+* **[4Save](https://github.com/Jakiboy/4Save)** - *PS4 & PS5 Games ID Lookup Tool.*
 * **PKG Merge** - *PS4 PKG files merger.*
 * **PS4 Webkit** - *PS4 generic WebKit payload injector (GoldHen).*
 * **[4Exploit](https://github.com/Jakiboy/4Exploit)** - *PS4 AIO WebKit payload injector (Micro-Hen).*
@@ -1579,7 +1580,7 @@ Helper tools and miscellaneous content.
 * **[UnoArduSim](http://www.unoardusim.com/)** - *Arduino simulator and debugger.*
 * **[Circuit Simulator](https://github.com/pfalcon/awesome-circuit-simulator)** - *Software for simulating electronic circuits.*
 * **[Logisim](https://github.com/logisim-evolution/logisim-evolution)** - *Educational digital circuit simulator.*
-* **[Arduino CLI](https://github.com/arduino/arduino-cli)** - *Command-line interface for Arduino.*
+* **[Arduino](https://github.com/arduino/arduino-cli)** - *Command-line interface for Arduino.*
 * **[Dia](https://gitlab.gnome.org/GNOME/dia)** - *Diagram creation software.*
 
 ##### Programming

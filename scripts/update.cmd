@@ -18,7 +18,7 @@ if errorlevel 1 (
 )
 
 REM Run the update script
-python "%~dp0update_items.py"
+python "%~dp0update.py"
 
 REM Capture exit code
 set UPDATE_EXIT_CODE=%errorlevel%
