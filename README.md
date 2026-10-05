@@ -376,7 +376,7 @@ Unpack and remove binary protection (UPX, ASPack, VMProtect).
 
 ##### Unprotect
 *Remove PE protection and obfuscation.*
-* **[XVolkolak](https://github.com/horsicq/XVolkolak/)** - *Unpacker emulator for malware analysis.*
+* **[XVolkolak](https://github.com/horsicq/XVolkolak)** - *Unpacker emulator for malware analysis.*
 * **[.NET Reactor Slayer](https://github.com/SychicBoy/NETReactorSlayer)** - *Deobfuscator and unpacker for .NET Reactor.*
 * **[MalUnpack](https://github.com/hasherezade/mal_unpack)** - *Dynamic unpacker for malware analysis.*
 * **deARMPro** - *ARM Protector unpacker.*
