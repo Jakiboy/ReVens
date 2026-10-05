@@ -5275,7 +5275,7 @@
             "sub": "unprotect",
             "extra": false,
             "version": "0.22",
-            "url": "https://n10info.blogspot.com/2018/07/xvolkolak-021.html",
+            "url": "https://github.com/horsicq/XVolkolak",
             "download": "https://www.dropbox.com/s/nziop8xznuu09ra/xvlk_win32_public_{version}.zip?dl=1",
             "script": [
                 "flatten"
@@ -18185,7 +18185,7 @@
             "slug": "ps4-webkit",
             "desc": "PS4 generic WebKit payload injector (GoldHen)",
             "type": "zip",
-            "path": "/Gaming/PlayStation/Flash/PS4 Webkit.zip",
+            "path": "/Gaming/PlayStation/Flash/PS4/PS4 Webkit.zip",
             "section": "misc",
             "sub": "gaming",
             "extra": "playstation",
@@ -18201,7 +18201,7 @@
             "slug": "4exploit",
             "desc": "PS4 AIO WebKit payload injector (Micro-Hen)",
             "type": "zip",
-            "path": "/Gaming/PlayStation/Flash/4Exploit.zip",
+            "path": "/Gaming/PlayStation/Flash/PS4/4Exploit.zip",
             "section": "misc",
             "sub": "gaming",
             "extra": "playstation",
