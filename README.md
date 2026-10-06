@@ -84,7 +84,7 @@ bash build.sh
 
 * Download latest ReVens from: [Releases](https://github.com/Jakiboy/ReVens/releases).
 
-## 🔧 TODO
+## 💡 TODO
 
 For anyone who wants to contribute:
 
