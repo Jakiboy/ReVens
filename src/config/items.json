@@ -21217,7 +21217,7 @@
             "slug": "what-is-reverse-engineering",
             "desc": "What is Reverse Engineering",
             "type": "doc",
-            "path": "/Documentation/Introduction/What is Reverse Engineering.pdf",
+            "path": "/Documentation/Introduction/What is Reverse Engineering.md",
             "section": "docs",
             "sub": "introduction",
             "extra": false,
