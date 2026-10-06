@@ -48,7 +48,7 @@ ReVens is provided **"AS IS"** without warranty of any kind, either expressed or
 
 By downloading, installing, or using ReVens, you acknowledge that you have read, understood, and agreed to this disclaimer. You accept full responsibility for your actions and any consequences that may arise from using this toolkit.
 
-### — USE AT YOUR OWN RISK. BETTER CALL SAUL! —
+### - USE AT YOUR OWN RISK. BETTER CALL SAUL! -
 
 ## History
 
@@ -56,7 +56,7 @@ The name **ReVens** originates from **"(R)(e)(v)(e)r(s)e E(n)gineering"**, refle
 
 Between 2006 and 2010, the creator, Jakiboy, was heavily involved in using several all-in-one reverse-engineering tool distributions of the era. Notable influences included "CRACKL@B DVD" (2006) published by "eXelab", as well as "Cracking Kit" (2008), which utilized the **PStart** launcher menu. 
 
-These early tool collections shaped the vision for what would eventually evolve into ReVens—aiming to modernize, streamline, and rebuild the kind of organized RE environment those classic kits provided, but with a cleaner, more up-to-date launcher and packages manager.
+These early tool collections shaped the vision for what would eventually evolve into ReVens-aiming to modernize, streamline, and rebuild the kind of organized RE environment those classic kits provided, but with a cleaner, more up-to-date launcher and packages manager.
 
 ---
 

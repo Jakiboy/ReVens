@@ -390,7 +390,7 @@ async function startDownload(launcher) {
 	const getExtractDir = (filePath) => {
 		const archiveName = path.basename(filePath, path.extname(filePath));
 		// In debug mode, test archives already have a named top-level folder.
-		// In production, archives have loose files — create named subdir.
+		// In production, archives have loose files - create named subdir.
 		return config.debug ? baseDir : path.join(baseDir, archiveName);
 	};
 
@@ -656,7 +656,7 @@ function extractArchive(sevenZipPath, archivePath, outputDir, password = null, r
 					detail.includes('Cannot delete output file');
 
 				if (isLocked && attemptsLeft > 1) {
-					// File locked by another process — wait and retry
+					// File locked by another process - wait and retry
 					setTimeout(() => attempt(attemptsLeft - 1), retryDelay);
 				} else {
 					reject(new Error(`Extraction failed: ${detail}`));

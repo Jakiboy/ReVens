@@ -120,7 +120,7 @@ const Notice = () => {
                         for your actions and any consequences that may arise from using this toolkit.</p>
 
                       <div className="cta">
-                        <span className="danger">— USE AT YOUR OWN RISK. BETTER CALL SAUL! —</span>
+                        <span className="danger">- USE AT YOUR OWN RISK. BETTER CALL SAUL! -</span>
                       </div>
 
                       <div className="separator" aria-hidden="true"></div>
@@ -133,13 +133,13 @@ const Notice = () => {
                         Between 2006 and 2010, the creator, Jakiboy, was heavily involved in using several all-in-one reverse-engineering tool distributions of the era. Notable influences included "CRACKL@B DVD" (2006) published by "eXelab", as well as "Cracking Kit" (2008), which utilized the <strong>PStart</strong> launcher menu.
                       </p>
                       <p>
-                        These early tool collections shaped the vision for what would eventually evolve into ReVens—aiming to modernize, streamline, and rebuild the kind of organized RE environment those classic kits provided, but with a cleaner, more up-to-date launcher and packages manager.
+                        These early tool collections shaped the vision for what would eventually evolve into ReVens-aiming to modernize, streamline, and rebuild the kind of organized RE environment those classic kits provided, but with a cleaner, more up-to-date launcher and packages manager.
                       </p>
 
                       <div className="separator" aria-hidden="true"></div>
 
                       <p className="muted">
-                        Source: <a href="https://github.com/Jakiboy/ReVens" className="page-link" target="_blank" rel="noopener noreferrer">GitHub — Jakiboy/ReVens</a><br />
+                        Source: <a href="https://github.com/Jakiboy/ReVens" className="page-link" target="_blank" rel="noopener noreferrer">GitHub - Jakiboy/ReVens</a><br />
                         License: <a href="https://opensource.org/licenses/MIT" className="page-link" target="_blank" rel="noopener noreferrer">MIT License</a><br />
                         For issues, questions, or contributions, please visit the project's GitHub repository.
                       </p>

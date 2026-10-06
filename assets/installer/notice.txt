@@ -75,7 +75,7 @@ By downloading, installing, or using ReVens, you acknowledge that you have read,
 understood, and agreed to this disclaimer. You accept full responsibility for 
 your actions and any consequences that may arise from using this toolkit.
 
-— USE AT YOUR OWN RISK. BETTER CALL SAUL! —
+- USE AT YOUR OWN RISK. BETTER CALL SAUL! -
 
 -------------------------------------------------------------------------------
                               LIABILITY DISCLAIMER
@@ -95,7 +95,7 @@ as well as "Cracking Kit" (2008), which utilized the PStart
 launcher menu. 
 
 These early tool collections shaped the vision for what would 
-eventually evolve into ReVens—aiming to modernize, streamline, 
+eventually evolve into ReVens-aiming to modernize, streamline, 
 and rebuild the kind of organized RE environment those classic kits provided, 
 but with a cleaner, more up-to-date launcher and packages manager.
 

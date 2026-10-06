@@ -54,7 +54,7 @@ Local AI assistant integrated using **Ollama**.
 * Many of the included tools are **outdated** and provided solely for legacy purposes!
 * The primary architecture of the packages is **x64**, but other architectures (x86, ARM) can also be supported.
 * ReVens is Windows-based, but still **cross-platform** if you want to build it for Linux.
-* *— Use it at your own risk. Better Call Saul! —*
+* *- Use it at your own risk. Better Call Saul! -*
 
 ## 🔧 Requirements
 
