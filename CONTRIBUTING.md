@@ -1,6 +1,6 @@
 # Contributing to ReVens
 
-Thank you for considering contributing to **ReVens** - The Ultimate Reverse Engineering Toolkit AIO! Follow the steps below to get started.
+Thank you for considering contributing to **ReVens** - Follow the steps below to get started.
 
 ## How to Contribute
 
@@ -30,6 +30,9 @@ git checkout -b feature/your-feature-name
 
 #### Adding Items to ReVens Packages Manager
 
+> [!CAUTION]
+> DO NOT edit **README.md** directly; make changes through the appropriate configuration files.
+
 If you think a missing reverse engineering tool can be added to ReVens Packages Manager, you can add it in the `src/config/items.json`.
 
 **Important requirements:**
@@ -41,6 +44,13 @@ If you think a missing reverse engineering tool can be added to ReVens Packages 
   - `url` (GitHub repository)
   - `download` (GitHub release or download link)
   - `version` (if available)
+
+After updating items in `src/config/items.json`, make sure to update README.md using the provided script:
+
+```bash
+# Update README.md with the latest items.json changes
+./scripts/generate.cmd
+```
 
 ### 5. Commit Your Changes
 
