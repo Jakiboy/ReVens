@@ -130,7 +130,7 @@ function getTemplate(launcher) {
                 },
                 {
                     "label": 'Edit packages',
-                    click() { openUrl(`${config.url}/pulls`); }
+                    click() { openUrl(`${config.url}?tab=contributing-ov-file#contributing-to-revens`); }
                 },
                 { "type": 'separator' },
                 {
