@@ -1118,7 +1118,7 @@ Generate patching program using binary compare.
 * **SS Creator** - *Serial Sniffer Creator.*
 
 ##### Release
-*Build patcher release and NFO & Cracktro file.*
+*Build patcher release info file (NFO, DIZ, Cracktro).*
 * **Release Builder** - *Software release info file builder.*
 * **DizView** - *DIZ/NFO file viewer.*
 * **Fast Cracktro Maker** - *Create fast crack intros for software.*
@@ -1475,7 +1475,7 @@ Helper tools and miscellaneous content.
 * **VisualUpx** - *Visual UPX interface.*
 
 ##### Mobile
-*Mbile RE toolkits.*
+*Mobile RE toolkits.*
 * **[Etcher](https://github.com/balena-io/etcher)** - *A cross-platform tool to flash OS images onto SD cards and USB.*
 * **[WhatsApp Viewer](https://github.com/andreas-marschke/whatsapp-viewer)** - *Viewer for WhatsApp chat histories.*
 * **[OTP Extractor](https://github.com/scito/extract_otp_secrets)** - *Tool for extracting OTPs (One-Time Passwords).*
@@ -1563,9 +1563,13 @@ Helper tools and miscellaneous content.
 * **Remote PKG Installer** - *PS4 PKG files installer using remote server.*
 * **ShadPS4** - *PlayStation 4 emulator.*
 * **[4Save](https://github.com/Jakiboy/4Save)** - *PS4 & PS5 Games ID Lookup Tool.*
+* **Fake PKG Tools** - *Fake PKG Tools.*
+* **PS2 FPKG** - *PS2 FPKG.*
+* **PS4 PKG Tool** - *PS4 PKG Tool.*
+* **Chiaki** - *Remote play client for PlayStation.*
 * **PKG Merge** - *PS4 PKG files merger.*
 * **PS4 Webkit** - *PS4 generic WebKit payload injector (GoldHen).*
-* **[4Exploit](https://github.com/Jakiboy/4Exploit)** - *PS4 AIO WebKit payload injector (Micro-Hen).*
+* **[4Exploit](https://github.com/Jakiboy/4Exploit)** - *PS4 AIO WebKit payload injector (MicroHen).*
 * **DevKit** - *PlayStation DevKit dependencies.*
 * **Firmwares** - *Firmwares for PlayStation (PS4|PS5).*
 * **Homebrew** - *Collection of homebrew apps for PlayStation Jailbreak (PS4|PS5).*

@@ -278,7 +278,7 @@
                 {
                     "name": "release",
                     "title": "Release",
-                    "desc": "Build patcher release and <strong>NFO</strong> & <strong>Cracktro</strong> file"
+                    "desc": "Build patcher release info file (<strong>NFO</strong>, <strong>DIZ</strong>, <strong>Cracktro</strong>)"
                 },
                 {
                     "name": "ascii",
@@ -356,7 +356,7 @@
                 {
                     "name": "mobile",
                     "title": "Mobile",
-                    "desc": "Mbile RE toolkits",
+                    "desc": "Mobile RE toolkits",
                     "extra": [
                         {
                             "name": "android",
